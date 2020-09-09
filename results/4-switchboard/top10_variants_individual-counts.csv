@@ -4,8 +4,8 @@
 2,4,additive,absolute,False,True,free,none
 3,3,multiplicative,absolute,False,False,gaze-dependent,none
 4,2,multiplicative,absolute,False,False,free,gaze-dependent
-5,1,multiplicative,vsmean,False,True,gaze-dependent,none
+5,1,multiplicative,vsmean,False,True,gaze-dependent,distance-dependent
 6,1,multiplicative,vsmean,False,True,gaze-dependent,free
-7,1,multiplicative,absolute,True,True,free,distance-dependent
-8,1,multiplicative,vsmean,False,True,gaze-dependent,distance-dependent
-9,1,multiplicative,vsmean,False,True,free,gaze-dependent
+7,1,multiplicative,vsmean,False,True,gaze-dependent,none
+8,1,multiplicative,vsmean,False,True,free,gaze-dependent
+9,1,multiplicative,absolute,True,True,free,distance-dependent

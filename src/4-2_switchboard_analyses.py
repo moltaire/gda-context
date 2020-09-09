@@ -206,24 +206,25 @@ print(f"{pd.isnull(mean_bics['BIC']).sum()} were marked as duplicate.")
 
 
 # Identify overall best fitting model (lowest mean BIC)
-best_variants_pooled = (
+top10_variants_pooled_bic = (
     mean_bics.sort_values("BIC").head(10).drop("model", axis=1).reset_index(drop=True)
 )
 print("Top 10 variants (based on mean BIC across participants)")
-print(best_variants_pooled)
-best_variants_pooled.to_csv(join(OUTPUT_DIR, "best-variants_pooled.csv"))
+print(top10_variants_pooled_bic)
+top10_variants_pooled_bic.to_csv(join(OUTPUT_DIR, "top10_variants_pooled_bic.csv"))
 
 # Single best variant:
-best_variant_pooled = mean_bics.sort_values("BIC")["model"].values[0]
+top1_variant_pooled_estimate_summary = mean_bics.sort_values("BIC")["model"].values[0]
 
 # Investigate winning model parameters
 print("Best variant (average across participants) parameter estimates:")
-best_variant_pooled_estimate_summary = sb_estimates.loc[
-    sb_estimates["model"] == best_variant_pooled, ["alpha", "beta", "lam", "theta"]
+top1_variant_pooled_estimate_summary = sb_estimates.loc[
+    sb_estimates["model"] == top1_variant_pooled_estimate_summary,
+    ["alpha", "beta", "lam", "theta"],
 ].describe()
-print(best_variant_pooled_estimate_summary)
-best_variant_pooled_estimate_summary.to_csv(
-    join(OUTPUT_DIR, "best-variant_pooled_estimate-summary.csv")
+print(top1_variant_pooled_estimate_summary)
+top1_variant_pooled_estimate_summary.to_csv(
+    join(OUTPUT_DIR, "top1_variant_pooled_estimate-summary.csv")
 )
 
 
@@ -239,7 +240,7 @@ sb_estimates_noduplicates.loc[
 ] = "n.d."
 
 # identify best switch levels
-switch_results = []
+switch_levels_bic = []
 for switch in switches.keys():
     switch_mean_bics = sb_estimates_noduplicates.groupby(switch)["bic"].agg(
         ["mean", "sem"]
@@ -247,9 +248,9 @@ for switch in switches.keys():
     df = pd.DataFrame(switch_mean_bics)
     df.index.name = "level"
     df["switch"] = switch
-    switch_results.append(df.reset_index())
+    switch_levels_bic.append(df.reset_index())
 
-switch_results = pd.concat(switch_results)[
+switch_levels_bic = pd.concat(switch_levels_bic)[
     ["switch", "level", "mean", "sem"]
 ].reset_index(drop=True)
 level_labels = {
@@ -270,11 +271,10 @@ level_labels = {
     },
 }
 
-switch_results["label"] = switch_results.apply(
+switch_levels_bic["label"] = switch_levels_bic.apply(
     lambda x: level_labels[x["switch"]][x["level"]], axis=1
 )
-
-switch_results.to_csv(join(OUTPUT_DIR, "switch-level_bics.csv"))
+switch_levels_bic.to_csv(join(OUTPUT_DIR, "switch-levels_bic.csv"))
 
 
 # Switch-level average BIC plot
@@ -282,7 +282,7 @@ colors = np.array(
     [
         palette[c]
         for c in pd.Categorical(
-            switch_results["switch"],
+            switch_levels_bic["switch"],
             categories=[
                 "comparison",
                 "integration",
@@ -298,19 +298,19 @@ colors = np.array(
 
 fig, ax = plt.subplots(figsize=cm2inch(2, 6), dpi=300)
 
-bic_means = switch_results["mean"]
-bic_sems = switch_results["sem"]
+bic_means = switch_levels_bic["mean"]
+bic_sems = switch_levels_bic["sem"]
 
-bars = ax.barh(np.arange(len(switch_results)), bic_means, color=colors)
+bars = ax.barh(np.arange(len(switch_levels_bic)), bic_means, color=colors)
 ax.hlines(
-    y=np.arange(len(switch_results)),
+    y=np.arange(len(switch_levels_bic)),
     xmin=bic_means - bic_sems,
     xmax=bic_means + bic_sems,
     linewidth=0.75,
 )
-ax.set_yticks(np.arange(len(switch_results)))
-ax.set_yticklabels(switch_results["label"], fontsize=5)
-ax.set_ylim(len(switch_results), -0.5)
+ax.set_yticks(np.arange(len(switch_levels_bic)))
+ax.set_yticklabels(switch_levels_bic["label"], fontsize=5)
+ax.set_ylim(len(switch_levels_bic), -0.5)
 ax.set_xlabel("Mean BIC")
 ax.set_xlim(200, 400)
 ax.set_xticks(np.arange(200, 401, 100))
@@ -318,13 +318,13 @@ ax = break_after_nth_tick(ax, n=0, axis="x")
 ax.set_xticklabels(np.insert(np.arange(200, 401, 100)[1:], 0, 0))
 
 switch_indices = (
-    switch_results["switch"].drop_duplicates().index
+    switch_levels_bic["switch"].drop_duplicates().index
 )  # identify indices where switches occur first
 ax.legend(
     handles=[bars[i] for i in switch_indices],
     labels=[
         switch_labels[switch]
-        for switch in switch_results["switch"][switch_indices].values
+        for switch in switch_levels_bic["switch"][switch_indices].values
     ],
     fontsize=5,
     bbox_to_anchor=(0.9, 1.025),
@@ -335,7 +335,7 @@ ax.legend(
 
 
 # identify individually best fitting models
-best_variants_ind = sb_estimates_noduplicates.loc[
+ind_best_variants = sb_estimates_noduplicates.loc[
     sb_estimates_noduplicates.groupby("subject")["bic"].idxmin()
 ][
     [
@@ -350,44 +350,50 @@ best_variants_ind = sb_estimates_noduplicates.loc[
         "inhibition",
     ]
 ]
-best_variants_ind.to_csv(join(OUTPUT_DIR, "best-variants_individual.csv"))
+ind_best_variants.drop("model", axis=1).to_csv(
+    join(OUTPUT_DIR, "individual_best-variants_bic.csv")
+)
 
 
-best_variants_ind_counts = (
-    best_variants_ind["model"]
+top10_variants_individual_counts = (
+    ind_best_variants["model"]
     .value_counts()
     .reset_index()
     .rename({"index": "model", "model": "count"}, axis=1)
 )
 
 # decode switches from model names
-best_variants_ind_counts["integration"] = (
-    best_variants_ind_counts.model.str.split("_").str[1].str[4:]
+top10_variants_individual_counts["integration"] = (
+    top10_variants_individual_counts.model.str.split("_").str[1].str[4:]
 )
-best_variants_ind_counts["comparison"] = (
-    best_variants_ind_counts.model.str.split("_").str[2].str[5:]
+top10_variants_individual_counts["comparison"] = (
+    top10_variants_individual_counts.model.str.split("_").str[2].str[5:]
 )
-best_variants_ind_counts["gb_att"] = (
-    best_variants_ind_counts.model.str.split("_").str[3].str[6:] == "true"
+top10_variants_individual_counts["gb_att"] = (
+    top10_variants_individual_counts.model.str.split("_").str[3].str[6:] == "true"
 )
-best_variants_ind_counts["gb_alt"] = (
-    best_variants_ind_counts.model.str.split("_").str[4].str[6:] == "true"
+top10_variants_individual_counts["gb_alt"] = (
+    top10_variants_individual_counts.model.str.split("_").str[4].str[6:] == "true"
 )
-best_variants_ind_counts["leak"] = (
-    best_variants_ind_counts.model.str.split("_").str[5].str[3:]
+top10_variants_individual_counts["leak"] = (
+    top10_variants_individual_counts.model.str.split("_").str[5].str[3:]
 )
-best_variants_ind_counts["inhibition"] = (
-    best_variants_ind_counts.model.str.split("_").str[6].str[4:]
+top10_variants_individual_counts["inhibition"] = (
+    top10_variants_individual_counts.model.str.split("_").str[6].str[4:]
 )
-best_variants_ind_counts = best_variants_ind_counts.drop("model", axis=1)
-best_variants_ind_counts.to_csv(join(OUTPUT_DIR, "best_variants_individual_counts.csv"))
-print(best_variants_ind_counts)
+top10_variants_individual_counts = top10_variants_individual_counts.drop(
+    "model", axis=1
+)
+top10_variants_individual_counts.to_csv(
+    join(OUTPUT_DIR, "top10_variants_individual-counts.csv")
+)
+print(top10_variants_individual_counts)
 
 # Count individually best fitting switches
 
 best_switches_individual_counts = []
 for switch in switches.keys():
-    best_counts = best_variants_ind[switch].value_counts()
+    best_counts = ind_best_variants[switch].value_counts()
     best_counts.name = "count"
     df = pd.DataFrame(best_counts)
     df.index.name = "level"
@@ -402,7 +408,7 @@ best_switches_individual_counts["label"] = best_switches_individual_counts.apply
 )
 print(best_switches_individual_counts)
 best_switches_individual_counts.to_csv(
-    join(RESULTS_DIR, "best-switch-levels_individual_counts.csv")
+    join(RESULTS_DIR, "switch-levels_individual-counts.csv")
 )
 
 
@@ -451,4 +457,3 @@ ax.legend(
     bbox_to_anchor=(1.05, 1.025),
 )
 
-plt.show()
