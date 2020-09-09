@@ -1,0 +1,2 @@
+,subject,nll,bic,model,alpha,gamma,eta,theta,lam,phi,wd,w_p,beta
+30,30,105.47142764080073,259.6877589014412,sb_int-multiplicative_comp-absolute_gbatt-true_gbalt-true_lk-gaze-dependent_inh-distance-dependent,0.31416604121707636,1.0,1.0,1.0,0.989090743556203,0.00012862931091191539,48.012036426952925,0.0633236775349941,0.7933081315959074

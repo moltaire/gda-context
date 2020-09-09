@@ -1,0 +1,11 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+.vscode/
+*.py[cod]
+
+# Ignore large concatenated dataframes
+results/3-behavioural-modeling/estimates/estimates_de1.csv
+results/3-behavioural-modeling/predictions/predictions_de1.csv
+results/4-switchboard/estimates/sb_estimates_de1.csv
+results/4-switchboard/predictions/sb_predictions_de1.csv

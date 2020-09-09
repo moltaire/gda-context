@@ -1,0 +1,4 @@
+subject_id,block,success,n_trials,CBm,Bm,Am,CAm
+42,1,True,13,18,15,11,9
+42,2,True,9,17,15,12,9
+42,3,True,15,17,15,11,8

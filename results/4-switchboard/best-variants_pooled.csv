@@ -1,0 +1,11 @@
+,BIC,integration,comparison,gb_att,gb_alt,leak,inhibition
+0,232.08193234245655,$\times$,n.d.,False,True,Constant,None
+1,235.94433551014487,$\times$,independent,False,False,Constant,Gaze
+2,236.7485002268489,$\times$,comparative,False,True,Constant,Gaze
+3,237.21265383523738,$\times$,n.d.,True,True,Constant,None
+4,237.31482509829544,$\times$,independent,False,True,Constant,Gaze
+5,237.39850707617325,$\times$,n.d.,False,True,Constant,Constant
+6,238.40783315626103,$\times$,comparative,False,True,Gaze,None
+7,241.03987068154953,$\times$,independent,True,False,Constant,Gaze
+8,241.40351744532154,$\times$,comparative,False,True,Constant,Distance
+9,241.7849875676825,$\times$,comparative,True,True,Constant,Gaze

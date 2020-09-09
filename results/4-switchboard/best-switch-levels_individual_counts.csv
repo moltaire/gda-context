@@ -1,0 +1,16 @@
+,switch,level,count,label
+0,inhibition,none,25,None
+1,inhibition,distance-dependent,11,Distance
+2,inhibition,gaze-dependent,3,Gaze
+3,inhibition,free,1,Constant
+4,leak,free,34,Constant
+5,leak,gaze-dependent,6,Gaze
+6,comparison,n.d.,21,$n.d.$
+7,comparison,vsmean,13,Comparative
+8,comparison,absolute,6,Independent
+9,gb_alt,True,35,with
+10,gb_alt,False,5,without
+11,integration,multiplicative,36,$\times$
+12,integration,additive,4,$+$
+13,gb_att,False,39,without
+14,gb_att,True,1,with

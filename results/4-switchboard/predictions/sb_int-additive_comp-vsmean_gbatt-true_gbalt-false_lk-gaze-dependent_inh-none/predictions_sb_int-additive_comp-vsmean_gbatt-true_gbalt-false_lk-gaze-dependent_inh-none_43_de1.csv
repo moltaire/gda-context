@@ -1,0 +1,455 @@
+,subject,block,trial,effect,target,key,choice,choice_tcd,rt,pA,pB,pC,mA,mB,mC,pos_A,pos_B,pos_C,pA_top,pB_top,pC_top,fixated_alternatives,fixated_attributes,fixation_durations,predicted_choice,model,rep
+8775,43,1,1,filler,,R,1,,11060.0,0.31,0.38,0.85,32,26,11,0,2,1,False,False,False,[2 2 0 0 0 2 2 2 1 0 0 2 2 1 2 2 1 1 1 1 2 2 0 2 2 2 1 2 2 2 0 0 2 1 1],[1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 0 1 1 1 1 1],"[0.141    0.141    0.266    0.175    0.216    0.166    0.091    0.241
+ 0.851    0.233    0.475    0.258    0.083    0.442    0.183    0.283
+ 0.2      0.4      0.133    0.166    0.125    0.2      0.425    0.283
+ 0.141    0.208    0.375    0.158    0.934    0.358    0.116    0.141
+ 0.133    0.233    0.857591]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8776,43,1,2,compromise,A,R,1,competitor,7510.0,0.78,0.68,0.82,13,15,11,0,2,1,False,False,False,[2 1 1 1 1 0 0 2 2 2 2 2 2 1 1 2 0 1 1 1 1 1 1 1 2],[1 1 1 0 0 1 1 1 0 0 0 1 1 1 1 1 1 1 1 0 0 0 1 0 0],"[0.225    0.083    0.45     0.225    0.116    0.141    0.325    0.175
+ 0.208    0.091    0.191    0.217    0.258    0.333    0.283    0.692
+ 0.175    0.917    0.125    0.1      0.175    0.4      0.233    0.3
+ 0.162433]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8777,43,1,3,attraction,B,L,1,target,5100.0,0.72,0.62,0.6,13,14,13,1,0,2,True,True,True,[0 2 2 2 2 0 0 1 1 1 2 2 1 1 2 2 0 0],[0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 1 1],"[0.183    0.191    0.141    0.433    0.233    0.108    0.141    0.625
+ 0.116    0.166    0.291    0.216    0.458    0.225    0.1      0.292
+ 0.125    0.062877]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8778,43,1,4,attraction,A,R,1,competitor,6570.0,0.75,0.68,0.73,12,14,11,0,2,1,True,False,True,[2 0 0 0 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 2 2 0],[0 0 1 1 1 1 1 0 0 0 0 0 1 1 0 0 1 1 0 1 1 0 1 1],"[0.525    0.659    0.091    0.208    0.191    0.091    0.091    0.141
+ 0.642    0.233    0.083    0.091    0.091    0.308    0.108    0.275
+ 0.091    0.275    0.208    0.1      0.091    0.175    0.283    0.178459]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8779,43,1,5,filler,,R,1,,6380.0,0.27,0.61,0.89,37,16,11,0,2,1,True,True,True,[1 1 1 2 2 1 1 1 1 2 1 1 0 0 2 2 0 0 1],[0 0 0 1 1 0 0 0 1 1 1 0 1 1 1 1 1 1 1],"[0.183    0.166    0.175    0.216    0.717    0.116    0.141    0.2
+ 0.358    0.525    1.051    0.191    0.083    0.183    0.175    0.358
+ 0.166    0.241    0.138916]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8780,43,1,6,filler,,M,1,,2180.0,0.32,0.6,0.78,31,16,12,2,1,0,True,True,True,[1 1 0 0 2 2 1 1],[1 1 1 1 1 1 1 0],[0.175    0.183    0.125    0.383    0.275    0.15     0.3      0.075086],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8781,43,1,7,compromise,A,R,1,competitor,3820.0,0.78,0.68,0.88,12,15,11,0,2,1,True,True,False,[2 1 1 1 2 0 0 0 2 2 2 1 1],[0 1 0 0 1 0 0 1 0 1 1 0 0],"[0.408 0.425 0.116 0.183 0.25  0.166 0.166 0.333 0.275 0.083 0.116 0.15
+ 0.283]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8782,43,1,8,attraction,A,M,1,competitor,2390.0,0.72,0.62,0.7,13,15,12,0,1,2,True,False,True,[1 2 2 2 2 1 0 0 1 1],[1 0 0 1 1 0 1 1 1 1],"[0.125    0.191    0.242    0.116    0.183    0.116    0.325    0.133
+ 0.367    0.136804]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8783,43,1,9,attraction,A,M,1,competitor,2390.0,0.75,0.65,0.73,13,14,12,2,1,0,True,False,False,[1 0 2 1 1 0 0],[1 0 0 0 1 0 1],[0.2      0.25     0.433    0.133    0.191    0.308    0.030969],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8784,43,1,10,compromise,A,R,1,competitor,3520.0,0.75,0.62,0.88,12,15,11,0,2,1,True,False,False,[2 1 0 0 0 0 0 1 1 0 0 0 0 0 1 1],[1 1 0 0 0 1 1 0 0 1 1 0 0 0 1 0],"[0.325    0.417    0.1      0.091    0.158    0.183    0.241    0.2
+ 0.141    0.15     0.175    0.116    0.083    0.15     0.241    0.178897]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8785,43,1,11,attraction,A,R,1,competitor,5790.0,0.78,0.68,0.76,13,15,12,1,2,0,False,True,True,[1 2 2 2 2 2 2 2 0 2 0 0 1 1 0],[0 0 1 1 0 0 1 1 1 0 0 0 1 0 1],"[0.417 0.45  0.116 0.5   0.191 0.625 0.191 0.175 0.166 0.1   0.083 0.266
+ 0.4   0.4   0.266]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8786,43,1,12,filler,,M,1,,2330.0,0.27,0.47,0.86,37,21,11,2,1,0,True,True,True,[1 0 0 0 0 1 1 2],[0 0 0 1 1 1 1 1],[0.442    0.242    0.25     0.141    0.2      0.291    0.125    0.294766],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8787,43,1,13,attraction,B,R,1,target,6320.0,0.78,0.65,0.63,13,15,14,0,2,1,True,True,False,[2 2 2 2 1 1 1 1 1 1 1 1 2 2 2 2 1 1 2 2 2 0 0 0 0 0 0],[1 1 1 0 0 0 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 0 0 1 1 0 0],"[0.133    0.191    0.233    0.45     0.091    0.166    0.225    0.141
+ 0.233    0.35     0.2      0.133    0.292    0.258    0.116    0.2
+ 0.158    0.325    0.216    0.091    0.133    0.108    0.083    0.083
+ 0.291    0.175    0.061841]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8788,43,1,14,attraction,B,L,1,target,2710.0,0.72,0.65,0.63,13,14,13,2,0,1,False,False,False,[2 0 0 1 2 2 1 1 1],[1 1 1 1 1 0 0 1 1],"[0.308    0.15     0.108    0.442    0.333    0.3      0.358    0.141
+ 0.165762]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8789,43,1,15,compromise,A,L,1,competitor,3520.0,0.72,0.68,0.82,13,15,10,2,0,1,False,False,False,[2 1 1 1 1 2 0 0 0 2 2 1 1],[1 1 1 0 0 0 0 1 1 1 1 1 1],"[0.392    0.15     0.291    0.091    0.25     0.325    0.2      0.108
+ 0.192    0.392    0.183    0.133    0.320442]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8790,43,1,16,compromise,B,M,2,decoy,2830.0,0.72,0.68,0.52,13,15,17,2,0,1,True,True,True,[2 2 0 0 1 1 2 2 0 1 2],[0 0 0 0 1 1 1 1 1 1 0],"[0.175    0.191    0.208    0.233    0.183    0.158    0.233    0.133
+ 0.383    0.158    0.062112]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8791,43,1,17,compromise,B,M,2,decoy,4030.0000000000014,0.72,0.65,0.58,12,15,16,2,0,1,False,False,True,[2 2 2 2 0 1 1 1 2 2 2 1 1],[0 1 0 0 1 1 0 0 1 0 1 1 1],"[0.425 0.417 0.125 0.191 0.258 0.266 0.141 0.3   0.333 0.141 0.116 0.175
+ 0.208]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8792,43,1,18,attraction,B,M,1,target,4220.0,0.72,0.62,0.6,12,15,14,2,1,0,False,True,True,[1 1 1 1 2 2 2 0 0 0 0 1 1 2 2 2 1 1],[0 0 1 1 1 0 0 1 1 0 0 1 1 1 0 0 0 1],"[0.241    0.358    0.175    0.083    0.2      0.133    0.242    0.233
+ 0.166    0.116    0.241    0.15     0.233    0.125    0.116    0.116
+ 0.367    0.047604]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8793,43,1,19,compromise,A,L,1,competitor,3250.0,0.78,0.68,0.85,12,15,10,1,0,2,False,False,False,[0 1 1 0 0 0 0 0 1 2 1],[1 1 0 0 0 0 1 1 1 1 1],"[0.475    0.158    0.125    0.267    0.375    0.125    0.116    0.2
+ 0.225    0.484    0.155899]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8794,43,1,20,attraction,A,L,1,competitor,2710.0,0.72,0.65,0.7,13,15,12,1,0,2,True,False,True,[0 0 1 1 0 0 0 0 2 2 2 0],[0 1 0 0 1 1 0 0 0 0 1 1],"[0.241   0.183   0.091   0.242   0.108   0.175   0.125   0.1     0.133
+ 0.108   0.316   0.17657]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8795,43,1,21,compromise,A,L,1,competitor,1990.0,0.78,0.65,0.82,13,14,10,1,0,2,False,True,True,[0 0 1 1 0 2 0],[1 1 0 0 0 1 0],[0.2      0.1      0.216    0.158    0.333    0.417    0.206329],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8796,43,1,22,compromise,A,L,1,competitor,3460.0,0.75,0.65,0.85,13,15,11,1,0,2,False,False,True,[0 0 1 1 1 1 1 1 0 2 2 2 1],[1 1 1 1 0 0 1 1 1 0 0 1 0],"[0.233    0.133    0.258    0.659    0.1      0.383    0.083    0.116
+ 0.283    0.15     0.083    0.408    0.085654]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8797,43,1,23,compromise,A,R,1,competitor,3530.0,0.72,0.68,0.82,13,15,10,1,2,0,True,True,False,[0 2 2 0 0 1 1 1 1 0 0 0 2 2 2 1],[0 1 0 1 1 0 0 1 1 1 0 0 1 0 0 1],"[0.283    0.208    0.291    0.2      0.108    0.233    0.175    0.166
+ 0.108    0.166    0.116    0.191    0.258    0.091    0.2      0.050086]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8798,43,1,24,compromise,A,M,1,competitor,2450.0,0.75,0.65,0.82,13,15,10,0,1,2,True,False,False,[1 1 2 0 0 0 0 1 1],[1 1 1 0 0 1 1 1 1],"[0.183    0.191    0.408    0.25     0.1      0.141    0.125    0.083
+ 0.538226]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8799,43,1,25,attraction,B,R,1,target,4240.0,0.72,0.62,0.6,13,15,14,0,2,1,False,True,True,[2 2 1 2 0 0 0 2 1 1 1 2],[0 1 1 1 0 1 1 1 1 0 0 0],"[0.826    0.4      0.542    0.183    0.241    0.166    0.191    0.191
+ 0.317    0.125    0.133    0.184558]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8800,43,1,26,attraction,A,M,1,competitor,4710.0,0.75,0.65,0.73,13,15,12,0,1,2,True,False,True,[1 1 0 0 0 0 0 1 1 2 2 0 0 1 1],[0 0 1 1 0 0 0 1 1 1 1 1 1 1 1],"[0.25     0.192    0.1      0.2      0.133    0.317    0.258    0.25
+ 0.175    0.158    0.492    0.25     0.167    0.133    0.345995]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8801,43,1,27,compromise,B,R,2,decoy,2440.0,0.72,0.62,0.58,12,14,17,0,1,2,True,True,True,[1 1 1 2 0 2 2 1],[0 0 1 1 1 0 0 0],[0.2      0.225    0.433    0.266    0.258    0.125    0.133    0.365266],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8802,43,1,28,compromise,B,R,2,decoy,7680.0,0.78,0.65,0.52,13,14,16,1,0,2,False,True,True,[2 2 2 2 1 1 1 0 1 1 0 2 2 2 0 0 2 2 1 1 1 0 0 1 1 1 2 2 2 2],[0 0 1 1 1 0 0 1 1 1 0 1 0 0 1 0 1 1 1 0 0 1 1 0 1 1 1 0 0 0],"[0.2      0.116    0.233    0.125    0.166    0.15     0.166    0.091
+ 0.208    0.2      0.225    0.175    0.208    0.116    0.325    0.25
+ 0.108    0.133    0.225    0.125    0.809    0.166    0.208    0.358
+ 0.091    0.191    0.35     0.116    0.183    0.075248]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8803,43,1,29,compromise,A,R,1,competitor,3830.0,0.75,0.62,0.88,13,15,10,1,2,0,False,False,True,[0 1 1 1 1 1 0 2 2 2 2 0 0 1],[1 1 0 0 1 1 1 0 0 1 1 1 1 0],"[0.4   0.116 0.091 0.358 0.108 0.292 0.175 0.125 0.166 0.083 0.216 0.325
+ 0.141 0.225]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8804,43,1,30,compromise,A,L,1,competitor,3940.0,0.72,0.65,0.82,13,15,10,1,0,2,False,False,False,[0 2 0 0 2 2 2 1 1 1 0 2 0 1 1],[1 1 0 0 0 1 1 1 1 0 0 0 0 1 1],"[0.417    0.158    0.25     0.083    0.242    0.108    0.283    0.25
+ 0.1      0.317    0.258    0.308    0.233    0.125    0.154992]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8805,43,1,31,compromise,B,L,2,decoy,12260.0,0.72,0.68,0.58,12,15,17,1,2,0,True,False,True,[0 0 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 1 1 1 0 2 2 2 2 0 0 0 0 1 1 1],[0 0 0 1 1 1 0 0 0 1 1 0 1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 0 0 1 1 0],"[0.242    0.208    1.727    0.158    0.158    0.45     0.133    1.393
+ 0.467    0.183    0.492    0.308    0.717    0.233    0.1      0.325
+ 0.25     0.133    0.342    0.275    0.241    0.158    0.241    0.483
+ 0.166    0.125    0.2      0.091    0.258    0.133    0.3      0.197644]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8806,43,1,32,filler,,M,1,,9500.0,0.19,0.59,0.81,52,16,12,0,1,2,False,True,False,[1 1 1 1 1 2 2 2 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 2],[0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1 0 0 1],"[0.2      0.867    0.091    0.125    0.383    0.625    0.275    0.191
+ 0.509    0.258    0.342    0.508    0.116    0.175    0.3      0.383
+ 0.367    0.108    0.216    0.267    0.342    0.909    0.2      0.25
+ 0.349241]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8807,43,1,33,attraction,B,R,1,target,4590.0,0.75,0.65,0.63,12,14,13,0,2,1,True,False,False,[2 2 2 2 2 0 0 0 2 2 1 1 1 1 2 2 1 1 1 0],[1 1 0 0 0 1 0 0 1 1 1 1 0 0 0 1 1 1 0 1],"[0.208    0.133    0.1      0.116    0.166    0.433    0.183    0.175
+ 0.233    0.158    0.183    0.15     0.133    0.183    0.342    0.258
+ 0.292    0.125    0.208    0.036939]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8808,43,1,34,compromise,B,M,2,decoy,3770.0,0.75,0.62,0.58,13,14,17,2,0,1,False,True,True,[2 2 1 1 1 2 2 2 0 0 0 2 2 0],[0 0 0 0 1 1 0 0 0 0 1 1 1 1],"[0.091    0.133    0.175    0.408    0.475    0.167    0.367    0.1
+ 0.141    0.266    0.166    0.1      0.333    0.050989]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8809,43,1,35,compromise,B,L,2,decoy,4240.0,0.72,0.65,0.52,13,15,16,1,2,0,False,False,False,[0 2 2 2 2 2 1 1 1 1 2 2 1 1 1 2 2],[1 1 1 0 0 0 0 0 1 1 1 1 1 0 0 0 1],"[0.125 0.2   0.175 0.091 0.091 0.166 0.15  0.183 0.141 0.216 0.116 0.492
+ 0.3   0.175 0.141 0.475 0.091]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8810,43,1,36,filler,,L,1,,6660.0,0.29,0.42,0.72,34,23,13,1,0,2,True,True,True,[1 1 0 0 0 1 2 2 2 2 1 1 1 1 0 0 1 1 0 0 1],[0 0 0 0 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 1 1],"[0.2      0.116    0.183    0.283    0.525    0.433    0.158    0.183
+ 0.116    0.241    0.266    0.317    0.133    0.534    0.175    0.5
+ 0.275    0.083    0.191    0.325    0.315001]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8811,43,1,37,attraction,A,M,1,competitor,3520.0,0.78,0.68,0.76,12,15,11,0,1,2,True,False,False,[1 1 1 2 2 0 0 0 0 1 1 2 2],[0 1 1 1 1 0 1 0 0 0 0 0 0],"[0.175    0.141    0.125    0.125    0.258    0.409    0.392    0.191
+ 0.091    0.133    0.225    0.317    0.054065]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8812,43,1,38,attraction,B,M,1,target,4280.0,0.72,0.62,0.6,13,15,14,0,1,2,True,True,False,[1 0 0 1 2 2 2 2 2 2 2 1 1 1 1],[0 0 1 1 0 0 0 1 1 0 0 1 0 0 1],"[0.091 0.358 0.283 0.734 0.191 0.083 0.1   0.233 0.325 0.108 0.183 0.191
+ 0.183 0.358 0.241]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8813,43,1,39,filler,,M,1,,3370.0,0.16,0.46,0.87,62,21,11,0,1,2,False,True,True,[1 1 0 0 1 2 1 2 1 1 1],[0 0 1 1 0 0 1 1 1 0 0],"[0.191    0.242    0.116    0.475    0.342    0.183    0.275    0.534
+ 0.183    0.15     0.065499]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8814,43,1,40,compromise,A,L,1,competitor,2150.0,0.78,0.65,0.82,13,14,11,2,0,1,False,True,True,[2 2 1 1 1 0 0 0],[1 0 0 1 1 0 0 1],[0.166    0.275    0.367    0.1      0.35     0.108    0.292    0.051741],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8815,43,1,41,compromise,B,R,2,decoy,2280.0,0.75,0.68,0.55,12,14,16,1,0,2,True,True,False,[0 1 0 2 2 2 2],[1 1 1 0 0 1 1],[0.108    0.392    0.183    0.208    0.192    0.275    0.518582],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8816,43,1,42,compromise,B,M,2,decoy,2160.0,0.72,0.68,0.58,13,14,17,0,2,1,False,True,False,[2 2 2 0 2 2 1 1],[1 1 1 1 0 0 0 0],[0.133    0.141    0.133    0.442    0.225    0.25     0.175    0.281118],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8817,43,1,43,attraction,B,M,1,target,4320.0,0.75,0.62,0.6,12,15,14,0,1,2,True,True,False,[1 1 1 0 0 0 1 2 2 2 2 1 1 1 1 1],[0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1],"[0.108    0.266    0.383    0.217    0.1      0.208    0.325    0.15
+ 0.35     0.2      0.208    0.15     0.15     0.175    0.292    0.434663]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8818,43,1,44,compromise,B,M,2,decoy,4840.0,0.72,0.62,0.55,13,14,17,2,0,1,False,False,True,[2 2 0 0 0 0 2 1 1 2 2 2 1 1 2 2],[1 0 1 1 0 0 1 0 0 1 1 0 1 1 0 1],"[0.625    0.342    0.083    0.25     0.116    0.108    0.216    0.367
+ 0.584    0.083    0.108    0.125    0.15     0.392    0.283    0.148609]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8819,43,1,45,compromise,A,M,1,competitor,6860.0,0.78,0.68,0.88,13,15,10,2,1,0,True,False,False,[1 1 1 2 2 2 2 0 0 1 1 0 0 2 1 1 1 1 0],[1 0 0 0 1 1 1 1 1 1 1 0 0 0 1 1 0 0 1],"[0.342 0.208 0.15  0.283 0.133 0.125 0.158 0.242 0.208 0.292 1.935 0.183
+ 0.191 0.467 0.125 0.292 0.216 0.2   0.258]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8820,43,1,46,compromise,A,L,1,competitor,4550.0,0.78,0.62,0.85,13,14,10,1,0,2,True,False,False,[1 1 1 1 0 2 2 2 0 0 0 2 2 1 1 1 1 1],[0 1 0 1 0 1 0 0 1 1 0 1 1 1 0 0 1 1],"[0.166   0.183   0.358   0.183   0.267   0.166   0.2     0.116   0.191
+ 0.1     0.308   0.1     0.258   0.417   0.125   0.275   0.091   0.10664]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8821,43,1,47,attraction,B,L,2,decoy,12680.0,0.78,0.68,0.66,12,14,13,1,2,0,True,True,False,[0 0 2 2 2 0 1 1 1 1 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 2 2 2 2 1 1 1 1 2 2],[0 1 0 1 1 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 0 0 1 1 0 0 0 0 1 1 0 1],"[0.166    0.175    0.308    0.233    0.141    0.191    0.091    0.167
+ 0.25     0.275    0.183    0.083    0.283    2.278    0.417    0.45
+ 0.375    0.125    0.217    0.283    1.643    0.826    0.208    0.1
+ 0.225    0.191    0.125    0.116    0.242    0.083    0.216    0.308
+ 0.166    0.2      0.133786]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8822,43,1,48,attraction,B,L,0,competitor,6880.0,0.78,0.65,0.63,13,15,14,0,1,2,False,True,False,[1 1 0 0 0 1 2 1 0 0 0 0 0 1 2 2 2 2 0 0 0 0],[0 1 0 0 1 0 1 1 1 1 1 0 0 0 1 0 0 1 1 1 0 0],"[0.442   1.109   0.158   0.1     0.233   0.233   0.517   0.175   0.166
+ 0.2     0.158   0.125   0.091   0.141   0.191   0.1     0.275   0.233
+ 0.375   0.091   0.175   0.22875]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8823,43,1,49,compromise,B,L,0,competitor,4600.0,0.78,0.62,0.55,13,14,17,0,1,2,False,True,True,[1 1 1 1 2 2 2 2 1 1 0 0 0 0 0 0 2 0 0],[0 1 1 1 1 0 0 0 0 0 1 0 0 0 1 1 1 1 1],"[0.2      0.091    0.709    0.083    0.433    0.091    0.158    0.091
+ 0.191    0.108    0.266    0.091    0.241    0.116    0.2      0.25
+ 0.258    0.116    0.023056]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8824,43,1,50,attraction,A,M,1,competitor,6470.0,0.72,0.65,0.7,12,14,11,2,1,0,False,False,False,[1 2 2 2 1 1 1 1 1 1 1 2 1 1 1 0 0 1 1 0],[1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1],"[0.283    0.584    0.25     0.292    0.158    0.609    0.1      0.275
+ 0.192    0.191    0.25     0.417    0.183    0.1      0.233    0.292
+ 0.458    0.091    0.675    0.048643]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8825,43,1,51,compromise,B,R,2,decoy,5810.0,0.72,0.68,0.55,12,14,17,1,0,2,False,False,True,[0 0 2 0 0 1 1 1 2 2 2 2 2 2 1 1 1 1 1 2 0 1],[1 1 0 0 0 0 1 1 1 1 0 0 0 1 0 1 1 0 0 1 0 0],"[0.208    0.158    0.183    0.2      0.166    0.542    0.258    0.116
+ 0.225    0.208    0.108    0.141    0.517    0.225    0.175    0.275
+ 0.116    0.141    0.1      0.417    0.258    0.141708]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8826,43,1,52,attraction,A,L,1,competitor,7010.0,0.78,0.62,0.76,12,15,11,1,0,2,True,False,False,[0 0 0 2 2 2 0 0 0 0 0 2 2 2 1 1 1 1 1 1 1 1 1],[0 1 1 0 1 1 0 1 1 0 0 1 1 0 0 1 1 1 0 0 1 1 1],"[0.233    0.2      0.266    0.183    0.208    0.1      0.333    0.175
+ 0.183    0.233    0.217    0.116    0.333    0.192    0.225    0.133
+ 0.125    0.417    0.208    0.984    0.116    0.375    0.340046]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8827,43,1,53,filler,,R,2,,5860.0,0.24,0.37,0.76,41,27,13,0,1,2,False,False,False,[1 1 1 1 0 0 0 0 1 2 2 2 2 1 1 1 1 1 2],[1 1 0 0 0 0 1 1 1 1 1 0 0 0 1 0 1 1 1],"[0.525    0.342    0.325    0.175    0.175    0.325    0.15     0.266
+ 0.367    0.458    0.125    0.2      0.166    0.291    0.292    0.191
+ 0.375    0.116    0.266246]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8828,43,1,54,attraction,B,R,2,decoy,8830.0,0.75,0.68,0.66,12,14,13,1,0,2,False,True,False,[1 1 1 0 0 0 2 2 2 0 0 0 1 1 0 0 0 0 2 2 0 0 1 1 1 1 2 2],[0 1 1 0 1 1 0 0 1 1 0 0 1 1 0 0 1 1 1 1 1 1 0 1 1 1 0 1],"[0.208    0.1      0.325    0.425    0.125    0.267    0.217    0.225
+ 0.283    0.225    0.108    1.059    0.141    0.876    0.208    0.225
+ 0.192    0.208    0.392    0.383    0.175    0.1      0.375    0.083
+ 0.208    0.108    0.292    0.023222]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8829,43,1,55,compromise,A,M,1,competitor,3600.0,0.78,0.62,0.85,12,15,10,0,1,2,False,False,False,[0 1 2 1 1 1 0 1 1 2 2 0 0],[1 1 1 1 0 0 0 1 1 1 1 1 1],"[0.116   0.2     0.308   0.175   0.208   0.216   0.325   0.166   0.133
+ 0.166   0.5     0.141   0.20776]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8830,43,1,56,filler,,R,1,,6010.0,0.32,0.48,0.85,31,20,11,1,2,0,True,False,False,[0 0 2 0 1 1 0 1 1 2 2 2 2],[0 0 1 0 1 1 0 1 0 0 0 1 1],"[0.367    1.335    0.383    0.892    0.483    0.3      0.216    0.166
+ 0.484    0.275    0.183    0.108    0.093732]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8831,43,1,57,attraction,A,M,1,competitor,3550.0,0.75,0.65,0.73,13,15,12,0,1,2,True,False,True,[2 2 2 2 1 1 1 0 0 0 2],[1 1 0 0 0 0 1 0 0 1 1],[0.125 0.342 0.083 0.375 0.141 0.183 0.375 0.325 0.125 0.267 0.45 ],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8832,43,1,58,attraction,A,L,0,target,4760.0,0.72,0.65,0.7,12,15,11,0,2,1,True,True,True,[2 2 2 2 1 1 0 1 1 1 2 0 0 0 0 1 0 1 1 0 0],[0 0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 0 0 0 0 1],"[0.191    0.1      0.183    0.267    0.2      0.125    0.267    0.091
+ 0.1      0.208    0.183    0.15     0.158    0.141    0.283    0.425
+ 0.116    0.191    0.141    0.166    0.045846]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8833,43,1,59,compromise,B,R,2,decoy,4680.0,0.75,0.65,0.55,13,14,16,1,0,2,False,True,False,[0 0 2 1 1 1 1 1 0 0 0 0 0 2 2 2 2],[1 1 1 0 0 0 1 1 0 1 1 0 0 1 1 0 0],"[0.183 0.533 0.342 0.325 0.275 0.158 0.192 0.15  0.367 0.166 0.2   0.108
+ 0.116 0.133 0.191 0.166 0.191]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8834,43,1,60,attraction,B,L,1,target,5180.0,0.78,0.62,0.6,13,15,14,2,0,1,False,True,True,[2 0 0 0 0 0 0 2 2 2 1 1 1 1 1 0 0 0 2 2 1 1],[0 1 1 0 0 1 1 0 1 1 1 0 0 1 1 1 1 1 0 0 0 0],"[0.116   0.233   0.2     0.158   0.308   0.15    0.133   0.267   0.267
+ 0.183   0.25    0.125   0.141   0.1     0.325   0.225   0.15    0.125
+ 0.175   0.283   0.116   0.06261]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8835,43,1,61,attraction,A,R,0,target,7160.0,0.75,0.65,0.73,12,15,11,2,1,0,True,False,False,[1 2 2 2 1 1 1 1 0 0 0 1 1 1 1 0 2 2 2 2 2 1 0 0 0 0 0],[1 1 1 1 1 1 0 0 1 1 1 0 0 1 1 0 0 0 1 1 1 1 0 0 1 0 0],"[0.208    0.158    0.125    0.241    0.15     0.183    0.225    0.325
+ 0.241    0.642    0.266    0.091    0.091    0.108    0.175    0.2
+ 0.217    0.383    0.267    0.116    0.133    0.158    0.1      0.091
+ 0.342    0.192    0.319045]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8836,43,1,62,attraction,A,L,1,competitor,5930.0,0.75,0.65,0.73,13,14,12,2,0,1,True,True,True,[2 2 2 2 2 0 1 1 2 0 0 1 0 2 2 0 0 2 1 1 1],[0 1 1 0 0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 0 1],"[0.267    0.091    0.317    0.1      0.267    0.258    0.492    0.317
+ 0.258    0.283    0.175    0.258    0.225    0.266    0.241    0.166
+ 0.133    0.283    0.091    0.225    0.039895]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8837,43,1,63,compromise,A,M,1,competitor,5440.0,0.75,0.68,0.88,12,15,11,2,1,0,False,False,False,[2 2 2 2 2 2 2 2 1 1 0 0 1 0 1 2],[0 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1],"[0.233    0.141    0.158    0.091    0.383    0.917    0.191    0.183
+ 0.408    0.141    0.083    0.533    0.308    0.308    0.158    0.145211]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8838,43,1,64,attraction,B,M,1,target,3330.0,0.78,0.62,0.6,12,15,14,0,1,2,False,False,False,[1 1 0 0 0 1 1 2 2 1 0 2],[1 1 1 0 0 0 0 0 0 1 1 1],[0.125 0.258 0.375 0.183 0.216 0.2   0.141 0.191 0.25  0.258 0.216 0.183],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8839,43,1,65,attraction,B,L,2,decoy,6420.0,0.78,0.62,0.6,12,14,13,1,2,0,True,False,True,[0 0 1 1 1 0 0 2 2 2 2 2 2 2 0 0 0 0 1 2 2],[0 0 1 0 0 1 1 1 0 0 1 1 1 1 1 0 1 1 0 0 0],"[0.141 0.125 0.225 0.083 0.183 0.091 0.15  0.717 0.1   0.342 0.141 0.475
+ 0.684 0.233 0.275 0.283 0.083 0.183 0.3   0.192 0.275]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8840,43,1,66,attraction,A,L,1,competitor,5820.0,0.72,0.65,0.7,12,15,11,1,0,2,False,True,True,[1 1 1 1 1 1 0 0 0 0 1 1 1 2 2 2 2 2],[0 0 0 0 1 1 0 1 1 0 1 0 0 1 1 0 0 1],"[0.108 0.091 0.584 0.592 0.191 0.266 0.308 0.116 0.383 0.2   0.116 0.166
+ 0.383 0.175 0.166 0.175 0.367 0.2  ]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8841,43,1,67,filler,,R,2,,6480.0,0.28,0.67,0.78,35,14,12,1,0,2,True,True,True,[0 0 0 0 0 1 2 2 0 2 1 1 1 2 2 1 2 2 2 2 2],[0 0 0 1 1 1 1 1 1 1 1 0 0 0 0 1 1 0 0 1 1],"[0.2      0.233    0.158    0.325    0.233    0.358    0.242    0.467
+ 0.308    0.442    0.342    0.108    0.267    0.191    0.233    0.342
+ 0.333    0.133    0.4      0.116    0.052125]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8842,43,1,68,attraction,B,R,1,target,4900.0,0.72,0.68,0.66,13,14,13,0,2,1,False,False,True,[1 1 1 1 1 1 0 0 0 2 2 0],[1 1 0 0 1 0 0 1 1 0 1 0],[0.158 0.3   0.158 1.126 0.291 0.266 0.467 0.091 0.433 0.317 0.325 0.116],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8843,43,1,69,attraction,A,M,1,competitor,3450.0,0.72,0.68,0.7,12,14,11,0,1,2,True,True,True,[1 1 1 2 2 0 0 1 2 1 1],[0 0 0 0 0 0 1 1 1 1 0],[0.15  0.275 0.175 0.091 0.183 0.275 0.208 0.559 0.333 0.383 0.108],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8844,43,1,70,attraction,B,M,2,decoy,2230.0,0.78,0.65,0.63,12,15,14,2,0,1,True,True,True,[2 2 0 2 0 1 1],[0 0 0 1 1 1 0],[0.116    0.3      0.091    0.342    0.292    0.358    0.085383],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8845,43,1,71,attraction,A,M,1,competitor,2080.0,0.78,0.62,0.76,13,14,12,2,1,0,False,False,True,[1 1 1 0 0 2 0],[0 1 1 1 1 0 0],[0.25     0.091    0.358    0.225    0.116    0.458    0.076798],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8846,43,1,72,compromise,B,M,2,decoy,2630.0,0.72,0.62,0.55,13,14,17,2,0,1,False,False,False,[2 2 2 2 2 2 0 0 0 2 1],[1 1 0 0 1 1 1 0 0 0 0],"[0.158    0.333    0.258    0.183    0.083    0.183    0.45     0.158
+ 0.125    0.208    0.092488]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8847,43,1,73,compromise,B,M,2,decoy,1990.0,0.75,0.62,0.58,12,15,16,0,2,1,True,False,True,[2 2 2 0 0 0 1],[0 1 1 0 0 0 1],[0.308 0.125 0.342 0.125 0.133 0.333 0.242],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8848,43,1,74,filler,,L,1,,7970.0,0.19,0.56,0.8,52,17,12,2,0,1,False,True,True,[2 2 2 2 0 0 0 0 0 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 1],[0 1 1 0 1 1 1 0 0 1 0 0 1 1 1 1 0 0 0 0 0 0 1 1 0],"[0.492 0.158 0.216 0.417 0.158 0.208 0.116 0.108 0.225 0.15  0.083 0.275
+ 0.216 0.175 0.383 0.116 0.333 0.575 0.292 0.584 0.316 0.358 0.133 0.392
+ 0.208]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8849,43,1,75,compromise,B,R,2,decoy,7130.0,0.72,0.65,0.55,12,15,17,1,0,2,True,True,False,[1 0 2 2 0 2 2 0 0 0 0 0 0 0 0 1 1 2 2 2 2 2 2],[1 1 1 1 0 0 0 1 0 0 0 0 0 1 1 1 1 1 1 0 0 1 1],"[0.275    0.625    0.141    0.275    0.208    0.333    0.267    0.2
+ 0.158    0.642    0.116    0.108    0.258    0.2      0.108    0.291
+ 0.342    0.133    0.258    0.225    0.183    0.1      0.228829]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8850,43,2,76,attraction,A,L,1,competitor,2230.0,0.78,0.68,0.76,13,15,12,2,0,1,True,False,True,[2 1 1 2 0 0 1],[0 1 0 1 0 0 0],[0.083    0.208    0.4      0.317    0.1      0.317    0.124115],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8851,43,2,77,compromise,B,R,2,decoy,1980.0,0.72,0.68,0.55,12,14,17,0,1,2,True,False,True,[1 1 0 0 2 2 1],[1 1 1 1 1 0 1],[0.158    0.308    0.125    0.158    0.2      0.233    0.132283],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8852,43,2,78,attraction,A,R,1,competitor,1860.0,0.72,0.65,0.7,12,15,11,0,2,1,True,True,True,[2 2 0 1],[0 1 1 1],[0.125    0.225    0.45     0.706439],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8853,43,2,79,filler,,R,2,,3120.0,0.24,0.37,0.76,41,27,13,1,0,2,True,False,True,[2 2 2 0 1 0 0 0 0 2 2 2],[0 1 1 1 0 1 1 0 0 1 1 0],"[0.125    0.183    0.233    0.083    0.425    0.225    0.183    0.175
+ 0.208    0.141    0.342    0.043861]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8854,43,2,80,attraction,B,L,1,target,3680.0,0.78,0.65,0.63,13,15,14,1,0,2,False,True,False,[0 2 2 2 2 2 1 1 1 1 1 0 1],[0 0 0 0 1 1 0 1 1 1 0 1 0],"[0.308    0.108    0.183    0.108    0.116    0.467    0.425    0.091
+ 0.175    0.116    0.283    0.242    0.183297]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8855,43,2,81,compromise,A,M,1,competitor,2030.0,0.72,0.68,0.82,13,15,10,2,1,0,False,False,False,[2 2 1 0 0 1 1],[1 1 1 1 1 1 1],[0.108    0.216    0.267    0.216    0.225    0.508    0.182953],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8856,43,2,82,attraction,A,R,1,competitor,2130.0,0.78,0.62,0.76,12,15,11,1,2,0,True,True,True,[0 0 2 1 1 1],[0 0 1 1 0 0],[0.141    0.2      0.367    0.542    0.133    0.099241],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8857,43,2,83,attraction,B,L,2,decoy,2630.0,0.72,0.62,0.6,13,15,14,2,1,0,False,False,False,[1 0 0 0 0 1 2 2 2 2],[1 1 0 0 1 1 1 1 0 0],"[0.2      0.275    0.208    0.125    0.208    0.191    0.225    0.208
+ 0.166    0.131537]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8858,43,2,84,compromise,A,L,1,competitor,3350.0,0.78,0.68,0.88,13,15,10,1,0,2,False,False,True,[1 1 0 2 2 2 2 1 0],[1 1 1 0 0 1 1 0 1],"[0.108    0.784    0.141    0.091    0.308    0.1      0.191    0.267
+ 0.308064]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8859,43,2,85,compromise,A,M,1,competitor,1950.0,0.72,0.68,0.82,13,15,10,2,1,0,False,True,False,[1 1 1 2 2 2 0],[0 0 1 0 1 1 1],[0.225 0.25  0.275 0.183 0.091 0.225 0.358],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8860,43,2,86,attraction,A,L,1,competitor,2630.0,0.75,0.65,0.73,12,15,11,2,0,1,False,True,True,[2 2 1 2 2 0 0 0 1],[0 1 1 0 0 1 1 0 1],"[0.233    0.116    0.433    0.125    0.125    0.25     0.133    0.425
+ 0.296916]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8861,43,2,87,compromise,B,M,2,decoy,1470.0,0.72,0.62,0.55,13,14,17,2,0,1,False,False,False,[1 2 2 0],[1 1 1 1],[0.267    0.225    0.225    0.370798],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8862,43,2,88,compromise,A,L,1,competitor,3020.0,0.75,0.65,0.82,13,15,10,1,0,2,True,True,False,[0 0 0 0 0 1 1 1 2 2 2 2],[0 0 1 0 0 0 1 1 0 1 1 0],"[0.166   0.183   0.442   0.125   0.241   0.267   0.083   0.2     0.166
+ 0.1     0.233   0.19236]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8863,43,2,89,attraction,A,L,1,competitor,4270.0,0.72,0.65,0.7,13,15,12,2,0,1,False,True,True,[1 1 1 2 2 1 1 1 2 2 2 0 0 0 1],[0 0 0 0 0 0 1 1 1 0 0 1 0 0 1],"[0.225    0.367    0.191    0.25     0.158    0.317    0.15     0.233
+ 0.217    0.116    0.15     0.141    0.216    0.2      0.205814]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8864,43,2,90,attraction,A,R,1,competitor,2730.0,0.72,0.68,0.7,12,14,11,0,2,1,False,False,False,[2 0 2 2 2 0 2 1 1],[1 1 1 1 1 1 1 1 1],"[0.275    0.367    0.091    0.383    0.158    0.367    0.166    0.258
+ 0.281452]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8865,43,2,91,attraction,A,M,1,competitor,1660.0,0.75,0.65,0.73,13,15,12,2,1,0,True,False,False,[1 0 0 2 2 2 1],[1 0 0 1 0 0 1],[0.4      0.1      0.2      0.275    0.158    0.183    0.103136],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8866,43,2,92,attraction,B,L,2,decoy,2060.0,0.72,0.68,0.66,13,14,13,1,2,0,True,True,False,[1 1 1 2 2 2],[0 0 1 0 0 1],[0.175    0.183    0.225    0.133    0.442    0.067802],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8867,43,2,93,attraction,B,R,1,target,3430.0,0.75,0.68,0.66,12,14,13,0,2,1,False,False,True,[2 2 1 1 1 1 1 2 0 0],[0 1 1 1 1 0 1 0 1 0],"[0.642    0.325    0.116    0.091    0.2      0.467    0.175    0.225
+ 0.534    0.182477]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8868,43,2,94,compromise,A,M,1,competitor,2630.0,0.78,0.68,0.85,12,15,10,2,1,0,False,True,False,[1 1 1 0 0 2 2 0 0 1],[0 1 1 1 1 1 1 1 1 1],"[0.317    0.375    0.1      0.158    0.15     0.1      0.417    0.191
+ 0.216    0.039652]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8869,43,2,95,filler,,L,1,,5870.0,0.27,0.47,0.86,37,21,11,2,0,1,True,False,True,[2 2 2 1 0 0 0 0 0 0 1 2 1 1 1 1 1 1],[0 1 1 0 0 0 0 1 1 0 1 0 1 1 0 0 1 1],"[0.317 0.183 0.233 0.275 0.083 0.358 0.091 0.141 0.35  0.467 0.467 0.442
+ 0.133 0.125 0.091 0.467 0.166 0.091]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8870,43,2,96,attraction,B,R,1,target,4880.0,0.72,0.65,0.63,13,14,13,1,2,0,False,True,True,[0 0 2 2 2 1 1 1 1 1 2 2 1 1],[0 0 1 0 0 0 0 1 1 0 0 1 0 0],"[0.2      0.233    0.3      0.166    0.166    0.433    0.308    0.267
+ 0.166    0.2      0.383    0.283    0.5      0.061908]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8871,43,2,97,filler,,M,1,,7610.0,0.16,0.46,0.87,62,21,11,2,1,0,False,True,False,[0 2 2 2 2 2 2 2 1 1 0 0 0 1 1 0 0 0 0 2 2 2 1 1],[1 1 0 0 0 0 1 1 1 1 1 1 1 0 0 1 0 0 1 1 0 0 1 0],"[0.283   1.001   0.742   0.141   0.091   0.191   0.116   0.133   0.125
+ 0.258   0.108   0.1     0.15    0.158   0.425   0.275   0.333   0.2
+ 0.342   0.358   0.125   0.241   0.225   0.21762]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8872,43,2,98,attraction,B,M,1,target,5810.0,0.78,0.62,0.6,12,15,14,2,1,0,True,True,True,[1 1 2 2 2 2 1 0 2 2 1 1 1 0 0 0 0 1 1 1],[0 1 1 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 1 1],"[0.225    0.667    0.45     0.1      0.083    0.116    0.35     0.358
+ 0.1      0.141    0.283    0.241    0.166    0.484    0.108    0.183
+ 0.242    0.475    0.167    0.067204]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8873,43,2,99,compromise,B,M,2,decoy,1880.0,0.72,0.68,0.58,12,15,17,2,0,1,False,False,True,[2 2 0 0 1 1],[0 0 1 1 0 0],[0.166   0.216   0.158   0.2     0.208   0.46099],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8874,43,2,100,attraction,B,R,1,target,2760.0,0.72,0.62,0.6,13,14,13,1,2,0,False,False,True,[0 0 0 2 2 2 1 1 1 2],[1 1 0 1 0 0 1 0 0 1],[0.158 0.191 0.342 0.166 0.258 0.116 0.358 0.225 0.083 0.342],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8875,43,2,101,attraction,B,M,1,target,2140.0,0.75,0.62,0.6,12,15,14,0,1,2,False,True,True,[1 1 1 1 2 2 1 1],[0 0 1 1 1 0 0 1],[0.191 0.108 0.25  0.091 0.275 0.183 0.4   0.2  ],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8876,43,2,102,attraction,B,R,1,target,3310.0,0.75,0.65,0.63,12,14,13,1,2,0,False,True,False,[0 0 0 0 1 2 2 2 2 2],[1 1 0 0 0 1 1 0 0 1],[0.141 0.692 0.133 0.3   0.292 0.183 0.208 0.241 0.208 0.2  ],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8877,43,2,103,compromise,A,R,1,competitor,2240.0,0.78,0.62,0.85,13,14,10,0,2,1,False,False,False,[2 1 1 0 2 2 2 1 1 1],[1 1 1 1 1 1 1 1 1 0],"[0.158    0.133    0.342    0.5      0.141    0.125    0.175    0.108
+ 0.125    0.048022]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8878,43,2,104,attraction,B,L,1,target,2170.0,0.78,0.65,0.63,12,15,14,2,0,1,False,True,False,[0 2 2 1 1 0 0 2 1],[1 1 1 0 0 0 0 0 1],"[0.166    0.267    0.083    0.25     0.25     0.158    0.258    0.158
+ 0.206199]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8879,43,2,105,filler,,M,1,,5400.0,0.19,0.59,0.81,52,16,12,0,1,2,False,False,False,[1 0 2 2 2 2 1 1 1 1 0 0 0 0 0 1 1 2],[1 1 1 1 0 0 0 0 1 1 1 0 0 1 1 1 1 1],"[0.408    0.317    0.158    0.283    0.292    0.166    0.1      0.258
+ 0.191    0.258    0.367    0.091    0.483    0.191    0.383    0.4
+ 0.267    0.173001]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8880,43,2,106,compromise,B,R,2,decoy,6870.0,0.75,0.62,0.58,12,15,16,1,0,2,True,False,False,[0 2 2 2 2 0 1 1 1 1 2 2 0 0 2 2 1 1 1 1 2 2 2],[0 1 1 0 0 1 1 1 0 0 1 1 0 1 0 0 0 1 1 1 1 1 0],"[1.426    0.108    0.367    0.083    0.225    0.183    0.141    0.383
+ 0.241    0.1      0.133    0.116    0.358    0.175    0.116    0.175
+ 0.275    0.116    0.141    0.116    0.275    0.458    0.131238]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8881,43,2,107,compromise,B,M,2,decoy,2310.0,0.78,0.62,0.55,13,14,17,0,2,1,True,True,True,[2 2 2 1 1 1 2 0 0],[0 1 1 1 0 0 0 0 0],[0.2   0.083 0.25  0.25  0.166 0.116 0.25  0.091 0.467],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8882,43,2,108,compromise,A,M,1,competitor,1710.0,0.78,0.65,0.82,13,14,11,0,1,2,False,True,False,[1 1 2 2 2 0],[0 1 1 1 1 1],[0.291    0.325    0.091    0.1      0.141    0.376183],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8883,43,2,109,compromise,A,M,1,competitor,1840.0,0.78,0.65,0.82,13,14,10,2,1,0,False,False,True,[1 0 0 2 2 0 0],[1 1 1 0 0 0 0],[0.292    0.183    0.133    0.192    0.133    0.216    0.129198],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8884,43,2,110,filler,,M,1,,1810.0,0.29,0.42,0.72,34,23,13,0,1,2,True,False,True,[2 2 2 2 0 1],[0 0 1 1 1 1],[0.183    0.091    0.166    0.125    0.342    0.194258],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8885,43,2,111,attraction,A,R,1,competitor,3180.0,0.78,0.62,0.76,13,14,12,0,2,1,False,True,True,[2 2 2 2 2 1 1 1 1 1 0 0 0],[0 1 1 0 0 0 0 0 1 1 0 1 1],"[0.216    0.15     0.233    0.166    0.091    0.108    0.241    0.15
+ 0.133    0.158    0.383    0.083    0.442928]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8886,43,2,112,attraction,B,R,1,target,4380.0,0.72,0.62,0.6,13,15,14,0,2,1,False,True,True,[2 1 1 1 1 1 1 1 2 2 2 1 1 0 0 0 0],[0 1 1 0 0 1 1 0 1 0 0 0 0 1 1 0 0],"[0.267    0.316    0.166    0.091    0.242    0.1      0.358    0.241
+ 0.433    0.183    0.158    0.116    0.233    0.108    0.358    0.116
+ 0.265862]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8887,43,2,113,attraction,B,L,1,target,5740.0,0.78,0.62,0.6,13,15,14,2,0,1,True,True,True,[2 1 1 1 2 2 2 2 0 0 0 2 1 1 1 2 2 2 1 1],[0 0 1 1 1 0 0 0 0 0 1 1 1 0 0 0 1 1 1 0],"[0.15     0.291    0.167    0.208    0.525    0.133    0.15     0.592
+ 0.125    0.267    0.4      0.242    0.333    0.116    0.166    0.333
+ 0.15     0.133    0.183    0.103879]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8888,43,2,114,compromise,B,R,1,target,3320.0,0.72,0.65,0.52,13,15,16,0,2,1,True,True,True,[2 2 2 1 1 1 2 2 0 0 1 1],[0 0 1 1 0 0 0 0 0 1 1 1],"[0.183    0.233    0.709    0.367    0.191    0.083    0.141    0.125
+ 0.216    0.2      0.15     0.125283]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8889,43,2,115,filler,,L,1,,3030.0,0.32,0.6,0.78,31,16,12,1,0,2,True,False,False,[0 0 2 2 1 1 1 1 0 2],[0 0 1 1 1 0 1 1 0 1],"[0.1      0.275    0.133    0.308    0.375    0.534    0.083    0.283
+ 0.325    0.110357]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8890,43,2,116,compromise,A,M,1,competitor,1040.0,0.75,0.62,0.88,12,15,11,0,1,2,False,False,False,[2],[1],[0.233],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8891,43,2,117,attraction,A,L,1,competitor,1830.0,0.72,0.65,0.7,12,15,11,2,0,1,False,False,False,[2 2 0 0 1 1 1 2],[1 1 1 1 1 0 0 0],[0.1      0.317    0.116    0.141    0.392    0.192    0.158    0.131543],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8892,43,2,118,compromise,B,R,2,decoy,10280.0,0.72,0.62,0.58,12,14,17,0,1,2,True,False,False,[0 0 1 1 2 2 1 0 0 0 1 2 2 1 1 2 2 0 0 2 2 1],[0 0 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 1 0 0 0],"[0.1      2.278    0.358    0.083    0.166    0.242    0.425    0.166
+ 0.951    0.475    0.492    0.242    0.3      0.108    1.368    0.083
+ 0.283    0.291    0.25     0.208    0.167    0.095158]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8893,43,2,119,compromise,A,L,1,competitor,4430.0,0.75,0.68,0.88,12,15,11,1,0,2,False,True,True,[0 0 0 1 1 0 2 0 0 2 1],[1 1 1 0 0 1 0 0 0 1 1],[0.116 0.133 0.55  0.25  1.143 0.292 0.283 0.133 0.158 0.4   0.3  ],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8894,43,2,120,compromise,B,R,2,decoy,6530.0,0.75,0.65,0.55,13,14,16,0,1,2,True,False,False,[1 1 0 0 0 1 1 2 1 1 2 2 1 1 2 2 2],[1 0 1 0 0 1 1 1 0 0 0 1 1 0 0 1 1],"[0.609   0.233   0.525   0.158   0.392   0.133   0.216   0.15    0.216
+ 0.15    0.158   0.191   1.017   0.275   0.3     0.2     0.52768]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8895,43,2,121,compromise,B,L,2,decoy,4260.0,0.72,0.65,0.55,12,15,17,1,2,0,True,True,False,[0 2 2 2 2 2 2 0 1 1 1 2 2 2],[0 0 1 1 1 0 0 1 1 0 0 1 0 0],"[0.25     0.15     0.158    0.158    0.158    0.325    0.433    0.125
+ 0.342    0.2      0.116    0.442    0.216    0.462746]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8896,43,2,122,compromise,B,L,2,decoy,3730.0,0.75,0.68,0.55,12,14,16,2,1,0,True,True,False,[1 1 1 1 2 2 2 0 0 0 0 2],[0 0 1 1 0 1 1 0 0 1 1 0],[0.141 0.158 0.241 0.183 0.834 0.133 0.2   0.15  0.317 0.208 0.275 0.116],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8897,43,2,123,compromise,A,L,1,competitor,2540.0,0.78,0.62,0.85,12,15,10,1,0,2,True,False,False,[0 1 1 0 0 0 2 1 1 1 1],[0 1 0 1 0 0 1 0 1 1 1],"[0.166    0.158    0.291    0.192    0.141    0.166    0.283    0.217
+ 0.091    0.191    0.037096]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8898,43,2,124,attraction,A,R,1,competitor,2050.0,0.78,0.68,0.76,12,15,11,0,2,1,False,False,True,[2 0 0 2 1 1 1 1],[0 1 1 0 0 0 1 1],[0.283    0.233    0.166    0.3      0.191    0.233    0.133    0.091854],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8899,43,2,125,attraction,B,L,1,target,3830.0,0.78,0.62,0.6,12,14,13,1,0,2,True,True,False,[0 0 0 2 2 0 1 2 2 2 1 1 1 1],[0 0 0 1 1 1 1 1 0 0 1 0 0 1],"[0.133    0.3      0.108    0.1      0.275    0.367    0.383    0.592
+ 0.191    0.15     0.166    0.217    0.183    0.054187]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8900,43,2,126,filler,,M,2,,9440.0,0.31,0.38,0.85,32,26,11,0,2,1,False,False,False,[0 0 2 1 1 1 0 0 0 0 1 2 2 2 2 1 1 0 2 2 2 2 2 2 0],[1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 1],"[0.15     0.225    0.342    0.659    1.794    0.241    0.125    0.333
+ 0.166    0.2      0.091    0.392    0.367    0.225    0.333    0.191
+ 0.3      0.25     0.216    0.216    0.125    0.358    0.166    0.417
+ 0.055671]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8901,43,2,127,compromise,A,M,1,competitor,9490.0,0.78,0.68,0.88,12,15,11,0,1,2,True,True,False,[1 1 0 0 0 0 0 1 2 2 2 1 1 1 1 2 2 0 0 0 0 1 1 1 2 2 2 2 2 2 1 1 1],[0 0 0 0 0 1 1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 0 0 0 1 0 0],"[0.242    0.091    0.1      0.25     0.167    0.191    0.225    0.684
+ 0.191    0.275    0.15     0.15     0.15     0.141    0.475    0.133
+ 0.258    0.15     0.116    0.175    0.158    0.417    0.208    1.568
+ 0.125    0.091    0.308    0.192    0.108    0.116    0.35     0.175
+ 0.022037]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8902,43,2,128,attraction,A,R,1,competitor,5050.0,0.75,0.68,0.73,12,14,11,1,2,0,True,True,True,[0 0 0 1 1 2 2 1 1 1 0],[0 0 1 1 1 1 1 0 0 0 0],"[1.493    1.168    0.392    0.15     0.258    0.375    0.125    0.108
+ 0.1      0.125    0.156194]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8903,43,2,129,filler,,L,1,,3410.0,0.19,0.56,0.8,52,17,12,1,0,2,False,True,True,[0 0 0 0 2 1 1 1 1 1 1 1 2],[1 1 0 0 1 1 1 0 0 0 1 1 0],"[0.116 0.2   0.133 0.759 0.4   0.225 0.158 0.091 0.2   0.141 0.158 0.216
+ 0.166]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8904,43,2,130,attraction,A,M,1,competitor,2370.0,0.75,0.65,0.73,13,15,12,2,1,0,False,False,True,[1 2 1 1 1 0 0 0],[1 0 1 0 0 0 1 1],[0.258    0.383    0.367    0.166    0.175    0.525    0.083    0.048311],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8905,43,2,131,compromise,B,R,2,decoy,4130.0,0.75,0.62,0.58,13,14,17,0,1,2,True,True,True,[1 1 0 0 0 0 1 1 1 1 2 2 2 1 2 1 1 2],[0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 1],"[0.125    0.175    0.166    0.133    0.133    0.216    0.367    0.1
+ 0.125    0.116    0.175    0.116    0.475    0.3      0.2      0.125
+ 0.358    0.028491]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8906,43,2,132,attraction,A,M,1,competitor,3140.0,0.75,0.65,0.73,13,14,12,0,1,2,False,False,True,[2 2 2 2 1 0 0 1 1 1],[0 0 1 1 0 0 1 1 1 0],"[0.283    0.217    0.133    0.175    0.191    0.325    0.342    0.15
+ 0.267    0.036797]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8907,43,2,133,compromise,B,L,2,decoy,2460.0,0.78,0.65,0.52,13,14,16,2,1,0,False,False,False,[1 0 2 2 2 2 2 2],[1 1 1 1 0 0 1 1],[0.266    0.275    0.275    0.208    0.125    0.317    0.116    0.326463],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8908,43,2,134,filler,,R,1,,5780.0,0.27,0.61,0.89,37,16,11,1,2,0,True,False,False,[0 2 2 2 2 2 0 0 2 2 2 2 0 0 1 1 1 1 1 1 0 2],[0 1 1 0 0 1 0 0 0 0 1 1 0 0 1 1 0 0 1 1 0 1],"[0.35  0.217 0.15  0.116 0.15  0.35  0.133 0.392 0.158 0.467 0.083 0.25
+ 0.183 0.1   0.2   0.325 0.175 0.375 0.091 0.233 0.166 0.158]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8909,43,2,135,compromise,A,L,1,competitor,2610.0,0.78,0.68,0.82,13,15,11,2,0,1,True,True,True,[2 2 0 0 0 2 1 1 1 1 1],[0 0 0 0 1 1 1 1 0 0 0],"[0.15     0.158    0.283    0.1      0.392    0.275    0.258    0.15
+ 0.108    0.225    0.041456]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8910,43,2,136,attraction,A,M,1,competitor,4970.0,0.72,0.62,0.7,13,15,12,2,1,0,False,True,True,[2 2 1 1 1 1 1 0 1 2 2 1 1 0 1 1],[0 0 0 0 0 1 1 0 1 0 0 1 1 0 0 0],"[0.216    0.141    0.1      0.208    0.225    0.233    0.233    0.567
+ 0.258    0.442    0.083    0.125    0.525    0.241    0.125    0.287524]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8911,43,2,137,attraction,B,M,1,target,2370.0,0.78,0.65,0.63,13,15,14,0,1,2,True,False,False,[1 2 2 1 1 1 0 0],[1 1 0 0 1 1 0 0],[0.567    0.492    0.225    0.25     0.091    0.108    0.133    0.128316],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8912,43,2,138,filler,,M,1,,6170.0,0.28,0.67,0.78,35,14,12,0,1,2,False,False,False,[1 1 1 1 1 1 2 2 2 2 0 1 1 1 1 1 2 1 1 1 0],[1 1 0 0 0 0 0 0 1 1 1 0 0 1 1 1 0 0 1 1 1],"[0.133    0.191    0.141    0.233    0.25     0.45     0.216    0.183
+ 0.216    0.283    0.542    0.099    0.225    0.266    0.091    0.2
+ 0.267    0.392    0.116    0.533    0.052387]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8913,43,2,139,attraction,A,M,1,competitor,9510.0,0.72,0.65,0.7,12,14,11,0,1,2,False,True,False,[1 1 1 1 1 0 0 0 0 1 2 2 2 2 2 2 1 1 2 2 2 1 1 1 1 1 0],[0 0 1 1 0 0 1 1 1 1 0 1 1 1 1 1 0 0 1 1 1 0 1 1 0 0 0],"[0.2      0.183    0.275    0.208    0.358    0.325    0.116    0.433
+ 0.392    0.141    0.292    0.108    0.275    0.183    1.093    0.191
+ 0.358    0.851    0.15     0.325    0.484    0.141    0.183    0.308
+ 0.241    0.191    0.063746]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8914,43,2,140,compromise,B,M,2,decoy,1100.0,0.72,0.62,0.55,13,14,17,2,0,1,False,False,False,[2 2 2],[1 0 0],[0.308    0.283    0.168273],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8915,43,2,141,compromise,B,R,1,target,7180.0,0.72,0.68,0.52,13,15,17,1,2,0,True,False,True,[0 1 0 1 1 1 2 2 2 2 1 1 1 1 2 2 2 2 2 1 1 1 1 2 2],[0 1 1 0 1 1 1 0 0 0 0 0 1 1 0 1 0 0 0 1 1 0 0 0 0],"[0.158    0.233    0.266    0.258    0.158    0.091    0.292    0.108
+ 0.15     0.292    0.191    0.317    0.108    0.267    0.175    0.25
+ 0.083    0.375    0.592    0.191    0.225    0.083    0.183    0.125
+ 0.319736]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8916,43,2,142,attraction,A,M,1,competitor,4010.0,0.75,0.65,0.73,13,14,12,2,1,0,False,True,False,[1 1 1 1 1 2 2 0 0 1 1 1 0 0 2],[0 0 0 1 1 1 1 1 1 1 0 0 0 0 0],"[0.141    0.25     0.567    0.1      0.283    0.2      0.2      0.083
+ 0.325    0.158    0.275    0.216    0.217    0.167    0.188293]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8917,43,2,143,compromise,A,R,0,target,5710.0,0.75,0.62,0.88,13,15,10,2,1,0,False,True,True,[1 1 0 1 0 0 0 0 0 0 2 1 1 1 0 1 0 0 0],[0 1 0 0 1 1 0 0 1 1 0 1 1 0 1 0 0 0 1],"[0.317    0.275    0.141    0.283    0.242    0.208    0.317    0.141
+ 0.125    0.208    0.45     0.208    0.475    0.083    0.241    0.408
+ 0.141    0.233    0.047869]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8918,43,2,144,compromise,A,L,1,competitor,7930.0,0.72,0.65,0.82,13,15,10,2,0,1,False,False,True,[2 2 0 0 1 1 1 1 2 2 2 0 0 0 1 1 1 1 0 2 2 0 1 1 1 1 1],[0 1 0 0 1 1 1 1 0 0 0 1 1 1 0 0 1 1 1 0 0 1 0 1 1 1 0],"[0.358   0.584   0.216   0.692   0.083   0.141   0.133   0.258   0.45
+ 0.792   0.083   0.133   0.1     0.292   0.2     0.225   0.116   0.233
+ 0.15    0.15    0.225   0.225   0.141   0.083   0.325   0.083   0.27334]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8919,43,2,145,compromise,B,R,2,decoy,4590.0,0.72,0.68,0.58,13,14,17,1,0,2,False,False,True,[1 1 1 1 1 1 1 0 2 2 2 2 2 2 2 2 1 1 1 1 1],[1 1 0 0 0 1 1 1 0 0 0 1 1 0 0 0 1 1 1 0 0],"[0.116 0.342 0.108 0.133 0.166 0.141 0.158 0.292 0.133 0.091 0.158 0.208
+ 0.241 0.158 0.15  0.283 0.083 0.2   0.191 0.25  0.116]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8920,43,2,146,attraction,B,R,0,competitor,7910.0,0.78,0.68,0.66,12,14,13,2,1,0,False,True,True,[0 0 0 1 1 1 2 2 2 2 2 2 0 0 1 1 1 1 1 1 2 2 2 2 1 0 0 0 0 0],[1 0 0 1 0 0 0 1 1 1 0 0 1 1 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0 0],"[0.292    0.192    0.417    0.283    0.208    0.15     0.3      0.108
+ 0.191    0.133    0.2      0.2      0.316    0.216    0.1      0.133
+ 0.166    0.55     0.191    0.15     0.125    0.15     0.133    0.216
+ 0.192    0.1      0.358    0.1      0.141    0.411714]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8921,43,2,147,attraction,B,L,0,competitor,5730.0,0.72,0.62,0.6,12,15,14,0,2,1,True,False,True,[2 2 2 2 2 2 2 2 2 2 0 0 0 2 0 0 0 0 2 1 1],[0 0 1 1 1 1 0 0 1 1 0 0 0 1 1 1 0 0 0 1 1],"[0.2     0.291   0.333   0.759   0.267   0.208   0.133   0.241   0.417
+ 0.2     0.116   0.241   0.1     0.25    0.091   0.208   0.208   0.083
+ 0.233   0.141   0.05607]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8922,43,2,148,compromise,B,L,2,decoy,4490.0,0.72,0.65,0.58,12,15,16,2,1,0,False,True,True,[1 1 1 1 1 1 0 0 0 2 2 2 2 2],[0 1 1 0 1 1 0 1 1 0 1 1 0 0],"[0.4     0.183   0.191   0.275   0.216   0.1     0.375   0.141   0.183
+ 0.141   0.25    0.35    0.083   0.64663]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8923,43,2,149,compromise,A,M,1,competitor,3650.0,0.75,0.65,0.85,13,15,11,2,1,0,True,True,False,[1 1 1 1 1 0 0 0 0 0 0 1 1 2 2 0],[0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 0],"[0.108    0.083    0.158    0.3      0.233    0.091    0.091    0.183
+ 0.1      0.108    0.559    0.1      0.35     0.083    0.383    0.031685]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8924,43,2,150,filler,,R,1,,4100.0,0.32,0.48,0.85,31,20,11,0,2,1,True,True,True,[2 2 2 0 1 1 1 1 1 1 1 1],[0 0 1 1 1 0 0 0 1 1 1 0],"[0.191    0.158    0.266    0.275    0.317    0.108    0.208    0.5
+ 0.083    1.101    0.141    0.102122]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8925,43,3,151,attraction,A,M,1,competitor,3040.0,0.78,0.68,0.76,13,15,12,2,1,0,True,True,True,[1 1 0 0 0 1 2 2 2 2 1 1],[0 0 0 1 1 1 1 1 0 0 0 0],"[0.208    0.191    0.233    0.1      0.275    0.3      0.116    0.233
+ 0.125    0.116    0.308    0.203992]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8926,43,3,152,compromise,A,R,1,competitor,1820.0,0.78,0.68,0.82,13,15,10,1,2,0,True,True,True,[0 2 2 1 1 1 1 0],[1 1 1 1 1 0 0 0],[0.225    0.233    0.1      0.233    0.2      0.141    0.1      0.245804],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8927,43,3,153,compromise,B,R,2,decoy,3280.0,0.72,0.68,0.55,12,14,19,1,0,2,True,True,True,[0 1 2 2 2 1 2 2 2],[1 1 1 0 0 1 1 1 0],"[0.217    0.333    0.317    0.158    0.183    0.208    0.108    0.141
+ 0.075349]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8928,43,3,154,compromise,A,R,1,competitor,3030.0,0.78,0.68,0.88,12,15,10,1,2,0,True,True,True,[0 1 1 1 1 1 1 2 2 0],[0 0 0 1 1 0 1 1 1 1],"[0.192    0.191    0.417    0.1      0.308    0.292    0.217    0.083
+ 0.342    0.282381]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8929,43,3,155,compromise,B,R,2,decoy,4830.0,0.72,0.68,0.52,13,15,19,0,1,2,False,True,True,[1 1 1 1 2 2 2 2 2 0 0 0 0 1 1],[0 0 0 1 1 1 0 0 0 1 1 0 0 0 0],"[0.166 0.166 0.2   0.358 0.317 0.1   0.175 0.325 0.884 0.175 0.216 0.2
+ 0.208 0.125 0.483]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8930,43,3,156,compromise,B,L,1,target,5570.0,0.72,0.65,0.52,13,15,18,2,0,1,True,True,True,[0 0 1 1 1 1 2 2 2 1 1 2 2 0 0 1 1],[0 0 0 0 1 1 1 0 0 0 0 0 1 1 0 0 1],"[0.116    0.408    0.166    0.425    0.108    0.458    0.442    0.083
+ 0.183    0.091    0.3      0.225    0.308    0.4      0.317    0.325
+ 0.423542]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8931,43,3,157,compromise,B,L,0,competitor,6600.0,0.75,0.65,0.55,13,14,18,0,2,1,False,True,False,[2 2 2 2 2 1 1 0 0 1 1 1 1 1 0 0 0 0 1 1 1 0 0],[1 1 0 1 1 1 1 1 1 0 1 1 0 0 1 1 0 0 1 0 0 1 1],"[0.166    0.183    0.475    0.166    0.091    0.083    0.25     0.125
+ 0.267    0.592    0.116    0.392    0.133    0.242    0.091    0.567
+ 0.108    0.317    0.258    0.083    0.158    0.175    0.185249]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8932,43,3,158,attraction,B,L,1,target,4470.0,0.72,0.65,0.63,13,14,13,2,0,1,False,False,True,[1 1 1 1 1 2 2 2 2 0 0 1 1 1 1 1],[1 0 0 1 1 1 1 0 0 1 1 0 1 0 0 1],"[0.258    0.483    0.091    0.267    0.175    0.158    0.308    0.183
+ 0.158    0.258    0.191    0.175    0.283    0.091    0.166    0.405305]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8933,43,3,159,attraction,A,M,1,competitor,6620.0,0.78,0.62,0.76,13,14,12,0,1,2,False,True,True,[1 1 1 1 1 1 1 1 2 2 1 0 0 0 0 1 1 2],[0 0 1 1 0 0 1 1 0 0 0 1 1 0 0 1 1 1],"[0.183 0.192 0.291 1.335 0.2   0.667 0.225 0.5   0.1   0.175 0.333 0.233
+ 0.375 0.15  0.241 0.083 0.233 0.342]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8934,43,3,160,attraction,A,R,1,competitor,1450.0,0.72,0.68,0.7,12,14,11,0,2,1,False,False,True,[2 2 0 0 1 1],[0 0 1 1 0 0],[0.141 0.183 0.091 0.216 0.267 0.133],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8935,43,3,161,attraction,A,L,1,competitor,2190.0,0.72,0.62,0.7,13,15,12,2,0,1,True,False,False,[2 2 0 0 1 1 1 1],[1 0 1 0 1 1 0 0],[0.266 0.283 0.191 0.233 0.191 0.208 0.183 0.217],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8936,43,3,162,compromise,A,R,1,competitor,2270.0,0.72,0.68,0.82,13,15,9,1,2,0,False,True,True,[0 2 2 2 0 1 1 1 1 1 2],[1 0 1 1 0 1 0 0 1 1 0],"[0.133    0.217    0.116    0.216    0.283    0.15     0.167    0.166
+ 0.1      0.191    0.071371]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8937,43,3,163,filler,,R,0,,2990.0,0.16,0.46,0.87,62,21,11,2,1,0,False,True,True,[1 0 0 1 2 2 1 1 0 0 0],[0 0 0 1 1 0 0 0 1 1 0],"[0.191   0.216   0.116   0.517   0.191   0.225   0.258   0.125   0.108
+ 0.375   0.22005]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8938,43,3,164,compromise,B,M,1,target,6840.0,0.75,0.62,0.58,12,15,18,2,1,0,True,True,True,[1 0 0 0 0 0 0 1 1 0 0 0 0 1 1 1 1 2 2 2 2 2 1 1],[1 0 0 0 0 1 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0 0 0 1],"[0.141    0.333    0.1      0.275    0.15     0.508    0.183    0.375
+ 0.342    0.283    0.141    0.15     0.208    0.2      0.158    0.183
+ 0.442    0.233    0.125    0.492    0.083    0.241    0.283    0.058134]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8939,43,3,165,attraction,A,M,1,competitor,5620.0,0.75,0.65,0.73,13,15,12,0,1,2,False,False,True,[1 1 1 1 1 1 0 1 1 1 1 0 2 2 1],[1 1 0 0 1 1 1 0 0 1 1 1 1 0 0],"[0.392 0.266 0.233 0.433 0.116 0.333 0.166 0.258 0.842 0.1   0.125 0.392
+ 0.45  0.233 0.258]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8940,43,3,166,compromise,B,R,2,decoy,3130.0,0.78,0.62,0.55,13,14,19,0,1,2,False,False,False,[0 2 2 2 2 1 1 1 1 2 2],[1 1 1 0 0 0 0 1 1 1 1],"[0.316    0.15     0.383    0.216    0.091    0.183    0.167    0.116
+ 0.125    0.091    0.353358]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8941,43,3,167,attraction,B,R,1,target,6210.0,0.72,0.62,0.6,13,15,14,1,2,0,True,True,True,[0 0 1 1 1 0 2 2 2 2 2 0 1 1 1 1 1 1 1 1 1 0],[0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1 1 1],"[0.275 0.433 0.342 0.1   0.166 0.175 0.1   0.15  0.383 0.116 0.517 0.342
+ 0.425 0.2   0.333 0.241 0.275 0.091 0.091 0.241 0.141 0.183]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8942,43,3,168,compromise,B,M,2,decoy,2850.0,0.72,0.65,0.58,12,15,18,0,2,1,False,True,True,[2 2 2 1 1 1 1 2 2 0 0],[0 0 1 1 1 0 0 0 1 0 1],"[0.141    0.116    0.375    0.166    0.208    0.192    0.091    0.425
+ 0.542    0.166    0.055885]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8943,43,3,169,compromise,A,L,1,competitor,2040.0,0.75,0.65,0.85,13,15,10,1,0,2,True,False,True,[0 1 1 2 2 2 1],[0 1 0 1 1 0 1],[0.233    0.166    0.358    0.225    0.15     0.183    0.347667],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8944,43,3,170,filler,,R,2,,2590.0,0.29,0.42,0.72,34,23,13,0,1,2,True,True,False,[0 0 1 2 2 2 2 2 2 1],[1 1 1 0 1 1 1 0 0 1],[0.133 0.225 0.3   0.283 0.083 0.183 0.175 0.1   0.35  0.216],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8945,43,3,171,attraction,A,L,1,competitor,1830.0,0.75,0.65,0.73,13,15,12,2,0,1,False,False,True,[2 1 1 1 1 1],[0 0 0 1 1 1],[0.383   0.233   0.158   0.091   0.116   0.15149],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8946,43,3,172,filler,,L,1,,2810.0,0.32,0.6,0.78,31,16,12,1,0,2,False,True,False,[0 0 0 1 1 2 2 1 1 1],[1 0 0 0 0 1 0 1 0 0],"[0.316    0.158    0.241    0.091    0.183    0.333    0.2      0.233
+ 0.083    0.405539]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8947,43,3,173,filler,,R,2,,5590.0,0.31,0.38,0.85,32,26,11,0,1,2,False,True,True,[0 0 1 1 1 1 2 2 2 0 0 0 0 1 1 1 1 2 2 2 2],[1 1 0 0 1 1 1 0 0 0 0 1 1 0 1 0 0 0 0 1 0],"[0.166    0.191    0.225    0.141    0.116    0.208    0.442    0.141
+ 0.241    0.091    0.108    0.317    0.208    0.191    0.458    0.242
+ 0.325    0.083    0.241    0.408    0.053363]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8948,43,3,174,compromise,A,R,1,competitor,4980.0,0.78,0.68,0.85,12,15,9,0,2,1,True,True,True,[2 2 2 2 2 2 1 1 1 1 0 0 0 1 1],[0 1 1 0 0 1 1 1 0 0 0 1 1 1 1],"[0.208    0.158    0.417    0.116    0.35     0.242    0.283    0.091
+ 0.166    0.826    0.4      0.217    0.225    0.15     0.309412]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8949,43,3,175,compromise,A,R,1,competitor,4490.0,0.75,0.65,0.82,13,15,9,1,2,0,True,True,False,[0 1 0 2 2 0 0 2 2 1 1 1 1 2],[0 1 1 0 0 1 0 1 0 1 0 0 0 1],"[0.175    0.492    0.258    0.275    0.125    0.917    0.333    0.175
+ 0.292    0.233    0.125    0.083    0.1      0.140743]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8950,43,3,176,filler,,L,2,,5700.0,0.24,0.37,0.76,41,27,13,1,2,0,True,False,False,[0 1 2 2 2 2 2 0 0 0 0 1 1 1 1 2 2],[1 0 0 1 1 0 0 0 0 1 1 0 1 1 1 1 1],"[0.216    0.492    0.208    0.108    0.475    0.175    0.3      0.517
+ 0.141    0.1      0.3      0.45     0.116    0.158    0.483    0.233
+ 0.103813]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8951,43,3,177,filler,,M,1,,5970.0,0.32,0.48,0.85,31,20,11,2,1,0,True,False,True,[1 1 1 1 1 1 2 2 2 2 1 2 0 0 0 0 1 1 1 1],[1 0 0 0 1 1 0 1 0 0 1 0 0 0 1 1 1 1 0 0],"[0.4      0.091    0.267    0.158    0.1      0.158    0.433    0.4
+ 0.183    0.308    0.659    0.233    0.208    0.216    0.383    0.091
+ 0.133    0.233    0.116    0.296868]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8952,43,3,178,compromise,A,R,0,target,4630.0,0.78,0.65,0.82,13,14,9,2,1,0,True,True,True,[2 2 2 1 1 1 1 0 0 0 0 1 1 0 0 1],[0 0 1 1 1 0 0 0 0 1 1 1 1 0 0 0],"[0.275 0.216 0.258 0.116 0.258 0.141 0.233 0.108 0.609 0.166 0.083 0.125
+ 0.133 0.141 0.175 0.283]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8953,43,3,179,compromise,B,M,2,decoy,3730.0,0.78,0.65,0.52,13,14,18,2,0,1,False,False,True,[2 0 0 2 2 2 1 1 0 0 2],[0 1 1 0 1 1 1 1 1 0 1],"[0.291    0.275    0.175    0.241    0.342    0.35     0.175    0.25
+ 0.358    0.3      0.280626]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8954,43,3,180,attraction,B,L,1,target,3900.0,0.78,0.68,0.66,12,14,13,1,0,2,True,True,False,[0 0 0 1 0 2 2 2 2 2 1 1 1 1 1],[0 0 1 1 1 1 1 1 0 0 1 0 0 1 1],"[0.166    0.116    0.15     0.392    0.333    0.108    0.141    0.175
+ 0.241    0.133    0.225    0.15     0.325    0.141    0.690142]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8955,43,3,181,filler,,R,1,,4650.0,0.19,0.59,0.81,52,16,12,0,2,1,False,False,False,[2 2 0 0 2 1 2 2 0 2 2 1 1 1 1 2],[1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0],"[0.3      0.141    0.175    0.292    0.383    0.408    0.208    0.283
+ 0.6      0.141    0.267    0.108    0.275    0.191    0.158    0.180735]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8956,43,3,182,attraction,B,R,1,target,5360.0,0.78,0.62,0.6,12,15,14,1,2,0,True,True,False,[0 1 1 1 1 0 2 2 2 2 2 2 2 2 0 0 1 1 1 1 2 2 1],[0 0 0 1 1 0 0 0 1 1 1 1 1 1 0 0 1 1 0 0 1 1 0],"[0.183    0.175    0.258    0.133    0.216    0.383    0.2      0.25
+ 0.1      0.116    0.175    0.166    0.133    0.183    0.283    0.233
+ 0.1      0.258    0.158    0.133    0.141    0.358    0.084201]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8957,43,3,183,compromise,A,M,1,competitor,5560.0,0.78,0.65,0.82,13,14,10,0,1,2,False,True,True,[1 2 0 0 0 1 1 1 1 2 2 1 2 2 2 1 1 1 2 1],[0 0 1 1 1 1 1 0 0 1 1 1 0 0 0 0 0 1 1 1],"[0.191    0.283    0.158    0.375    0.383    0.166    0.191    0.175
+ 0.242    0.383    0.584    0.175    0.083    0.133    0.191    0.183
+ 0.125    0.2      0.15     0.217642]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8958,43,3,184,compromise,B,L,1,target,4630.0,0.72,0.62,0.55,13,14,19,2,0,1,False,True,True,[2 2 0 0 1 1 1 1 2 1 1 2 2 2 0 0 0 2 2],[0 0 1 1 0 0 1 1 1 0 0 0 1 1 0 1 1 0 0],"[0.241   0.2     0.208   0.133   0.225   0.208   0.191   0.116   0.2
+ 0.091   0.183   0.35    0.141   0.1     0.484   0.116   0.35    0.2
+ 0.09721]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8959,43,3,185,attraction,A,L,1,competitor,4080.0,0.75,0.65,0.73,12,15,11,2,0,1,False,False,True,[2 2 2 2 2 1 1 1 0 0 0 1],[0 1 1 0 0 1 0 0 1 1 1 1],[0.851 0.333 0.1   0.141 0.192 0.125 0.208 0.617 0.108 0.175 0.166 0.225],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8960,43,3,186,attraction,B,R,1,target,2840.0,0.72,0.68,0.66,13,14,13,0,2,1,False,True,False,[2 2 2 2 2 0 1 1 1 1 1],[1 0 0 1 1 1 0 0 1 1 0],"[0.25     0.108    0.35     0.108    0.191    0.35     0.217    0.166
+ 0.292    0.116    0.154565]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8961,43,3,187,attraction,B,L,1,target,2130.0,0.78,0.62,0.6,13,15,14,1,0,2,True,False,True,[2 2 2 0 1 1 1],[0 0 1 0 0 1 1],[0.217    0.158    0.283    0.275    0.308    0.158    0.264348],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8962,43,3,188,attraction,A,R,1,competitor,3180.0,0.72,0.65,0.7,13,15,12,0,2,1,True,False,True,[2 0 0 0 2 2 1 1 1 1 1 1],[0 0 1 1 1 0 1 1 0 0 1 1],"[0.116    0.458    0.116    0.192    0.225    0.308    0.141    0.217
+ 0.208    0.183    0.233    0.230283]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8963,43,3,189,attraction,A,L,1,competitor,2200.0,0.75,0.68,0.73,12,14,11,1,0,2,False,True,False,[0 2 2 1 1 1 1 0],[1 1 0 0 0 1 1 1],[0.141    0.392    0.342    0.175    0.258    0.2      0.166    0.024573],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8964,43,3,190,attraction,B,R,1,target,1980.0,0.78,0.65,0.63,13,15,14,1,2,0,True,False,False,[0 2 2 1 1 1 1],[0 1 1 1 1 0 1],[0.216    0.091    0.283    0.241    0.158    0.433    0.041115],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8965,43,3,191,attraction,B,M,1,target,2550.0,0.72,0.62,0.6,12,15,14,2,1,0,True,False,False,[1 0 2 2 2 1 1],[1 0 0 0 1 0 1],[0.275    0.342    0.242    0.275    0.25     0.208    0.252155],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8966,43,3,192,attraction,A,L,1,competitor,1700.0,0.78,0.62,0.76,12,15,11,1,0,2,True,False,False,[2 1 1 1 1 1],[1 1 1 0 1 1],[0.383    0.141    0.191    0.3      0.1      0.047066],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8967,43,3,193,compromise,B,M,2,decoy,3670.0,0.72,0.68,0.58,12,15,19,2,0,1,False,True,False,[1 1 1 2 2 0 0 0 2 2 0 0 0 1],[1 0 0 1 1 1 1 0 0 1 1 0 0 1],"[0.208    0.125    0.116    0.166    0.191    0.392    0.15     0.183
+ 0.342    0.116    0.275    0.275    0.191    0.093115]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8968,43,3,194,filler,,M,1,,6700.0,0.27,0.47,0.86,37,21,11,0,1,2,True,False,False,[0 0 0 1 1 2 2 1 1 1 1 1 2 2 2 2 0 0 0 1 0 0 1 1 1],[0 1 1 1 1 1 1 1 0 0 1 1 1 0 0 1 0 0 1 1 0 0 0 0 1],"[0.325    0.166    0.091    0.141    0.208    0.133    0.317    0.1
+ 0.183    0.292    0.283    0.35     0.517    0.225    0.15     0.208
+ 0.091    0.333    0.317    0.258    0.225    0.166    0.191    0.208
+ 0.275075]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8969,43,3,195,attraction,B,R,1,target,5020.0,0.72,0.62,0.6,13,15,14,1,2,0,False,False,False,[2 0 1 1 1 1 1 2 2 2 1 1 1],[1 1 1 1 0 1 1 0 1 1 1 1 1],"[0.709    0.191    0.166    0.25     0.258    0.2      0.367    0.342
+ 0.1      0.2      0.266    0.75     0.235893]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8970,43,3,196,attraction,B,M,1,target,2150.0,0.78,0.65,0.63,12,15,14,2,1,0,True,True,False,[1 0 0 0 1 1 1 1 2 2],[0 0 0 1 1 1 0 0 1 1],"[0.208    0.166    0.091    0.15     0.108    0.267    0.15     0.183
+ 0.1      0.424059]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8971,43,3,197,compromise,A,R,1,competitor,1590.0,0.72,0.65,0.82,13,15,9,0,2,1,False,False,False,[2 2 2 0 1 1 1 1],[0 1 1 1 1 1 0 0],[0.2      0.083    0.208    0.216    0.1      0.2      0.116    0.108938],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8972,43,3,198,compromise,B,M,2,decoy,4940.0,0.75,0.68,0.55,12,14,18,2,0,1,False,True,True,[0 2 2 2 2 2 0 0 2 1 1 1 1 1 2 2],[1 0 1 1 1 1 0 1 0 0 0 1 0 0 0 0],"[0.166 0.175 0.266 0.191 0.2   0.233 0.5   0.2   0.317 0.125 0.141 0.258
+ 0.175 0.25  0.65  0.308]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8973,43,3,199,compromise,B,M,2,decoy,1250.0,0.72,0.65,0.55,12,15,19,0,2,1,True,False,False,[2 2 2 1 1],[1 0 0 1 1],[0.266   0.175   0.2     0.208   0.06219],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8974,43,3,200,attraction,B,R,1,target,2610.0,0.78,0.62,0.6,12,14,13,0,2,1,True,True,True,[1 1 1 2 0 1 1 1 1],[0 1 1 1 1 1 1 0 0],[0.183 0.116 0.158 0.25  0.317 0.15  0.308 0.15  0.158],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8975,43,3,201,attraction,B,R,1,target,2220.0,0.72,0.62,0.6,13,14,13,1,2,0,True,True,True,[0 0 1 2 2 2 2 1 1],[0 1 1 1 1 0 0 0 1],"[0.091    0.183    0.258    0.158    0.25     0.166    0.158    0.291
+ 0.032394]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8976,43,3,202,compromise,B,L,2,decoy,4530.0,0.75,0.62,0.58,13,14,19,2,1,0,True,False,True,[1 1 1 1 0 2 2 2 1 1 2 2 2 2],[1 0 0 0 1 1 0 0 1 0 0 1 1 0],"[0.392    0.175    0.133    0.5      0.275    0.35     0.15     0.141
+ 0.225    0.316    0.392    0.183    0.175    0.097205]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8977,43,3,203,compromise,B,L,2,decoy,2250.0,0.72,0.68,0.58,13,14,19,2,1,0,True,False,False,[1 1 2 2 1 1 0],[0 0 0 0 0 1 0],[0.125 0.166 0.225 0.575 0.358 0.25  0.342],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8978,43,3,204,filler,,L,1,,3400.0,0.28,0.67,0.78,35,14,12,2,0,1,False,True,False,[2 1 1 1 2 0 0 1 1],[1 1 0 0 1 1 0 0 0],[0.442   0.325   0.291   0.083   0.216   0.292   0.308   0.091   0.55192],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8979,43,3,205,compromise,A,L,1,competitor,1590.0,0.78,0.62,0.85,13,14,9,1,0,2,False,False,False,[0 1 2 2 1 1 1],[1 1 1 1 0 0 1],[0.2      0.25     0.183    0.183    0.141    0.191    0.069962],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8980,43,3,206,compromise,A,R,1,competitor,2570.0,0.75,0.62,0.88,12,15,10,1,2,0,True,True,True,[2 2 0 0 2 0 1 1 1 1 1],[0 0 0 1 1 1 1 1 0 0 0],[0.175 0.108 0.158 0.225 0.367 0.233 0.191 0.125 0.125 0.241 0.125],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8981,43,3,207,compromise,A,M,1,competitor,2660.0,0.78,0.68,0.88,13,15,9,2,1,0,True,True,True,[1 1 1 1 0 0 0 2 2],[1 0 0 0 0 1 1 1 1],[0.575 0.108 0.141 0.25  0.258 0.308 0.108 0.191 0.292],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8982,43,3,208,attraction,B,L,1,target,3330.0,0.75,0.68,0.66,12,14,13,1,0,2,False,True,True,[0 0 2 2 2 1 1 1 1 1 0 0 0],[0 0 1 0 0 0 0 0 1 1 1 1 0],"[0.183    0.125    0.417    0.108    0.233    0.192    0.275    0.191
+ 0.2      0.225    0.183    0.266    0.254468]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8983,43,3,209,attraction,A,R,1,competitor,2600.0,0.72,0.65,0.7,12,15,11,1,2,0,False,True,True,[2 2 2 2 0 1 1 1 1 1],[0 0 1 1 0 1 1 0 0 1],[0.125 0.275 0.125 0.166 0.275 0.233 0.183 0.133 0.275 0.275],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8984,43,3,210,compromise,A,M,1,competitor,1920.0,0.75,0.62,0.88,13,15,9,0,1,2,True,True,True,[2 2 2 2 1 1 1 1 0],[1 0 0 1 1 1 0 0 0],"[0.141    0.15     0.192    0.258    0.191    0.167    0.241    0.133
+ 0.029805]",0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8985,43,3,211,compromise,A,M,2,decoy,6260.0,0.72,0.68,0.82,13,15,9,2,0,1,False,True,False,[2 2 1 1 1 1 2 2 0 2 2 2 1 1 2 0 0],[1 1 0 0 1 1 0 0 0 0 0 1 0 0 1 1 1],"[0.133 0.183 0.158 0.083 0.233 0.191 0.233 0.15  0.292 0.434 0.417 0.392
+ 0.308 0.475 0.759 0.3   0.225]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8986,43,3,212,compromise,B,M,2,decoy,4960.0,0.72,0.62,0.58,12,14,19,0,2,1,True,True,False,[2 2 2 2 2 1 1 1 1 1 1 1 2 2],[1 0 0 1 1 0 1 1 0 0 1 1 0 0],"[0.317    0.241    1.034    0.2      0.175    0.508    0.191    0.183
+ 0.175    0.383    0.258    0.175    0.091    0.129797]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8987,43,3,213,filler,,R,1,,2280.0,0.27,0.61,0.89,37,16,11,0,2,1,True,False,False,[2 2 0 2 2 1 1],[1 1 1 0 1 1 1],[0.208 0.258 0.342 0.291 0.283 0.333 0.116],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8988,43,3,214,compromise,A,R,1,competitor,3690.0,0.75,0.68,0.88,12,15,10,1,2,0,False,True,True,[0 1 1 1 2 2 2 2 2 1 1 1],[1 0 1 1 1 0 0 1 1 1 1 1],"[0.183    0.483    0.216    0.216    0.233    0.241    0.425    0.158
+ 0.692    0.166    0.108    0.053408]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8989,43,3,215,attraction,B,R,1,target,4260.0,0.75,0.62,0.6,12,15,14,0,2,1,True,True,True,[1 1 1 2 0 0 0 0 0 0 2 2 2 1 1 1],[0 0 1 1 1 1 0 0 1 1 1 0 0 0 1 1],"[0.225 0.217 0.258 0.275 0.141 0.317 0.233 0.333 0.158 0.1   0.317 0.141
+ 0.275 0.292 0.133 0.267]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8990,43,3,216,attraction,A,R,1,competitor,3080.0,0.75,0.65,0.73,13,14,12,1,2,0,True,False,False,[0 1 1 1 0 0 0 2 2 0],[1 0 0 1 0 1 1 1 1 0],"[0.15     0.225    0.542    0.258    0.325    0.166    0.258    0.083
+ 0.283    0.098648]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8991,43,3,217,compromise,B,L,2,decoy,3250.0,0.72,0.62,0.55,13,14,19,2,1,0,False,False,False,[0 2 1 1 2 1 2 2 2],[1 1 0 0 1 1 0 0 1],"[0.258    0.308    0.091    0.15     0.408    0.433    0.258    0.233
+ 0.141819]",2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8992,43,3,218,attraction,A,R,1,competitor,1660.0,0.72,0.65,0.7,12,15,11,1,2,0,True,True,True,[0 0 0 2 1 1 1],[0 0 1 1 1 0 0],[0.166    0.3      0.275    0.233    0.308    0.083    0.055234],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8993,43,3,219,filler,,R,1,,1960.0,0.19,0.56,0.8,52,17,12,1,2,0,True,False,False,[0 0 1 1 1 2 2 0],[1 1 0 1 1 0 0 1],[0.125    0.241    0.383    0.108    0.183    0.158    0.258    0.176897],0,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8994,43,3,220,attraction,A,R,1,competitor,2310.0,0.75,0.65,0.73,13,14,12,0,2,1,False,True,True,[2 1 1 2 1 1 2 0],[1 1 1 1 0 0 1 0],[0.141    0.183    0.116    0.108    0.25     0.242    0.325    0.274811],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8995,43,3,221,attraction,A,R,1,competitor,2050.0,0.72,0.65,0.7,12,14,11,0,2,1,False,False,False,[1 1 1 1 1 2 2 0],[0 0 1 1 1 1 1 1],[0.191   0.233   0.083   0.175   0.408   0.166   0.2     0.29459],2,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8996,43,3,222,attraction,B,L,1,target,2660.0,0.75,0.65,0.63,12,14,13,1,0,2,True,True,False,[2 2 2 0 0 0 0 1 1 1],[1 0 0 1 0 0 1 1 0 0],"[0.434    0.191    0.183    0.183    0.25     0.367    0.133    0.258
+ 0.183    0.034761]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8997,43,3,223,attraction,B,L,1,target,1980.0,0.78,0.65,0.63,13,15,14,1,0,2,True,True,True,[1 1 0 2 2 1],[0 1 1 1 0 0],[0.091    0.233    0.108    0.375    0.15     0.184799],1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8998,43,3,224,compromise,A,L,1,competitor,2240.0,0.78,0.62,0.85,12,15,9,1,0,2,True,True,True,[0 0 0 1 0 1 1 1 2],[0 0 1 1 1 0 0 0 0],"[0.216    0.116    0.208    0.383    0.275    0.15     0.108    0.125
+ 0.244339]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0
+8999,43,3,225,attraction,A,L,1,competitor,4710.0,0.78,0.68,0.76,12,15,11,2,0,1,False,False,False,[2 1 1 1 1 1 1 2 2 2 1 1 1 2 1 0 0],[1 1 1 0 0 1 1 1 0 0 0 1 1 1 0 0 0],"[0.208 0.375 0.267 0.116 0.375 0.2   0.116 0.291 0.208 0.25  0.2   0.275
+ 0.175 0.2   0.367 0.175 0.141]",1,sb_int-additive_comp-vsmean_gbatt-true_gbalt-false_lk-gaze-dependent_inh-none,0

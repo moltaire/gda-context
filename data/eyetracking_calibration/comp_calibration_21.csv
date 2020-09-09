@@ -1,0 +1,4 @@
+subject_id,block,x_left,y_left,x_right,y_right,success
+21,1,0.75,0.1575,0.75,0.1575,True
+21,2,0.795,0.3175,0.795,0.3175,True
+21,3,0.4225,0.3925,0.4225,0.3925,True

@@ -1,0 +1,2 @@
+,subject,nll,bic,model,alpha,gamma,eta,lam,phi,wd,w_p,beta
+10,10,173.9260615534065,391.18092632444836,sb_int-multiplicative_comp-vsmean_gbatt-true_gbalt-false_lk-free_inh-distance-dependent,0.05842438333544414,1.0,1.0,0.21096856448175538,1.578764394039071e-05,35.70871980313007,0.4548533728001768,8.207752624139568
