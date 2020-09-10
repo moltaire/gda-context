@@ -23,10 +23,8 @@ from analysis import bayescorr, best
 
 warnings.filterwarnings("ignore")
 
-
 logger = logging.getLogger("pymc3")
 logger.setLevel(logging.ERROR)
-
 
 # Random seed
 SEED = 32
