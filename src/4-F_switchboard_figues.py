@@ -55,7 +55,7 @@ palette = [
 
 
 # %% 1) Heatmap of all variants' BIC values
-# --------------------------------------
+# -----------------------------------------
 
 # Load mean BIC dataframe
 variants_mean_bic = pd.read_csv(join(RESULTS_DIR, "variants_mean_bic.csv"))
@@ -191,6 +191,7 @@ ax.legend(
 plt.savefig(join(OUTPUT_DIR, "4-2_switch-level_bic.png"), dpi=300, bbox_inches="tight")
 
 # %% 3) Switch-level individual counts
+# ------------------------------------
 # Load the data
 best_switches_individual_counts = pd.read_csv(
     join(RESULTS_DIR, "switch-levels_individual-counts.csv")
