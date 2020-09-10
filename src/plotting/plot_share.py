@@ -217,7 +217,7 @@ def lm(
             pm.GLM.from_formula("y ~ x", data=df)
             trace = pm.sample(**sample_kwargs)
 
-    summary = pm.summary(trace, hdi_prob=credibe_interval)
+    summary = pm.summary(trace, hdi_prob=credible_interval)
 
     # Plot MAP regression line
     if xrange is None:
