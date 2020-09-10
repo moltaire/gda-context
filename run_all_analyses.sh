@@ -46,7 +46,7 @@ echo "\t/!\ Note, that model estimation estimation can take a long, long time. I
 echo
 echo "Running model estimation..."
 python 3-1_behavioural-modeling_fitting.py --label de1 --optmethod differential_evolution --nruns 1 --ncores 24 --seed 1 --verbose 2
-python 3-2_behavioural-modeling_comparison.py
+python 3-2_behavioural-modeling_analyses.py
 
 # Switchboard
 echo
