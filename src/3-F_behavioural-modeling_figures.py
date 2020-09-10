@@ -188,7 +188,7 @@ for effect, ax in zip(["attraction", "compromise"], [axs[2], axs[3]]):
     ax.set_yticks(np.arange(0, 1.01, 0.25))
     ax.set_ylim(0, 1)
     ax.plot([0, 1], [0, 1], lw=0.5, color="gray", zorder=-1)
-    ax.set_xlabel("RST obs.")
+    ax.set_xlabel("observed RST")
     ax.set_ylabel("GLA predicted RST")
     ax.set_title(f"{effect.capitalize()}")
 
