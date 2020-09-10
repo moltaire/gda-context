@@ -50,7 +50,7 @@ def scatter(
         y,
         color=colorConverter.to_rgba_array(color, alpha=facealpha),
         linewidth=edgewidth,
-        s=size**2,
+        s=size ** 2,
         edgecolor=colorConverter.to_rgba("k", alpha=edgealpha),
         clip_on=False,
         zorder=5,
@@ -178,6 +178,7 @@ def lm(
     scatter_color=None,
     line_color=None,
     xrange=None,
+    sample_kwargs={"cores": 1},
     **kwargs,
 ):
     """Make a custom linear model plot with confidence bands.
@@ -214,9 +215,9 @@ def lm(
         df = pd.DataFrame(dict(x=x, y=y))
         with pm.Model() as glm:
             pm.GLM.from_formula("y ~ x", data=df)
-            trace = pm.sample()
+            trace = pm.sample(**sample_kwargs)
 
-    summary = pm.summary(trace)
+    summary = pm.summary(trace, hdi_prob=credibe_interval)
 
     # Plot MAP regression line
     if xrange is None:
