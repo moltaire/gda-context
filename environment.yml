@@ -138,6 +138,7 @@ dependencies:
   - readline=8.0=h0678c8f_2
   - regex=2020.7.14=py38haf1e3a3_0
   - scipy=1.5.2=py38h1402333_0
+  - seaborn=0.10.1=py_0
   - send2trash=1.5.0=py38_0
   - setuptools=49.6.0=py38h32f6830_0
   - sip=4.19.8=py38h0a44026_0
@@ -166,3 +167,4 @@ dependencies:
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h7795811_1009
   - zstd=1.4.5=h289c70a_2
+prefix: /Users/felixmolter/anaconda3/envs/gda-context
