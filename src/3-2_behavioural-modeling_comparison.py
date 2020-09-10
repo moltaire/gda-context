@@ -44,7 +44,7 @@ estimates = pd.read_csv(
     join(RESULTS_DIR, "3-behavioural-modeling", "estimates", "estimates_de1.csv")
 )
 
-# 1. Compute mean ± s.d. BICs per model
+# %% 1. Compute mean ± s.d. BICs per model
 # -------------------------------------
 print("1. Summarising mean ± s.d. BICs per model...")
 bic_summary = (
@@ -54,7 +54,7 @@ bic_summary.to_csv(join(OUTPUT_DIR, "model-comparison_bic_summary.csv"), index=F
 print("\tGenerated output file:", join(OUTPUT_DIR, "model-comparison_bic_summary.csv"))
 
 
-# 2. Count individually best fitting models
+# %% 2) Count individually best fitting models
 # -----------------------------------------
 
 bics = estimates.pivot_table(values="bic", columns="model", index="subject")
@@ -80,7 +80,7 @@ print(
     join(OUTPUT_DIR, "model-comparison_individual-best-models_count.csv"),
 )
 
-# 3. Bayesian correlation analysis: observed vs. predicted context effects for GLA
+# %% 3) Bayesian correlation analysis: observed vs. predicted context effects for GLA
 # -------------------------------------------------------------------------------------------
 
 
@@ -218,7 +218,7 @@ for e, effect in enumerate(["attraction", "compromise"]):
     )
 
 
-# 4. Bayesian linear regression analysis: observed vs. predicted context effects for GLA
+# %% 4) Bayesian linear regression analysis: observed vs. predicted context effects for GLA
 # -------------------------------------------------------------------------------------------------
 def runBayesReg(x, y, sample_kwargs={}):
     """Run Bayesian Gaussian regression with PyMC3 default priors.
@@ -287,7 +287,7 @@ for e, effect in enumerate(["attraction", "compromise"]):
     )
 
 
-# 5. Bias analysis: BEST of difference predicted-observed vs 0
+# %% 5) Bias analysis: BEST of difference predicted-observed vs 0
 print(
     "5. Running bias analysis: BEST of difference (RST_GLA-predicted - RST_observed) vs 0"
 )
