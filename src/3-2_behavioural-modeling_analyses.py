@@ -42,6 +42,20 @@ estimates = pd.read_csv(
     join(RESULTS_DIR, "3-behavioural-modeling", "estimates", "estimates_de1.csv")
 )
 
+
+# %% 0. Save BIC dataframe for BMS
+# --------------------------------
+(estimates
+ [["subject", "model", "bic"]]
+ .pivot(index="subject", columns="model", values="bic")
+ .reset_index()
+ .to_csv(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bics.csv"),
+         index=False)
+)
+print("\tGenerated output file:", join(OUTPUT_DIR, "model-comparison_bics.csv"))
+
+
+
 # %% 1. Compute mean ± s.d. BICs per model
 # -------------------------------------
 print("1. Summarising mean ± s.d. BICs per model...")

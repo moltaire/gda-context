@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pymc3 as pm
+from scipy.io import loadmat
 
 from analysis.bayescorr import runBayesCorr
 from plotting.plot_share import lm, violin
@@ -43,9 +44,18 @@ model_names = {
     "glickman1layer": "GLA",
     "mdft": "MDFT",
     "eu": "EU",
-    "gaze-baseline-stat": "Gaze\n(static)",
-    "gaze-baseline-dyn": "Gaze\n(dynamic)",
+    "gaze-baseline-stat": "GB$_{stat}$",
+    "gaze-baseline-dyn": "GB$_{dyn}$"
 }
+
+short_names = {
+    "glickman1layer": "GLA",
+    "mdft": "MDFT",
+    "eu": "EU",
+    "gaze-baseline-stat": "GB$_{stat}$",
+    "gaze-baseline-dyn": "GB$_{dyn}$",
+}
+
 
 # MCMC settings passed on to pm.sample
 sample_kwargs = {"cores": 1, "random_seed": SEED, "progressbar": False}
@@ -98,6 +108,12 @@ axs[0].axhline(
 )
 
 # b) Count of individual best fitting models
+
+# Load BMS results from MATLAB
+bms = loadmat(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bms_results.mat"))
+models = np.concatenate(bms['result']["model_names"][0])[1:]
+xp = bms["result"]["xp"][0][0].flatten()
+
 # Load data
 individual_best_models = pd.read_csv(
     join(
@@ -115,6 +131,15 @@ axs[1].set_xticks(np.arange(len(N)))
 axs[1].set_xticklabels([model_names[i] for i in N.index])
 axs[1].set_ylabel("N Lowest BIC")
 axs[1].set_ylim(0, 40)
+
+# Make inset for exceedance probabilities
+axins = axs[1].inset_axes(bounds=(0.6, 0.6, 0.4, 0.4))
+axins.bar(np.arange(len(models)), xp[np.argsort(xp)[::-1]], color='#666666')
+axins.set_xticks(np.arange(len(models)))
+axins.set_xticklabels([short_names[model.replace('_', '-')] for model in models[np.argsort(xp)[::-1]]], fontsize=4, rotation=90)
+axins.set_ylabel("Exceedance\nprobability", fontsize=4, labelpad=-5)
+axins.set_yticks([0, 1])
+axins.set_ylim(0, 1)
 
 # c), d) GLA predicted vs. observed RST in attraction and compromise trials
 # Read and process the data
