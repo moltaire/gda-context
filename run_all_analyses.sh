@@ -59,4 +59,14 @@ echo "Running switchboard estimation..."
 python 4-1_switchboard_fitting.py --label de1 --optmethod differential_evolution --nruns 1 --ncores 24 --seed 1 --verbose 2
 python 4-2_switchboard_analyses.py
 
+# Figures
+echo
+echo "###########"
+echo "# Figures #"
+echo "###########"
+echo
+python 2-F_context-effects_figure.py
+python 3-F_behavioural-modeling_figures.py
+python 4-F_switchboard_figures.py
+
 cd ..
