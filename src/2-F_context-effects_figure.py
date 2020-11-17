@@ -325,4 +325,4 @@ if __name__ == "__main__":
         )
 
     fig.tight_layout(h_pad=4, w_pad=2)
-    plt.savefig(join(OUTPUT_DIR, "2-context-effects.png"))
+    plt.savefig(join(OUTPUT_DIR, "2-context-effects.pdf"))
