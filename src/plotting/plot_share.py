@@ -139,7 +139,9 @@ def violin(
     return ax
 
 
-def addEffectBar(text, x0, x1, y, ax, linewidth=0.5, lineTextGap=0.02, fontsize=5):
+def addEffectBar(
+    text, x0, x1, y, ax, color="black", linewidth=0.5, lineTextGap=0.02, fontsize=5
+):
     """Add a horizontal line and some text. Good for p-values and similar stuff.
     
     Args:
@@ -148,6 +150,7 @@ def addEffectBar(text, x0, x1, y, ax, linewidth=0.5, lineTextGap=0.02, fontsize=
         x1 (float): Line end value.
         y (float): Height of the line.
         ax (matplotlib.axis): Axis to annotate
+        color (str, optional): Bar color. Defaults to 'black'.
         linewidth (float, optional): Linewidth. Defaults to 0.5.
         lineTextGap (float, optional): Distance between the line and the text. Defaults to 0.02.
         fontsize (int, optional): Fontsize. Defaults to 5.
@@ -155,7 +158,7 @@ def addEffectBar(text, x0, x1, y, ax, linewidth=0.5, lineTextGap=0.02, fontsize=
     Returns:
         matplotlib.axis: Annotated axis.
     """
-    ax.hlines(y, x0, x1, linewidth=linewidth, clip_on=False)
+    ax.hlines(y, x0, x1, linewidth=linewidth, clip_on=False, color=color)
     ax.text(
         x=(x0 + x1) / 2,
         y=y + lineTextGap,
