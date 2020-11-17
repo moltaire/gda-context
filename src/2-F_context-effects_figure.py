@@ -126,11 +126,11 @@ def ternaryTCD(choiceshares, scale=10, group_mean=True, ax=None):
         tax.scatter(
             scatter_data.mean(axis=0)[None, :] * scale,
             marker="X",
-            facecolors="red",
-            edgecolors="none",
-            linewidth=1,
-            alpha=0.9,
-            s=30,
+            facecolors="crimson",
+            edgecolors="black",
+            linewidth=0.5,
+            alpha=0.95,
+            s=24,
             zorder=10,
         )
 
