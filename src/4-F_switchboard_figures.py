@@ -133,7 +133,7 @@ for x, y in list(zip(xcoords, ycoords)):
     ax.add_patch(rect)
 
 plt.savefig(
-    join(OUTPUT_DIR, "4-1_switchboard_bic_heatmap.png"), dpi=300, bbox_inches="tight"
+    join(OUTPUT_DIR, "4-1_switchboard_bic_heatmap.pdf"), dpi=300, bbox_inches="tight"
 )
 
 # %% 2) Switch-level mean BIC barplot
@@ -174,6 +174,7 @@ ax.hlines(
     xmin=bic_means - bic_sems,
     xmax=bic_means + bic_sems,
     linewidth=0.75,
+    color="black",
 )
 ax.set_yticks(np.arange(len(switch_levels_bic)))
 ax.set_yticklabels(switch_levels_bic["label"], fontsize=5)
@@ -197,7 +198,7 @@ ax.legend(
     bbox_to_anchor=(0.9, 1.025),
 )
 
-plt.savefig(join(OUTPUT_DIR, "4-2_switch-level_bic.png"), dpi=300, bbox_inches="tight")
+plt.savefig(join(OUTPUT_DIR, "4-2_switch-level_bic.pdf"), dpi=300, bbox_inches="tight")
 
 # %% 3) Switch-level individual counts
 # ------------------------------------
@@ -253,7 +254,7 @@ ax.legend(
 )
 
 plt.savefig(
-    join(OUTPUT_DIR, "4-2_switch-level_individual_counts.png"),
+    join(OUTPUT_DIR, "4-2_switch-level_individual_counts.pdf"),
     dpi=300,
     bbox_inches="tight",
 )
@@ -381,18 +382,20 @@ for model, color in zip(["m1", "m2"], ["slategray", "darksalmon"]):
         ax.set_ylabel("predicted RST")
 
         stat_str = (
-            f"$r$ = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']}, {corrSummary.loc['r', 'hdi_97.5%']}]"
+            f"$r$ = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
             + "\n"
-            f"Intercept = {summary.loc['Intercept', 'mean']}, Slope = {summary.loc['x', 'mean']}"
+            + f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
+            + "\n"
+            + f"Slope = {summary.loc['x', 'mean']:.2f} [{summary.loc['x', 'hdi_2.5%']:.2f}, {summary.loc['x', 'hdi_97.5%']:.2f}]"
         )
         ax.annotate(stat_str, [1, 0.05], ha="right", va="bottom", fontsize=4)
 
         i += 1
 
-axs[0, 0].set_title("Attraction", fontweight="bold")
-axs[0, 1].set_title("Compromise", fontweight="bold")
-axs[0, 0].set_ylabel(r"$\bf{" + model_labels[model1] + "}$" + "\n\nPredicted RST")
-axs[1, 0].set_ylabel(r"$\bf{" + model_labels[model2] + "}$" + "\n\nPredicted RST")
+axs[0, 0].set_title("Attraction", fontsize=7)
+axs[0, 1].set_title("Compromise", fontsize=7)
+axs[0, 0].set_ylabel(r"$\bf{" + model_labels[model1] + "}$" + "\n\npredicted RST")
+axs[1, 0].set_ylabel(r"$\bf{" + model_labels[model2] + "}$" + "\n\npredicted RST")
 
 fig.tight_layout(h_pad=4, w_pad=4)
 
@@ -409,6 +412,6 @@ for ax, label in zip(axs.ravel(), list("abcd")):
     fig.text(X - 0.1, Y, label, size=10, weight="bold")
 
 plt.savefig(
-    join(OUTPUT_DIR, "rst-prediction_top2-sb-variants_no-inh-vs-inh.png"), dpi=300,
+    join(OUTPUT_DIR, "rst-prediction_top2-sb-variants_no-inh-vs-inh.pdf"), dpi=300,
 )
 
