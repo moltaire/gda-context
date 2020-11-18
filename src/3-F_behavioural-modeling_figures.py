@@ -234,7 +234,7 @@ for ax, label in zip(axs.ravel(), list("abcd")):
     Y = ax.get_position().y1
     fig.text(X - 0.05, Y + 0.05, label, size=10, weight="bold", ha="right", va="center")
 
-plt.savefig(join(OUTPUT_DIR, "3-model-comparison.png"))
+plt.savefig(join(OUTPUT_DIR, "3-model-comparison.pdf"))
 
 
 # %% 2) Supplementary Figure: deltaBIC vs RST
@@ -294,4 +294,4 @@ for effect, ax in zip(["attraction", "compromise"], axs):
     ax.set_ylim(0, 1)
 
 fig.tight_layout()
-plt.savefig(join(OUTPUT_DIR, "3-dBIC-gla-mdft_RST.png"), bbox_inches="tight")
+plt.savefig(join(OUTPUT_DIR, "3-dBIC-gla-mdft_RST.pdf"), bbox_inches="tight")
