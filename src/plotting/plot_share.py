@@ -317,7 +317,7 @@ def factorial_heatmap(
     # x_labels = levels from last col_factor
     ax.set_xlabel(factor_labels[col_factors[-1]])
     ax.set_xticks(np.arange(n_col))
-    ax.set_xticklabels(df_sorted[col_factors[-1]], rotation=xlabel_rotation)
+    ax.set_xticklabels(df_sorted[col_factors[-1]][:n_col], rotation=xlabel_rotation)
     ax.set_xlim(-0.5, n_col - 0.5)
 
     # other factors across columns:
