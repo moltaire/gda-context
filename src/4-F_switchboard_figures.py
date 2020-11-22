@@ -62,6 +62,20 @@ palette = [
 # %% 1) Heatmap of all variants' BIC values
 # -----------------------------------------
 
+height = 4.5
+width = 12
+
+fontsize = 5
+matplotlib.rcParams.update(
+    {
+        "font.size": fontsize,
+        "axes.labelsize": fontsize,
+        "axes.titlesize": fontsize,
+        "xtick.labelsize": fontsize,
+        "ytick.labelsize": fontsize,
+    }
+)
+
 # Load mean BIC dataframe
 variants_mean_bic = pd.read_csv(
     join(RESULTS_DIR, "4-switchboard", "variants_mean_bic.csv")
@@ -91,11 +105,11 @@ variants_mean_bic["inhibition"] = pd.Categorical(
 )
 
 # Make the figure
-fig, ax = plt.subplots(figsize=cm2inch(12, 5), dpi=300)
+fig, ax = plt.subplots(figsize=cm2inch(width, height), dpi=300)
 ax, values = factorial_heatmap(
     variants_mean_bic,
-    row_factors=["leak", "gb_att", "integration"],
-    col_factors=["comparison", "gb_alt", "inhibition"],
+    row_factors=["comparison", "gb_att", "integration"],
+    col_factors=["leak", "gb_alt", "inhibition"],
     value_var="BIC",
     cmap="RdYlGn_r",
     norm=TwoSlopeNorm(vcenter=275),  # mean_bics['BIC'].mean()),
@@ -106,17 +120,19 @@ ax, values = factorial_heatmap(
         "leak": {"None": "None", "Constant": "Leak\nConstant", "Gaze": "Gaze"},
         "inhibition": {
             "None": "None",
-            "Constant": "Constant",
-            "Distance": "Distance",
+            "Constant": "Const.",
+            "Distance": "Dist.",
             "Gaze": "Gaze",
         },
         "gb_att": {True: "With\nGD" + r"$_{Att}$", False: "No\nGD" + r"$_{Att}$"},
         "integration": {"multiplicative": r"$\times$", "additive": r"$+$"},
     },
     xlabel_rotation=90,
-    pad_label_bar=0.1,
-    pad_per_factor=2.5,
-    pad_colorbar=0.075,
+    pad_label_bar=0.2,
+    pad_per_factor_top=1.75,
+    pad_per_factor_right=2.5,
+    pad_colorbar=0.05,
+    cb_args={"fraction": 0.0125},
 )
 
 # Mark minima (two, because the top two models are actually equivalent, differences due to noise in optimization)
@@ -132,71 +148,90 @@ for x, y in list(zip(xcoords, ycoords)):
     )
     ax.add_patch(rect)
 
+fig.tight_layout()
+
 plt.savefig(
     join(OUTPUT_DIR, "4-1_switchboard_bic_heatmap.pdf"), dpi=300, bbox_inches="tight"
 )
 
 # %% 2) Switch-level mean BIC barplot
 # -----------------------------------
+
+width = 11.5
+height = 4
+
+fontsize = 6
+matplotlib.rcParams.update(
+    {
+        "font.size": fontsize,
+        "axes.labelsize": fontsize,
+        "axes.titlesize": fontsize,
+        "xtick.labelsize": fontsize,
+        "ytick.labelsize": fontsize,
+    }
+)
+
 # Load data
 switch_levels_bic = pd.read_csv(
     join(RESULTS_DIR, "4-switchboard", "switch-levels_bic.csv")
 )
 
-# Set up colors
-colors = np.array(
-    [
-        palette[c]
-        for c in pd.Categorical(
-            switch_levels_bic["switch"],
-            categories=[
-                "comparison",
-                "integration",
-                "gb_alt",
-                "gb_att",
-                "leak",
-                "inhibition",
-            ],
-            ordered=True,
-        ).codes
-    ]
+
+fig, axs = plt.subplots(
+    2,
+    3,
+    figsize=cm2inch(width, height),
+    sharex=True,
+    dpi=300,
+    gridspec_kw={"height_ratios": [3, 2]},
 )
 
-# Make the figure
-fig, ax = plt.subplots(figsize=cm2inch(2, 6), dpi=300)
+for i, (switch, color) in enumerate(
+    zip(
+        ["inhibition", "leak", "comparison", "gb_alt", "integration", "gb_att"],
+        [
+            "lightpink",
+            "paleturquoise",
+            "slategray",
+            "mediumaquamarine",
+            "darksalmon",
+            "indianred",
+        ],
+    )
+):
+    ax = axs.ravel()[i]
+    ax.set_title(switch_labels[switch], fontsize=6, y=0.95)
 
-bic_means = switch_levels_bic["mean"]
-bic_sems = switch_levels_bic["sem"]
+    means = switch_levels_bic.loc[switch_levels_bic["switch"] == switch, "mean"].values
+    sems = switch_levels_bic.loc[switch_levels_bic["switch"] == switch, "sem"].values
+    sort = np.argsort(means)[::-1]
+    ylabels = switch_levels_bic.loc[
+        switch_levels_bic["switch"] == switch, "label"
+    ].values
+    y = np.arange(len(means))
+    ax.barh(y, means[sort], color=color)
+    ax.hlines(
+        y,
+        means[sort] - sems[sort],
+        means[sort] + sems[sort],
+        color="black",
+        linewidth=0.75,
+    )
+    ax.set_yticks(y)
+    ax.set_yticklabels(ylabels[sort], fontsize=5)
+    ax.set_ylim(-1, len(y) - 0.5)
 
-bars = ax.barh(np.arange(len(switch_levels_bic)), bic_means, color=colors)
-ax.hlines(
-    y=np.arange(len(switch_levels_bic)),
-    xmin=bic_means - bic_sems,
-    xmax=bic_means + bic_sems,
-    linewidth=0.75,
-    color="black",
-)
-ax.set_yticks(np.arange(len(switch_levels_bic)))
-ax.set_yticklabels(switch_levels_bic["label"], fontsize=5)
-ax.set_ylim(len(switch_levels_bic), -0.5)
-ax.set_xlabel("Mean BIC")
-ax.set_xlim(200, 400)
-ax.set_xticks(np.arange(200, 401, 100))
-ax = break_after_nth_tick(ax, n=0, axis="x")
-ax.set_xticklabels(np.insert(np.arange(200, 401, 100)[1:], 0, 0))
+    ax.set_xlim(200, 300)
+    ax.set_xticks(np.arange(200, 401, 100))
+    ax = break_after_nth_tick(ax, n=0, axis="x")
 
-switch_indices = (
-    switch_levels_bic["switch"].drop_duplicates().index
-)  # identify indices where switches occur first
-ax.legend(
-    handles=[bars[i] for i in switch_indices],
-    labels=[
-        switch_labels[switch]
-        for switch in switch_levels_bic["switch"][switch_indices].values
-    ],
-    fontsize=5,
-    bbox_to_anchor=(0.9, 1.025),
-)
+
+for ax in axs[-1, :]:
+    ax.set_xlabel("BIC")
+    ax = break_after_nth_tick(ax, n=0, axis="x")
+    ax.set_xticklabels(np.insert(np.arange(200, 401, 100)[1:], 0, 0))
+
+plt.tight_layout(w_pad=0.25, h_pad=1)
 
 plt.savefig(join(OUTPUT_DIR, "4-2_switch-level_bic.pdf"), dpi=300, bbox_inches="tight")
 
