@@ -263,7 +263,8 @@ def factorial_heatmap(
     ylabel_rotation=0,
     xlabel_rotation=0,
     pad_label_bar=0.2,
-    pad_per_factor=1.5,
+    pad_per_factor_top=1.5,
+    pad_per_factor_right=None,
     pad_colorbar=0.05,
     cb_args={},
 ):
@@ -291,6 +292,10 @@ def factorial_heatmap(
     matplotlib.axis
         axis with plot
     """
+
+    if pad_per_factor_right is None:
+        pad_per_factor_right = pad_per_factor_top
+
     all_factors = row_factors + col_factors
     default_factor_labels = {factor: factor for factor in all_factors}
     factor_labels = {**default_factor_labels, **factor_labels}
@@ -324,7 +329,7 @@ def factorial_heatmap(
     # from second-to-last to first, so that the first factor is the uppermost level
     for f, col_factor in enumerate(col_factors[-2::-1]):
         levels = df_sorted[col_factor].values[:n_col]
-        bar_y = n_row - 0.25 + f * pad_per_factor
+        bar_y = n_row - 0.25 + f * pad_per_factor_top
 
         # Identify blocks of same levels: https://stackoverflow.com/a/6352456
         index = 0
@@ -360,7 +365,7 @@ def factorial_heatmap(
     # from second-to-last to first, so that the first factor is the uppermost level
     for f, row_factor in enumerate(row_factors[-2::-1]):
         levels = df_sorted[row_factor].values[::n_col][:n_row]
-        bar_x = n_col - 0.25 + f * pad_per_factor
+        bar_x = n_col - 0.25 + f * pad_per_factor_right
 
         index = 0
         for level, block in groupby(levels):
