@@ -417,13 +417,15 @@ for model, color in zip(["m1", "m2"], ["slategray", "darksalmon"]):
         ax.set_ylabel("predicted RST")
 
         stat_str = (
-            f"$r$ = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
+            f"r = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
             + "\n"
             + f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
             + "\n"
             + f"Slope = {summary.loc['x', 'mean']:.2f} [{summary.loc['x', 'hdi_2.5%']:.2f}, {summary.loc['x', 'hdi_97.5%']:.2f}]"
         )
-        ax.annotate(stat_str, [1, 0.05], ha="right", va="bottom", fontsize=4)
+        ax.annotate(
+            stat_str, [1, 0.05], ha="right", va="bottom", fontsize=4, ma="right"
+        )
 
         i += 1
 
@@ -447,6 +449,6 @@ for ax, label in zip(axs.ravel(), list("abcd")):
     fig.text(X - 0.1, Y, label, size=10, weight="bold")
 
 plt.savefig(
-    join(OUTPUT_DIR, "rst-prediction_top2-sb-variants_no-inh-vs-inh.pdf"), dpi=300,
+    join(OUTPUT_DIR, "5-best-2-model-variants_rst-predictions.pdf"), dpi=300,
 )
 
