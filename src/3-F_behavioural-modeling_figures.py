@@ -44,7 +44,7 @@ model_names = {
     "mdft": "MDFT",
     "eu": "EU",
     "gaze-baseline-stat": "GB$_{stat}$",
-    "gaze-baseline-dyn": "GB$_{dyn}$"
+    "gaze-baseline-dyn": "GB$_{dyn}$",
 }
 
 short_names = {
@@ -97,7 +97,7 @@ axs[0] = violin(
     data=bics_wide, ax=axs[0], palette=["slategray"] * len(bics_wide.columns)
 )
 axs[0].set_xticks(range(len(model_names)))
-axs[0].set_xticklabels([model_names[c] for c in bics_wide.columns])
+axs[0].set_xticklabels([model_names[c] for c in bics_wide.columns], rotation=45)
 axs[0].set_ylabel("BIC")
 axs[0].set_xlabel(None)
 axs[0].set_ylim(0, 600)
@@ -109,7 +109,9 @@ axs[0].axhline(
 # b) Count of individual best fitting models
 
 # Load BMS results from MATLAB
-bms = pd.read_csv(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bms_results.csv"))
+bms = pd.read_csv(
+    join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bms_results.csv")
+)
 models = bms["model"].values
 pxp = bms["pxp"].values
 
@@ -127,16 +129,20 @@ N = individual_best_models["model"].value_counts()
 axs[1].bar(np.arange(len(N)), N, color="slategray")
 axs[1].set_xlim(-0.75, 2.75)
 axs[1].set_xticks(np.arange(len(N)))
-axs[1].set_xticklabels([model_names[i] for i in N.index])
+axs[1].set_xticklabels([model_names[i] for i in N.index], rotation=45)
 axs[1].set_ylabel("N Lowest BIC")
 axs[1].set_ylim(0, 40)
 
 # Make inset for exceedance probabilities
-axins = axs[1].inset_axes(bounds=(0.6, 0.6, 0.4, 0.4))
-axins.bar(np.arange(len(models)), pxp[np.argsort(pxp)[::-1]], color='#666666')
+axins = axs[1].inset_axes(bounds=(0.6, 0.7, 0.4, 0.3))
+axins.bar(np.arange(len(models)), pxp[np.argsort(pxp)[::-1]], color="#666666")
 axins.set_xticks(np.arange(len(models)))
-axins.set_xticklabels([short_names[model.replace('_', '-')] for model in models[np.argsort(pxp)[::-1]]], fontsize=4, rotation=90)
-axins.set_ylabel("Protected\nexc. prob.", fontsize=4, labelpad=-5)
+axins.set_xticklabels(
+    [short_names[model.replace("_", "-")] for model in models[np.argsort(pxp)[::-1]]],
+    fontsize=4,
+    rotation=90,
+)
+axins.set_ylabel("$pxp$", fontsize=4, labelpad=-5)
 axins.set_yticks([0, 1])
 axins.set_ylim(0, 1)
 
@@ -217,11 +223,14 @@ for effect, ax in zip(["attraction", "compromise"], [axs[2], axs[3]]):
     ax.set_title(f"{effect.capitalize()}")
 
     stat_str = (
-        f"$r$ = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']}, {corrSummary.loc['r', 'hdi_97.5%']}]"
+        f"r = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
         + "\n"
-        f"Intercept = {summary.loc['Intercept', 'mean']}, Slope = {summary.loc['x', 'mean']}"
+        + f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
+        + "\n"
+        + f"Slope = {summary.loc['x', 'mean']:.2f} [{summary.loc['x', 'hdi_2.5%']:.2f}, {summary.loc['x', 'hdi_97.5%']:.2f}]"
     )
-    ax.annotate(stat_str, [1, 0.05], ha="right", va="bottom", fontsize=4)
+
+    ax.annotate(stat_str, [1, 0.05], ma="right", ha="right", va="bottom", fontsize=4)
 
 fig.tight_layout(h_pad=4, w_pad=2)
 
@@ -274,6 +283,7 @@ for effect, ax in zip(["attraction", "compromise"], axs):
     )
 
     summary.loc["x", "P>0"] = np.mean(trace.get_values("x") > 0)
+
     stat_str = (
         f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
         + "\n"
