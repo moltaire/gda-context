@@ -17,7 +17,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import pymc3 as pm
-from scipy.io import loadmat
 
 from analysis.bayescorr import runBayesCorr
 from plotting.plot_share import lm, violin
@@ -110,9 +109,9 @@ axs[0].axhline(
 # b) Count of individual best fitting models
 
 # Load BMS results from MATLAB
-bms = loadmat(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bms_results.mat"))
-models = np.concatenate(bms['result']["model_names"][0])[1:]
-xp = bms["result"]["xp"][0][0].flatten()
+bms = pd.read_csv(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bms_results.csv"))
+models = bms["model"].values
+pxp = bms["pxp"].values
 
 # Load data
 individual_best_models = pd.read_csv(
@@ -134,10 +133,10 @@ axs[1].set_ylim(0, 40)
 
 # Make inset for exceedance probabilities
 axins = axs[1].inset_axes(bounds=(0.6, 0.6, 0.4, 0.4))
-axins.bar(np.arange(len(models)), xp[np.argsort(xp)[::-1]], color='#666666')
+axins.bar(np.arange(len(models)), pxp[np.argsort(pxp)[::-1]], color='#666666')
 axins.set_xticks(np.arange(len(models)))
-axins.set_xticklabels([short_names[model.replace('_', '-')] for model in models[np.argsort(xp)[::-1]]], fontsize=4, rotation=90)
-axins.set_ylabel("Exceedance\nprobability", fontsize=4, labelpad=-5)
+axins.set_xticklabels([short_names[model.replace('_', '-')] for model in models[np.argsort(pxp)[::-1]]], fontsize=4, rotation=90)
+axins.set_ylabel("Protected\nexc. prob.", fontsize=4, labelpad=-5)
 axins.set_yticks([0, 1])
 axins.set_ylim(0, 1)
 

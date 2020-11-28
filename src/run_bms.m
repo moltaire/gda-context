@@ -22,6 +22,6 @@ bics = -2 * bics;
 % Run BMS
 [alpha, exp_r, xp, pxp, bor] = spm_BMS(bics);
 
-% Save result
-result = struct("model_names", model_names, "alpha", alpha, "exp_r", exp_r, "xp", xp, "pxp", pxp, "bor", bor);
-save((PROJECT_DIRECTORY + "results/3-behavioural-modeling/model-comparison_bms_results.mat"), "result");
+% Save result as a table
+result = table(model_names(2:numel(model_names))', alpha', exp_r', xp', pxp', 'VariableNames', {'model', 'alpha', 'exp_r', 'xp', 'pxp'});
+writetable(result, (PROJECT_DIRECTORY + "results/3-behavioural-modeling/model-comparison_bms_results.csv"), 'Delimiter', ',')
