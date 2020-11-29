@@ -64,6 +64,11 @@ def runRegression():
     )
 
     parser.add_argument("--nchains", type=int, default=4, help="Number of MCMC chains.")
+
+    parser.add_argument(
+        "--ncores", type=int, default=4, help="Number of CPU cores to use."
+    )
+
     parser.add_argument(
         "--nsamples", type=int, default=2000, help="Number of samples per MCMC chain."
     )
@@ -91,6 +96,7 @@ def runRegression():
     if LABEL != "":
         LABEL = "_" + LABEL
     N_CHAINS = args.nchains
+    N_CORES = args.ncores
     N_TUNE = args.ntune
     N_SAMPLES = args.nsamples
     OVERWRITE = args.overwrite
@@ -261,8 +267,9 @@ def runRegression():
                 random=random_terms,
                 family="gaussian",
                 samples=N_SAMPLES,
-                chains=N_CHAINS,
                 tune=N_TUNE,
+                chains=N_CHAINS,
+                cores=N_CORES,
             )
 
             trace = model.backend.trace
