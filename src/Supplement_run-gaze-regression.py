@@ -117,7 +117,6 @@ def runRegression():
     now = datetime.now()
     datestring = now.strftime("%d/%m/%Y %H:%M:%S")
     settings["time"] = datestring
-    np.save(f"settings{LABEL}.npy", settings)
     with open(join(OUTPUT_DIR, "settings.yaml"), "w") as file:
         settings = yaml.dump(settings, file)
 
