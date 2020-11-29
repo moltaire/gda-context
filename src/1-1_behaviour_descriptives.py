@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script generates descriptives of behavioural data
     1. Compute subject-wise choice shares for ABC, TCD, split by target alternative
     2. Compute subject-wise choice shares for ABC, TCD, across target alternatives

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs statistical tests of context effects
     1. Test context effects: One-sample BEST RST vs. 0.5
     2. Test context effects: One-sample (paired) BEST: P(Target) - P(Competitor)

@@ -1,4 +1,8 @@
-# Summarise GLA estimates and make pairwise scatterplots
+#!/usr/bin/python
+"""
+Gaze-dependent accumulation in context-dependent risky choice
+    Summarise GLA estimates and make pairwise scatterplots
+"""
 
 from os.path import join
 

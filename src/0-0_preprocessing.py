@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs preprocessing of behavioural and gaze data
     1. Exclude subjects
         a) marked to exclude (Experiment crash or no understanding of task)

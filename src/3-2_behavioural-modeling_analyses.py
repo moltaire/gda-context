@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs model comparison of previously fitted models
     1. Compute mean ± s.d. BICs per model
     2. Count individually best fitting models

@@ -1,6 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # coding: utf-8
 """
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs analysis on the results from the switchboard analysis, performed in `4-1_switchboard_fitting`.
 
     1) Read and process switchboard estimate data

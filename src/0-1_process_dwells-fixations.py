@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs further preprocessing of dwell and fixation data
     1. Compute trial-wise relative dwells and merge them into trial dataframe
     2. Save combined dataframe (trials_with-dwells)
@@ -16,11 +16,11 @@ DATA_DIR = join("..", "results", "0-clean_data")
 OUTPUT_DIR = DATA_DIR
 
 # Load data
-trials = pd.read_csv(join(DATA_DIR "trials.csv"), index_col=0)
+trials = pd.read_csv(join(DATA_DIR, "trials.csv"), index_col=0)
 dwells = pd.read_csv(join(DATA_DIR, "dwells.csv"), index_col=0)
 
 fixations = pd.read_csv(
-    join(DATA_DIR "fixations.csv"), index_col=0
+    join(DATA_DIR, "fixations.csv"), index_col=0
 )
 
 # 1. Compute trial-wise relative dwells and merge them into trial dataframe

@@ -1,5 +1,6 @@
-# usr/bin/python
+#!/usr/bin/python
 """
+Gaze-dependent accumulation in context-dependent risky choice
 Figure 2: Context Effects in Behaviour and Gaze
 """
 import math

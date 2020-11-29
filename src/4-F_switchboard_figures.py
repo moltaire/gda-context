@@ -1,5 +1,6 @@
-#!usr/bin/python
+#!/usr/bin/python
 """
+Gaze-dependent accumulation in context-dependent risky choice
 This script makes figures for the switchboard analysis.
     1) Heatmap of all variants' BIC values
     2) Barplot of switch-level mean BICs

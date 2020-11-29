@@ -1,10 +1,10 @@
 #!/usr/bin/python
+"""
+Gaze-dependent accumulation in context-dependent risky choice
+  Switchboard Model Fitting
 
-# Eye movements in context effects
-#   Switchboard Model Fitting
-#
-# Author: Felix Molter, felixmolter@gmail.com
-# Date: May 21, 2019
+Author: Felix Molter, felixmolter@gmail.com
+"""
 
 import argparse
 import itertools

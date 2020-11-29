@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs maximum likelihood estimation and prediction of the behavioural models
     0. Processing of behavioural and fixation data, so that they fit the model code.
     1. (Parallel, if specified) maximum likelihood estimation and prediction of all models listed in `models`

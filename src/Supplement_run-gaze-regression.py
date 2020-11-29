@@ -1,4 +1,9 @@
-#!~/anaconda3/bin/python
+#!/usr/bin/python
+"""
+Gaze-dependent accumulation in context-dependent risky choice
+This script runs a regression analysis of AOI dwell times on stimulus characteristics (including the required preprocessing steps)
+Author: Felix Molter, felixmolter@gmail.com
+"""
 
 import argparse
 import os

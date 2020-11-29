@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script performs confirmatory statistical analyses of the gaze data
     1. One-sample (paired) BEST of Dwell(Target) - Dwell(Competitor) vs. 0, for attraction and compromise trials.
     2. Bayesian correlation between RST and Payne Index, for attraction and compromise trials

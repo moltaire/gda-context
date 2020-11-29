@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script generates descriptives of gaze data
     1. Compute subject level mean ± s.d. and grand average of dwells towards ABC, by effect and target alternative
     2. Compute subject level mean ± s.d. and grand average of dwells towards ABC, by effect across target alternatives

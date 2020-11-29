@@ -1,5 +1,6 @@
-# /usr/bin/python
+#!/usr/bin/python
 """
+Gaze-dependent accumulation in context-dependent risky choice
 This script makes figures of the behavioural-modeling analyses.
     1) Composite figure of
         a) BIC violin plot

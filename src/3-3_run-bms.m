@@ -1,3 +1,7 @@
+% Gaze-dependent accumulation in context-dependent risky choice
+% This script runs Bayesian Model Selection (Stephan et al., 2009, Rigoux et al., 2014)
+% Author: Felix Molter, felixmolter@gmail.com
+
 PROJECT_DIRECTORY = "~/Desktop/gda-context/";
 
 % Read BIC file

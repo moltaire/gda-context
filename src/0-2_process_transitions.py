@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Eye movements in context effects
+Gaze-dependent accumulation in context-dependent risky choice
 This script processes the eyetracking data to create a dataframe containing transitions between AOIs
     1. Create transition dataframe
     2. Save dataframe (transitions)
