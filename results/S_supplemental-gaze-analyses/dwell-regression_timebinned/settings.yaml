@@ -1,0 +1,15 @@
+center_time: false
+data_dir: ../results/0-clean_data
+label: timebinned
+mixed: true
+nchains: 4
+ncores: 4
+nsamples: 2000
+ntune: 500
+overwrite: false
+results_dir: ../results/
+seed: 1
+time: 30/11/2020 21:25:14
+timebinned: true
+verbose: 2
+withoutchoice: false
