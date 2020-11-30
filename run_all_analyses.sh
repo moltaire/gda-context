@@ -69,4 +69,15 @@ python 2-F_context-effects_figure.py
 python 3-F_behavioural-modeling_figures.py
 python 4-F_switchboard_figures.py
 
+# Supplement
+echo
+echo "#########################"
+echo "# Supplemental analyses #"
+echo "#########################"
+echo
+
+echo "Running dwell time regressions..."
+python Supplement_run-gaze-regression.py --verbose 2 --mixed  --seed 1 --label fulltrial
+python Supplement_run-gaze-regression.py --verbose 2 --mixed  --timebinned --seed 1 --label timebinned
+
 cd ..
