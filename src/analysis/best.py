@@ -2,14 +2,14 @@
 
 # This module contains code to run BEST models
 # John K. Kruschke, Journal of Experimental Psychology: General, 2013, v.142(2), pp.573-603. (doi: 10.1037/a0029146)
-# Code is in part adapted from the PyMC3 implementation available at
+# Code is in part used by the PyMC3 implementation available at
 # https://docs.pymc.io/notebooks/BEST.html
 
 import numpy as np
 import pymc3 as pm
 
 
-def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores": 1}):
+def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={}):
     """Run two-sample BEST model
     
     Args:
@@ -17,9 +17,11 @@ def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores": 1}):
         y2 (array): Group 2 values
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
         sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
+        seed : int, optional
+            seed passed on to pymc3.sample
         sample_kwargs : dict, optional
-        additional keyword arguments passed on to pymc3.sample
-    
+            additional keyword arguments passed on to pymc3.sample
+
     Returns:
         pymc3.MultiChain: MCMC trace from BEST model.
     """
@@ -48,12 +50,12 @@ def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores": 1}):
         group2 = pm.StudentT("group2", nu=nu, mu=group2_mean, lam=lam2, observed=y2)
 
         # MCMC
-        trace = pm.sample(**sample_kwargs)
+        trace = pm.sample(random_seed=seed, **sample_kwargs)
 
     return trace
 
 
-def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores": 1}):
+def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={}):
     """Run one-sample BEST model.
     
     Args:
@@ -61,6 +63,8 @@ def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores":
         mu (float, optional): Population mean. Defaults to 0.0.
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
         sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
+        seed : int, optional
+            seed passed on to pymc3.sample
         sample_kwargs : dict, optional
             additional keyword arguments passed on to pymc3.sample
     
@@ -82,6 +86,6 @@ def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, sample_kwargs={"cores":
         observed = pm.StudentT("observed", nu=nu, mu=mean, lam=lam, observed=y)
 
         # MCMC
-        trace = pm.sample(**sample_kwargs)
+        trace = pm.sample(random_seed=seed, **sample_kwargs)
 
     return trace
