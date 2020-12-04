@@ -10,7 +10,7 @@ import pymc3 as pm
 import theano.tensor as tt
 
 
-def runBayesCorr(y1, y2, sample_kwargs={}):
+def runBayesCorr(y1, y2, seed=None, sample_kwargs={}):
     """
     Run Bayesian correlation analysis.
 
@@ -20,6 +20,8 @@ def runBayesCorr(y1, y2, sample_kwargs={}):
     ----------
     y1 array like
     y2 array like
+    seed : int, optional
+        random seed passed on to pymc3.sample
     sample_kwargs : dict, optional
         additional keyword arguments passed on to pymc3.sample
 
@@ -53,6 +55,6 @@ def runBayesCorr(y1, y2, sample_kwargs={}):
         Y = pm.MvNormal("Y", mu=mu, cov=cov, shape=2, observed=y)
 
         # MCMC
-        trace = pm.sample(**sample_kwargs)
+        trace = pm.sample(random_seed=seed, **sample_kwargs)
 
     return trace
