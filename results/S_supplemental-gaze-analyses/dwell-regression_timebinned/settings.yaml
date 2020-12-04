@@ -8,8 +8,8 @@ nsamples: 2000
 ntune: 500
 overwrite: false
 results_dir: ../results/
-seed: 1
-time: 30/11/2020 21:25:14
+seed: 2
+time: 30/11/2020 22:02:59
 timebinned: true
 verbose: 2
 withoutchoice: false
