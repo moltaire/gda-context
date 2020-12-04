@@ -80,4 +80,8 @@ echo "Running dwell time regressions..."
 python Supplement_run-gaze-regression.py --verbose 2 --mixed  --seed 1 --label fulltrial
 python Supplement_run-gaze-regression.py --verbose 2 --mixed  --timebinned --seed 1 --label timebinned
 
+echo "Supplemental figures..."
+python Supplement_GLA-estimates_figure.py
+python Supplement_gaze-predictors_figure.py
+
 cd ..
