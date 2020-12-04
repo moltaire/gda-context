@@ -14,8 +14,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import yaml
+from arviz import plot_trace, summary
 from bambi import Model
-from arviz import summary, plot_trace
+
+from analysis.utilities import makeDirIfNeeded
 
 
 def runRegression():
@@ -452,11 +454,6 @@ def decode_pos(x):
         else:
             row = 0
     return row, col
-
-
-def makeDirIfNeeded(directory):
-    if not os.path.exists(directory):
-        os.makedirs(directory)
 
 
 if __name__ == "__main__":
