@@ -150,7 +150,7 @@ class FullModel(ChoiceModel):
         if switches["leak"] in ["free", "gaze-dependent"]:
             parameters["lam"] = dict(
                 bounds=[0, 1]
-            )  # 0 = full leak, 1 = no leak, perfect memory
+            )  # 0 = full leak, 1 = no leak, perfect memory, note this is opposite to how it's coded in the GLA
 
         if switches["inhibition"] in ["free", "gaze-dependent"]:
             parameters["phi"] = dict(

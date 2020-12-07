@@ -289,7 +289,7 @@ class Glickman1Layer(ChoiceModel):
     beta (beta > 0)
         Inverse temperature parameter
     lambda (0 < lambda < 1)
-        Leak parameter (1 = full retention, 0 = full leak)
+        Leak parameter (0 = perfect memory, 1 = full leak)
     theta (0 < theta < 1)
         Gaze bias parameter
     """
@@ -363,7 +363,7 @@ class Glickman2Layer(ChoiceModel):
     beta (beta > 0)
         Inverse temperature parameter
     lambda (0 < lambda < 1)
-        Leak parameter (1 = full retention, 0 = full leak)
+        Leak parameter (0 = perfect memory, 1 = full leak)
     theta (0 < theta < 1)
         Gaze bias parameter
     """
