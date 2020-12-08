@@ -16,7 +16,7 @@ def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, sample_kwargs={}):
         y1 (array): Group 1 values
         y2 (array): Group 2 values
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
-        sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
+        sigma_high (float, optional): Upper bound of uniform prior on group standard deviation. Defaults to 10.0.
         sample_kwargs : dict, optional
             additional keyword arguments passed on to pymc3.sample
 
@@ -60,7 +60,7 @@ def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, sample_kwargs={}):
         y (array): Values
         mu (float, optional): Population mean. Defaults to 0.0.
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
-        sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
+        sigma_high (float, optional): Upper bound of uniform prior on group standard deviation. Defaults to 10.0.
         sample_kwargs : dict, optional
             additional keyword arguments passed on to pymc3.sample
     
