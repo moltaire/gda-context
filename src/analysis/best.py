@@ -9,7 +9,7 @@ import numpy as np
 import pymc3 as pm
 
 
-def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={}):
+def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, sample_kwargs={}):
     """Run two-sample BEST model
     
     Args:
@@ -17,8 +17,6 @@ def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={})
         y2 (array): Group 2 values
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
         sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
-        seed : int, optional
-            seed passed on to pymc3.sample
         sample_kwargs : dict, optional
             additional keyword arguments passed on to pymc3.sample
 
@@ -50,12 +48,12 @@ def runBEST(y1, y2, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={})
         group2 = pm.StudentT("group2", nu=nu, mu=group2_mean, lam=lam2, observed=y2)
 
         # MCMC
-        trace = pm.sample(random_seed=seed, **sample_kwargs)
+        trace = pm.sample(**sample_kwargs)
 
     return trace
 
 
-def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwargs={}):
+def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, sample_kwargs={}):
     """Run one-sample BEST model.
     
     Args:
@@ -63,8 +61,6 @@ def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwarg
         mu (float, optional): Population mean. Defaults to 0.0.
         sigma_low (float, optional): Lower bound of uniform prior on group standard deviation. Defaults to 1.0.
         sigma_high (float, optional): Upper bound of uniform prior on group. Defaults to 10.0.
-        seed : int, optional
-            seed passed on to pymc3.sample
         sample_kwargs : dict, optional
             additional keyword arguments passed on to pymc3.sample
     
@@ -86,6 +82,6 @@ def runBEST1G(y, mu=0.0, sigma_low=1.0, sigma_high=10.0, seed=None, sample_kwarg
         observed = pm.StudentT("observed", nu=nu, mu=mean, lam=lam, observed=y)
 
         # MCMC
-        trace = pm.sample(random_seed=seed, **sample_kwargs)
+        trace = pm.sample(**sample_kwargs)
 
     return trace
