@@ -238,59 +238,74 @@ plt.savefig(join(OUTPUT_DIR, "4-2_switch-level_bic.pdf"), dpi=300, bbox_inches="
 
 # %% 3) Switch-level individual counts
 # ------------------------------------
+width = 11.5
+height = 4
+
+fontsize = 6
+matplotlib.rcParams.update(
+    {
+        "font.size": fontsize,
+        "axes.labelsize": fontsize,
+        "axes.titlesize": fontsize,
+        "xtick.labelsize": fontsize,
+        "ytick.labelsize": fontsize,
+    }
+)
+
 # Load the data
 best_switches_individual_counts = pd.read_csv(
-    join(RESULTS_DIR, "4-switchboard", "switch-levels_individual-counts.csv")
+    join(RESULTS_DIR, "4-switchboard", "switch-levels_individual-counts.csv"),
+    index_col=0
 )
 
-# Make the figure
-colors = np.array(
-    [
-        palette[c]
-        for c in pd.Categorical(
-            best_switches_individual_counts["switch"],
-            categories=[
-                "comparison",
-                "integration",
-                "gb_alt",
-                "gb_att",
-                "leak",
-                "inhibition",
-            ],
-            ordered=True,
-        ).codes
-    ]
+fig, axs = plt.subplots(
+    2,
+    3,
+    figsize=cm2inch(width, height),
+    sharex=True,
+    dpi=300,
+    gridspec_kw={"height_ratios": [3, 2]},
 )
 
-# Make the figure
-fig, ax = plt.subplots(figsize=cm2inch(3, 4.5), dpi=300)
+for i, (switch, color) in enumerate(
+    zip(
+        ["inhibition", "leak", "comparison", "gb_alt", "integration", "gb_att"],
+        [
+            "lightpink",
+            "paleturquoise",
+            "slategray",
+            "mediumaquamarine",
+            "darksalmon",
+            "indianred",
+        ],
+    )
+):
+    ax = axs.ravel()[i]
+    ax.set_title(switch_labels[switch], fontsize=6, y=0.95)
 
-counts = best_switches_individual_counts["count"]
+    counts = best_switches_individual_counts.loc[best_switches_individual_counts["switch"] == switch, "count"].values
+    sort = np.argsort(counts)
+    ylabels = best_switches_individual_counts.loc[
+        best_switches_individual_counts["switch"] == switch, "label"
+    ].values
+    y = np.arange(len(counts))
+    ax.barh(y, counts[sort], color=color)
+    ax.set_yticks(y)
+    ax.set_yticklabels(ylabels[sort], fontsize=5)
+    ax.set_ylim(-1, len(y) - 0.5)
 
-bars = ax.barh(np.arange(len(best_switches_individual_counts)), counts, color=colors)
+    ax.set_xlim(0, 40)
+    ax.set_xticks(np.arange(0, 41, 10))
 
-ax.set_yticks(np.arange(len(best_switches_individual_counts)))
-ax.set_yticklabels(best_switches_individual_counts["label"], fontsize=5)
-ax.set_ylim(len(best_switches_individual_counts), -0.5)
-ax.set_xlabel("N best fitting")
-ax.set_xticks(np.arange(0, 41, 10))
-ax.set_xlim(0, 40)
 
-switch_indices = (
-    best_switches_individual_counts["switch"].drop_duplicates().index
-)  # identify indices where switches occur first
-ax.legend(
-    handles=[bars[i] for i in switch_indices],
-    labels=[
-        switch_labels[switch]
-        for switch in best_switches_individual_counts["switch"][switch_indices].values
-    ],
-    fontsize=5,
-    bbox_to_anchor=(1.05, 1.025),
-)
+for ax in axs[-1, :]:
+    ax.set_xlabel("N subjects")
+
+plt.tight_layout(w_pad=0.25, h_pad=1)
+
 
 plt.savefig(
-    join(OUTPUT_DIR, "4-2_switch-level_individual_counts.pdf"),
+    join(OUTPUT_DIR, "S_switch-level_individual_counts.pdf"),
     dpi=300,
     bbox_inches="tight",
 )
