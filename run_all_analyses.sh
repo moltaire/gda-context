@@ -81,8 +81,15 @@ python Supplement_run-dwell-regression.py --verbose 2 --mixed  --seed 1 --label 
 python Supplement_run-dwell-regression.py --verbose 2 --mixed  --timebinned --seed 2 --label timebinned
 python Supplement_run-dwell-regression.py --verbose 2 --mixed  --timebinned --center-time --seed 2 --label timebinned
 
+echo "Running analysis of transition patterns"
+python Supplement_transitions_stats.py
+
+echo "Running analyses testing simple choice rule"
+python Supplement_choicerule-analysis.py
+
 echo "Supplemental figures..."
 python Supplement_GLA-estimates_figure.py
 python Supplement_gaze-predictors_figure.py
+python Supplement_dwell-regression-weights_figure.py
 
 cd ..
