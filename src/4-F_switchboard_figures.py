@@ -112,7 +112,7 @@ ax, values = factorial_heatmap(
     row_factors=["comparison", "gb_att", "integration"],
     col_factors=["leak", "gb_alt", "inhibition"],
     value_var="BIC",
-    cmap="RdYlGn_r",
+    cmap="viridis_r",
     norm=TwoSlopeNorm(vcenter=275),  # mean_bics['BIC'].mean()),
     factor_labels={"integration": "Integration", "inhibition": "Inhibition"},
     level_labels={
