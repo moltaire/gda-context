@@ -242,7 +242,7 @@ if __name__ == "__main__":
         )
         axs[e, 2].set_ylim(0.1, 0.5)
         axs[e, 2].set_yticks(np.arange(0.1, 0.51, 0.1))
-        axs[e, 2].set_ylabel("Relative dwell")
+        axs[e, 2].set_ylabel("Relative dwell time")
         axs[e, 2].set_xlabel(None)
         axs[e, 2].set_xticks([0, 1, 2])
         axs[e, 2].set_xticklabels(["Target", "Competitor", "Decoy"])
