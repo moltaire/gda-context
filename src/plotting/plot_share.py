@@ -229,7 +229,7 @@ def lm(
         xs = np.linspace(*xrange, 100)
     intercept = summary.loc["Intercept", "mean"]
     beta = summary.loc["x", "mean"]
-    ax.plot(xs, intercept + beta * xs, color=line_color, zorder=4, **kwargs)
+    ax.plot(xs, intercept + beta * xs, color=line_color, zorder=2, **kwargs)
 
     # Plot posterior predictive credible region band
     intercept_samples = trace.get_values("Intercept")
