@@ -294,8 +294,15 @@ def fit_predict_subject_model(
         predictions_df = []
         for rep in range(n_sims):
             predicted_choices = subject_model.simulate_choices(parameters=estimates)
+            predicted_choiceprobs = subject_model.predict_choiceprobs(
+                parameters=estimates
+            )
             predictions_rep_df = subject_model.data.copy()
             predictions_rep_df["predicted_choice"] = predicted_choices
+            for i, option in enumerate(["A", "B", "C"]):
+                predictions_rep_df[
+                    f"predicted_choiceprob_{option}"
+                ] = predicted_choiceprobs[:, i]
             predictions_rep_df["model"] = model_label
             predictions_rep_df["rep"] = rep
             predictions_df.append(predictions_rep_df)
