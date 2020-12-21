@@ -71,6 +71,9 @@ def violin(
     ax=None,
 ):
     """Make a custom violinplot, with nice inner boxplot.
+    The box extends from the lower to upper quartile values of the data, with a line at the median.
+    Whiskers range from observed values determined by 1.5 times the interquartile range (IRQ).
+    Outlier values outside this range are indicated as individual points.
 
     Args:
         data (pandas.DataFrame): Data to plot. Each column will be made into one violin.
