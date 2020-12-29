@@ -68,6 +68,7 @@ def violin(
     xticklabels=None,
     ylabel=None,
     palette=None,
+    whiskers=1.5,
     ax=None,
 ):
     """Make a custom violinplot, with nice inner boxplot.
@@ -83,6 +84,7 @@ def violin(
         xticklabels (list, optional): x-tick labels. Defaults to None.
         ylabel (str, optional): y-axis label. Defaults to None.
         palette (list, optional): list of colors to use for violins. Defaults to default colors.
+        whiskers (float, sequence or string): boxplot `whis` argument.
         ax (matplotlib.axis, optional): Axis to plot on. Defaults to None.
 
     Returns:
@@ -119,6 +121,7 @@ def violin(
         boxplot_data,
         positions=range(len(boxplot_data)),
         widths=box_width,
+        whis=whiskers,
         showcaps=False,
         boxprops=dict(linewidth=0.5),
         medianprops=dict(linewidth=0.5, color="black"),
