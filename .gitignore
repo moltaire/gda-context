@@ -9,3 +9,5 @@ results/3-behavioural-modeling/estimates/estimates_de1.csv
 results/3-behavioural-modeling/predictions/predictions_de1.csv
 results/4-switchboard/estimates/sb_estimates_de1.csv
 results/4-switchboard/predictions/sb_predictions_de1.csv
+
+results/S_supplemental-gda-increased-softmax-beta/GLA-predictions_increased-beta.csv
