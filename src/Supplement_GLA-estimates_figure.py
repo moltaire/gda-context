@@ -60,7 +60,7 @@ gla_estimates_summary.to_csv(
 )
 
 
-def pairPlot(df, kind="lm", bins=None, limits=None, labels=None):
+def pairPlot(df, kind="lm", bins=None, limits=None, labels=None, titles=None):
     """
     Plot associations between all pairs of variables in df.
     
@@ -69,6 +69,10 @@ def pairPlot(df, kind="lm", bins=None, limits=None, labels=None):
         'scatter': Only scatter
     limits : dict
         Dictionary of variable limits.
+    labels : dict
+        Dictionary of variable x- and y-labels
+    titles : dict
+        Dictionary of variable column titles
     
     Returns:
         fig, axs
@@ -95,6 +99,10 @@ def pairPlot(df, kind="lm", bins=None, limits=None, labels=None):
                     ax.set_xlabel(labels[varx])
                 else:
                     ax.set_xlabel(varx)
+                if titles is not None:
+                    ax.set_title(titles[varx])
+                else:
+                    pass
 
             elif vy < vx:
                 ax.axis("off")
@@ -130,6 +138,13 @@ labels = dict(
     lam=r"$\lambda$",
     theta=r"$\theta$",
 )
+titles = dict(
+    alpha="Utility",
+    beta="Inverse temperature\n(0 = random choice)",
+    gamma="Probability weighting\n(1 = linear weighting)",
+    lam="Leak\n(0 = perfect memory,\n1 = full leak)",
+    theta="Gaze-discount\n(1 = no discount,\n0 = full discount)",
+)
 
 fig, axs = pairPlot(
     gla_estimates[["alpha", "beta", "gamma", "lam", "theta"]],
@@ -137,6 +152,7 @@ fig, axs = pairPlot(
     bins=10,
     limits=limits,
     labels=labels,
+    titles=titles
 )
 
 fig.tight_layout(h_pad=0.1, w_pad=0.1)
