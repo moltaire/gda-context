@@ -1,15 +1,15 @@
-,subject,block,trial,effect,target,key,choice,choice_tcd,rt,pA,pB,pC,mA,mB,mC,pos_A,pos_B,pos_C,pA_top,pB_top,pC_top,fixated_alternatives,fixated_attributes,fixation_durations,predicted_choice,model,rep
+,subject,block,trial,effect,target,key,choice,choice_tcd,rt,pA,pB,pC,mA,mB,mC,pos_A,pos_B,pos_C,pA_top,pB_top,pC_top,fixated_alternatives,fixated_attributes,fixation_durations,predicted_choice,predicted_choiceprob_A,predicted_choiceprob_B,predicted_choiceprob_C,model,rep
 3375,15,1,1,compromise,B,L,1,target,11310.0,0.78,0.62,0.55,7,14,35,2,0,1,False,True,True,[2 1 1 1 2 2 1 1 1 2 2 1 0 0 0 2 1 1 1 2 1 1 2 2 1 2 0 0 0 0 0 0 1 0 1 1 1],[0 0 1 1 1 1 0 1 0 0 1 0 1 0 1 1 0 1 1 1 0 0 1 0 1 0 0 0 1 1 0 1 0 1 0 1 1],"[0.158    0.125    0.108    0.383    0.158    0.183    0.166    0.191
  0.35     0.175    0.458    0.208    0.208    0.258    0.392    0.35
  0.308    0.108    0.158    0.175    0.317    0.333    0.15     0.217
  0.367    0.417    0.083    0.233    0.392    0.125    0.267    0.308
- 0.242    0.233    0.258    0.108    0.210689]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.242    0.233    0.258    0.108    0.210689]",2,0.18426423524758903,0.7016113876069706,0.11412437714544038,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3376,15,1,2,filler,,L,2,,6330.0,0.28,0.67,0.78,35,14,12,2,1,0,True,False,True,[1 1 2 2 2 2 2 1 1 0 0 0 1 2 1 2 2 2 1 1 2 2 2],[1 0 0 1 1 0 0 0 0 0 1 1 0 0 1 0 1 1 0 1 1 0 0],"[0.3      0.283    0.3      0.216    0.1      0.158    0.133    0.091
  0.15     0.525    0.166    0.508    0.208    0.175    0.3      0.333
- 0.133    0.15     0.191    0.35     0.316    0.242    0.056125]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3377,15,1,3,attraction,A,R,1,competitor,2250.0,0.78,0.68,0.76,6,15,5,0,2,1,False,False,False,[2 0 0 1 1 1],[0 0 1 0 0 1],[0.208    0.425    0.175    0.183    0.166    0.401028],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.133    0.15     0.191    0.35     0.316    0.242    0.056125]",2,2.7976197409456086e-05,0.013186340412926318,0.9867856833896642,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3377,15,1,3,attraction,A,R,1,competitor,2250.0,0.78,0.68,0.76,6,15,5,0,2,1,False,False,False,[2 0 0 1 1 1],[0 0 1 0 0 1],[0.208    0.425    0.175    0.183    0.166    0.401028],1,0.04167191086746759,0.9440541900424664,0.014273899090066194,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3378,15,1,4,compromise,B,R,1,target,2790.0,0.75,0.68,0.55,6,14,34,0,2,1,False,False,False,[2 0 1 2 2 2 1 1 1 1],[0 0 0 0 1 1 1 1 0 1],"[0.367    0.233    0.4      0.133    0.175    0.133    0.367    0.133
- 0.25     0.059315]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.25     0.059315]",1,0.0139964646535739,0.9373025234336053,0.048701011912820676,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3379,15,1,5,attraction,B,L,1,target,21770.0,0.72,0.68,0.66,7,14,13,1,0,2,True,True,True,"[0 0 0 0 1 1 0 2 2 2 0 1 1 2 2 2 2 1 1 2 1 1 1 2 2 1 1 0 2 2 2 1 1 1 2 2 2
  2 1 2 1 1 1 1 1 2 2 2 1 1 0 0 0 0 1 2 2 2 2 1 1 1 2 2 2 2 2 2 0 1 1 1 1 0
  2 0 1]","[0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0
@@ -23,348 +23,348 @@
  0.258    0.141    0.442    0.233    0.158    0.141    0.233    0.083
  0.308    0.183    0.166    0.6      0.225    0.116    0.158    0.133
  0.292    0.433    0.225    0.292    0.367    0.133    0.467    0.266
- 0.926    0.2      0.325    0.175    0.039072]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.926    0.2      0.325    0.175    0.039072]",1,0.09274327283532843,0.8486719295873649,0.0585847975773066,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3380,15,1,6,attraction,B,M,2,decoy,9120.0,0.72,0.62,0.6,7,15,14,0,2,1,True,False,True,[2 2 1 1 2 2 0 0 1 1 1 1 1 1 2 2 0 0 0 1 2 1 1 2 2 2 1 2 2 1 1 2 0 0 2 2],[1 1 0 1 0 1 1 0 1 1 0 1 0 0 0 0 1 0 0 1 0 0 1 1 1 0 1 0 1 0 1 0 0 1 1 0],"[0.1      0.225    0.175    0.183    0.425    0.166    0.191    0.192
  0.1      0.208    0.166    0.216    0.091    0.191    0.408    0.358
  0.25     0.266    0.116    0.317    0.283    0.25     0.166    0.191
  0.141    0.266    0.1      0.258    0.166    0.166    0.25     0.417
- 0.15     0.2      0.116    0.087671]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.2      0.116    0.087671]",2,0.20108739603444814,0.17676028555920575,0.6221523184063461,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3381,15,1,7,compromise,A,L,0,target,5450.0,0.78,0.65,0.82,7,14,5,0,2,1,True,True,True,[2 2 2 2 0 2 1 1 2 0 1 1 1 0 2 0 1 0 0],[0 0 0 1 1 1 1 0 0 0 0 1 0 0 0 1 1 1 0],"[0.216    0.175    0.141    0.325    0.242    0.166    0.166    0.267
  0.225    0.283    0.216    0.208    0.15     0.158    0.2      0.358
- 0.433    0.208    0.187965]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.433    0.208    0.187965]",1,0.866172531758022,0.08135712568250954,0.052470342559468426,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3382,15,1,8,compromise,B,M,1,target,6570.0,0.72,0.62,0.55,7,14,35,2,1,0,True,True,True,[1 1 2 2 1 0 0 1 2 2 1 2 1 1 2 2 1 1 1 0 0 1],[0 1 1 1 1 1 0 0 0 1 1 1 0 0 0 1 0 0 1 1 0 0],"[0.191    0.2      0.083    0.208    0.308    0.133    0.217    0.242
  0.492    0.267    0.492    0.1      0.342    0.15     0.225    0.158
- 0.25     0.383    0.292    0.125    0.408    0.138129]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3383,15,1,9,attraction,B,R,1,target,4070.0000000000014,0.72,0.62,0.6,7,14,13,0,2,1,True,True,False,[2 0 0 2 2 1 2 1 1 2 2 1 1 1 1],[0 1 0 1 1 0 1 1 1 1 0 0 0 0 0],"[0.217    0.183    0.108    0.166    0.133    0.367    0.158    0.091
- 0.2      0.216    0.191    0.383    0.283    0.125    0.115191]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.25     0.383    0.292    0.125    0.408    0.138129]",2,0.25353293926303944,0.5242334579728887,0.22223360276407175,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3383,15,1,9,attraction,B,R,1,target,4070.000000000001,0.72,0.62,0.6,7,14,13,0,2,1,True,True,False,[2 0 0 2 2 1 2 1 1 2 2 1 1 1 1],[0 1 0 1 1 0 1 1 1 1 0 0 0 0 0],"[0.217    0.183    0.108    0.166    0.133    0.367    0.158    0.091
+ 0.2      0.216    0.191    0.383    0.283    0.125    0.115191]",1,0.03314704403423793,0.9506227564641035,0.01623019950165852,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3384,15,1,10,compromise,A,M,1,competitor,3930.0,0.75,0.62,0.88,7,15,4,0,1,2,True,False,True,[2 2 2 1 0 0 0 0 0 1 2 1 1 1 1],[1 1 0 0 1 0 1 0 0 0 0 1 0 0 1],"[0.108    0.116    0.458    0.175    0.15     0.125    0.333    0.241
- 0.1      0.125    0.225    0.208    0.25     0.167    0.063985]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.1      0.125    0.225    0.208    0.25     0.167    0.063985]",1,0.05895755492155825,0.8509603507851756,0.09008209429326618,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3385,15,1,11,filler,,L,2,,9330.0,0.27,0.61,0.89,37,16,11,2,1,0,True,False,False,[1 1 0 2 2 1 1 0 0 0 0 1 2 2 2 2 2 2 1 2 2 1 0 1 1 0 1 2 2 2],[0 0 1 1 1 1 0 1 0 0 1 0 1 0 1 1 1 1 0 0 0 1 0 0 0 1 1 1 0 1],"[0.225 0.225 0.4   0.125 0.4   0.292 0.258 0.208 0.283 0.175 0.141 0.208
  0.241 0.375 0.166 0.216 0.676 0.45  0.208 0.375 0.217 0.241 0.225 0.225
- 0.116 0.283 0.175 0.266 0.191 0.408]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3386,15,1,12,compromise,A,R,1,competitor,2200.0,0.75,0.62,0.88,6,15,5,0,2,1,True,False,False,[2 2 1 0 0 2 1 1],[0 0 0 0 0 0 0 1],[0.225    0.158    0.208    0.15     0.25     0.166    0.158    0.240329],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.116 0.283 0.175 0.266 0.191 0.408]",2,5.186359053903805e-06,0.0011835572991563974,0.9988112563417898,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3386,15,1,12,compromise,A,R,1,competitor,2200.0,0.75,0.62,0.88,6,15,5,0,2,1,True,False,False,[2 2 1 0 0 2 1 1],[0 0 0 0 0 0 0 1],[0.225    0.158    0.208    0.15     0.25     0.166    0.158    0.240329],1,0.0808579234893731,0.5517369979799237,0.3674050785307031,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3387,15,1,13,attraction,B,R,1,target,6270.0,0.72,0.62,0.6,6,15,14,1,2,0,False,True,True,[1 1 1 0 0 2 2 0 1 1 0 2 2 2 1 1 1],[1 1 1 1 1 0 0 1 1 1 1 0 1 1 1 0 1],"[0.183 0.15  1.193 0.133 0.2   0.417 0.108 0.242 0.408 0.225 0.242 0.525
- 0.242 0.083 0.158 0.308 0.208]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.242 0.083 0.158 0.308 0.208]",2,0.03183693784698809,0.9376104729124372,0.03055258924057489,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3388,15,1,14,compromise,B,M,1,target,5900.0,0.75,0.62,0.58,7,14,35,2,1,0,True,True,True,[0 0 0 1 2 1 0 0 1 2 1 1 0 1 1 1 1 0 1],[0 0 1 1 1 1 1 0 0 0 0 1 1 1 1 0 0 0 0],"[0.141    0.158    0.225    0.233    0.333    0.383    0.258    0.292
  0.116    0.333    0.267    0.684    0.225    0.258    0.333    0.125
- 0.158    0.266    0.113813]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.266    0.113813]",0,0.17822254442484994,0.577939967289947,0.24383748828520302,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3389,15,1,15,compromise,A,R,1,competitor,4160.0,0.78,0.68,0.85,6,15,4,0,2,1,True,True,False,[0 1 1 2 0 2 1 1 2 2 2 0 1],[0 1 1 0 1 0 0 0 0 1 1 0 1],"[0.392    0.183    0.25     0.325    0.383    0.158    0.141    0.25
- 0.116    0.208    0.108    0.283    0.414356]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3390,15,1,16,compromise,A,L,1,competitor,2730.0,0.78,0.68,0.88,7,15,4,2,0,1,False,False,False,[2 2 1 0 2 1 1],[0 0 0 0 0 0 1],[0.208    0.317    0.308    0.467    0.2      0.191    0.448255],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3391,15,1,17,attraction,A,L,1,competitor,2110.0,0.72,0.65,0.7,7,15,6,2,0,1,False,False,False,[2 1 2 0 0 1 1 1],[0 0 0 0 1 1 1 0],[0.125    0.208    0.141    0.233    0.392    0.175    0.141    0.160912],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.116    0.208    0.108    0.283    0.414356]",1,0.14173080161121984,0.6934836368369335,0.1647855615518468,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3390,15,1,16,compromise,A,L,1,competitor,2730.0,0.78,0.68,0.88,7,15,4,2,0,1,False,False,False,[2 2 1 0 2 1 1],[0 0 0 0 0 0 1],[0.208    0.317    0.308    0.467    0.2      0.191    0.448255],1,0.06305273552178844,0.8480714015065894,0.08887586297162202,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3391,15,1,17,attraction,A,L,1,competitor,2110.0,0.72,0.65,0.7,7,15,6,2,0,1,False,False,False,[2 1 2 0 0 1 1 1],[0 0 0 0 1 1 1 0],[0.125    0.208    0.141    0.233    0.392    0.175    0.141    0.160912],1,0.04302609643319279,0.9406070163945377,0.016366887172269612,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3392,15,1,18,attraction,A,L,1,competitor,3510.0,0.75,0.68,0.73,6,14,5,2,0,1,True,True,True,[1 2 0 0 2 1 1 1 2 2 2],[1 1 1 0 0 0 1 1 1 0 1],"[0.408    0.216    0.167    0.233    0.35     0.275    0.1      0.258
- 0.241    0.258    0.298828]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.241    0.258    0.298828]",1,0.08552163279283165,0.4298028694013642,0.48467549780580405,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3393,15,1,19,compromise,A,L,1,competitor,5350.0,0.78,0.68,0.88,6,15,5,2,0,1,False,False,True,[1 1 1 2 2 0 0 0 0 2 2 2 0 2 1 1 1 2 2 0 2],[0 1 1 0 1 1 0 0 1 0 0 1 0 1 0 1 1 0 1 0 0],"[0.283    0.166    0.108    0.25     0.091    0.25     0.175    0.116
  0.175    0.5      0.133    0.216    0.258    0.3      0.191    0.225
- 0.108    0.275    0.191    0.375    0.097114]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.108    0.275    0.191    0.375    0.097114]",2,0.06896292403171773,0.09504714585897736,0.8359899301093049,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3394,15,1,20,attraction,B,M,1,target,7500.0,0.72,0.62,0.6,7,15,14,2,1,0,False,True,True,[2 1 1 0 1 2 2 1 1 2 2 0 0 0 1 0 1 2 2 1 1 1 2 1 1 2 1],[1 1 0 1 0 1 1 1 0 1 0 1 0 1 0 0 1 1 0 0 1 0 1 0 1 0 0],"[0.367    0.141    0.317    0.216    0.191    0.108    0.2      0.233
  0.433    0.191    0.3      0.208    0.375    0.275    0.233    0.133
  0.325    0.225    0.292    0.183    0.208    0.333    0.25     0.216
- 0.158    0.192    0.051185]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.192    0.051185]",1,0.02897714010231129,0.955738139509205,0.015284720388483728,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3395,15,1,21,compromise,A,M,0,target,6860.0,0.78,0.68,0.82,7,15,5,1,0,2,False,False,False,[0 0 0 1 2 2 2 2 2 2 0 0 0 0 1 1 0 1 0 0 0 0 0 0 1 0],[0 0 1 0 0 0 1 1 0 1 0 1 1 0 0 1 1 1 1 0 0 1 1 1 1 0],"[0.083    0.091    0.333    0.308    0.133    0.083    0.333    0.175
  0.417    0.275    0.166    0.108    0.083    0.15     0.375    0.208
  0.25     0.292    0.175    0.233    0.192    0.2      0.275    0.15
- 0.283    0.132874]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.283    0.132874]",0,0.7697387425970449,0.1919323057869935,0.038328951615961525,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3396,15,1,22,compromise,B,L,1,target,5270.0,0.72,0.68,0.52,7,15,35,1,0,2,True,False,True,[0 0 1 2 2 0 0 2 0 1 1 1 1 0 0 0 1 1],[1 0 0 1 0 0 1 0 0 1 1 0 0 1 0 0 0 1],"[0.183    0.383    0.3      0.183    0.508    0.175    0.216    0.15
  0.241    0.308    0.358    0.108    0.216    0.141    0.1      0.191
- 0.3      0.251789]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.3      0.251789]",1,0.05073028489479294,0.9214279396704556,0.027841775434751553,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3397,15,1,23,compromise,B,L,1,target,3220.0,0.72,0.65,0.58,6,15,34,1,0,2,False,True,True,[0 2 2 2 0 1 1 1 1 2 1 1],[0 1 0 0 1 1 1 0 0 1 0 1],"[0.3     0.2     0.191   0.15    0.208   0.141   0.425   0.216   0.091
- 0.383   0.208   0.02133]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.383   0.208   0.02133]",1,0.014761058599484945,0.8075600093435005,0.17767893205701457,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3398,15,1,24,compromise,A,L,1,competitor,3750.0,0.78,0.62,0.85,7,14,4,1,0,2,False,False,True,[2 2 2 0 1 1 0 2 0 1 0 0 0 1 1],[1 1 0 0 0 1 1 0 1 1 1 0 0 0 0],"[0.083 0.125 0.275 0.208 0.25  0.242 0.15  0.191 0.383 0.35  0.183 0.191
- 0.125 0.083 0.108]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.125 0.083 0.108]",1,0.39793719520113024,0.5172052613734512,0.0848575434254186,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3399,15,1,25,compromise,B,R,1,target,4260.0,0.72,0.68,0.58,6,15,35,1,2,0,True,True,False,[0 1 1 2 0 1 0 2 0 0 0 1 1 2 2 1],[1 0 0 1 0 0 0 0 0 1 1 0 1 0 0 1],"[0.225 0.141 0.183 0.317 0.175 0.225 0.183 0.308 0.266 0.125 0.108 0.275
- 0.367 0.175 0.225 0.125]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.367 0.175 0.225 0.125]",1,0.01740769763255773,0.5212912264058187,0.46130107596162356,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3400,15,1,26,attraction,B,M,1,target,7350.0,0.75,0.62,0.6,6,15,14,0,1,2,True,False,False,[2 2 2 1 0 0 1 2 1 1 2 1 0 0 1 1 2 1 1 1 2 1],[1 0 1 1 1 0 0 0 0 0 0 1 0 1 0 1 1 1 0 0 0 1],"[0.158    0.233    0.317    0.4      0.242    0.3      0.367    0.35
  0.141    0.509    0.55     0.166    0.292    0.208    0.208    0.2
- 0.308    0.158    0.166    0.125    0.175    0.523726]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.308    0.158    0.166    0.125    0.175    0.523726]",1,0.021759623627141716,0.9711403237862113,0.00710005258664713,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3401,15,1,27,attraction,B,R,1,target,7790.0,0.75,0.68,0.66,6,14,13,0,2,1,False,True,True,[2 2 2 2 2 1 0 0 0 0 2 2 0 2 2 1 2 1 2 0 0 2 2 1 1 2 2 1 1 1 2],[1 0 0 0 1 1 1 1 1 0 0 0 1 1 0 0 0 0 1 0 1 1 1 1 0 0 1 1 0 0 0],"[0.15     0.208    0.133    0.108    0.233    0.216    0.141    0.275
  0.083    0.183    0.208    0.183    0.166    0.166    0.2      0.183
  0.225    0.208    0.125    0.216    0.25     0.133    0.133    0.166
- 0.275    0.392    0.183    0.392    0.208    0.1      0.292032]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.275    0.392    0.183    0.392    0.208    0.1      0.292032]",1,0.03781998085848389,0.79395262046019,0.16822739868132605,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3402,15,1,28,attraction,A,M,1,competitor,3420.0,0.75,0.65,0.73,7,14,6,0,1,2,True,False,True,[2 2 1 1 0 0 1 2 1 1 1],[1 0 1 0 0 0 0 0 0 1 1],"[0.216    0.308    0.15     0.342    0.2      0.241    0.175    0.316
- 0.167    0.308    0.313322]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.167    0.308    0.313322]",1,0.04952195783331014,0.9212446164671113,0.0292334256995787,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3403,15,1,29,attraction,A,M,1,competitor,4610.0,0.72,0.65,0.7,6,15,5,0,1,2,True,True,True,[1 1 2 0 0 0 1 2 1 0 0 1 2 1 1 1 1],[0 1 1 0 0 1 1 1 1 0 0 0 0 0 0 1 0],"[0.108    0.2      0.208    0.191    0.3      0.25     0.291    0.317
  0.175    0.108    0.2      0.258    0.333    0.15     0.116    0.283
- 0.272868]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3404,15,1,30,compromise,A,L,1,competitor,1390.0,0.75,0.65,0.85,7,15,5,1,0,2,False,True,True,[0 2 1 1],[1 0 1 0],[0.292    0.217    0.275    0.308637],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.272868]",1,0.01431337048790245,0.9779899914297642,0.007696638082333388,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3404,15,1,30,compromise,A,L,1,competitor,1390.0,0.75,0.65,0.85,7,15,5,1,0,2,False,True,True,[0 2 1 1],[1 0 1 0],[0.292    0.217    0.275    0.308637],1,0.08351586308957469,0.7472238869783135,0.16926024993211178,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3405,15,1,31,compromise,B,R,1,target,5090.0,0.75,0.62,0.58,6,15,34,1,2,0,False,False,True,[0 0 1 2 2 0 1 1 2 2 2 2 0 1 0 2 0 0 1 1 0],[1 1 1 1 0 0 1 0 1 0 0 1 1 1 0 0 0 0 1 0 1],"[0.216    0.108    0.216    0.2      0.158    0.15     0.275    0.291
  0.25     0.116    0.091    0.116    0.2      0.35     0.191    0.216
- 0.175    0.166    0.283    0.242    0.123936]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.175    0.166    0.283    0.242    0.123936]",0,0.40038264667714035,0.2767419392347194,0.32287541408814036,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3406,15,1,32,compromise,A,L,1,competitor,4300.0,0.72,0.68,0.82,7,15,4,1,0,2,False,False,False,[0 0 2 1 1 0 0 2 1 1 1 0 0 1 1],[1 1 1 0 1 1 0 0 0 1 1 1 1 0 0],"[0.217    0.125    0.267    0.158    0.258    0.233    0.383    0.241
- 0.375    0.267    0.333    0.25     0.125    0.183    0.067201]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.375    0.267    0.333    0.25     0.125    0.183    0.067201]",1,0.03819484386729203,0.94343252457153,0.01837263156117787,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3407,15,1,33,compromise,A,R,1,competitor,5450.0,0.78,0.65,0.82,7,14,4,1,2,0,True,False,True,[0 0 1 1 2 2 2 1 1 1 0 0 1 1 0 1 1 1 0 1 1],[0 1 1 1 1 1 0 1 1 0 1 1 0 0 0 1 1 1 1 0 1],"[0.125    0.175    0.15     0.383    0.317    0.108    0.217    0.208
  0.125    0.258    0.2      0.225    0.091    0.2      0.3      0.183
- 0.217    0.133    0.233    0.25     0.249274]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.217    0.133    0.233    0.25     0.249274]",1,0.11859085899972682,0.8537994168484364,0.02760972415183669,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3408,15,1,34,compromise,A,M,1,competitor,7370.0,0.72,0.65,0.82,7,15,4,0,1,2,False,True,False,[2 2 1 1 1 0 2 1 0 2 1 1 1 0 1 1 1 1 0 1 0 1],[1 1 0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0],"[0.116 0.166 0.2   0.166 0.125 0.192 0.267 0.467 0.233 0.183 0.208 0.4
- 0.392 0.333 0.125 0.225 0.241 0.308 0.3   0.383 0.534 0.375]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.392 0.333 0.125 0.225 0.241 0.308 0.3   0.383 0.534 0.375]",1,0.11394444327242757,0.8467274273987028,0.039328129328869574,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3409,15,1,35,attraction,A,R,1,competitor,6410.0,0.72,0.65,0.7,6,15,5,0,2,1,True,False,False,[2 2 1 0 2 2 1 1 2 0 1 1 1 1 1 1 2 1 1 2 0 2 2 0 2],[1 0 0 0 0 0 0 1 1 0 0 0 1 1 1 1 1 0 0 1 0 0 0 0 1],"[0.367    0.208    0.25     0.417    0.125    0.108    0.15     0.375
  0.217    0.183    0.183    0.141    0.392    0.116    0.208    0.091
  0.116    0.35     0.125    0.308    0.191    0.208    0.133    0.233
- 0.083766]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083766]",1,0.26061493597191765,0.3611164666040281,0.37826859742405416,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3410,15,1,36,filler,,M,2,,10720.0,0.27,0.47,0.86,37,21,11,2,0,1,False,True,True,[2 2 0 0 1 1 0 0 0 0 2 1 1 0 0 2 0 0 0 2 1 2 1 1 0 0 2 2 2 2 2],[1 1 1 1 0 0 1 1 1 1 1 0 0 1 1 0 0 1 1 1 0 0 1 1 0 1 0 1 0 1 0],"[0.191    0.1      0.2      0.166    0.425    0.175    0.275    0.108
  0.15     0.7      0.283    0.3      0.141    0.275    0.108    0.333
  0.208    0.676    0.968    0.333    0.425    0.291    0.158    0.216
- 0.25     0.225    0.158    0.35     0.275    0.116    0.315479]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.25     0.225    0.158    0.35     0.275    0.116    0.315479]",2,5.042339361831427e-06,0.00010533210141196044,0.9998896255592262,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3411,15,1,37,compromise,B,R,1,target,8410.0,0.72,0.62,0.58,6,14,35,1,2,0,False,False,False,[0 0 2 1 1 2 2 2 2 0 0 0 2 2 2 2 0 1 1 2 2 0 0 0 1 1 1 1 0],[1 0 0 0 1 1 1 0 0 0 1 0 0 0 1 1 1 1 0 0 0 0 1 1 1 0 1 1 0],"[0.125 0.15  0.258 0.383 0.233 0.275 0.091 0.108 0.083 0.108 0.592 0.333
  0.225 0.333 0.517 0.367 0.192 0.166 0.333 0.158 0.216 0.442 0.25  0.167
- 0.166 0.183 0.258 0.125 0.125]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166 0.183 0.258 0.125 0.125]",1,0.204788727499629,0.42678826198072234,0.36842301051964876,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3412,15,1,38,attraction,A,L,1,competitor,3610.0,0.75,0.65,0.73,7,15,6,1,0,2,True,True,True,[1 1 0 2 0 0 1 0 2 0 1 0 1],[0 1 1 1 1 0 0 0 0 0 0 0 0],"[0.183    0.275    0.317    0.266    0.183    0.116    0.175    0.158
- 0.333    0.292    0.241    0.2      0.096535]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3413,15,1,39,attraction,B,M,1,target,3480.0,0.78,0.65,0.63,6,15,14,0,1,2,True,False,False,[1 1 2 1 2 0 1 2 2 1 1 2],[1 1 0 0 0 0 0 0 1 1 0 1],[0.308 0.133 0.108 0.266 0.133 0.383 0.158 0.141 0.208 0.417 0.35  0.275],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.333    0.292    0.241    0.2      0.096535]",1,0.2636398560458039,0.6926100017877169,0.043750142166479045,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3413,15,1,39,attraction,B,M,1,target,3480.0,0.78,0.65,0.63,6,15,14,0,1,2,True,False,False,[1 1 2 1 2 0 1 2 2 1 1 2],[1 1 0 0 0 0 0 0 1 1 0 1],[0.308 0.133 0.108 0.266 0.133 0.383 0.158 0.141 0.208 0.417 0.35  0.275],1,0.08514320144635958,0.7447252077603812,0.1701315907932593,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3414,15,1,40,filler,,R,2,,5700.0,0.29,0.42,0.72,34,23,13,0,1,2,True,True,False,[0 0 0 1 1 2 2 2 0 1 1 1 2 2 1 1 2 2 1 1 1 0 0 2 2],[0 1 0 0 0 1 0 0 0 0 0 0 0 1 1 1 1 0 0 1 1 1 0 1 0],"[0.317    0.175    0.116    0.208    0.091    0.292    0.116    0.141
  0.258    0.175    0.241    0.1      0.158    0.208    0.083    0.25
  0.15     0.2      0.275    0.1      0.233    0.308    0.141    0.417
- 0.052499]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.052499]",2,0.0002941908450520057,0.0018451208393623,0.9978606883155857,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3415,15,1,41,compromise,B,M,1,target,7300.0,0.72,0.68,0.58,7,14,35,0,1,2,False,True,True,[1 2 2 2 1 0 0 1 2 1 2 1 1 1 2 2 1 1 2 2 2 2 2 1 1 1 1],[1 1 0 0 0 1 0 0 0 1 1 1 0 1 1 1 1 0 0 0 0 1 1 1 1 0 0],"[0.216    0.083    0.166    0.116    0.175    0.35     0.292    0.225
  0.183    0.35     0.475    0.166    0.292    0.25     0.342    0.183
  0.083    0.292    0.342    0.1      0.2      0.108    0.35     0.275
- 0.166    0.283    0.133569]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.283    0.133569]",1,0.012096462951740494,0.8839698477878125,0.1039336892604471,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3416,15,1,42,attraction,A,L,1,competitor,2950.0,0.72,0.62,0.7,7,15,6,2,0,1,False,True,True,[2 0 0 1 1 1 2 0 0],[1 1 1 0 1 1 0 1 0],"[0.166    0.183    0.125    0.342    0.241    0.166    0.784    0.166
- 0.135348]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3417,15,1,43,attraction,A,L,1,competitor,2130.0,0.75,0.65,0.73,7,14,6,1,0,2,True,True,False,[1 0 0 2 2 2 0 1],[0 0 0 1 0 0 0 0],[0.292    0.191    0.158    0.133    0.291    0.091    0.158    0.243469],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3418,15,1,44,filler,,M,2,,4670.0,0.24,0.37,0.76,41,27,13,0,2,1,False,True,False,[2 1 0 2 2 0 1 2 2 2 1 0],[0 0 1 0 1 0 1 1 0 0 0 1],[0.233 0.35  0.383 0.225 0.342 0.308 0.458 0.609 0.125 0.317 0.216 0.217],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.135348]",1,0.7413802152520972,0.18820282539157832,0.0704169593563244,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3417,15,1,43,attraction,A,L,1,competitor,2130.0,0.75,0.65,0.73,7,14,6,1,0,2,True,True,False,[1 0 0 2 2 2 0 1],[0 0 0 1 0 0 0 0],[0.292    0.191    0.158    0.133    0.291    0.091    0.158    0.243469],1,0.31390689928158244,0.5323686222802865,0.15372447843813108,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3418,15,1,44,filler,,M,2,,4670.0,0.24,0.37,0.76,41,27,13,0,2,1,False,True,False,[2 1 0 2 2 0 1 2 2 2 1 0],[0 0 1 0 1 0 1 1 0 0 0 1],[0.233 0.35  0.383 0.225 0.342 0.308 0.458 0.609 0.125 0.317 0.216 0.217],2,0.00028656434809290525,0.0022630359704275747,0.9974503996814796,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3419,15,1,45,compromise,B,M,1,target,5000.0,0.72,0.65,0.55,6,15,35,0,1,2,True,True,False,[1 1 0 0 1 2 2 1 1 2 1 1 1 0 2 1 1],[0 0 0 1 0 1 0 0 1 1 0 1 1 0 1 1 0],"[0.083   0.442   0.308   0.116   0.141   0.208   0.316   0.267   0.25
- 0.275   0.4     0.158   0.166   0.158   0.358   0.175   0.22046]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3420,15,1,46,compromise,A,L,1,competitor,1360.0,0.75,0.68,0.88,6,15,5,2,0,1,False,False,True,[2 2 0 1],[0 1 0 1],[0.175    0.191    0.25     0.399739],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.275   0.4     0.158   0.166   0.158   0.358   0.175   0.22046]",1,0.025535862074748665,0.8383359015148146,0.1361282364104367,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3420,15,1,46,compromise,A,L,1,competitor,1360.0,0.75,0.68,0.88,6,15,5,2,0,1,False,False,True,[2 2 0 1],[0 1 0 1],[0.175    0.191    0.25     0.399739],2,0.10100529957462241,0.5472899197782921,0.35170478064708544,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3421,15,1,47,compromise,B,M,1,target,3580.0,0.72,0.62,0.55,7,14,35,2,1,0,True,False,False,[1 1 0 1 2 2 1 1 0 1 1 2 2 2 1],[0 0 1 0 1 0 0 1 0 1 1 0 0 1 0],"[0.183    0.091    0.3      0.116    0.283    0.175    0.275    0.4
- 0.25     0.125    0.158    0.183    0.225    0.141    0.073655]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.25     0.125    0.158    0.183    0.225    0.141    0.073655]",2,0.04754117941402932,0.2509055220660007,0.7015532985199698,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3422,15,1,48,filler,,R,2,,8730.0,0.32,0.48,0.85,31,20,11,1,0,2,True,False,False,[0 2 1 0 2 1 0 0 2 0 0 2 2 1 1 0 2 2 0 1 2 2 0 2 0 1 0 0 1],[1 0 1 0 1 0 0 0 1 0 0 1 1 0 1 1 0 0 1 1 0 0 1 1 0 1 1 0 0],"[0.333 0.208 0.216 0.333 0.191 0.375 0.158 0.292 0.392 0.183 0.191 0.233
  0.141 0.175 0.233 0.192 0.308 0.091 0.191 0.417 0.083 0.208 0.742 0.3
- 0.225 0.208 0.158 0.225 0.267]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.225 0.208 0.158 0.225 0.267]",2,0.0013814925485631391,0.021970499993085854,0.9766480074583509,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3423,15,1,49,filler,,L,2,,4200.0,0.16,0.46,0.87,62,21,11,1,2,0,True,True,False,[0 1 1 1 0 0 1 2 2 2 0 1 2 2 0 1],[0 0 1 1 0 1 0 1 1 0 0 1 0 0 0 1],"[0.15  0.191 0.116 0.141 0.183 0.408 0.2   0.333 0.3   0.15  0.283 0.116
- 0.116 0.191 0.242 0.192]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3424,15,1,50,attraction,A,M,1,competitor,2540.0,0.78,0.62,0.76,6,15,5,0,1,2,False,True,False,[1 1 0 0 1 2 2 1 1],[0 1 0 1 0 0 0 0 0],[0.25  0.358 0.192 0.166 0.2   0.133 0.158 0.108 0.292],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.116 0.191 0.242 0.192]",2,1.3351574272587483e-05,0.0040316774860709075,0.9959549709396565,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3424,15,1,50,attraction,A,M,1,competitor,2540.0,0.78,0.62,0.76,6,15,5,0,1,2,False,True,False,[1 1 0 0 1 2 2 1 1],[0 1 0 1 0 0 0 0 0],[0.25  0.358 0.192 0.166 0.2   0.133 0.158 0.108 0.292],1,0.11356314210230459,0.7866813463717555,0.09975551152593996,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3425,15,1,51,attraction,B,L,0,competitor,3450.0,0.75,0.65,0.63,6,14,13,0,1,2,False,True,True,[1 2 2 0 0 0 0 1 2 2 1 1 2],[1 0 1 0 1 1 0 0 0 0 0 1 1],"[0.258    0.158    0.367    0.233    0.116    0.116    0.108    0.2
- 0.191    0.15     0.191    0.283    0.184949]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.15     0.191    0.283    0.184949]",2,0.08763550305369389,0.604501780176978,0.30786271676932825,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3426,15,1,52,attraction,A,M,1,competitor,7220.0,0.78,0.68,0.76,7,15,6,2,1,0,False,False,False,[1 1 1 1 1 2 2 1 1 1 1 1 0 1 1 0 0 1 0 2 1 1],[1 1 0 1 0 0 1 1 1 0 0 0 0 1 1 1 0 0 0 0 0 1],"[0.141    0.141    0.216    0.842    0.383    0.35     0.25     0.241
  0.133    0.75     0.292    0.15     0.225    0.191    0.417    0.2
- 0.158    0.317    0.158    0.275    0.166    0.102513]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.317    0.158    0.275    0.166    0.102513]",1,0.07303236430763932,0.8911003049364834,0.035867330755877315,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3427,15,1,53,attraction,B,L,1,target,5110.0,0.72,0.65,0.63,7,14,13,1,0,2,False,False,True,[0 0 2 0 0 2 0 1 2 2 2 0 1 0 2 0 1 1 2 2 1],[0 1 0 1 0 1 1 1 1 0 0 0 0 0 0 1 1 0 1 0 1],"[0.233    0.25     0.208    0.242    0.175    0.191    0.183    0.267
  0.116    0.141    0.083    0.175    0.3      0.125    0.275    0.15
- 0.317    0.108    0.158    0.175    0.163188]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.317    0.108    0.158    0.175    0.163188]",2,0.07377618119049029,0.7254090768034107,0.20081474200609908,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3428,15,1,54,attraction,B,L,1,target,6460.0,0.78,0.65,0.63,7,15,14,1,0,2,True,False,False,[1 0 0 1 2 0 0 2 0 2 1 0 1 1 1 1 2 2 2 2 2 1 1 1],[1 1 0 0 1 0 0 1 1 0 1 0 0 1 0 1 0 0 1 1 0 1 0 1],"[0.208    0.108    0.233    0.317    0.3      0.25     0.15     0.383
  0.308    0.208    0.308    0.183    0.183    0.183    0.192    0.125
- 0.15     0.208    0.367    0.15     0.15     0.392    0.158    0.138623]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.208    0.367    0.15     0.15     0.392    0.158    0.138623]",1,0.05519926612798715,0.9083394535429904,0.036461280329022475,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3429,15,1,55,compromise,B,M,1,target,3540.0,0.75,0.65,0.55,7,14,34,0,1,2,False,False,False,[1 1 1 2 0 1 2 2 2 1 1 1 2 1 1 0],[1 0 0 0 0 0 0 1 0 0 1 1 1 1 1 1],"[0.15  0.183 0.091 0.208 0.233 0.158 0.317 0.191 0.125 0.15  0.25  0.091
- 0.258 0.133 0.1   0.183]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.258 0.133 0.1   0.183]",2,0.30031344638852114,0.5069810736853116,0.19270547992616724,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3430,15,1,56,attraction,B,L,1,target,7310.0,0.78,0.65,0.63,7,15,14,1,0,2,False,True,False,[1 0 0 2 2 1 0 0 0 2 0 1 1 1 2 2 0 0 2 2 2 1],[1 0 0 0 1 0 0 0 1 1 1 0 1 1 0 1 1 0 0 1 1 0],"[0.408 0.292 0.158 0.383 0.458 0.4   0.217 0.1   0.191 0.617 0.216 0.3
- 0.217 0.208 0.175 0.166 0.375 0.141 0.217 0.083 0.125 0.325]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.217 0.208 0.175 0.166 0.375 0.141 0.217 0.083 0.125 0.325]",2,0.17670901410147735,0.3506610616691256,0.4726299242293971,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3431,15,1,57,attraction,B,M,1,target,3360.0,0.78,0.62,0.6,7,15,14,0,1,2,False,False,False,[1 0 1 0 2 1 1 1 2 1 1],[1 1 0 0 0 0 1 1 1 1 0],"[0.125    0.392    0.242    0.183    0.475    0.108    0.166    0.116
- 0.275    0.158    0.165384]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.275    0.158    0.165384]",0,0.04097146584889043,0.9529834711034575,0.006045063047651912,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3432,15,1,58,compromise,B,R,1,target,3640.0,0.78,0.65,0.52,7,14,34,1,2,0,True,False,False,[0 1 1 2 2 1 0 0 1 0 1 1 2 2],[1 1 1 0 0 1 1 0 0 1 0 1 0 1],"[0.275    0.183    0.175    0.325    0.133    0.183    0.141    0.275
- 0.15     0.166    0.2      0.3      0.158    0.191292]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.166    0.2      0.3      0.158    0.191292]",2,0.16609662458132843,0.2367775200184107,0.597125855400261,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3433,15,1,59,filler,,R,2,,12350.0,0.31,0.38,0.85,32,26,11,0,1,2,True,False,True,"[1 1 2 2 2 0 0 1 0 1 1 2 2 2 2 2 2 1 1 0 1 1 2 1 0 1 1 2 1 0 0 2 1 1 2 2 2
  1]","[0 1 0 1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0 1 0
  1]","[0.3      0.15     0.158    0.175    0.325    0.166    0.5      0.175
  0.242    0.208    0.133    0.434    0.2      0.267    0.392    0.442
  0.308    0.166    0.183    0.75     0.15     0.183    0.375    0.25
  0.726    0.183    0.342    0.225    0.367    0.158    0.116    0.308
- 0.225    0.417    0.15     0.3      0.308    0.182143]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.225    0.417    0.15     0.3      0.308    0.182143]",2,7.1241421500802e-05,0.0006383108426955031,0.9992904477358037,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3434,15,1,60,attraction,B,R,1,target,2900.0,0.78,0.68,0.66,6,14,13,0,2,1,True,True,True,[2 1 1 2 0 2 1 1 2 1 1 2],[1 0 0 0 0 0 0 1 1 1 0 0],"[0.175    0.141    0.133    0.141    0.3      0.192    0.15     0.191
- 0.325    0.116    0.208    0.244169]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3435,15,1,61,attraction,A,L,1,competitor,1840.0,0.72,0.68,0.7,6,14,5,1,0,2,False,True,False,[0 0 2 2 1 1 1],[1 1 1 0 1 0 0],[0.266 0.116 0.275 0.266 0.317 0.083 0.125],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.325    0.116    0.208    0.244169]",1,0.0552063037153752,0.7875593291681792,0.15723436711644567,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3435,15,1,61,attraction,A,L,1,competitor,1840.0,0.72,0.68,0.7,6,14,5,1,0,2,False,True,False,[0 0 2 2 1 1 1],[1 1 1 0 1 0 0],[0.266 0.116 0.275 0.266 0.317 0.083 0.125],1,0.016611597193086997,0.9722739218563285,0.011114480950584428,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3436,15,1,62,compromise,B,L,1,target,3460.0,0.72,0.65,0.52,7,15,34,2,0,1,False,True,True,[2 0 0 2 1 2 1 2 2 1 1 1],[0 0 1 1 0 1 1 1 0 1 0 0],"[0.291    0.267    0.3      0.191    0.392    0.191    0.141    0.116
- 0.383    0.258    0.1      0.100111]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.383    0.258    0.1      0.100111]",1,0.024043186351907372,0.9182194930518234,0.05773732059626919,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3437,15,1,63,filler,,L,2,,7160.0,0.32,0.6,0.78,31,16,12,2,1,0,True,False,False,[0 0 0 1 2 2 2 1 2 0 0 1 1 2 2 2 2 1 1 1 2 2 2 2 2 2 2 2 2],[0 1 1 1 0 1 1 0 1 1 1 0 1 0 0 1 1 0 1 1 1 0 0 1 1 0 1 1 1],"[0.175    0.216    0.116    0.258    0.166    0.1      0.216    0.375
  0.217    0.083    0.241    0.192    0.258    0.158    0.25     0.166
  0.125    0.116    0.308    0.242    0.191    0.158    0.325    0.166
- 0.4      0.166    0.191    0.316    0.047918]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.4      0.166    0.191    0.316    0.047918]",2,2.9685719019424642e-05,0.0017658390132821277,0.9982044752676985,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3438,15,1,64,filler,,M,2,,5050.0,0.19,0.59,0.81,52,16,12,2,0,1,True,True,True,[2 1 1 2 2 0 2 1 0 0 2 1 1 2 2 1 1 2 2 2],[0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 1 1 0 0],"[0.133    0.208    0.208    0.158    0.2      0.233    0.133    0.208
  0.3      0.275    0.191    0.417    0.233    0.133    0.1      0.141
- 0.158    0.258    0.258    0.172095]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.258    0.258    0.172095]",2,3.4308086081742585e-06,0.0025298742159421015,0.9974666949754496,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3439,15,1,65,attraction,A,M,1,competitor,2760.0,0.75,0.65,0.73,6,15,5,2,1,0,False,False,False,[1 1 0 2 1 1 1 0 0 1],[1 0 0 0 0 1 1 0 0 1],"[0.308    0.275    0.258    0.292    0.191    0.091    0.216    0.166
- 0.183    0.167502]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.183    0.167502]",1,0.1905198317734205,0.7826131274446911,0.02686704078188839,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3440,15,1,66,attraction,B,M,1,target,5250.0,0.78,0.62,0.6,6,15,14,0,1,2,False,False,False,[1 1 0 2 2 1 0 2 1 2 1 1 1 2 1],[0 1 1 1 0 0 0 0 0 0 0 0 1 1 0],"[0.266    0.233    0.217    0.267    0.191    0.241    0.292    0.492
- 0.459    0.492    0.192    0.208    0.233    0.258    0.209669]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.459    0.492    0.192    0.208    0.233    0.258    0.209669]",1,0.053609585544320056,0.9243453136659343,0.022045100789745736,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3441,15,1,67,attraction,B,R,1,target,5230.0,0.78,0.62,0.6,6,14,13,1,2,0,True,False,True,[0 0 1 1 2 1 1 0 1 2 2 2 1 1 2 2 2 1 1],[1 0 1 1 1 1 1 0 0 1 0 1 0 1 0 0 1 1 0],"[0.233    0.2      0.166    0.166    0.291    0.108    0.166    0.116
  0.242    0.358    0.375    0.217    0.217    0.266    0.283    0.083
- 0.216    0.275    0.121724]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.216    0.275    0.121724]",1,0.12798561316464216,0.7492212312650752,0.12279315557028256,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3442,15,1,68,filler,,R,2,,7790.0,0.19,0.56,0.8,52,17,12,1,0,2,False,True,True,[2 2 2 2 0 0 1 1 1 0 0 2 2 2 0 1 1 0 2 0 0 2 1 1 1 2 2 2],[0 0 0 1 0 1 0 1 1 1 1 0 1 1 0 0 1 1 0 1 0 1 0 0 1 0 1 0],"[0.267    0.15     0.125    0.133    0.3      0.233    0.408    0.208
  0.108    0.225    0.216    0.559    0.116    0.15     0.183    0.258
  0.283    0.208    0.3      0.183    0.25     0.241    0.125    0.266
- 0.158    0.166    0.15     0.233783]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.166    0.15     0.233783]",2,4.996760316671639e-06,0.00248268232582945,0.9975123209138538,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3443,15,1,69,compromise,A,L,1,competitor,2580.0,0.72,0.68,0.82,7,15,4,1,0,2,True,True,True,[0 2 2 0 1 1 0 1 0 0 1],[1 1 0 0 0 0 0 0 0 0 0],"[0.175    0.1      0.425    0.216    0.183    0.133    0.283    0.191
- 0.108    0.141    0.050937]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.108    0.141    0.050937]",1,0.1439913603713271,0.8212207485996046,0.03478789102906831,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3444,15,1,70,attraction,A,R,1,competitor,2540.0,0.75,0.65,0.73,7,15,6,0,2,1,False,False,True,[2 0 0 2 2 2 1 0 0 1],[0 1 1 0 1 1 1 0 1 1],"[0.183    0.125    0.225    0.216    0.25     0.183    0.233    0.225
- 0.166    0.235217]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3445,15,1,71,compromise,A,M,1,competitor,1610.0,0.78,0.62,0.85,6,15,4,0,1,2,True,True,True,[1 2 1 0 1],[1 0 0 0 0],[0.166 0.241 0.225 0.3   0.225],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.235217]",1,0.3306396644469965,0.6081223853055844,0.061237950247419064,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3445,15,1,71,compromise,A,M,1,competitor,1610.0,0.78,0.62,0.85,6,15,4,0,1,2,True,True,True,[1 2 1 0 1],[1 0 0 0 0],[0.166 0.241 0.225 0.3   0.225],0,0.24379189698890913,0.6182506145735112,0.1379574884375797,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3446,15,1,72,compromise,B,L,1,target,2320.0,0.72,0.68,0.55,6,14,35,2,0,1,True,True,True,[0 0 0 2 1 1 2 2 1 1 1 1],[0 0 0 0 0 1 0 1 1 0 0 0],"[0.083    0.15     0.091    0.208    0.258    0.183    0.116    0.208
- 0.233    0.091    0.116    0.074649]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3447,15,1,73,attraction,A,M,1,competitor,1700.0,0.78,0.62,0.76,7,14,6,2,1,0,False,False,True,[1 0 1 2 1 1],[1 1 0 1 0 1],[0.133    0.417    0.2      0.233    0.091    0.096538],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3448,15,1,74,compromise,A,L,1,competitor,1390.0,0.75,0.65,0.82,7,15,4,2,0,1,False,False,False,[2 0 0 1 1],[0 1 0 0 1],[0.225   0.116   0.158   0.25    0.17394],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3449,15,1,75,attraction,A,R,1,competitor,1920.0,0.72,0.65,0.7,6,14,5,0,2,1,True,False,True,[0 2 1 1 0 0 2 1],[1 1 1 1 0 1 1 1],[0.158   0.208   0.242   0.158   0.1     0.183   0.141   0.07372],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.233    0.091    0.116    0.074649]",1,0.008552964841191835,0.9452993635250726,0.04614767163373548,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3447,15,1,73,attraction,A,M,1,competitor,1700.0,0.78,0.62,0.76,7,14,6,2,1,0,False,False,True,[1 0 1 2 1 1],[1 1 0 1 0 1],[0.133    0.417    0.2      0.233    0.091    0.096538],1,0.15744263942943829,0.7305372236687095,0.1120201369018521,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3448,15,1,74,compromise,A,L,1,competitor,1390.0,0.75,0.65,0.82,7,15,4,2,0,1,False,False,False,[2 0 0 1 1],[0 1 0 0 1],[0.225   0.116   0.158   0.25    0.17394],2,0.14580705737428987,0.8000207128616735,0.0541722297640366,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3449,15,1,75,attraction,A,R,1,competitor,1920.0,0.72,0.65,0.7,6,14,5,0,2,1,True,False,True,[0 2 1 1 0 0 2 1],[1 1 1 1 0 1 1 1],[0.158   0.208   0.242   0.158   0.1     0.183   0.141   0.07372],1,0.1329106919142474,0.8003659840828178,0.0667233240029347,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3450,15,2,76,attraction,A,R,0,target,6030.0,0.78,0.68,0.76,8,15,7,2,0,1,True,False,True,[2 2 1 1 2 1 0 0 2 2 2 1 0 1 1 1 0 0 0 0 2],[0 1 0 1 0 1 0 1 0 0 0 1 0 0 1 1 0 1 0 0 0],"[0.183    0.233    0.158    0.166    0.25     0.208    0.158    0.258
  0.15     0.208    0.392    0.225    0.242    0.342    0.308    0.125
- 0.125    0.166    0.483    0.108    0.128427]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.125    0.166    0.483    0.108    0.128427]",0,0.679342216049479,0.125945821846506,0.19471196210401498,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3451,15,2,77,compromise,B,M,1,target,5230.0,0.72,0.68,0.55,7,14,35,0,1,2,True,False,True,[1 2 2 1 0 1 1 1 2 2 1 1 1 2 1 1 0 0 0 1 1 0 1],[0 1 0 1 0 1 0 0 1 0 1 0 0 0 1 1 0 1 1 1 0 0 1],"[0.15     0.116    0.241    0.183    0.283    0.141    0.083    0.116
  0.258    0.25     0.133    0.141    0.175    0.358    0.1      0.083
- 0.2      0.158    0.133    0.3      0.258    0.333    0.190602]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2      0.158    0.133    0.3      0.258    0.333    0.190602]",1,0.08249610455331075,0.8445846359119407,0.07291925953474862,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3452,15,2,78,attraction,A,R,1,competitor,4210.0,0.72,0.65,0.7,7,15,6,0,2,1,True,True,True,[2 2 2 0 0 2 1 1 2 0 2 1 1 2 2 0 0 0],[0 1 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1],"[0.175 0.158 0.208 0.133 0.108 0.175 0.35  0.166 0.191 0.275 0.091 0.208
- 0.216 0.083 0.233 0.158 0.083 0.241]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.216 0.083 0.233 0.158 0.083 0.241]",0,0.7949248450106735,0.15361226485467902,0.05146289013464752,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3453,15,2,79,filler,,R,2,,5990.0,0.24,0.37,0.76,41,27,13,1,0,2,True,False,True,[2 2 2 0 1 0 1 1 1 0 2 2 0 1 1 0 2 2 0 1 2 2 0],[0 1 0 1 1 0 0 1 1 1 0 1 0 0 1 0 1 1 0 0 1 0 0],"[0.191    0.166    0.192    0.25     0.358    0.333    0.283    0.1
  0.083    0.225    0.425    0.208    0.192    0.233    0.15     0.267
- 0.183    0.083    0.241    0.3      0.116    0.266    0.090071]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.183    0.083    0.241    0.3      0.116    0.266    0.090071]",2,0.00017996299728951774,0.0008903803087055178,0.9989296566940049,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3454,15,2,80,attraction,B,L,1,target,4740.0,0.78,0.65,0.63,8,15,14,1,0,2,False,True,False,[0 2 0 1 0 1 2 2 0 1 1 2 2 2 1 1 1],[0 1 1 0 1 1 0 0 1 1 0 1 0 1 0 1 0],"[0.392    0.3      0.175    0.233    0.492    0.25     0.091    0.275
  0.208    0.166    0.216    0.216    0.275    0.241    0.141    0.175
- 0.064497]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3455,15,2,81,compromise,A,M,1,competitor,1990.0,0.72,0.68,0.82,8,15,5,2,1,0,False,False,False,[1 1 1 2 0 1],[1 0 0 0 0 0],[0.525    0.158    0.158    0.216    0.275    0.308019],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.064497]",1,0.06534461280221888,0.9082267752662314,0.026428611931549724,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3455,15,2,81,compromise,A,M,1,competitor,1990.0,0.72,0.68,0.82,8,15,5,2,1,0,False,False,False,[1 1 1 2 0 1],[1 0 0 0 0 0],[0.525    0.158    0.158    0.216    0.275    0.308019],1,0.09125585615952399,0.8214603271902765,0.08728381665019956,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3456,15,2,82,attraction,A,R,1,competitor,3950.0,0.78,0.62,0.76,7,15,6,1,2,0,True,True,True,[0 0 0 2 1 1 1 0 0 2 1 0 0 0 1],[0 0 1 1 1 0 1 1 0 0 0 0 1 1 1],"[0.208    0.1      0.325    0.275    0.166    0.191    0.133    0.133
- 0.358    0.15     0.375    0.183    0.108    0.158    0.168307]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.358    0.15     0.375    0.183    0.108    0.158    0.168307]",1,0.6727213747348919,0.2655061097114149,0.06177251555369312,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3457,15,2,83,attraction,B,M,1,target,3280.0,0.72,0.62,0.6,8,15,14,2,1,0,False,False,False,[1 1 0 2 1 1 1 1 2 1 1 1],[1 0 0 0 0 0 0 1 1 1 0 1],"[0.233    0.2      0.242    0.4      0.175    0.108    0.15     0.216
- 0.267    0.175    0.375    0.057849]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.267    0.175    0.375    0.057849]",1,0.012925584216361984,0.9853671977319218,0.0017072180517162573,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3458,15,2,84,compromise,A,M,0,target,5450.0,0.78,0.68,0.88,8,15,5,1,0,2,False,False,True,[2 2 2 2 0 1 0 0 1 1 0 1 0 1 1 1 0 2 0 0 0],[0 1 0 0 0 0 0 1 0 1 1 1 1 1 0 0 0 1 1 1 1],"[0.125    0.216    0.25     0.083    0.091    0.158    0.508    0.192
  0.2      0.125    0.158    0.208    0.267    0.183    0.083    0.083
- 0.35     0.192    0.116    0.2      0.306647]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.35     0.192    0.116    0.2      0.306647]",0,0.8809255297055218,0.05355861318116849,0.0655158571133097,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3459,15,2,85,compromise,A,M,1,competitor,4470.0,0.72,0.68,0.82,8,15,5,2,1,0,False,True,False,[1 1 2 0 0 1 1 0 1 1 1 1 1 0 0 0 1 1],[1 1 0 0 0 1 0 1 0 1 0 0 1 0 0 1 1 0],"[0.216    0.083    0.275    0.208    0.158    0.192    0.15     0.35
  0.292    0.3      0.2      0.116    0.25     0.166    0.133    0.233
- 0.2      0.218068]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3460,15,2,86,attraction,A,L,1,competitor,3750.0,0.75,0.65,0.73,7,15,6,2,0,1,False,True,True,[2 0 1 1 2 1 2 0 2 2 0],[1 1 0 1 0 0 0 1 1 0 0],[0.392 0.225 0.258 0.275 0.283 0.175 0.217 0.158 0.208 0.208 0.133],0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2      0.218068]",1,0.06757504042695746,0.8999504265085017,0.03247453306454092,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3460,15,2,86,attraction,A,L,1,competitor,3750.0,0.75,0.65,0.73,7,15,6,2,0,1,False,True,True,[2 0 1 1 2 1 2 0 2 2 0],[1 1 0 1 0 0 0 1 1 0 0],[0.392 0.225 0.258 0.275 0.283 0.175 0.217 0.158 0.208 0.208 0.133],2,0.5723900496996814,0.17652034736085073,0.2510896029394677,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3461,15,2,87,compromise,B,L,1,target,6690.0,0.72,0.62,0.55,8,14,35,2,0,1,False,False,False,[1 2 0 0 2 1 2 0 2 2 1 1 1 1 2 2 1 2 0 2 2 1 1 1],[0 0 1 0 0 0 0 0 0 0 1 1 0 0 0 1 1 1 1 1 1 1 0 0],"[0.367    0.233    0.158    0.367    0.383    0.342    0.183    0.45
  0.141    0.141    0.141    0.133    0.091    0.083    0.383    0.275
- 0.333    0.175    0.208    0.191    0.116    0.175    0.091    0.165517]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.333    0.175    0.208    0.191    0.116    0.175    0.091    0.165517]",1,0.07081223414220998,0.689049566660499,0.24013819919729107,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3462,15,2,88,compromise,A,M,0,target,4560.0,0.75,0.65,0.82,8,15,5,1,0,2,True,True,False,[0 0 0 1 2 2 0 0 0 0 1 0 0 2],[1 1 0 0 0 0 0 0 0 1 1 0 0 1],"[0.15  0.267 0.225 0.317 0.166 0.183 0.3   0.175 0.7   0.233 0.375 0.183
- 0.208 0.125]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.208 0.125]",2,0.5631801834838267,0.12369997981488864,0.3131198367012847,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3463,15,2,89,attraction,A,R,0,target,6980.0,0.72,0.65,0.7,8,15,7,2,0,1,False,True,True,[2 0 1 1 0 0 1 1 1 0 2 2 0 0 0 1 1 1 0 1 1],[1 1 0 0 1 0 1 0 0 1 0 1 0 1 1 0 1 1 1 0 0],"[0.275 0.275 0.191 0.408 0.141 0.208 0.333 0.133 0.417 0.367 0.425 0.192
- 0.183 0.175 0.208 0.7   0.116 0.216 0.442 0.183 0.083]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3464,15,2,90,attraction,A,R,1,competitor,2400.0,0.72,0.68,0.7,7,14,6,0,2,1,False,False,False,[2 1 0 2 2 1],[0 0 0 0 0 0],[0.317    0.292    0.375    0.375    0.141    0.247655],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.183 0.175 0.208 0.7   0.116 0.216 0.442 0.183 0.083]",0,0.06430765582968263,0.9170621862382892,0.01863015793202829,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3464,15,2,90,attraction,A,R,1,competitor,2400.0,0.72,0.68,0.7,7,14,6,0,2,1,False,False,False,[2 1 0 2 2 1],[0 0 0 0 0 0],[0.317    0.292    0.375    0.375    0.141    0.247655],1,0.07607081791436315,0.8106360695862772,0.11329311249935957,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3465,15,2,91,attraction,A,R,0,target,6430.0,0.75,0.65,0.73,8,15,7,2,1,0,True,False,False,[1 0 0 1 2 2 2 1 0 1 1 2 1 0 0 0 1 1 0 0],[0 1 1 0 0 1 1 0 1 0 1 0 0 1 0 0 1 1 0 1],"[0.083    0.183    0.116    0.5      0.083    0.191    0.233    0.158
  0.5      0.3      1.184    0.125    0.392    0.358    0.308    0.108
- 0.208    0.175    0.083    0.211477]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.208    0.175    0.083    0.211477]",0,0.8240872903786883,0.14348102595681517,0.0324316836644964,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3466,15,2,92,attraction,B,R,1,target,6480.0,0.72,0.68,0.66,8,14,13,1,2,0,True,True,False,[0 1 2 2 1 1 0 1 1 1 2 2 2 1 1 0 2 0 0 0 0 1 1],[1 0 1 1 0 0 0 0 1 0 0 1 1 0 1 1 0 1 1 0 0 1 0],"[0.233    0.191    0.083    0.242    0.325    0.217    0.266    0.116
  0.208    0.175    0.233    0.2      0.116    0.35     0.358    0.158
- 0.283    0.275    0.125    0.242    0.2      0.191    0.255297]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.283    0.275    0.125    0.242    0.2      0.191    0.255297]",1,0.07712325461775751,0.8959465529294248,0.026930192452817595,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3467,15,2,93,attraction,B,R,1,target,4770.0,0.75,0.68,0.66,7,14,13,0,2,1,False,False,True,[2 2 1 2 0 0 2 2 1 0 2 1 1 1 2 2 1 1 2 1],[0 1 1 0 1 1 1 1 1 0 0 1 0 1 0 0 0 0 1 1],"[0.158    0.216    0.208    0.308    0.191    0.308    0.292    0.141
  0.191    0.291    0.217    0.267    0.25     0.116    0.183    0.083
- 0.1      0.083    0.242    0.099464]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.1      0.083    0.242    0.099464]",1,0.03475964521024191,0.898444427407522,0.0667959273822361,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3468,15,2,94,compromise,A,M,1,competitor,4230.0,0.78,0.68,0.85,7,15,5,2,1,0,False,True,False,[1 1 1 0 2 1 1 1 0 0 0 0 1 1],[1 0 0 0 0 0 1 0 0 1 0 1 0 1],"[0.233    0.233    0.116    0.208    0.433    0.467    0.559    0.192
- 0.175    0.258    0.266    0.175    0.166    0.106255]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.175    0.258    0.266    0.175    0.166    0.106255]",0,0.1443588116622904,0.8044748204319581,0.051166367905751575,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3469,15,2,95,filler,,M,2,,4140.0,0.27,0.47,0.86,37,21,11,2,0,1,True,False,True,[2 2 2 1 1 2 0 2 1 1 2 0 2 1 2],[1 0 0 0 1 0 1 0 1 1 1 0 1 0 1],"[0.241    0.15     0.233    0.141    0.333    0.3      0.317    0.3
- 0.083    0.15     0.283    0.2      0.208    0.258    0.163293]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083    0.15     0.283    0.2      0.208    0.258    0.163293]",2,2.1783578267212358e-05,0.0009026558553556823,0.999075560566377,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3470,15,2,96,attraction,B,R,1,target,9670.0,0.72,0.65,0.63,8,14,13,1,2,0,False,True,True,"[0 1 1 1 2 0 1 1 0 1 2 2 0 1 1 0 1 1 2 0 0 2 2 2 2 1 0 1 1 1 2 2 2 1 0 0 0
  1 1 1]","[1 0 1 1 0 1 1 0 0 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 1 1 0 1 0 0 1 1 0 0 0 1 1
  0 1 0]","[0.308    0.175    0.083    0.108    0.3      0.308    0.342    0.158
  0.383    0.25     0.241    0.175    0.141    0.267    0.158    0.208
  0.158    0.216    0.2      0.091    0.2      0.233    0.141    0.083
  0.125    0.141    0.125    0.241    0.191    0.083    0.125    0.25
- 0.275    0.183    0.175    0.233    0.108    0.275    0.4      0.052623]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.275    0.183    0.175    0.233    0.108    0.275    0.4      0.052623]",1,0.04752092640427257,0.9389497912872586,0.013529282308468994,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3471,15,2,97,filler,,L,2,,9740.0,0.16,0.46,0.87,62,21,11,2,1,0,False,True,False,[1 1 0 0 1 2 2 2 1 0 1 2 1 1 1 1 1 0 0 1 2 1 0 0 1 1 0 1 2 2 2 2 1 2],[1 0 1 0 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 1 0 0 0 1],"[0.15     0.392    0.191    0.158    0.266    0.141    0.208    0.15
  0.308    0.408    0.233    0.333    0.383    0.292    0.183    0.125
  0.292    0.183    0.408    0.5      0.325    0.233    0.283    0.158
  0.133    0.116    0.408    0.191    0.1      0.3      0.233    0.125
- 0.175    0.070333]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.175    0.070333]",2,1.3957167693885946e-06,0.0003557929227915517,0.9996428113604392,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3472,15,2,98,attraction,B,M,1,target,5120.0,0.78,0.62,0.6,7,15,14,2,1,0,True,True,True,[1 1 2 2 1 1 0 0 1 2 1 1 2 2 1 1 1],[1 0 1 0 1 1 1 0 0 0 0 1 1 0 1 1 0],"[0.225    0.208    0.358    0.167    0.1      0.116    0.275    0.216
  0.233    0.241    0.517    0.241    0.458    0.25     0.141    0.083
- 0.416376]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.416376]",1,0.04500343383327069,0.9470747530477023,0.007921813119026934,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3473,15,2,99,compromise,B,L,1,target,3740.0,0.72,0.68,0.58,7,15,35,2,0,1,False,False,True,[2 0 0 0 2 1 1 2 2 2 2 1 1],[0 1 1 0 1 1 1 0 1 0 0 0 1],"[0.275    0.2      0.158    0.183    0.166    0.392    0.133    0.133
- 0.166    0.175    0.166    0.3      0.325271]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3474,15,2,100,attraction,B,R,1,target,2380.0,0.72,0.62,0.6,8,14,13,1,2,0,False,False,True,[0 1 1 1 2 2 1 1],[1 1 0 0 1 0 1 1],[0.375    0.15     0.175    0.091    0.242    0.283    0.417    0.217825],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3475,15,2,101,attraction,B,M,1,target,2580.0,0.75,0.62,0.6,7,15,14,0,1,2,False,True,True,[1 1 2 0 1 2 2 1 1],[1 0 0 0 0 0 1 1 0],[0.216   0.3     0.225   0.283   0.192   0.133   0.183   0.25    0.13335],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.175    0.166    0.3      0.325271]",1,0.016809996209171084,0.6817561278528838,0.3014338759379453,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3474,15,2,100,attraction,B,R,1,target,2380.0,0.72,0.62,0.6,8,14,13,1,2,0,False,False,True,[0 1 1 1 2 2 1 1],[1 1 0 0 1 0 1 1],[0.375    0.15     0.175    0.091    0.242    0.283    0.417    0.217825],0,0.0773850057166069,0.8751730611822205,0.04744193310117256,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3475,15,2,101,attraction,B,M,1,target,2580.0,0.75,0.62,0.6,7,15,14,0,1,2,False,True,True,[1 1 2 0 1 2 2 1 1],[1 0 0 0 0 0 1 1 0],[0.216   0.3     0.225   0.283   0.192   0.133   0.183   0.25    0.13335],0,0.08220099010330266,0.8678097046322375,0.04998930526445987,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3476,15,2,102,attraction,B,R,1,target,13240.0,0.75,0.65,0.63,7,14,13,1,2,0,False,True,False,"[0 0 2 1 1 0 0 2 2 2 2 2 2 2 1 0 1 1 0 0 0 1 2 1 1 1 2 1 0 0 0 2 1 1 0 2 2
  2 1 1]","[1 0 1 1 1 0 0 1 1 1 1 1 1 1 0 1 1 1 0 0 1 1 1 1 1 1 0 0 1 1 1 1 1 1 0 1 0
  0 0 1]","[0.225    0.191    0.325    0.241    0.116    0.308    0.25     0.5
  0.275    0.283    0.133    0.342    0.5      0.575    0.308    0.191
  0.45     0.15     0.208    0.191    0.258    0.116    0.634    0.133
  0.25     0.133    0.367    0.35     0.233    0.433    0.183    0.3
- 0.15     0.492    0.283    0.475    0.116    0.125    0.325    0.128058]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3477,15,2,103,compromise,A,R,1,competitor,1900.0,0.78,0.62,0.85,8,14,5,0,2,1,False,False,False,[2 2 1 0 0 0 1 1],[0 0 0 0 0 1 0 1],[0.233    0.1      0.216    0.125    0.216    0.141    0.25     0.233103],0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.492    0.283    0.475    0.116    0.125    0.325    0.128058]",1,0.0828726857801187,0.8059989850568755,0.11112832916300572,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3477,15,2,103,compromise,A,R,1,competitor,1900.0,0.78,0.62,0.85,8,14,5,0,2,1,False,False,False,[2 2 1 0 0 0 1 1],[0 0 0 0 0 1 0 1],[0.233    0.1      0.216    0.125    0.216    0.141    0.25     0.233103],1,0.43570821342812566,0.4301784631763258,0.1341133233955486,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3478,15,2,104,attraction,B,L,1,target,3590.0,0.78,0.65,0.63,7,15,14,2,0,1,False,True,False,[2 2 0 2 2 0 1 2 2 0 2 2 1 1 1],[0 0 0 0 1 1 1 0 0 1 0 1 0 0 0],"[0.217    0.083    0.217    0.175    0.15     0.3      0.292    0.208
- 0.166    0.241    0.158    0.225    0.358    0.083    0.050525]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3479,15,2,105,filler,,R,2,,3550.0,0.19,0.59,0.81,52,16,12,0,1,2,False,False,False,[1 1 2 0 1 2 2 2 1 0 2 2],[0 0 0 0 0 0 0 1 1 1 1 0],[0.175 0.15  0.208 0.35  0.442 0.258 0.175 0.283 0.367 0.342 0.166 0.083],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.241    0.158    0.225    0.358    0.083    0.050525]",1,0.1111419122557886,0.7538858513138099,0.13497223643040154,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3479,15,2,105,filler,,R,2,,3550.0,0.19,0.59,0.81,52,16,12,0,1,2,False,False,False,[1 1 2 0 1 2 2 2 1 0 2 2],[0 0 0 0 0 0 0 1 1 1 1 0],[0.175 0.15  0.208 0.35  0.442 0.258 0.175 0.283 0.367 0.342 0.166 0.083],2,6.3673856252577005e-06,0.003102191452936402,0.9968914411614385,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3480,15,2,106,compromise,B,L,1,target,6040.0,0.75,0.62,0.58,7,15,34,1,0,2,True,False,False,[0 2 1 2 2 2 0 1 1 1 1 0 1 1 2 0 0 0 1 0],[1 0 1 0 0 1 0 1 0 0 1 1 1 0 1 0 1 1 1 0],"[0.191    0.2      0.6      0.133    0.133    0.367    0.191    0.15
  0.116    0.175    0.175    0.333    0.509    0.266    0.25     0.425
- 0.166    0.083    0.467    0.059239]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.083    0.467    0.059239]",0,0.6591066259398342,0.12783002430793325,0.2130633497522325,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3481,15,2,107,compromise,B,L,0,competitor,9810.0,0.78,0.62,0.55,8,14,35,0,2,1,True,True,True,[2 0 1 1 2 2 0 1 1 2 0 2 2 2 1 1 2 2 1 1 2 2 1 0 0 0 1 1 1 0 0],[1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 1 1 1 1 0 0 0 1 1 0],"[0.241    0.408    0.1      0.342    0.175    0.442    0.417    0.158
  0.241    0.216    0.65     0.1      0.717    0.258    0.225    0.158
  0.1      0.141    0.175    0.241    0.275    0.175    0.375    0.116
- 0.166    0.267    0.133    0.408    0.208    0.233    0.096826]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.267    0.133    0.408    0.208    0.233    0.096826]",2,0.887066969289696,0.05716842258979168,0.05576460812051235,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3482,15,2,108,compromise,A,L,0,target,4750.0,0.78,0.65,0.82,8,14,6,0,1,2,False,True,False,[1 0 0 1 1 0 1 2 2 2 2 1 1 1 1 1 0],[0 1 0 1 0 1 0 1 0 1 0 0 1 0 0 1 0],"[0.091    0.3      0.141    0.133    0.116    0.233    0.317    0.166
  0.367    0.533    0.242    0.191    0.25     0.175    0.208    0.358
- 0.163115]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.163115]",0,0.47212347926496717,0.417933021561015,0.10994349917401781,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3483,15,2,109,compromise,A,R,0,target,4920.0,0.78,0.65,0.82,8,14,5,2,1,0,False,False,True,[1 0 0 0 2 2 1 1 0 1 1 1 1 2 2 2 1 1],[0 0 1 1 1 0 0 1 0 1 1 0 1 0 1 0 1 0],"[0.333 0.191 0.108 0.183 0.517 0.233 0.166 0.141 0.216 0.183 0.116 0.166
- 0.216 0.216 0.258 0.108 0.308 0.183]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.216 0.216 0.258 0.108 0.308 0.183]",1,0.1174401178064523,0.7126580629697943,0.16990181922375347,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3484,15,2,110,filler,,R,2,,5380.0,0.29,0.42,0.72,34,23,13,0,1,2,True,False,True,[1 0 0 2 1 1 0 1 2 2 1 0 1 0 1 2 2 1 1 0],[1 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 1 1 1],"[0.083 0.133 0.183 0.333 0.191 0.116 0.2   0.267 0.25  0.192 0.175 0.333
- 0.192 0.208 0.183 0.141 0.291 0.141 0.1   0.225]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.192 0.208 0.183 0.141 0.291 0.141 0.1   0.225]",2,0.00276154635034839,0.027419494205482134,0.9698189594441695,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3485,15,2,111,attraction,A,L,0,target,6660.0,0.78,0.62,0.76,8,14,7,0,2,1,False,True,True,[1 1 2 0 0 2 1 2 2 1 0 0 1 1 1 1 2 0 0 0 2 2 0 1 1],[0 0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 0 1 1 0 0 0 1 0 1],"[0.191    0.208    0.216    0.208    0.333    0.225    0.15     0.083
  0.108    0.25     0.158    0.317    0.242    0.342    0.233    0.225
  0.158    0.175    0.166    0.325    0.25     0.133    0.35     0.116
- 0.119273]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.119273]",0,0.38564893667833106,0.4578827609073079,0.15646830241436113,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3486,15,2,112,attraction,B,L,0,competitor,3710.0,0.72,0.62,0.6,8,15,14,0,2,1,False,True,True,[0 0 0 0 2 2 2 2 2 1 1 1 1 2 0 0 0],[1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 1 0],"[0.166    0.233    0.15     0.25     0.25     0.208    0.1      0.083
  0.166    0.183    0.2      0.183    0.233    0.175    0.125    0.083
- 0.181935]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.181935]",0,0.8241669733212375,0.1415829965659159,0.03425003011284669,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3487,15,2,113,attraction,B,R,0,competitor,2590.0,0.78,0.62,0.6,8,15,14,2,0,1,True,True,True,[2 2 0 0 2 1 2 0 0 0 2 1],[0 0 0 0 1 0 0 0 1 1 1 1],"[0.233    0.108    0.192    0.116    0.15     0.308    0.208    0.208
- 0.1      0.1      0.166    0.165437]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.1      0.1      0.166    0.165437]",0,0.5373518193893758,0.2765507242526371,0.18609745635798705,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3488,15,2,114,compromise,B,L,0,competitor,6090.0,0.72,0.65,0.52,8,15,34,0,2,1,True,True,True,[2 1 1 2 0 2 1 1 2 1 0 1 1 1 0 0 2 1 0 1 1 0 0],[0 0 1 0 0 0 0 1 1 1 1 1 0 1 1 1 1 1 0 0 0 0 0],"[0.116    0.233    0.15     0.175    0.275    0.183    0.208    0.166
  0.25     0.225    0.333    0.158    0.125    0.317    0.217    0.175
- 0.241    0.442    0.3      0.125    0.175    0.15     0.046248]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.241    0.442    0.3      0.125    0.175    0.15     0.046248]",0,0.6817668919864206,0.2535731017476688,0.06466000626591069,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3489,15,2,115,filler,,R,2,,4180.0,0.32,0.6,0.78,31,16,12,1,0,2,True,False,False,[1 0 2 2 0 2 1 0 2 2 0 2 1 2 2 2],[1 0 1 0 1 0 1 1 0 1 0 1 0 1 0 1],"[0.225    0.158    0.108    0.158    0.292    0.191    0.308    0.225
- 0.258    0.125    0.442    0.166    0.242    0.15     0.15     0.195033]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3490,15,2,116,compromise,A,M,1,competitor,1880.0,0.75,0.62,0.88,7,15,6,0,1,2,False,False,False,[1 2 0 1 0 1 1 1],[0 0 0 0 1 0 1 1],[0.175    0.216    0.225    0.208    0.167    0.2      0.183    0.028063],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3491,15,2,117,attraction,A,L,1,competitor,1810.0,0.72,0.65,0.7,7,15,6,2,0,1,False,False,False,[2 1 0 0 2 1 1],[0 0 0 1 1 1 0],[0.208    0.175    0.191    0.183    0.108    0.3      0.200087],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.258    0.125    0.442    0.166    0.242    0.15     0.15     0.195033]",2,5.472208903798026e-05,0.003943028711891327,0.9960022491990708,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3490,15,2,116,compromise,A,M,1,competitor,1880.0,0.75,0.62,0.88,7,15,6,0,1,2,False,False,False,[1 2 0 1 0 1 1 1],[0 0 0 0 1 0 1 1],[0.175    0.216    0.225    0.208    0.167    0.2      0.183    0.028063],1,0.07562915778944729,0.6970271709298006,0.22734367128075206,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3491,15,2,117,attraction,A,L,1,competitor,1810.0,0.72,0.65,0.7,7,15,6,2,0,1,False,False,False,[2 1 0 0 2 1 1],[0 0 0 1 1 1 0],[0.208    0.175    0.191    0.183    0.108    0.3      0.200087],1,0.0664672554461839,0.8964027020233752,0.03713004253044099,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3492,15,2,118,compromise,B,M,1,target,6200.0,0.72,0.62,0.58,7,14,35,0,1,2,True,False,False,[0 0 1 1 2 2 1 0 1 1 2 1 0 1 1 1 2 2 1 1 0 0 0 0 0 1],[1 1 0 1 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 1 0 0 1 1 0 1],"[0.108    0.266    0.2      0.15     0.183    0.166    0.125    0.191
  0.267    0.133    0.25     0.25     0.183    0.166    0.083    0.308
  0.4      0.166    0.2      0.475    0.083    0.091    0.25     0.225
- 0.141    0.140772]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.141    0.140772]",0,0.39655192802336897,0.27208921165036054,0.33135886032627054,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3493,15,2,119,compromise,A,L,1,competitor,4290.0,0.75,0.68,0.88,7,15,6,1,0,2,False,True,True,[0 2 2 0 1 1 0 2 0 1 1 0 1 0 0 0 1],[0 1 0 1 1 1 1 0 0 1 0 1 0 0 1 0 1],"[0.2      0.141    0.191    0.233    0.175    0.083    0.208    0.392
  0.175    0.175    0.258    0.2      0.225    0.216    0.208    0.241
- 0.107436]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.107436]",0,0.24910045361317537,0.5671341055317678,0.1837654408550568,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3494,15,2,120,compromise,B,L,0,competitor,3950.0,0.75,0.65,0.55,8,14,34,0,1,2,True,False,False,[1 1 0 1 2 1 1 1 2 2 1 1 1 0 0 0 1],[0 1 0 0 0 1 1 1 1 1 0 0 1 1 0 0 1],"[0.175    0.2      0.325    0.158    0.342    0.158    0.292    0.15
  0.083    0.133    0.183    0.125    0.1      0.267    0.216    0.091
- 0.084604]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.084604]",0,0.46968271269355255,0.42089009928806204,0.10942718801838558,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3495,15,2,121,compromise,B,R,1,target,7940.0,0.72,0.65,0.55,7,15,35,1,2,0,True,True,False,[2 2 0 1 1 0 2 1 1 0 1 0 0 0 2 1 1 2 1 1 0 0 0 0 1],[1 1 1 0 0 1 1 0 0 0 1 0 1 1 0 1 0 1 1 0 1 0 1 1 0],"[0.266    0.091    0.191    0.275    0.2      0.15     0.3      0.15
  0.183    0.225    0.292    0.25     0.2      0.108    0.183    0.358
  0.25     0.15     0.258    0.258    0.183    0.383    0.133    0.091
- 0.044674]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.044674]",2,0.30061200577515995,0.5506513561233746,0.1487366381014655,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3496,15,2,122,compromise,B,M,1,target,3040.0,0.75,0.68,0.55,7,14,34,2,1,0,True,True,False,[1 1 1 0 0 1 1 2 1 1 1],[1 0 0 1 0 0 1 0 1 0 0],"[0.158    0.116    0.25     0.283    0.192    0.133    0.25     0.225
- 0.133    0.1      0.196581]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3497,15,2,123,compromise,A,L,1,competitor,2330.0,0.78,0.62,0.85,7,15,5,1,0,2,True,False,False,[1 1 0 0 2 1],[1 1 0 1 0 1],[0.233 0.208 0.133 0.492 0.433 0.141],0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3498,15,2,124,attraction,A,R,1,competitor,2440.0,0.78,0.68,0.76,7,15,6,0,2,1,False,False,True,[2 1 1 1 0 0 2 1 1],[1 0 1 1 1 0 1 1 1],[0.325 0.108 0.125 0.225 0.141 0.3   0.175 0.191 0.183],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.133    0.1      0.196581]",2,0.02193467231328159,0.9338724424181859,0.04419288526853259,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3497,15,2,123,compromise,A,L,1,competitor,2330.0,0.78,0.62,0.85,7,15,5,1,0,2,True,False,False,[1 1 0 0 2 1],[1 1 0 1 0 1],[0.233 0.208 0.133 0.492 0.433 0.141],0,0.30209244023242965,0.3518387806220708,0.3460687791454996,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3498,15,2,124,attraction,A,R,1,competitor,2440.0,0.78,0.68,0.76,7,15,6,0,2,1,False,False,True,[2 1 1 1 0 0 2 1 1],[1 0 1 1 1 0 1 1 1],[0.325 0.108 0.125 0.225 0.141 0.3   0.175 0.191 0.183],1,0.07605596545539971,0.8847810605244623,0.03916297402013799,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3499,15,2,125,attraction,B,L,1,target,3440.0,0.78,0.62,0.6,7,14,13,1,0,2,True,True,False,[0 0 0 1 2 0 1 1 2 2 2 1 1],[1 1 0 0 0 0 0 1 0 1 1 0 1],"[0.208    0.083    0.216    0.225    0.283    0.116    0.225    0.442
- 0.158    0.208    0.108    0.217    0.142927]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.158    0.208    0.108    0.217    0.142927]",1,0.1693574273510405,0.7339961053115227,0.09664646733743694,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3500,15,2,126,filler,,M,2,,3190.0,0.31,0.38,0.85,32,26,11,0,2,1,False,False,False,[2 2 2 0 0 1 1 2 0 2 0 1],[0 0 1 1 1 1 0 0 0 1 1 1],"[0.1      0.2      0.308    0.116    0.217    0.15     0.4      0.166
- 0.242    0.383    0.166    0.119462]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.242    0.383    0.166    0.119462]",2,0.0004887683360150336,0.002045204794401426,0.9974660268695834,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3501,15,2,127,compromise,A,M,1,competitor,4410.0,0.78,0.68,0.88,7,15,6,0,1,2,True,True,False,[1 1 0 1 2 2 1 0 1 1 1 0 0 0 0 1 1 1],[1 0 0 0 0 0 0 0 1 0 0 0 0 1 1 1 0 0],"[0.175    0.258    0.475    0.2      0.175    0.183    0.158    0.2
  0.258    0.3      0.083    0.183    0.183    0.083    0.266    0.25
- 0.091    0.022503]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.091    0.022503]",1,0.060522828194550814,0.856694035294223,0.08278313651122608,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3502,15,2,128,attraction,A,R,1,competitor,3450.0,0.75,0.68,0.73,7,14,6,1,2,0,True,True,True,[0 2 1 0 0 1 1 1 0 2 0],[0 0 0 0 1 1 0 0 0 0 0],"[0.183    0.275    0.275    0.133    0.292    0.225    0.158    0.183
- 0.367    0.292    0.132163]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.367    0.292    0.132163]",1,0.5955265283534321,0.3101980229878968,0.09427544865867114,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3503,15,2,129,filler,,R,2,,5000.0,0.19,0.56,0.8,52,17,12,1,0,2,False,True,True,[0 0 0 1 1 0 2 0 1 0 0 0 0 2 2 0 1 2 2],[1 1 0 0 0 1 0 1 1 1 1 0 1 0 1 0 0 1 0],"[0.242 0.233 0.2   0.125 0.158 0.2   0.183 0.183 0.358 0.35  0.208 0.091
- 0.166 0.191 0.191 0.233 0.283 0.216 0.317]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166 0.191 0.191 0.233 0.283 0.216 0.317]",2,8.248282919265436e-06,0.003176697442131709,0.9968150542749491,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3504,15,2,130,attraction,A,M,1,competitor,3720.0,0.75,0.65,0.73,8,15,7,2,1,0,False,False,True,[0 0 0 1 1 0 1 2 2 1 1 0 0],[1 0 1 0 1 0 1 0 1 0 1 0 1],"[0.15     0.191    0.191    0.191    0.175    0.175    0.216    0.242
- 0.291    0.375    0.233    0.291    0.188877]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.291    0.375    0.233    0.291    0.188877]",0,0.7553804102837122,0.19055680340056422,0.05406278631572368,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3505,15,2,131,compromise,B,L,0,competitor,4480.0,0.75,0.62,0.58,8,14,35,0,1,2,True,True,True,[1 0 2 1 1 1 2 1 1 0 1 1 0 0 0 0],[0 0 0 0 1 1 1 0 0 1 1 0 0 1 1 0],"[0.15    0.183   0.35    0.158   0.266   0.15    0.283   0.116   0.1
- 0.3     0.175   0.166   0.25    0.083   0.367   0.10854]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.3     0.175   0.166   0.25    0.083   0.367   0.10854]",0,0.8818537435798756,0.026929286346258057,0.09121697007386638,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3506,15,2,132,attraction,A,L,0,target,3880.0,0.75,0.65,0.73,8,14,7,0,1,2,False,False,True,[0 0 0 0 0 1 1 1 2 1 1 1 2 2],[1 1 1 0 0 1 1 0 0 0 1 0 1 0],"[0.225 0.158 0.15  0.191 0.125 0.125 0.175 0.175 0.358 0.225 0.308 0.141
- 0.183 0.216]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.183 0.216]",2,0.12080607725244555,0.3033017544588138,0.5758921682887407,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3507,15,2,133,compromise,B,R,0,competitor,4590.0,0.78,0.65,0.52,8,14,34,2,1,0,False,False,False,[2 2 2 2 2 2 2 1 0 2 2 1 0 1 1 0],[1 0 0 1 1 0 0 0 0 1 1 1 1 1 1 0],"[0.225    0.267    0.233    0.242    0.35     0.4      0.233    0.225
- 0.166    0.133    0.233    0.15     0.308    0.125    0.158    0.254006]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.133    0.233    0.15     0.308    0.125    0.158    0.254006]",0,0.6748417032937263,0.2710566761250902,0.05410162058118354,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3508,15,2,134,filler,,L,2,,2910.0,0.27,0.61,0.89,37,16,11,1,2,0,True,False,False,[0 1 0 0 2 1 2 2 0 1 1 0],[0 1 1 1 0 1 1 1 0 1 0 0],"[0.208    0.225    0.2      0.091    0.275    0.216    0.108    0.316
- 0.191    0.175    0.25     0.125655]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.175    0.25     0.125655]",2,0.00024184020071140973,0.05976249139330107,0.9399956684059876,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3509,15,2,135,compromise,A,R,0,target,4540.0,0.78,0.68,0.82,8,15,6,2,0,1,True,True,True,[1 1 1 1 2 0 0 0 2 1 1 1 0 0 1 1 0 0 0],[0 0 1 0 0 0 1 0 0 0 0 1 1 1 1 0 0 1 1],"[0.175    0.091    0.175    0.183    0.125    0.342    0.108    0.225
  0.242    0.208    0.208    0.166    0.15     0.191    0.2      0.25
- 0.267    0.166    0.091954]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.267    0.166    0.091954]",0,0.8860050624351612,0.07941802591635991,0.03457691164847897,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3510,15,2,136,attraction,A,R,0,target,6680.0,0.72,0.62,0.7,8,15,7,2,1,0,False,True,True,[1 1 1 1 0 1 1 1 0 2 1 1 0 2 1 2 2 2 1 1 0 0 1],[0 0 1 1 0 1 0 0 1 1 0 0 0 0 1 1 0 1 0 1 1 1 0],"[0.191    0.183    0.216    0.216    0.3      0.141    0.175    0.292
  0.216    0.358    0.125    0.3      0.15     0.258    0.175    0.141
- 0.166    0.241    0.392    0.183    0.091    0.25     0.160639]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.241    0.392    0.183    0.091    0.25     0.160639]",0,0.36877685355100753,0.5646586324174172,0.06656451403157523,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3511,15,2,137,attraction,B,L,0,competitor,2780.0,0.78,0.65,0.63,8,15,14,0,1,2,True,False,False,[1 2 0 0 0 2 2 1 0],[0 0 0 0 1 1 0 1 1],"[0.175    0.233    0.141    0.408    0.225    0.258    0.141    0.267
- 0.117652]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3512,15,2,138,filler,,R,2,,2640.0,0.28,0.67,0.78,35,14,12,0,1,2,False,False,False,[0 0 1 2 2 1 0 1 2],[1 0 0 0 1 1 1 1 1],[0.166 0.191 0.192 0.275 0.191 0.216 0.275 0.208 0.175],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.117652]",1,0.7224686231990655,0.16563453059779176,0.1118968462031428,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3512,15,2,138,filler,,R,2,,2640.0,0.28,0.67,0.78,35,14,12,0,1,2,False,False,False,[0 0 1 2 2 1 0 1 2],[1 0 0 0 1 1 1 1 1],[0.166 0.191 0.192 0.275 0.191 0.216 0.275 0.208 0.175],2,0.0001660075238868806,0.10885013214419352,0.8909838603319197,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3513,15,2,139,attraction,A,M,1,competitor,6470.0,0.72,0.65,0.7,7,14,6,0,1,2,False,True,False,[1 1 0 1 1 0 2 1 0 1 2 0 0 0 2 2 1 1 1],[1 0 0 1 1 1 1 0 1 1 1 1 0 1 0 0 0 1 1],"[0.116    0.225    0.241    0.2      0.1      0.3      0.383    0.283
  0.208    0.517    0.4      0.258    0.475    0.308    0.125    0.15
- 0.6      0.225    0.263889]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3514,15,2,140,compromise,B,R,0,competitor,2240.0,0.72,0.62,0.55,8,14,35,2,0,1,False,False,False,[1 1 2 0 0 2 1],[1 0 0 0 1 1 1],[0.225    0.2      0.3      0.367    0.25     0.2      0.224914],0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.6      0.225    0.263889]",1,0.042631903482167624,0.928790361392543,0.02857773512528922,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3514,15,2,140,compromise,B,R,0,competitor,2240.0,0.72,0.62,0.55,8,14,35,2,0,1,False,False,False,[1 1 2 0 0 2 1],[1 0 0 0 1 1 1],[0.225    0.2      0.3      0.367    0.25     0.2      0.224914],1,0.19774308235609822,0.3021169894492733,0.5001399281946285,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3515,15,2,141,compromise,B,M,0,competitor,5310.0,0.72,0.68,0.52,8,15,35,1,2,0,True,False,True,[0 2 1 0 0 0 1 1 1 2 2 0 0 0 2 1 1 1 1 0 0],[1 0 1 0 0 1 0 1 1 1 0 0 0 1 0 0 0 1 1 0 1],"[0.208    0.342    0.25     0.308    0.267    0.175    0.116    0.091
  0.083    0.308    0.175    0.258    0.116    0.166    0.25     0.208
- 0.083    0.158    0.091    0.383    0.091717]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083    0.158    0.091    0.383    0.091717]",1,0.48715019378080376,0.45297002891285193,0.059879777306344174,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3516,15,2,142,attraction,A,R,0,target,14660.0,0.75,0.65,0.73,8,14,7,2,1,0,False,True,False,"[1 1 2 1 0 0 0 1 2 2 2 1 1 2 2 2 1 1 0 1 1 2 1 1 1 1 1 1 1 1 2 0 1 0 1 0 0
  2 0 1 0 0 1]","[0 0 1 0 1 0 0 0 0 1 1 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 1 1 1 0 1 1 1
  1 1 0 0 1 0]","[0.083 0.192 0.367 0.183 0.275 0.15  0.559 0.242 0.233 0.533 0.133 0.342
  0.45  0.275 0.175 0.183 0.183 0.241 0.275 0.208 0.241 0.35  0.25  0.5
  0.158 0.258 0.517 0.55  0.258 0.759 0.333 0.258 0.166 0.216 0.25  0.091
- 0.083 0.358 0.383 0.158 0.266 0.267 0.216]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083 0.358 0.383 0.158 0.266 0.267 0.216]",1,0.5160981131080262,0.4279341913662227,0.05596769552575105,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3517,15,2,143,compromise,A,R,0,target,2020.0,0.75,0.62,0.88,8,15,5,2,1,0,False,True,True,[0 0 0 1 0 1 2 2 1],[1 1 1 0 0 1 1 0 0],"[0.125    0.275    0.141    0.225    0.2      0.175    0.183    0.216
- 0.054233]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.054233]",2,0.11058043777986244,0.2602280815412222,0.6291914806789154,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3518,15,2,144,compromise,A,R,0,target,4370.0,0.72,0.65,0.82,8,15,5,2,0,1,False,False,True,[0 0 0 2 1 1 1 2 2 1 1 1 0 0],[1 0 0 0 1 0 1 1 0 1 1 0 1 0],"[0.216 0.242 0.183 0.191 0.216 0.133 0.217 0.475 0.258 0.458 0.1   0.317
- 0.233 0.166]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.233 0.166]",0,0.5793317986707438,0.3137311063065066,0.10693709502274953,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3519,15,2,145,compromise,B,M,0,competitor,13510.0,0.72,0.68,0.58,8,14,35,1,0,2,False,False,True,"[1 1 1 1 2 2 2 2 0 0 0 0 0 1 1 0 2 2 2 2 2 2 0 1 1 0 0 1 1 1 0 0 2 0 2 1 0
  1 0 0 1 0 0 0 1 0 0]","[1 0 1 1 0 1 1 0 1 0 0 1 1 1 0 0 1 0 0 0 0 1 1 1 0 0 1 1 0 0 1 0 1 1 0 1 1
  0 0 1 1 1 1 0 0 0 1]","[0.225    0.191    0.15     0.241    0.283    0.108    0.191    0.342
@@ -372,48 +372,48 @@
  0.175    0.325    0.233    0.083    0.166    0.383    0.3      0.258
  0.534    0.175    0.3      0.675    0.116    0.216    0.166    0.133
  0.167    0.15     0.166    0.233    0.108    0.342    0.1      0.208
- 0.308    0.5      0.183    0.266    0.317    0.425    0.041756]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.308    0.5      0.183    0.266    0.317    0.425    0.041756]",1,0.686302366016221,0.16295450872003997,0.15074312526373906,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3520,15,2,146,attraction,B,M,1,target,2790.0,0.78,0.68,0.66,7,14,13,2,1,0,False,True,True,[2 1 1 0 0 1 2 2 1 1],[0 0 1 1 1 0 1 0 1 0],"[0.15     0.091    0.292    0.216    0.116    0.2      0.3      0.317
- 0.241    0.235787]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3521,15,2,147,attraction,B,M,2,decoy,2720.0,0.72,0.62,0.6,7,15,14,0,2,1,True,False,True,[1 1 2 0 0 2 1 1 2 2],[1 1 1 1 0 1 1 0 0 0],[0.183 0.258 0.225 0.125 0.358 0.217 0.25  0.175 0.133 0.191],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.241    0.235787]",1,0.055547428495120406,0.89202854508267,0.05242402642220957,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3521,15,2,147,attraction,B,M,2,decoy,2720.0,0.72,0.62,0.6,7,15,14,0,2,1,True,False,True,[1 1 2 0 0 2 1 1 2 2],[1 1 1 1 0 1 1 0 0 0],[0.183 0.258 0.225 0.125 0.358 0.217 0.25  0.175 0.133 0.191],0,0.12894743986994345,0.4776960121681142,0.39335654796194236,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3522,15,2,148,compromise,B,M,1,target,12360.0,0.72,0.65,0.58,7,15,34,2,1,0,False,True,True,"[0 0 1 1 1 1 1 2 2 2 1 2 0 0 0 1 2 2 1 1 1 0 1 1 1 1 2 2 1 0 1 1 2 2 1 1 0
  1 0 1]","[1 1 0 1 0 0 0 1 0 0 0 1 1 1 1 0 1 1 0 0 0 1 0 0 0 0 1 0 0 1 0 1 0 0 1 0 0
  0 1 0]","[0.141    0.158    0.283    0.275    0.241    0.216    0.192    0.125
  0.459    0.091    0.408    0.225    0.517    0.892    0.191    0.392
  0.534    0.325    0.25     0.2      0.225    0.191    0.166    0.2
  0.15     0.192    0.35     0.116    0.1      0.233    0.191    0.208
- 0.192    0.216    0.191    0.141    0.3      0.133    0.208    0.235419]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.192    0.216    0.191    0.141    0.3      0.133    0.208    0.235419]",1,0.10340249451820564,0.7087202457680768,0.18787725971371752,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3523,15,2,149,compromise,A,R,0,target,4100.0,0.75,0.65,0.85,8,15,6,2,1,0,True,True,False,[1 1 0 0 1 1 2 2 1 0 1 1 0 1 0],[0 0 1 0 0 1 0 1 0 1 0 0 0 1 0],"[0.091    0.183    0.225    0.308    0.216    0.292    0.141    0.241
- 0.192    0.25     0.166    0.275    0.15     0.308    0.060459]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.192    0.25     0.166    0.275    0.15     0.308    0.060459]",2,0.5452337362610133,0.2989248408457499,0.15584142289323674,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3524,15,2,150,filler,,M,2,,4590.0,0.32,0.48,0.85,31,20,11,0,2,1,True,True,True,[1 1 2 2 1 1 2 0 0 2 2 2 1 0 2],[0 0 0 1 1 0 0 0 0 0 0 1 1 1 0],"[0.333    0.183    0.458    0.408    0.125    0.2      0.258    0.216
- 0.108    0.258    0.125    0.258    0.216    0.233    0.242002]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.108    0.258    0.125    0.258    0.216    0.233    0.242002]",2,9.951223888099634e-05,0.0009315033315505221,0.9989689844295685,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3525,15,3,151,filler,,R,2,,11470.0,0.16,0.46,0.87,62,21,11,0,1,2,False,True,True,[0 0 0 1 1 0 0 1 2 2 2 1 2 1 0 0 1 2 1 0 0 0 0 1 1 1 1 2 1 2 1 2 1 0 2 2],[1 0 0 0 0 1 1 0 0 1 1 0 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 0 0 1 0 1 1 1 0 0],"[0.542    0.1      0.208    0.258    0.358    0.183    0.325    0.375
  0.55     0.116    0.175    0.383    0.175    0.175    0.292    0.375
  0.35     0.375    0.859    0.158    0.275    0.225    0.25     0.175
  0.233    0.25     0.125    0.4      0.183    0.15     0.141    0.2
- 0.15     0.225    0.15     0.073782]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.225    0.15     0.073782]",2,1.6531672216764273e-06,0.0002551963004879401,0.9997431505322903,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3526,15,3,152,filler,,M,2,,7390.0,0.19,0.56,0.8,52,17,12,2,0,1,True,True,True,[0 0 2 2 1 2 0 0 1 1 1 0 2 0 0 2 2 0 1 1 2 2 2 0 2],[0 1 1 0 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 1 1 0 0 1 1],"[0.333 0.225 0.158 0.517 0.216 0.35  0.208 0.125 0.225 0.091 0.216 0.225
  0.417 0.484 0.191 0.208 0.241 0.2   0.225 0.141 0.325 0.225 0.141 0.241
- 0.166]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166]",2,1.0737261941328094e-05,0.002606198491241387,0.9973830642468172,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3527,15,3,153,compromise,B,L,0,competitor,4370.0,0.72,0.62,0.55,8,14,35,0,2,1,False,True,False,[2 0 2 0 0 2 1 1 1 1 2 1 2 0 0 2 2 1 2],[1 1 0 0 0 0 0 0 1 0 1 1 0 0 1 0 0 0 1],"[0.2      0.216    0.216    0.1      0.225    0.2      0.1      0.108
  0.191    0.233    0.292    0.166    0.183    0.108    0.283    0.133
- 0.166    0.208    0.081264]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.208    0.081264]",2,0.054787026138942464,0.07457550361338776,0.8706374702476697,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3528,15,3,154,compromise,A,R,0,target,2890.0,0.78,0.62,0.85,8,14,5,2,0,1,False,False,True,[1 1 2 0 0 0 1 2 1 1 1 0],[0 0 1 0 1 1 1 0 0 0 1 1],"[0.166    0.133    0.283    0.133    0.083    0.108    0.283    0.3
- 0.141    0.267    0.233    0.039797]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.141    0.267    0.233    0.039797]",0,0.6452145597022756,0.2253052764467203,0.12948016385100414,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3529,15,3,155,compromise,A,M,1,competitor,2480.0,0.75,0.62,0.88,8,15,5,0,1,2,False,True,True,[0 0 0 1 2 2 1 1 0 1],[1 0 0 0 0 0 0 1 0 1],"[0.183   0.133   0.108   0.292   0.125   0.258   0.258   0.2     0.216
- 0.05733]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.05733]",1,0.24681609452388348,0.49989686383009035,0.2532870416460261,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3530,15,3,156,compromise,A,L,0,target,7350.0,0.78,0.68,0.88,8,15,5,0,2,1,False,False,True,[0 0 2 2 1 1 2 2 0 0 0 0 2 2 2 2 1 1 1 0 0 0 1 1 0 0],[0 1 1 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 1 0 1 1 0 1 1],"[0.258    0.141    0.133    0.225    0.2      0.35     0.183    0.216
  0.2      0.091    0.225    0.158    0.116    0.267    0.367    0.183
  0.275    0.4      0.225    0.208    0.333    0.283    0.308    0.325
- 0.183    0.195138]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.183    0.195138]",0,0.7950781232392856,0.14159539781282673,0.06332647894788765,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3531,15,3,157,filler,,M,2,,4180.0,0.29,0.42,0.72,34,23,13,2,0,1,True,False,False,[1 1 1 1 2 0 2 0 1 2 2 2 0 1 2],[1 0 1 1 0 0 1 1 0 1 1 0 0 1 1],"[0.116    0.275    0.241    0.2      0.25     0.141    0.333    0.308
- 0.233    0.166    0.133    0.216    0.258    0.241    0.168565]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.233    0.166    0.133    0.216    0.258    0.241    0.168565]",2,0.00034007959805225526,0.0035315544367456528,0.996128365965202,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3532,15,3,158,compromise,B,M,0,competitor,4740.0,0.78,0.62,0.55,8,14,35,1,2,0,False,True,True,[0 0 2 2 2 2 1 1 1 0 1 0 2 1 0 0],[1 1 0 1 1 0 0 1 1 1 0 0 1 1 0 1],"[0.15     0.2      0.433    0.183    0.091    0.191    0.266    0.167
- 0.116    0.233    0.217    0.383    0.542    0.2      0.175    0.241482]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.116    0.233    0.217    0.383    0.542    0.2      0.175    0.241482]",0,0.8861631521382589,0.039959287171064395,0.07387756069067672,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3533,15,3,159,attraction,B,M,1,target,5930.0,0.78,0.65,0.63,7,15,14,2,1,0,False,True,True,[1 2 2 1 0 0 1 2 1 2 1 1 2 1 2 1],[1 0 0 1 0 1 0 1 0 0 1 0 1 1 0 0],"[0.317    0.2      0.275    0.225    0.242    0.358    0.191    0.292
- 0.375    0.517    0.45     0.241    0.216    0.35     0.425    0.145779]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.375    0.517    0.45     0.241    0.216    0.35     0.425    0.145779]",1,0.05621609004961422,0.9076460596820586,0.036137850268327,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3534,15,3,160,compromise,A,R,0,target,3570.0,0.72,0.65,0.82,8,15,5,2,1,0,True,True,True,[1 0 2 2 2 1 0 1 2 2 2 1 1 0 0],[1 0 0 0 1 1 1 1 1 0 0 0 1 1 0],"[0.133    0.317    0.133    0.108    0.158    0.116    0.216    0.191
- 0.275    0.175    0.108    0.233    0.2      0.166    0.183575]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.275    0.175    0.108    0.233    0.2      0.166    0.183575]",1,0.6062797296423738,0.25895944152396994,0.13476082883365637,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3535,15,3,161,compromise,B,L,0,competitor,14740.0,0.72,0.68,0.58,8,14,35,0,1,2,False,False,True,"[1 1 0 0 0 1 2 2 0 1 2 1 2 2 2 1 1 0 0 0 0 0 0 0 0 0 1 1 1 2 1 1 1 1 0 0 0
  0 2 2 1 1 1 2 1 1 1 0 0 0 1 2 1]","[1 0 1 0 0 1 0 0 1 0 0 1 0 1 1 1 1 1 0 0 0 1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 0
  0 1 0 1 0 0 0 1 0 0 0 1 1 1 0 1]","[0.108    0.208    0.158    0.175    0.108    0.191    0.116    0.091
@@ -422,150 +422,150 @@
  0.35     0.183    0.108    0.208    0.292    0.467    0.225    0.091
  0.091    0.191    0.141    0.358    0.108    0.483    0.158    0.342
  0.375    0.158    0.2      0.392    0.208    0.091    0.283    0.175
- 0.2      0.408    0.192    0.241    0.109436]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2      0.408    0.192    0.241    0.109436]",2,0.06202440973178161,0.6152214880279677,0.32275410224025064,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3536,15,3,162,compromise,A,M,1,competitor,4640.0,0.78,0.68,0.88,7,15,6,0,1,2,False,False,False,[1 0 1 0 1 2 1 0 1 2 1 0 0 1 1],[1 1 1 0 0 0 0 1 1 1 0 0 0 0 1],"[0.166    0.584    0.208    0.208    0.2      0.358    0.208    0.308
- 0.225    0.141    0.375    0.083    0.275    0.116    0.199111]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.225    0.141    0.375    0.083    0.275    0.116    0.199111]",0,0.09149056429089149,0.7875135158372991,0.12099591987180945,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3537,15,3,163,attraction,A,M,0,target,2840.0,0.75,0.65,0.73,8,15,7,1,2,0,True,True,True,[0 0 1 1 2 2 0 0 0 0 1 1 0],[0 0 0 0 0 1 1 0 0 1 1 0 0],"[0.208    0.125    0.133    0.1      0.216    0.183    0.191    0.141
- 0.2      0.175    0.2      0.141    0.242884]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2      0.175    0.2      0.141    0.242884]",0,0.6461792435878382,0.3089591670773623,0.04486158933479941,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3538,15,3,164,attraction,B,R,1,target,2940.0,0.75,0.62,0.6,7,15,14,0,2,1,False,True,True,[0 0 0 0 0 2 1 2 1 1],[1 1 1 0 0 0 0 1 1 0],"[0.116    0.191    0.158    0.116    0.125    0.275    0.133    0.175
- 0.241    0.203032]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.241    0.203032]",1,0.09713037453446373,0.8502875414716253,0.05258208399391104,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3539,15,3,165,attraction,B,M,0,competitor,4300.0,0.72,0.62,0.6,8,15,14,1,0,2,True,False,True,[1 0 1 0 1 0 0 1 0 0 2 1 0 0],[0 0 1 1 1 1 0 0 1 0 1 0 0 0],"[0.308    0.317    0.15     0.15     0.208    0.116    0.175    0.267
- 0.208    0.158    0.175    0.292    0.141    0.087841]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.208    0.158    0.175    0.292    0.141    0.087841]",1,0.6985176285552953,0.2834788701921714,0.01800350125253326,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3540,15,3,166,filler,,R,2,,10150.0,0.32,0.6,0.78,31,16,12,0,1,2,True,True,False,[2 2 2 1 1 0 1 1 2 2 2 2 0 0 0 1 1 1 2 1 2 1 0 2 2 1 0 1 1 0 0 0 1 2 0],[1 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 1 1 1 1],"[0.15  0.166 0.108 0.266 0.183 0.141 0.091 0.141 0.15  0.191 0.091 0.125
  0.108 0.35  0.317 0.2   0.158 0.141 0.283 0.308 0.183 0.367 0.267 0.125
- 0.467 0.308 0.266 0.208 0.4   0.208 0.141 0.083 0.375 0.45  0.308]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.467 0.308 0.266 0.208 0.4   0.208 0.141 0.083 0.375 0.45  0.308]",2,0.0019318977556232056,0.0628733052196219,0.9351947970247548,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3541,15,3,167,compromise,A,L,1,competitor,3610.0,0.75,0.68,0.88,7,15,6,2,0,1,False,False,True,[2 2 0 1 0 2 1 1 2 1 1 1 2],[0 1 0 1 1 0 1 0 1 1 1 0 0],"[0.392    0.308    0.183    0.283    0.317    0.225    0.2      0.15
- 0.233    0.191    0.25     0.183    0.025838]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.233    0.191    0.25     0.183    0.025838]",2,0.023408019966769972,0.3769015444506823,0.5996904355825478,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3542,15,3,168,compromise,A,M,0,target,4860.0,0.78,0.65,0.82,8,14,5,1,0,2,False,True,False,[0 2 0 2 2 1 1 0 0 1 0 0 1 1 0 0 2],[0 1 1 0 0 1 0 1 0 0 1 1 1 0 0 1 1],"[0.166 0.208 0.233 0.25  0.083 0.375 0.208 0.225 0.241 0.283 0.367 0.116
- 0.242 0.3   0.125 0.233 0.275]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.242 0.3   0.125 0.233 0.275]",0,0.6397302634806705,0.10948921461190857,0.250780521907421,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3543,15,3,169,compromise,B,M,1,target,9690.0,0.72,0.62,0.58,7,14,35,0,1,2,False,True,True,[1 1 0 0 1 2 0 0 0 1 1 1 1 1 1 1 2 2 1 1 1 1 2 2 2 2 1 1 2 0 2 2 2 2],[1 1 1 1 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 1 1 1 0 0 1 0 1 0 1],"[0.133 0.083 0.091 0.15  0.275 0.25  0.25  0.116 0.091 0.258 0.233 0.425
  0.133 0.2   0.15  0.584 0.225 1.059 0.15  0.091 0.542 0.317 0.1   0.15
- 0.083 0.241 0.225 0.183 0.233 0.141 0.183 0.2   0.208 0.125]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083 0.241 0.225 0.183 0.233 0.141 0.183 0.2   0.208 0.125]",2,0.006829010544184668,0.006812517364160738,0.9863584720916545,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3544,15,3,170,filler,,M,2,,8470.0,0.27,0.61,0.89,37,16,11,0,2,1,True,True,True,[2 0 0 2 0 0 0 2 2 0 0 2 1 2 2 2 0 0 0 2 2 2 1],[0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 1 0 0 0 1 1 1],"[0.283 0.4   0.458 0.216 0.884 0.091 0.1   0.208 0.175 0.308 0.2   0.216
- 0.584 0.283 0.333 0.175 0.158 0.191 0.091 0.25  0.175 0.2   0.2  ]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.584 0.283 0.333 0.175 0.158 0.191 0.091 0.25  0.175 0.2   0.2  ]",2,2.0143994437986235e-05,0.009564709531855257,0.9904151464737069,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3545,15,3,171,filler,,L,2,,4730.0,0.19,0.59,0.81,52,16,12,1,2,0,True,True,False,[2 2 0 1 0 2 0 1 2 2 0 0 0 1 1 2 2],[1 1 0 0 1 0 0 1 0 1 0 1 0 1 0 1 0],"[0.116   0.183   0.191   0.2     0.308   0.358   0.225   0.283   0.266
- 0.358   0.2     0.091   0.216   0.208   0.191   0.233   0.06683]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.358   0.2     0.091   0.216   0.208   0.191   0.233   0.06683]",2,8.610039128931307e-06,0.006993371921026921,0.9929980180398442,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3546,15,3,172,filler,,L,2,,7380.0,0.32,0.48,0.85,31,20,11,1,2,0,True,False,False,[0 2 2 0 0 1 0 0 2 1 1 0 2 0 1 1 1 2 2 2 2 0 0 0 2 2],[1 0 1 0 0 1 0 1 0 1 1 1 0 1 1 1 1 0 0 1 0 1 1 0 1 1],"[0.2   0.166 0.35  0.108 0.1   0.308 0.125 0.342 0.183 0.225 0.183 0.091
  0.342 0.133 0.141 0.208 0.342 0.108 0.584 0.208 0.141 0.108 0.392 0.166
- 0.233 0.133]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.233 0.133]",2,5.995400152576479e-05,0.00035908382013529003,0.9995809621783389,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3547,15,3,173,attraction,A,R,0,target,4350.0,0.75,0.65,0.73,8,14,7,2,1,0,True,False,True,[2 2 2 2 1 1 1 1 0 2 2 1 0 0 1 2 2 1],[0 1 1 0 1 0 1 0 0 0 0 0 0 1 0 1 0 1],"[0.15  0.15  0.158 0.15  0.141 0.175 0.191 0.2   0.258 0.292 0.166 0.208
- 0.125 0.141 0.158 0.217 0.342 0.141]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.125 0.141 0.158 0.217 0.342 0.141]",2,0.16775529659855673,0.5803386571994006,0.25190604620204254,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3548,15,3,174,filler,,L,2,,3800.0,0.28,0.67,0.78,35,14,12,2,1,0,True,True,True,[0 0 1 2 1 0 1 2 2 1 1 2 1 0],[0 0 0 0 0 0 0 0 0 0 1 1 1 1],"[0.3      0.166    0.25     0.3      0.183    0.208    0.2      0.225
- 0.083    0.375    0.225    0.241    0.166    0.191857]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.083    0.375    0.225    0.241    0.166    0.191857]",2,0.000560915526918363,0.3079143966897882,0.6915246877832935,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3549,15,3,175,attraction,B,R,0,competitor,3460.0,0.78,0.65,0.63,8,15,14,2,0,1,False,False,True,[1 1 1 2 0 2 1 1 0 0 2 1],[1 0 0 0 1 1 1 1 0 1 0 1],"[0.408    0.116    0.158    0.241    0.292    0.275    0.083    0.15
- 0.408    0.242    0.183    0.111258]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.408    0.242    0.183    0.111258]",0,0.19548324895739194,0.7669411219245869,0.03757562911802118,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3550,15,3,176,attraction,B,L,1,target,5650.0,0.75,0.65,0.63,7,14,13,1,0,2,True,True,False,[2 2 0 1 0 2 1 0 1 2 1 0 0 2 2 1 1 1 2],[0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1],"[0.2      0.225    0.183    0.242    0.116    0.266    0.525    0.367
  0.275    0.217    0.275    0.291    0.275    0.291    0.191    0.15
- 0.191    0.183    0.077813]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.183    0.077813]",1,0.0945477612855167,0.7449223460642453,0.16052989265023815,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3551,15,3,177,filler,,M,2,,11240.0,0.24,0.37,0.76,41,27,13,0,2,1,False,False,False,"[0 0 0 0 0 0 2 2 1 1 2 1 1 1 2 2 2 2 0 0 2 1 1 1 1 2 0 0 2 2 1 1 1 2 0 2 2
  2]","[1 1 0 0 0 1 1 0 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 0
  0]","[0.175    0.133    0.116    0.725    0.45     0.291    0.208    0.225
  0.442    0.291    0.167    0.475    0.091    0.1      0.116    0.191
  0.141    0.091    0.2      0.108    0.25     0.408    0.592    0.125
  0.166    0.533    0.133    0.4      0.091    0.108    0.191    0.108
- 0.258    0.233    0.35     0.308    0.15     0.268657]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.258    0.233    0.35     0.308    0.15     0.268657]",2,1.9569097741827627e-05,0.0001633831458500113,0.9998170477564081,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3552,15,3,178,compromise,B,R,1,target,6150.0,0.75,0.62,0.58,7,15,34,1,2,0,True,True,False,[0 0 1 1 2 2 0 0 1 1 1 2 2 2 1 1 0 2 0 1 1 1 0 0 0],[0 1 0 0 1 1 1 0 0 1 1 0 1 1 0 1 1 0 0 1 1 0 0 1 0],"[0.183    0.15     0.133    0.158    0.283    0.125    0.2      0.291
  0.108    0.166    0.125    0.225    0.258    0.091    0.258    0.308
  0.225    0.2      0.342    0.091    0.1      0.241    0.308    0.141
- 0.192837]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.192837]",0,0.7709127937835967,0.07263204494187564,0.15645516127452766,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3553,15,3,179,attraction,B,M,1,target,4530.0,0.78,0.62,0.6,7,14,13,0,1,2,False,True,True,[0 0 1 1 2 1 2 2 2 1 0 0 1 1 1 2 1],[1 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 0],"[0.375    0.208    0.15     0.2      0.2      0.2      0.192    0.15
  0.15     0.225    0.408    0.167    0.2      0.133    0.283    0.225
- 0.205879]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.205879]",1,0.131109898801231,0.8301704923496644,0.03871960884910461,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3554,15,3,180,attraction,B,R,0,competitor,3220.0,0.72,0.68,0.66,8,14,13,2,0,1,False,True,True,[1 1 2 0 2 0 2 2 1],[0 0 0 1 1 0 1 0 0],"[0.35     0.083    0.425    0.225    0.141    0.225    0.091    0.141
- 0.244044]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.244044]",1,0.09599401491490707,0.4482634253343576,0.4557425597507353,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3555,15,3,181,attraction,B,R,0,competitor,2460.0,0.78,0.62,0.6,8,15,14,2,0,1,False,False,True,[2 0 0 1 2 2 1 1 0 0],[1 1 0 1 0 0 0 0 1 0],"[0.233    0.183    0.191    0.266    0.208    0.15     0.083    0.15
- 0.342    0.083071]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.342    0.083071]",0,0.8634203720877569,0.11804252363354552,0.018537104278697644,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3556,15,3,182,attraction,A,R,1,competitor,3560.0,0.72,0.65,0.7,7,15,6,0,2,1,False,True,False,[2 2 2 0 1 1 1 2 0 1 1],[0 1 1 0 1 1 0 1 0 1 0],"[0.592    0.35     0.225    0.233    0.166    0.208    0.141    0.25
- 0.191    0.125    0.035738]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.125    0.035738]",1,0.05379200752200843,0.9230150136164902,0.02319297886150125,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3557,15,3,183,attraction,B,M,0,competitor,2760.0,0.72,0.62,0.6,8,14,13,1,0,2,True,False,True,[0 2 1 1 0 2 0 2 1 0],[1 0 1 1 1 0 0 1 0 0],"[0.233    0.216    0.358    0.166    0.141    0.15     0.258    0.175
- 0.191    0.032764]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3558,15,3,184,filler,,M,2,,1570.0,0.27,0.47,0.86,37,21,11,0,2,1,True,False,True,[2 1 1 0 0 2 0],[1 1 1 0 0 0 1],[0.192    0.15     0.108    0.091    0.175    0.266    0.173412],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.032764]",0,0.6578703217061028,0.24923571109179632,0.09289396720210079,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3558,15,3,184,filler,,M,2,,1570.0,0.27,0.47,0.86,37,21,11,0,2,1,True,False,True,[2 1 1 0 0 2 0],[1 1 1 0 0 0 1],[0.192    0.15     0.108    0.091    0.175    0.266    0.173412],2,0.00034245301093930393,0.0027724944269978367,0.996885052562063,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3559,15,3,185,attraction,B,M,0,competitor,2750.0,0.72,0.62,0.6,8,15,14,1,0,2,False,True,False,[0 0 1 2 2 1 0 1 2],[0 1 1 0 1 0 0 0 1],"[0.191    0.45     0.216    0.266    0.225    0.158    0.191    0.475
- 0.067066]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3560,15,3,186,attraction,B,M,0,competitor,2260.0,0.72,0.65,0.63,8,14,13,1,2,0,True,False,False,[0 0 1 2 2 0 1 1 0],[0 1 1 0 1 0 0 1 0],[0.133   0.15    0.225   0.183   0.233   0.191   0.216   0.308   0.10485],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3561,15,3,187,attraction,A,M,1,competitor,1700.0,0.75,0.65,0.73,7,15,6,2,1,0,True,False,False,[1 2 2 0 0 1 1],[0 1 1 0 1 0 1],[0.2     0.158   0.15    0.158   0.275   0.15    0.21687],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.067066]",1,0.21504098475198272,0.5778745034629382,0.20708451178507908,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3560,15,3,186,attraction,B,M,0,competitor,2260.0,0.72,0.65,0.63,8,14,13,1,2,0,True,False,False,[0 0 1 2 2 0 1 1 0],[0 1 1 0 1 0 0 1 0],[0.133   0.15    0.225   0.183   0.233   0.191   0.216   0.308   0.10485],1,0.4250991196645454,0.5174543662780057,0.05744651405744906,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3561,15,3,187,attraction,A,M,1,competitor,1700.0,0.75,0.65,0.73,7,15,6,2,1,0,True,False,False,[1 2 2 0 0 1 1],[0 1 1 0 1 0 1],[0.2     0.158   0.15    0.158   0.275   0.15    0.21687],0,0.13673454183427927,0.8206390288314881,0.04262642933423283,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3562,15,3,188,attraction,B,L,1,target,10030.0,0.78,0.62,0.6,7,15,14,1,0,2,True,False,False,[0 1 1 1 1 0 1 0 2 2 0 0 0 2 0 1 1 1 0 0 1 1 2 2 0 1 0 0 0 2 2 1 1 2 1],[0 1 1 0 0 0 1 0 1 1 0 0 1 0 0 1 0 0 0 1 1 1 0 0 1 1 0 1 0 1 0 1 0 1 1],"[0.175    0.208    0.158    0.108    0.275    0.383    0.417    0.191
  0.592    0.091    0.233    0.083    0.358    0.258    0.1      0.659
  0.133    0.158    0.35     0.308    0.083    0.383    0.166    0.175
  0.216    0.216    0.091    0.225    0.208    0.108    0.191    0.158
- 0.175    0.25     0.127841]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3563,15,3,189,attraction,B,L,1,target,3530.0,0.78,0.68,0.66,7,14,13,2,0,1,False,True,False,[1 2 0 0 0 2 2 2 2 1 1 1],[1 0 1 1 1 1 0 0 1 0 1 1],[0.116 0.325 0.25  0.7   0.091 0.183 0.15  0.166 0.175 0.283 0.125 0.141],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.175    0.25     0.127841]",1,0.1288926247726761,0.8144162338256902,0.056691141401633754,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3563,15,3,189,attraction,B,L,1,target,3530.0,0.78,0.68,0.66,7,14,13,2,0,1,False,True,False,[1 2 0 0 0 2 2 2 2 1 1 1],[1 0 1 1 1 1 0 0 1 0 1 1],[0.116 0.325 0.25  0.7   0.091 0.183 0.15  0.166 0.175 0.283 0.125 0.141],1,0.059442797290089,0.8604604144284307,0.08009678828148034,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3564,15,3,190,compromise,A,M,1,competitor,5080.0,0.78,0.62,0.85,7,15,5,0,1,2,True,False,False,[2 2 1 1 0 1 0 1 1 1 2 2 0 0 0 1 1 2 1],[1 0 1 0 0 1 1 0 1 0 0 1 0 1 1 0 1 0 1],"[0.175    0.208    0.141    0.25     0.425    0.258    0.208    0.175
  0.283    0.216    0.192    0.15     0.2      0.275    0.116    0.166
- 0.133    0.208    0.114556]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3565,15,3,191,attraction,A,R,1,competitor,1810.0,0.72,0.65,0.7,7,15,6,1,2,0,False,False,False,[0 2 1 1 0 2 0],[0 0 0 1 1 1 1],[0.166    0.242    0.15     0.208    0.133    0.158    0.152947],0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.133    0.208    0.114556]",1,0.16763426950811708,0.5055903286967525,0.32677540179513054,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3565,15,3,191,attraction,A,R,1,competitor,1810.0,0.72,0.65,0.7,7,15,6,1,2,0,False,False,False,[0 2 1 1 0 2 0],[0 0 0 1 1 1 1],[0.166    0.242    0.15     0.208    0.133    0.158    0.152947],1,0.5744165811806372,0.31218621851981176,0.11339720029955089,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3566,15,3,192,attraction,A,M,1,competitor,2390.0,0.72,0.68,0.7,7,14,6,2,1,0,True,True,False,[1 1 1 2 1 0 1 1 2 1],[1 0 0 1 0 1 0 1 0 1],"[0.225    0.233    0.125    0.225    0.125    0.166    0.308    0.2
- 0.191    0.053855]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.191    0.053855]",1,0.03105814808042205,0.9382611968610896,0.030680655058488274,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3567,15,3,193,attraction,A,L,0,target,5850.0,0.72,0.62,0.7,8,15,7,0,2,1,False,False,False,[2 1 0 2 1 1 0 2 1 0 2 2 0 2 1 2 1 0],[0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 1 1 0],"[0.175 0.258 0.342 0.383 0.283 0.208 0.2   0.258 0.275 0.2   0.408 0.175
- 0.2   0.191 0.141 0.317 0.392 0.191]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2   0.191 0.141 0.317 0.392 0.191]",1,0.5243642504620454,0.3371416533508912,0.13849409618706343,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3568,15,3,194,attraction,B,R,0,competitor,3120.0,0.78,0.65,0.63,8,15,14,2,0,1,False,True,True,[1 0 2 1 2 0 0 0 2 1],[0 1 1 0 0 0 1 0 1 1],"[0.241    0.225    0.459    0.233    0.267    0.191    0.216    0.166
- 0.133    0.150196]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.133    0.150196]",1,0.3695162909957054,0.4885658544269297,0.14191785457736483,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3569,15,3,195,compromise,B,R,1,target,4250.0,0.72,0.68,0.58,7,15,35,0,2,1,True,False,False,[2 1 2 0 2 0 1 1 2 0 0 2 1 1 2 1],[0 1 1 1 0 0 0 0 0 0 1 0 0 1 1 1],"[0.2      0.166    0.233    0.191    0.158    0.2      0.208    0.158
- 0.267    0.342    0.133    0.333    0.166    0.2      0.267    0.293741]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.267    0.342    0.133    0.333    0.166    0.2      0.267    0.293741]",2,0.02144997681742562,0.6795513149506353,0.2989987082319391,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3570,15,3,196,compromise,B,R,1,target,6700.0,0.75,0.68,0.55,7,14,34,0,2,1,True,True,True,[2 2 0 2 1 2 1 2 2 1 2 0 0 2 2 1 1 0 0 0 2 1],[1 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 0 0 0],"[0.166    0.108    0.433    0.283    0.225    0.333    0.325    0.158
  0.175    0.325    0.458    0.208    0.3      0.258    0.141    0.192
- 0.225    0.108    0.175    0.3      0.083    0.323921]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3571,15,3,197,compromise,B,M,0,competitor,1550.0,0.78,0.65,0.52,8,14,34,1,2,0,True,True,True,[0 2 1 0 1],[0 0 0 1 1],[0.283 0.233 0.208 0.241 0.15 ],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.225    0.108    0.175    0.3      0.083    0.323921]",2,0.16669986087525884,0.5821905709946933,0.2511095681300478,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3571,15,3,197,compromise,B,M,0,competitor,1550.0,0.78,0.65,0.52,8,14,34,1,2,0,True,True,True,[0 2 1 0 1],[0 0 0 1 1],[0.283 0.233 0.208 0.241 0.15 ],0,0.41565977611219235,0.5027268118049756,0.08161341208283215,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3572,15,3,198,compromise,A,R,0,target,6030.0,0.75,0.65,0.85,8,15,6,2,1,0,True,False,True,[1 1 2 0 2 2 1 1 0 0 0 1 1 1 1 2 2 2 2 1 0 1 0 1],[1 0 0 1 0 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 1 1 0],"[0.233   0.133   0.233   0.191   0.433   0.1     0.083   0.1     0.183
  0.392   0.225   0.241   0.166   0.166   0.375   0.133   0.175   0.225
- 0.1     0.15    0.291   0.216   0.25    0.06175]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.1     0.15    0.291   0.216   0.25    0.06175]",1,0.2277748096957943,0.58208662746867,0.19013856283553557,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3573,15,3,199,compromise,A,R,0,target,5270.0,0.72,0.68,0.82,8,15,5,2,1,0,True,False,False,[1 2 1 0 0 1 1 1 0 1 1 1 1 0 0 2 1 2 1],[0 1 1 0 1 1 0 1 0 1 1 0 0 1 0 0 1 0 0],"[0.141    0.225    0.141    0.166    0.383    0.216    0.517    0.125
  0.241    0.342    0.091    0.1      0.091    0.116    0.217    0.258
- 0.325    0.208    0.163934]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.325    0.208    0.163934]",1,0.048217695336645106,0.8052536240884356,0.14652868057491936,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3574,15,3,200,attraction,A,R,0,target,3340.0,0.75,0.65,0.73,8,15,7,2,0,1,False,True,False,[2 0 0 0 1 2 0 2 1 1 2 2 1 0],[0 1 1 1 0 1 0 1 1 0 0 1 0 1],"[0.15     0.1      0.158    0.141    0.191    0.15     0.183    0.342
- 0.242    0.241    0.191    0.125    0.233    0.133589]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.242    0.241    0.191    0.125    0.233    0.133589]",0,0.4894694074472813,0.36204800043087987,0.14848259212183879,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3575,15,3,201,attraction,A,L,1,competitor,5240.0,0.78,0.62,0.76,7,15,6,1,0,2,False,False,False,[0 2 2 1 1 0 1 1 1 0 0 0 1 0 0 0 2 1],[0 1 0 0 1 1 1 0 0 0 1 1 1 1 1 0 0 0],"[0.292    0.141    0.217    0.383    0.15     0.433    0.3      0.175
  0.141    0.241    0.091    0.208    0.333    0.25     0.141    0.283
- 0.317    0.197385]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.317    0.197385]",0,0.492715302665777,0.3366203823604547,0.17066431497376838,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3576,15,3,202,compromise,A,M,0,target,3890.0,0.78,0.68,0.82,8,15,6,1,2,0,True,True,True,[2 2 0 1 0 0 1 1 1 0 2 0 0 0],[1 0 0 0 0 1 1 0 1 1 1 1 1 0],"[0.166    0.275    0.308    0.216    0.167    0.275    0.225    0.4
- 0.2      0.225    0.2      0.083    0.108    0.172926]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.2      0.225    0.2      0.083    0.108    0.172926]",0,0.9002727669824638,0.053266459210517175,0.046460773807018955,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3577,15,3,203,attraction,A,M,1,competitor,9330.0,0.72,0.65,0.7,7,14,6,2,1,0,True,True,True,[1 1 1 2 0 1 2 1 1 0 0 1 2 2 2 1 1 0 0 0 0 1 1 1 1 1 1 0 1 0 0 0 2 2 1],[1 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0],"[0.108    0.183    0.108    0.283    0.175    0.166    0.175    0.166
  0.408    0.216    0.325    0.517    0.216    0.116    0.175    0.325
  0.166    0.216    0.116    0.208    0.2      0.325    0.175    0.208
  0.158    0.242    0.567    0.408    0.333    0.133    0.091    0.175
- 0.166    0.15     0.114373]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166    0.15     0.114373]",1,0.16226332346796848,0.6877252278896197,0.1500114486424118,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3578,15,3,204,compromise,B,M,0,competitor,4640.0,0.72,0.68,0.52,8,15,35,1,0,2,False,True,True,[0 1 2 2 1 0 0 1 0 0 2 0 2 0 2],[1 0 0 1 1 1 0 0 1 1 0 1 0 0 1],"[0.292    0.2      0.317    0.233    0.308    0.475    0.15     0.25
- 0.125    0.216    0.275    0.275    0.15     0.25     0.170801]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.125    0.216    0.275    0.275    0.15     0.25     0.170801]",2,0.2618693699658312,0.18620315998265155,0.5519274700515172,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3579,15,3,205,attraction,A,R,1,competitor,4970.0,0.75,0.68,0.73,7,14,6,1,2,0,False,True,True,[0 0 1 2 0 1 1 0 0 1 1 1 1 1 0 0 2 1],[1 1 0 0 1 1 1 1 1 1 0 0 0 0 1 0 1 1],"[0.141  0.133  0.208  0.317  0.225  0.25   0.091  0.183  0.325  0.216
- 0.375  0.158  0.209  0.125  0.333  0.3    0.141  0.0663]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3580,15,3,206,compromise,A,M,1,competitor,1890.0,0.78,0.68,0.85,7,15,5,0,1,2,True,True,True,[1 0 1 2 1 1 1],[0 0 0 0 0 1 1],[0.158    0.166    0.108    0.258    0.317    0.183    0.375123],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.375  0.158  0.209  0.125  0.333  0.3    0.141  0.0663]",1,0.14164986484471986,0.7897904903185027,0.0685596448367775,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3580,15,3,206,compromise,A,M,1,competitor,1890.0,0.78,0.68,0.85,7,15,5,0,1,2,True,True,True,[1 0 1 2 1 1 1],[0 0 0 0 0 1 1],[0.158    0.166    0.108    0.258    0.317    0.183    0.375123],1,0.03032832124751372,0.9277778658312664,0.04189381292121982,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3581,15,3,207,compromise,A,L,1,competitor,3810.0,0.75,0.62,0.88,7,15,6,2,0,1,False,True,False,[1 1 2 0 2 2 0 1 1 2 2],[1 0 1 1 0 1 0 1 0 1 1],"[0.183    0.292    0.2      0.208    0.5      0.216    0.217    0.342
- 0.467    0.183    0.270669]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.467    0.183    0.270669]",2,0.018450705048497884,0.0270000827048255,0.9545492122466767,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3582,15,3,208,attraction,A,R,1,competitor,3980.0,0.75,0.65,0.73,8,14,7,0,2,1,True,True,False,[0 0 0 0 0 0 2 2 2 2 0 1 1 1 2 0],[1 0 0 1 1 0 0 1 1 0 1 1 0 1 1 0],"[0.175    0.266    0.15     0.125    0.342    0.258    0.083    0.191
- 0.141    0.183    0.183    0.15     0.342    0.225    0.175    0.236086]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.141    0.183    0.183    0.15     0.342    0.225    0.175    0.236086]",0,0.5595629287242488,0.27298591606653416,0.16745115520921694,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3583,15,3,209,compromise,B,R,1,target,7120.0,0.72,0.68,0.55,7,14,35,0,2,1,True,False,False,[1 1 2 2 2 0 2 2 2 0 0 2 1 2 2 2 1 2 2 2 1 1 2 2],[0 1 1 0 1 0 1 0 1 1 0 0 0 0 1 1 1 1 0 1 1 0 0 0],"[0.2      0.208    0.191    0.208    0.216    0.508    0.108    0.158
  0.208    0.158    0.191    0.158    0.283    0.233    0.609    0.217
- 0.492    0.275    0.258    0.225    0.2      0.242    0.091    0.085394]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.492    0.275    0.258    0.225    0.2      0.242    0.091    0.085394]",2,0.019601506555921116,0.14543393429784696,0.8349645591462319,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3584,15,3,210,attraction,A,M,0,target,3210.0,0.78,0.68,0.76,8,15,7,1,2,0,False,True,True,[0 0 1 2 0 0 1 1 0 0 1 0],[1 1 0 0 1 1 1 0 1 0 0 1],"[0.1      0.233    0.233    0.191    0.275    0.083    0.233    0.216
- 0.116    0.392    0.266    0.115277]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.116    0.392    0.266    0.115277]",0,0.7392577776554551,0.22654464008706515,0.03419758225747975,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3585,15,3,211,attraction,B,R,1,target,3630.0,0.72,0.62,0.6,7,15,14,0,2,1,True,True,True,[2 0 0 2 2 1 2 2 1 1 2 0 0],[0 0 1 0 0 0 0 1 1 0 0 0 1],"[0.317    0.25     0.325    0.158    0.141    0.25     0.141    0.241
- 0.283    0.233    0.392    0.158    0.071221]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3586,15,3,212,compromise,B,R,1,target,3470.0,0.72,0.65,0.52,8,15,34,1,2,0,True,False,False,[0 0 1 2 2 0 0 1 0 2 2 1],[0 1 1 0 1 0 1 1 0 1 1 0],[0.133 0.133 0.392 0.275 0.233 0.191 0.258 0.258 0.15  0.141 0.091 0.208],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3587,15,3,213,compromise,B,R,0,competitor,1810.0,0.75,0.65,0.55,8,14,34,2,1,0,False,False,False,[1 1 1 0 0 1 2],[1 0 0 0 1 1 1],[0.158 0.108 0.083 0.192 0.191 0.191 0.216],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3588,15,3,214,filler,,L,2,,4070.0000000000014,0.31,0.38,0.85,32,26,11,1,2,0,True,True,True,[1 1 1 1 0 2 0 0 0 2 2 2 2 0 1],[0 1 0 1 1 1 1 0 0 0 0 1 1 1 1],"[0.175    0.208    0.383    0.216    0.333    0.292    0.191    0.208
- 0.133    0.2      0.325    0.125    0.083    0.183    0.252942]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.283    0.233    0.392    0.158    0.071221]",0,0.7026393941429443,0.17011658182941813,0.12724402402763754,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3586,15,3,212,compromise,B,R,1,target,3470.0,0.72,0.65,0.52,8,15,34,1,2,0,True,False,False,[0 0 1 2 2 0 0 1 0 2 2 1],[0 1 1 0 1 0 1 1 0 1 1 0],[0.133 0.133 0.392 0.275 0.233 0.191 0.258 0.258 0.15  0.141 0.091 0.208],1,0.12606761507719183,0.575376783196384,0.29855560172642426,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3587,15,3,213,compromise,B,R,0,competitor,1810.0,0.75,0.65,0.55,8,14,34,2,1,0,False,False,False,[1 1 1 0 0 1 2],[1 0 0 0 1 1 1],[0.158 0.108 0.083 0.192 0.191 0.191 0.216],2,0.23466330883878117,0.2818858459721902,0.4834508451890286,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3588,15,3,214,filler,,L,2,,4070.000000000001,0.31,0.38,0.85,32,26,11,1,2,0,True,True,True,[1 1 1 1 0 2 0 0 0 2 2 2 2 0 1],[0 1 0 1 1 1 1 0 0 0 0 1 1 1 1],"[0.175    0.208    0.383    0.216    0.333    0.292    0.191    0.208
+ 0.133    0.2      0.325    0.125    0.083    0.183    0.252942]",2,0.00025229662160817324,0.0010739186619501523,0.9986737847164415,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3589,15,3,215,compromise,A,M,0,target,2640.0,0.72,0.68,0.82,8,15,5,1,2,0,True,False,False,[2 2 0 1 1 1 0 1 0 2],[0 1 1 1 1 0 0 0 0 1],"[0.233   0.125   0.325   0.175   0.267   0.15    0.3     0.216   0.108
- 0.05497]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.05497]",0,0.21063449963884665,0.43609274369190204,0.3532727566692512,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3590,15,3,216,attraction,B,R,1,target,9800.0,0.75,0.68,0.66,7,14,13,0,2,1,False,True,True,[2 2 1 0 0 0 2 0 2 2 1 2 2 2 0 0 0 0 0 2 1 1 2 2 1 2 2 1 1 1 1 2 2],[1 0 0 0 0 0 0 1 1 0 0 0 1 1 0 1 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 1],"[0.15     0.65     0.208    0.083    0.308    0.317    0.275    0.217
  0.125    0.275    0.25     0.492    0.191    0.225    0.225    0.475
  0.125    0.35     0.241    0.208    0.166    0.25     0.217    0.35
  0.175    0.358    0.183    0.141    0.166    0.091    0.158    0.208
- 0.166058]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.166058]",1,0.06482316431361855,0.6016848686572821,0.3334919670290993,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3591,15,3,217,attraction,A,L,0,target,4890.0,0.72,0.65,0.7,8,15,7,0,2,1,False,False,False,[1 1 1 1 2 2 0 0 0 2 0 2 0 1 2 0],[1 1 0 0 0 0 0 0 1 0 0 0 1 1 1 0],"[0.158    0.567    0.158    0.083    0.133    0.158    0.158    0.225
- 0.241    0.133    0.467    0.517    0.3      0.342    0.2      0.106852]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3592,15,3,218,compromise,B,M,0,competitor,2420.0,0.75,0.62,0.58,8,14,35,1,0,2,True,True,False,[1 1 0 1 0 2 1 0],[1 0 0 0 1 0 1 0],[0.141    0.183    0.4      0.191    0.225    0.25     0.241    0.181256],2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.241    0.133    0.467    0.517    0.3      0.342    0.2      0.106852]",0,0.605014154593978,0.24983797599403684,0.14514786941198515,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3592,15,3,218,compromise,B,M,0,competitor,2420.0,0.75,0.62,0.58,8,14,35,1,0,2,True,True,False,[1 1 0 1 0 2 1 0],[1 0 0 0 1 0 1 0],[0.141    0.183    0.4      0.191    0.225    0.25     0.241    0.181256],2,0.5275869669516532,0.12508420303032036,0.3473288300180264,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3593,15,3,219,compromise,A,M,0,target,2610.0,0.75,0.65,0.82,8,15,5,1,0,2,True,True,True,[0 0 0 1 1 2 2 2 2 0],[0 0 1 0 1 1 0 0 0 0],"[0.208    0.2      0.175    0.158    0.191    0.191    0.133    0.166
- 0.125    0.270285]",0,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
-3594,15,3,220,attraction,A,L,1,competitor,2700.0,0.78,0.68,0.76,7,15,6,1,0,2,True,True,True,[0 0 1 2 0 0 1 1 1 0],[1 0 0 0 0 1 1 0 0 0],[0.183 0.208 0.191 0.308 0.158 0.183 0.175 0.083 0.266 0.317],1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.125    0.270285]",1,0.40188413544371127,0.1081174095529235,0.4899984550033652,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+3594,15,3,220,attraction,A,L,1,competitor,2700.0,0.78,0.68,0.76,7,15,6,1,0,2,True,True,True,[0 0 1 2 0 0 1 1 1 0],[1 0 0 0 0 1 1 0 0 0],[0.183 0.208 0.191 0.308 0.158 0.183 0.175 0.083 0.266 0.317],2,0.37910783062419245,0.5852713402151689,0.0356208291606386,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3595,15,3,221,compromise,A,R,0,target,2540.0,0.78,0.65,0.82,8,14,6,2,0,1,False,False,False,[2 2 0 2 1 1 0 2 1 1 2],[1 0 0 0 0 1 1 1 1 0 0],"[0.233    0.267    0.275    0.1      0.116    0.133    0.242    0.175
- 0.225    0.108    0.106347]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.225    0.108    0.106347]",2,0.14119716026867332,0.2714048390761622,0.5873980006551645,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3596,15,3,222,compromise,B,M,0,competitor,2780.0,0.72,0.62,0.55,8,14,35,1,2,0,True,False,False,[0 0 1 0 1 2 2 1 1],[1 0 0 0 1 1 0 0 1],"[0.208    0.642    0.183    0.216    0.183    0.258    0.233    0.183
- 0.086697]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.086697]",1,0.08605255079469931,0.5807843917483089,0.33316305745699176,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3597,15,3,223,compromise,B,M,1,target,5840.0,0.72,0.65,0.55,7,15,35,2,1,0,True,True,False,[1 1 1 1 1 1 1 2 1 0 0 0 1 2 2 1 1 0 1 2 1 1],[0 0 1 1 0 0 0 1 1 0 1 1 0 1 0 0 1 1 0 1 1 0],"[0.091    0.083    0.091    0.508    0.233    0.317    0.375    0.166
  0.225    0.191    0.083    0.15     0.141    0.216    0.108    0.4
- 0.133    0.166    0.233    0.216    0.158    0.084687]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.133    0.166    0.233    0.216    0.158    0.084687]",1,0.030583554533161576,0.8433430781085196,0.12607336735831887,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3598,15,3,224,attraction,A,L,0,target,3630.0,0.78,0.62,0.76,8,14,7,0,1,2,False,False,True,[1 1 1 1 2 2 2 1 0 0 0 1 1],[1 1 0 0 0 1 1 1 1 0 1 1 0],"[0.15     0.133    0.242    0.183    0.342    0.258    0.083    0.216
- 0.25     0.617    0.233    0.191    0.032219]",1,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.25     0.617    0.233    0.191    0.032219]",0,0.4529169420588027,0.4533769510159693,0.0937061069252279,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
 3599,15,3,225,compromise,B,L,1,target,4990.0,0.72,0.65,0.58,7,15,34,1,0,2,False,False,False,[1 1 0 0 0 2 0 2 1 1 1 0 0 0 0 2 1 1],[0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 0 0 1],"[0.225    0.125    0.15     0.241    0.125    0.308    0.367    0.275
  0.266    0.083    0.241    0.258    0.191    0.25     0.133    0.367
- 0.15     0.131514]",2,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
+ 0.15     0.131514]",1,0.06086933860897206,0.6751728811400985,0.2639577802509295,sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent,0
