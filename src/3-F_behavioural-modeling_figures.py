@@ -22,7 +22,13 @@ import pandas as pd
 import pymc3 as pm
 
 from analysis.bayescorr import runBayesCorr
-from plotting.plot_share import lm, violin
+from plotting.plot_share import (
+    lm,
+    violin,
+    plot_dwell_adv,
+    plot_dwell_adv_set,
+    plot_observed_predicted_rst,
+)
 from plotting.plot_utils import *
 
 matplotlib = set_mpl_defaults(matplotlib)
@@ -227,250 +233,6 @@ def plot_n_best_fitting_pxp(individual_best_models, bms, models, model_labels, a
     return ax
 
 
-def plot_observed_predicted_rst(
-    choiceshares, prediction, effect, ax=None, sample_kwargs={}
-):
-    """
-    Plot observed (`choiceshares`) vs. predicted RST values for `effect` trials.
-    """
-    if ax is None:
-        ax = plt.gca()
-
-    # Compute RST of predicted data
-    rst_pred = (
-        prediction.loc[(prediction["effect"].isin(["attraction", "compromise"]))]
-        .groupby(["effect", "subject", "model"])["predicted_choice_tcd"]
-        .value_counts()
-        .rename("count")
-        .reset_index()
-        .pivot_table(
-            index=["effect", "subject"], columns="predicted_choice_tcd", values="count"
-        )
-        .reset_index()
-        .fillna(0)
-    )
-    rst_pred["rst"] = rst_pred["target"] / (rst_pred["target"] + rst_pred["competitor"])
-
-    # Merge observed and GLA-predicted RST dataframes
-    rst = (
-        choiceshares[["subject", "effect", "rst"]]
-        .rename({"rst": "rst_obs"}, axis=1)
-        .merge(
-            rst_pred[["subject", "effect", "rst"]].rename({"rst": "rst_pred"}, axis=1),
-            on=["subject", "effect"],
-        )
-    )
-
-    # Subset effect
-    rst_e = rst.loc[rst["effect"] == effect]
-
-    # Linear Model
-    ax, trace, summary = lm(
-        x=rst_e["rst_obs"],
-        y=rst_e["rst_pred"],
-        ax=ax,
-        scatter_color="slategray",
-        line_color="lightgray",
-        xrange=[0, 1],
-        sample_kwargs=sample_kwargs,
-    )
-
-    # Correlation
-    corrTrace = runBayesCorr(
-        y1=rst_e["rst_obs"], y2=rst_e["rst_pred"], sample_kwargs=sample_kwargs
-    )
-    corrSummary = pm.summary(corrTrace, hdi_prob=0.95)
-
-    ax.set_xlim(0, 1)
-    ax.set_xticks(np.arange(0, 1.01, 0.25))
-    ax.set_yticks(np.arange(0, 1.01, 0.25))
-    ax.set_ylim(0, 1)
-    ax.plot([0, 1], [0, 1], lw=0.5, color="gray", zorder=-1)
-    ax.set_xlabel("observed RST")
-    ax.set_ylabel("predicted RST")
-    ax.set_title(f"{effect.capitalize()}")
-
-    stat_str = (
-        f"r = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
-        + "\n"
-        + f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
-        + "\n"
-        + f"Slope = {summary.loc['x', 'mean']:.2f} [{summary.loc['x', 'hdi_2.5%']:.2f}, {summary.loc['x', 'hdi_97.5%']:.2f}]"
-    )
-
-    ax.annotate(stat_str, [1, 0.05], ma="right", ha="right", va="bottom", fontsize=4)
-    return ax
-
-
-def plot_dwell_adv(
-    df,
-    kind="bar",
-    alternative="A",
-    ax=None,
-    color="C0",
-    choicecol="choice",
-    label=None,
-    edgecolor=None,
-    linewidth=None,
-):
-    """
-    Make a plot of probability of choice, depending on binned dwell time advantage.
-    """
-    if ax is None:
-        ax = plt.gca()
-
-    # Compute means and sems
-    df[f"{alternative}_chosen"] = df[choicecol] == alternative
-    summary = (
-        df.groupby(["subject", f"total_dwell_adv_{alternative}"])[
-            f"{alternative}_chosen"
-        ]
-        .mean()
-        .reset_index()
-        .groupby(f"total_dwell_adv_{alternative}")[f"{alternative}_chosen"]
-        .aggregate(["mean", "sem"])
-    )
-    x = np.arange(len(summary))
-    if kind == "bar":
-        ax.bar(
-            x=x,
-            height=summary["mean"],
-            color=color,
-            label=label,
-            edgecolor=edgecolor,
-            linewidth=linewidth,
-        )
-        ax.vlines(
-            x=x,
-            ymin=summary["mean"] - summary["sem"],
-            ymax=summary["mean"] + summary["sem"],
-            color="black",
-        )
-    if kind == "box":
-        subject_means = (
-            df.groupby(["subject", f"total_dwell_adv_{alternative}"])[
-                f"{alternative}_chosen"
-            ]
-            .mean()
-            .reset_index()
-            .pivot(
-                index=["subject"],
-                values=f"{alternative}_chosen",
-                columns=f"total_dwell_adv_{alternative}",
-            )
-        )
-
-        # Remove NA values and make list of arrays for boxplot
-        subject_means_boxplottable = [
-            (subject_means[interval]).dropna().values
-            for interval in subject_means.columns
-        ]
-
-        bplot = ax.boxplot(
-            subject_means_boxplottable,
-            positions=range(len(subject_means_boxplottable)),
-            widths=0.5,
-            showcaps=False,
-            boxprops=dict(linewidth=0.5),
-            medianprops=dict(linewidth=0.5, color=edgecolor),
-            whiskerprops=dict(linewidth=0.5),
-            flierprops=dict(
-                marker="o",
-                markersize=2,
-                markerfacecolor=color,
-                markeredgecolor=edgecolor,
-                markeredgewidth=0.25,
-                alpha=0.9,
-            ),
-            patch_artist=True,
-            zorder=1,
-        )
-        for patch in bplot["boxes"]:
-            patch.set_facecolor(color)
-
-    elif kind == "line":
-        ax.plot(
-            x,
-            summary["mean"],
-            "--o",
-            color=color,
-            markersize=3,
-            markerfacecolor="none",
-            label=label,
-            zorder=2,
-        )
-
-    ax.set_xticks(x)
-    ax.set_xticklabels(
-        np.round([interval.mid for interval in summary.index], 2), rotation=45
-    )
-    ax.set_xlabel(f"Rel. dwell time advantage {alternative.capitalize()}")
-
-    ax.set_ylim(0, 1)
-    ax.set_yticks(np.arange(0, 1.01, 0.25))
-    ax.set_ylabel(f"P(Choose {alternative.capitalize()})")
-
-    return ax, summary
-
-
-def plot_dwell_adv_set(trials, predictions, models, model_labels, axs=None):
-    """
-    Makes the advantage plot for attraction and compromise trials, for observed and model-predicted data.
-    Observed data uses even trials, predictions use uneven trials.
-    """
-    if axs is None:
-        fig, axs = plt.subplots(2, 3)
-
-    for e, effect in enumerate(["attraction", "compromise"]):
-        for i, alternative in enumerate(["target", "competitor", "decoy"]):
-            ax = axs[e, i]
-            ax, summary = plot_dwell_adv(
-                trials.loc[(trials["effect"] == effect) & (trials["trial"] % 2 == 0)],
-                kind="bar",
-                color="white",
-                edgecolor="black",
-                linewidth=0.5,
-                alternative=alternative,
-                choicecol="choice_tcd",
-                ax=ax,
-            )
-            for m, (model, color) in enumerate(
-                zip(
-                    models[::-1],
-                    palette[: len(models)][::-1],
-                )
-            ):
-                ax, summary = plot_dwell_adv(
-                    predictions.loc[
-                        (predictions["model"] == model)
-                        & (predictions["effect"] == effect)
-                        & (predictions["trial"] % 2 == 1)
-                    ],
-                    kind="line",
-                    color=color,
-                    choicecol="predicted_choice_tcd",
-                    alternative=alternative,
-                    label=model_labels[model],
-                    ax=ax,
-                )
-            if i == 0:
-                ax.set_ylabel(f"{effect.capitalize()}\n\nP(choice)")
-            else:
-                ax.set_ylabel(None)
-
-            if e == 0:
-                ax.set_title(f"{alternative.capitalize()}")
-                ax.set_xlabel(None)
-                ax.set_xticklabels([])
-            else:
-                ax.set_xlabel("Rel. dwell time advantage")
-    handles, labels = axs[0, -1].get_legend_handles_labels()
-    axs[0, -1].legend(
-        handles[::-1], labels[::-1], loc="center right", bbox_to_anchor=(1.75, 0.0)
-    )
-    return axs
-
-
 # %% 1) Make composite figure
 # Set up figure
 fig, axs = plt.subplots(
@@ -494,7 +256,9 @@ for ax, effect in zip(axs[0, 2:4], ["attraction", "compromise"]):
     ax = plot_observed_predicted_rst(
         cs,
         predictions.loc[predictions["model"] == "glickman1layer"],
-        effect,
+        effect=effect,
+        scatter_color=palette[0],
+        line_color=palette[0],
         ax=ax,
         sample_kwargs=sample_kwargs,
     )
@@ -506,7 +270,7 @@ for ax in axs[1, :]:
 
 # e-j: Gaze advantage plots for targets, competitors, decoys in attraction, compromise trials
 axs[2:, :-1] = plot_dwell_adv_set(
-    trials, predictions, models, model_labels, axs[2:, :-1]
+    trials, predictions, models, model_labels, palette=palette, axs=axs[2:, :-1]
 )
 axs[2, -1].axis("off")
 axs[3, -1].axis("off")
