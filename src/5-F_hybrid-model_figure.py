@@ -11,17 +11,14 @@ This script makes figure illustrating performance of the hybrid model identified
 """
 
 from os.path import join
+from string import ascii_lowercase
 
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pymc3 as pm
-from matplotlib.colors import TwoSlopeNorm
-from matplotlib.patches import Rectangle
 
-from analysis.bayescorr import runBayesCorr
-from plotting.plot_share import lm, plot_dwell_adv, plot_observed_predicted_rst
+from plotting.plot_share import plot_dwell_adv, plot_observed_predicted_rst
 from plotting.plot_utils import cm2inch, set_mpl_defaults
 
 # %% Preparations
@@ -352,8 +349,6 @@ axs[2, 1].legend(
 fig.align_ylabels()
 
 # Label panels
-from string import ascii_lowercase
-
 for ax, label in zip(axs.ravel(), list(ascii_lowercase)):
     # Place axis labels in figure space, so that they are aligned
     # https://stackoverflow.com/a/52309638
@@ -367,3 +362,128 @@ plt.savefig(join(OUTPUT_DIR, "5-hybrid-variant.pdf"), bbox_inches="tight")
 
 
 # %% Supplemental Figure: Hybrid & GLA predictions of P(choice) vs. dwell time advantage, for subgroups (AE RST > 0.7, vs. rest)
+
+# First, make a list of strong responder subjects
+strong_responders = rst_obs.loc[
+    (rst_obs["effect"] == "attraction") & (rst_obs["rst"] > 0.7), "subject"
+].values
+
+# Now, make the figure
+fig, all_axs = plt.subplots(
+    4, 3, figsize=cm2inch(3 * 4.5, 12), sharey="row", sharex="col"
+)
+
+for group in ["normal", "strong"]:
+
+    if group == "normal":
+        axs = all_axs[:2, :]
+        barcolor = "white"
+        data = trials.loc[~trials["subject"].isin(strong_responders)]
+        N_normal = len(data["subject"].unique())
+        group_pred = predictions.loc[~predictions["subject"].isin(strong_responders)]
+    else:
+        axs = all_axs[2:, :]
+        barcolor = "lightgray"
+        data = trials.loc[trials["subject"].isin(strong_responders)]
+        N_strong = len(data["subject"].unique())
+        group_pred = predictions.loc[predictions["subject"].isin(strong_responders)]
+
+    for e, effect in enumerate(["attraction", "compromise"]):
+        for i, alternative in enumerate(["target", "competitor", "decoy"]):
+            ax = axs[e, i]
+            ax, summary = plot_dwell_adv(
+                data.loc[(data["effect"] == effect) & (data["trial"] % 2 == 0)],
+                kind="bar",
+                color=barcolor,
+                edgecolor="black",
+                linewidth=0.5,
+                alternative=alternative,
+                choicecol="choice_tcd",
+                ax=ax,
+            )
+
+            for m, model in enumerate(["glickman1layer", hybrid_variant]):
+                if model == hybrid_variant:
+                    color = palette[len(models) - 1]
+                else:
+                    color = palette[m]
+                ax, summary = plot_dwell_adv(
+                    group_pred.loc[
+                        (group_pred["model"] == model)
+                        & (group_pred["effect"] == effect)
+                        & (group_pred["trial"] % 2 == 1)
+                    ],
+                    kind="line",
+                    color=color,
+                    choicecol="predicted_choice_tcd",
+                    alternative=alternative,
+                    label=model_labels[model],
+                    ax=ax,
+                )
+
+            ax.set_yticks([0, 0.5, 1])
+            if i == 0:
+                ax.set_ylabel(f"{effect.capitalize()}\n\nP(choice)")
+            else:
+                ax.set_ylabel(None)
+
+            if (e == 0) and (group == "normal"):
+                ax.set_title(f"{alternative.capitalize()}")
+
+            ax.set_xlabel(None)
+            if (e == 1) and (group == "strong"):
+                ax.set_title(None)
+                ax.set_xlabel("Rel. dwell time advantage")
+
+# Adjust spacing
+plt.tight_layout(h_pad=2, w_pad=3)
+
+# Label axes
+for ax, label in zip(all_axs.ravel(), list(ascii_lowercase)):
+    # Place axis labels in figure space, so that they are aligned
+    # https://stackoverflow.com/a/52309638
+    if label in "adgj":
+        xshift = 0.06
+    else:
+        xshift = 0.02
+    X = ax.get_position().x0
+    Y = ax.get_position().y1
+    fig.text(X - xshift, Y, label, size=10, weight="bold", ha="right", va="center")
+
+# Add legend to upper right axis
+all_axs[0, -1].legend(loc="upper right", ncol=1, frameon=False)
+
+# Add vertical lines to group axes for normal and strong responders
+for ypos, label in zip(
+    [0.75, 0.3],
+    [
+        f"Attraction RST < 0.7\n(N = {N_normal})",
+        f"Attraction RST > 0.7\n(N = {N_strong})",
+    ],
+):
+    linelength = 0.4
+    xpos = -0.05
+    xpos_lineshift = 0.03
+    fig.text(
+        xpos,
+        ypos,
+        label,
+        va="center",
+        ha="center",
+        rotation="vertical",
+        fontsize=7,
+    )
+    line = plt.Line2D(
+        [xpos + xpos_lineshift, xpos + xpos_lineshift],
+        [ypos - linelength / 2, ypos + linelength / 2],
+        transform=fig.transFigure,
+        figure=fig,
+        color="black",
+        linewidth=0.75,
+    )
+    fig.lines.extend([line])
+
+# Save the figure
+plt.savefig(
+    join(OUTPUT_DIR, "S_dwell-advantage_subgroups_gla-hybrid.pdf"), bbox_inches="tight"
+)

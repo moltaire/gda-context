@@ -554,6 +554,7 @@ def plot_dwell_adv(
             label=label,
             edgecolor=edgecolor,
             linewidth=linewidth,
+            clip_on=False
         )
         ax.vlines(
             x=x,
