@@ -68,6 +68,7 @@ echo
 python 2-F_context-effects_figure.py
 python 3-F_behavioural-modeling_figures.py
 python 4-F_switchboard_figures.py
+python 5-F_hybrid-model_figure.py
 
 # Supplement
 echo
@@ -91,5 +92,7 @@ echo "Supplemental figures..."
 python Supplement_GLA-estimates_figure.py
 python Supplement_gaze-predictors_figure.py
 python Supplement_dwell-regression-weights_figure.py
+python Supplement_model-predicted-probabilities.py
+
 
 cd ..
