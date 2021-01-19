@@ -154,7 +154,6 @@ def plot_bic_violins(estimates, models, model_labels, ax=None):
     bics_wide.columns.name = None
 
     # Make the figure
-    ax = axs[0, 0]
     ax = violin(
         data=bics_wide,
         ax=ax,
@@ -197,7 +196,6 @@ def plot_n_best_fitting_pxp(individual_best_models, bms, models, model_labels, a
     N = individual_best_models.astype({"model": "category"})["model"].value_counts()
 
     # Make the figure
-    ax = axs[0, 1]
     ax.bar(
         np.arange(len(N)),
         N,
@@ -233,24 +231,98 @@ def plot_n_best_fitting_pxp(individual_best_models, bms, models, model_labels, a
 
 # %% 1) Make composite figure
 # Set up figure
-fig, axs = plt.subplots(
-    4,
-    4,
-    gridspec_kw={"height_ratios": [3, 0.7, 2, 2]},
-    figsize=cm2inch(4 * panel_width, 5 / 3 * panel_height),
+fig = plt.figure(figsize=cm2inch(18, 8), dpi=300)
+
+width_ratios = [1, 3 / 4, 3 / 4, 1]
+gs = plt.GridSpec(6, 4, figure=fig, width_ratios=width_ratios, wspace=0.95, hspace=100)
+gs_center = plt.GridSpec(
+    6, 4, figure=fig, width_ratios=width_ratios, wspace=0.4, hspace=0.75
 )
 
 # a) BIC Violin
-axs[0, 0] = plot_bic_violins(estimates, models, model_labels, ax=axs[0, 0])
+axa = fig.add_subplot(gs[:3, 0])
+axa = plot_bic_violins(estimates, models, model_labels, ax=axa)
 
 # b) Best fitting barplots with pXP inset
-axs[0, 1] = plot_n_best_fitting_pxp(
-    individual_best_models, bms, models, model_labels, ax=axs[0, 1]
+axb = fig.add_subplot(gs[3:, 0])
+axb = plot_n_best_fitting_pxp(individual_best_models, bms, models, model_labels, ax=axb)
+
+# dwell advantage
+axs = np.empty(shape=(3, 2), dtype=object)
+axs[0, 0] = fig.add_subplot(gs_center[0:2, 1])
+axs[1, 0] = fig.add_subplot(gs_center[2:4, 1])
+axs[2, 0] = fig.add_subplot(gs_center[4:6, 1])
+axs[0, 1] = fig.add_subplot(gs_center[0:2, 2])
+axs[1, 1] = fig.add_subplot(gs_center[2:4, 2])
+axs[2, 1] = fig.add_subplot(gs_center[4:6, 2])
+
+from plotting.plot_share import plot_dwell_adv
+
+for e, effect in enumerate(["attraction", "compromise"]):
+    for a, alternative in enumerate(["target", "competitor", "decoy"]):
+        # Plot data
+        plot_dwell_adv(
+            df=trials.loc[(trials["effect"] == effect) & (trials["trial"] % 2 == 0)],
+            alternative=alternative,
+            choicecol="choice_tcd",
+            color="white",
+            edgecolor="black",
+            linewidth=0.5,
+            ax=axs[a, e],
+        )
+
+        # Plot model predictions
+        for m, model in enumerate(models[::-1]):
+            if (e == 0) and (a == 0):
+                label = model_labels[model]
+            else:
+                label = None
+            plot_dwell_adv(
+                df=predictions.loc[
+                    (predictions["effect"] == effect)
+                    & (predictions["model"] == model)
+                    & (predictions["trial"] % 2 == 1)
+                ],
+                kind="line",
+                alternative=alternative,
+                choicecol="predicted_choice_tcd",
+                color=palette[: len(models)][::-1][m],
+                linewidth=1,
+                label=label,
+                ax=axs[a, e],
+            )
+
+        if a == 0:
+            axs[a, e].set_title(effect.capitalize())
+        if e == 0:
+            axs[a, e].set_ylabel(f"{alternative.capitalize()}\nP(Choice)")
+        else:
+            axs[a, e].set_ylabel(None)
+        if a == 2:
+            axs[a, e].set_xlabel("Rel. dwell adv.")
+        else:
+            axs[a, e].set_xlabel(None)
+            axs[a, e].set_xticklabels([])
+
+        # Adjust y-ticks
+        axs[a, e].set_yticks([0, 0.5, 1])
+
+# Legend for models
+handles, labels = axs[0, 0].get_legend_handles_labels()
+fig.legend(
+    handles[::-1],
+    labels[::-1],
+    loc="upper center",
+    bbox_to_anchor=(0.5, -0.02),
+    ncol=len(models),
+    columnspacing=1.2,
+    handletextpad=0.6,
 )
 
-# c-d) observed vs GLA predicted RST
-for ax, effect in zip(axs[0, 2:4], ["attraction", "compromise"]):
-
+# Predicted RST
+axi = fig.add_subplot(gs[:3, -1])
+axj = fig.add_subplot(gs[3:, -1])
+for effect, ax in zip(["attraction", "compromise"], [axi, axj]):
     ax = plot_observed_predicted_rst(
         cs,
         predictions.loc[predictions["model"] == "glickman1layer"],
@@ -260,34 +332,19 @@ for ax, effect in zip(axs[0, 2:4], ["attraction", "compromise"]):
         ax=ax,
         sample_kwargs=sample_kwargs,
     )
+    ax.set_title(effect.capitalize())
+    ax.set_xlabel("observed RST")
     ax.set_ylabel("GLA pred. RST")
 
-# Include a row of empty axes for better spacing
-for ax in axs[1, :]:
-    ax.axis("off")
-
-# e-j: Gaze advantage plots for targets, competitors, decoys in attraction, compromise trials
-axs[2:, :-1] = plot_dwell_adv_set(
-    trials, predictions, models, model_labels, palette=palette, axs=axs[2:, :-1]
-)
-axs[2, -1].axis("off")
-axs[3, -1].axis("off")
-
-plt.subplots_adjust(top=0.99, bottom=0.01, hspace=0.5, wspace=0.6)
+# Align y-labels in each column, duh
+fig.align_ylabels()
 
 # Label panels
-all_axes = (
-    list(axs[0, :].ravel()) + list(axs[2, :-1].ravel()) + list(axs[3, :-1].ravel())
-)
-for ax, label in zip(all_axes, list(ascii_lowercase)):
+all_axs = np.append(np.array([axa, axb]), np.append(axs.ravel(), np.array([axi, axj])))
+for ax, label in zip(all_axs, list(ascii_lowercase)):
     # Place axis labels in figure space, so that they are aligned
     # https://stackoverflow.com/a/52309638
-    if label == "a":
-        xshift = 0.045
-    elif label == "b":
-        xshift = 0.039
-    else:
-        xshift = 0.05
+    xshift = 0.045
     X = ax.get_position().x0
     Y = ax.get_position().y1
     fig.text(X - xshift, Y, label, size=10, weight="bold", ha="right", va="center")
@@ -295,8 +352,8 @@ for ax, label in zip(all_axes, list(ascii_lowercase)):
 # Save the figure
 plt.savefig(join(OUTPUT_DIR, "3-model-comparison.pdf"), bbox_inches="tight")
 
-# %% 2) Supplementary Figure: deltaBIC vs RST
-# -------------------------------------------
+# # %% 2) Supplementary Figure: deltaBIC vs RST
+# # -------------------------------------------
 # Preprocess data (already loaded)
 # BIC
 estimates_long = (
