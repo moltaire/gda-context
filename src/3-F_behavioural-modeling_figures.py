@@ -21,11 +21,9 @@ import numpy as np
 import pandas as pd
 import pymc3 as pm
 
-from analysis.bayescorr import runBayesCorr
 from plotting.plot_share import (
     lm,
     violin,
-    plot_dwell_adv,
     plot_dwell_adv_set,
     plot_observed_predicted_rst,
 )
