@@ -81,7 +81,6 @@ echo
 echo "Running dwell time regressions..."
 python Supplement_run-dwell-regression.py --verbose 2 --mixed  --seed 1 --label fulltrial
 python Supplement_run-dwell-regression.py --verbose 2 --mixed  --timebinned --seed 2 --label timebinned
-python Supplement_run-dwell-regression.py --verbose 2 --mixed  --timebinned --center-time --seed 2 --label timebinned
 
 echo "Running analysis of transition patterns"
 python Supplement_transitions_stats.py
