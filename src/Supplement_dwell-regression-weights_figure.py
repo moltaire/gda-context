@@ -147,4 +147,3 @@ plt.tight_layout(h_pad=2.5, w_pad=1)
 plt.savefig(
     join(OUTPUT_DIR, "S_dwell-regression_weights.pdf"), dpi=300, bbox_inches="tight"
 )
-
