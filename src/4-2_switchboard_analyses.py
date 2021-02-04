@@ -263,7 +263,7 @@ ind_best_variants = sb_estimates_noduplicates.loc[
     ]
 ]
 output_file = join(OUTPUT_DIR, "individual_best-variants_bic.csv")
-ind_best_variants.drop("model", axis=1).to_csv(output_file)
+ind_best_variants.drop("model", axis=1).round(2).to_csv(output_file)
 print(f"\tOutput file created at '{output_file}'.")
 
 
