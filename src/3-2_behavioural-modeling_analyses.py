@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs model comparison of previously fitted models
     1. Compute mean ± s.d. BICs per model
     2. Count individually best fitting models
@@ -45,15 +45,18 @@ estimates = pd.read_csv(
 
 # %% 0. Save BIC dataframe for BMS
 # --------------------------------
-(estimates
- [["subject", "model", "bic"]]
- .pivot(index="subject", columns="model", values="bic")
- .reset_index()
- .to_csv(join(RESULTS_DIR, "3-behavioural-modeling", "model-comparison_bics.csv"),
-         index=False)
+output_file = join(OUTPUT_DIR, "model-comparison_bics.csv")
+(
+    estimates[["subject", "model", "bic"]]
+    .pivot(index="subject", columns="model", values="bic")
+    .reset_index()
+    .round(4)
+    .to_csv(
+        output_file,
+        index=False,
+    )
 )
-print("\tGenerated output file:", join(OUTPUT_DIR, "model-comparison_bics.csv"))
-
+print("\tGenerated output file:", output_file)
 
 
 # %% 1. Compute mean ± s.d. BICs per model
@@ -62,8 +65,9 @@ print("1. Summarising mean ± s.d. BICs per model...")
 bic_summary = (
     estimates.groupby("model")["bic"].describe().sort_values("mean").reset_index()
 )
-bic_summary.to_csv(join(OUTPUT_DIR, "model-comparison_bic_summary.csv"), index=False)
-print("\tGenerated output file:", join(OUTPUT_DIR, "model-comparison_bic_summary.csv"))
+output_file = join(OUTPUT_DIR, "model-comparison_bic_summary.csv")
+bic_summary.round(4).to_csv(output_file, index=False)
+print("\tGenerated output file:", output_file)
 
 
 # %% 2) Count individually best fitting models
@@ -72,24 +76,21 @@ print("\tGenerated output file:", join(OUTPUT_DIR, "model-comparison_bic_summary
 bics = estimates.pivot_table(values="bic", columns="model", index="subject")
 best_model = bics.idxmin(axis=1)
 best_model.name = "model"
-best_model.reset_index().to_csv(
-    join(OUTPUT_DIR, "model-comparison_individual-best-models.csv"), index=False
-)
+output_file = join(OUTPUT_DIR, "model-comparison_individual-best-models.csv")
+best_model.reset_index().round(4).to_csv(output_file, index=False)
 print(
     "\tGenerated output file:",
-    join(OUTPUT_DIR, "model-comparison_individual-best-models.csv"),
+    output_file,
 )
 
 print("2. Individually best fitting (lowest BIC) model counts:")
 individual_best_model_counts = best_model.value_counts().rename("N")
 print(individual_best_model_counts)
-
-individual_best_model_counts.to_csv(
-    join(OUTPUT_DIR, "model-comparison_individual-best-models_count.csv")
-)
+output_file = join(OUTPUT_DIR, "model-comparison_individual-best-models_count.csv")
+individual_best_model_counts.to_csv(output_file)
 print(
     "\tGenerated output file:",
-    join(OUTPUT_DIR, "model-comparison_individual-best-models_count.csv"),
+    output_file,
 )
 
 # %% 3) Bayesian correlation analysis: observed vs. predicted context effects for GLA
@@ -98,14 +99,14 @@ print(
 
 def calc_rst(df, effect="attraction"):
     """Calculate RST.
-    
+
     Parameters
     ----------
     df : pandas.DataFrame
         trial DataFrame, containing columns `subject`, `effect`, `choice_tcd`
     effect : str, one of ['attraction', 'compromise'], optional
         which effect to look at, by default 'attraction'
-    
+
     Returns
     -------
     pandas.Series
@@ -126,14 +127,14 @@ def calc_rst(df, effect="attraction"):
 
 def calc_ptpc(df, effect="attraction"):
     """Calculate P(Target)-P(Competitor)
-    
+
     Parameters
     ----------
     df : pandas.DataFrame
         trial DataFrame, containing columns `subject`, `effect`, `choice_tcd`
     effect : str, one of ['attraction', 'compromise'], optional
         which effect to look at, by default 'attraction'
-    
+
     Returns
     -------
     pandas.Series
@@ -191,14 +192,18 @@ for e, effect in enumerate(["attraction", "compromise"]):
     summary.loc["r", "p>0"] = np.mean(trace.get_values("r") > 0)
     summary.to_csv(
         join(
-            OUTPUT_DIR, f"rst_observed_gla-predicted_{effect}_correlation_summary.csv",
+            OUTPUT_DIR,
+            f"rst_observed_gla-predicted_{effect}_correlation_summary.csv",
         )
     )
 
     # Traceplot
     pm.traceplot(trace)
     plt.savefig(
-        join(OUTPUT_DIR, f"rst_observed_gla-predicted_{effect}_correlation_trace.png",),
+        join(
+            OUTPUT_DIR,
+            f"rst_observed_gla-predicted_{effect}_correlation_trace.png",
+        ),
         dpi=100,
     )
 
@@ -234,11 +239,11 @@ for e, effect in enumerate(["attraction", "compromise"]):
 # -------------------------------------------------------------------------------------------------
 def runBayesReg(x, y, sample_kwargs={}):
     """Run Bayesian Gaussian regression with PyMC3 default priors.
-    
+
     Args:
         x (array-like): Predictor variable
         y (array-like): Outcome variable
-    
+
     Returns:
         pymc3.trace: Posterior trace
     """
@@ -282,7 +287,8 @@ for e, effect in enumerate(["attraction", "compromise"]):
         figsize=(len(variables) * 2.5, 2.5),
     )
     plt.savefig(
-        join(OUTPUT_DIR, f"rst_observed_gla-predicted_{effect}_posterior.png"), dpi=100,
+        join(OUTPUT_DIR, f"rst_observed_gla-predicted_{effect}_posterior.png"),
+        dpi=100,
     )
 
     # Print results
