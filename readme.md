@@ -9,9 +9,7 @@ Dependencies and package versions used are listed in the `environment.yml` file,
 
 All Python analyses can be run in sequence by calling the `run_all_analyses.sh` script. This script calls the individual analysis scripts in the `src` folder.
 
-Note that the project involves fitting of many (~200) behavioural model variants, which can take days to weeks, depending on the machine. If you plan to reproduce model-fitting, you can adapt the `overwrite` and `ncores` command line arguments for the `3-1_behavioural-modeling_fitting.py` and `4-1_switchboard_fitting.py` scripts.
-
-**By default, model fitting results are *not* overwritten, but read from the repository.**
+Note that the project involves fitting of many (~200) behavioural model variants, which can take days to weeks, depending on the machine. **By default, model fitting results are *not* overwritten, but read from the repository.** If you plan to reproduce the model-fitting, you can adapt the `overwrite` and `ncores` command line arguments for the `3-1_behavioural-modeling_fitting.py` and `4-1_switchboard_fitting.py` scripts.
 
 ### Contact
 
