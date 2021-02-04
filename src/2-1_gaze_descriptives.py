@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script generates descriptives of gaze data
     1. Compute subject level mean ± s.d. and grand average of dwells towards ABC, by effect and target alternative
     2. Compute subject level mean ± s.d. and grand average of dwells towards ABC, by effect across target alternatives
@@ -57,7 +57,11 @@ rdwells = (
     .reset_index()
 )
 
-rdwells.to_csv(join(OUTPUT_DIR, "dwells_by-target.csv"), index=False)
+output_file = join(OUTPUT_DIR, "dwells_by-target.csv")
+rdwells.round(4).to_csv(output_file, index=False)
+print(
+    f"Created participant level summary of relative dwells by target at '{output_file}'."
+)
 
 # Grand average
 rdwells_summary = (
@@ -75,7 +79,9 @@ rdwells_summary = (
     ].agg(["mean", "std", "min", "max"])
 ).T
 
-rdwells_summary.to_csv(join(OUTPUT_DIR, "dwells_by-target_summary.csv"))
+output_file = join(OUTPUT_DIR, "dwells_by-target_summary.csv")
+rdwells_summary.round(4).to_csv(output_file)
+print(f"Created grand average summary of relative dwells by target at '{output_file}'.")
 
 
 # 2. Compute subject level mean ± s.d. and grand average of dwells towards ABC, by effect across target alternatives
@@ -102,24 +108,35 @@ rdwells_across = (
     .mean()
     .reset_index()
 )
-
-rdwells_across.to_csv(join(OUTPUT_DIR, "dwells_across-targets.csv"), index=False)
+output_file = join(OUTPUT_DIR, "dwells_across-targets.csv")
+rdwells_across.round(4).to_csv(output_file, index=False)
+print(
+    f"Created participant level summary of relative dwells across targets at '{output_file}'."
+)
 
 # Grand average
-rdwells_across_summary = rdwells_across.groupby("effect")[
-    [
-        "dwell_A",
-        "dwell_B",
-        "dwell_C",
-        "dwell_p",
-        "dwell_m",
-        "dwell_target",
-        "dwell_competitor",
-        "dwell_decoy",
+rdwells_across_summary = (
+    rdwells_across.groupby("effect")[
+        [
+            "dwell_A",
+            "dwell_B",
+            "dwell_C",
+            "dwell_p",
+            "dwell_m",
+            "dwell_target",
+            "dwell_competitor",
+            "dwell_decoy",
+        ]
     ]
-].agg(["mean", "std", "min", "max"])
+    .agg(["mean", "std", "min", "max"])
+    .T
+)
 
-rdwells_across_summary.to_csv(join(OUTPUT_DIR, "dwells_across-targets_summary.csv"))
+output_file = join(OUTPUT_DIR, "dwells_across-targets_summary.csv")
+rdwells_across_summary.round(4).to_csv(output_file)
+print(
+    f"Created grand average summary of relative dwells across targets at '{output_file}'."
+)
 
 
 # 3. Compute subject level mean ± s.d. and grand average of Payne Indices for attraction and compromise trials
@@ -131,11 +148,14 @@ pi_part_across = (
     .mean()
     .reset_index()
 )
-
-pi_part_across.to_csv(join(OUTPUT_DIR, "payne-index_across-targets.csv"), index=False)
+output_file = join(OUTPUT_DIR, "payne-index_across-targets.csv")
+pi_part_across.round(4).to_csv(output_file, index=False)
+print(f"Created participant level summary of Payne Indices at '{output_file}'.")
 
 # Grand average
 pi_across_summary = pi_part_across.groupby("effect")["payne_index"].agg(
     ["mean", "std", "min", "max"]
 )
-pi_across_summary.to_csv(join(OUTPUT_DIR, "payne-index_across-targets_summary.csv"))
+output_file = join(OUTPUT_DIR, "payne-index_across-targets_summary.csv")
+pi_across_summary.round(4).to_csv(output_file)
+print(f"Created grand average summary of Payne Indices at '{output_file}'.")
