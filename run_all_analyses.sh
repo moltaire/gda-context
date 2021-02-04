@@ -90,9 +90,9 @@ echo "Running analyses testing simple choice rule"
 python Supplement_choicerule-analysis.py
 
 echo "Supplemental figures..."
-python Supplement_GLA-estimates_figure.py
 python Supplement_gaze-predictors_figure.py
 python Supplement_dwell-regression-weights_figure.py
+python Supplement_GLA-estimates_figure.py
 python Supplement_model-predicted-probabilities.py
 
 
