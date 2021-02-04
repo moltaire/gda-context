@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs statistical tests of context effects
     1. Test context effects: One-sample BEST RST vs. 0.5
     2. Test context effects: One-sample (paired) BEST: P(Target) - P(Competitor)
@@ -22,9 +22,7 @@ from analysis import bayescorr, best
 logger = logging.getLogger("pymc3")
 logger.setLevel(logging.ERROR)
 
-
 warnings.simplefilter(action="ignore", category=FutureWarning)
-
 
 # Set seed
 SEED = 12
@@ -101,7 +99,10 @@ for effect in ["attraction", "compromise"]:
     for var in ["mean", "difference", "d"]:
         summary.loc[var, "p>0"] = np.mean(trace.get_values(var) > 0)
     summary.to_csv(
-        join(OUTPUT_DIR, f"cs_target_vs_competitor_{effect}_BEST_summary.csv",)
+        join(
+            OUTPUT_DIR,
+            f"cs_target_vs_competitor_{effect}_BEST_summary.csv",
+        )
     )
 
     print(
@@ -118,7 +119,8 @@ for effect in ["attraction", "compromise"]:
     )
     pm.traceplot(trace)
     plt.savefig(
-        join(OUTPUT_DIR, f"cs_target_vs_competitor_{effect}_BEST_trace.png"), dpi=100,
+        join(OUTPUT_DIR, f"cs_target_vs_competitor_{effect}_BEST_trace.png"),
+        dpi=100,
     )
     pm.plot_posterior(
         trace,
@@ -156,9 +158,16 @@ print(
     "\t{}% of posterior mass above 0.".format(100 * np.mean(trace.get_values("r") > 0))
 )
 pm.traceplot(trace)
-plt.savefig(join(OUTPUT_DIR, "rst_attraction_compromise_correlation_trace.png"), dpi=100)
+plt.savefig(
+    join(OUTPUT_DIR, "rst_attraction_compromise_correlation_trace.png"), dpi=100
+)
 pm.plot_posterior(
-    trace, var_names=["r"], hdi_prob=0.95, round_to=2, ref_val=0.0, figsize=(5, 2.5),
+    trace,
+    var_names=["r"],
+    hdi_prob=0.95,
+    round_to=2,
+    ref_val=0.0,
+    figsize=(5, 2.5),
 )
 plt.savefig(
     join(OUTPUT_DIR, "rst_attraction_compromise_correlation_posterior.png"), dpi=100
