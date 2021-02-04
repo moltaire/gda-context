@@ -13,7 +13,7 @@ Note that the project involves fitting of many (~200) behavioural model variants
 
 ### Contact
 
-If you have any questions or comments, feel free to e-mail me at felixmolter@gmail.com.
+Questions or comments should be addressed at felixmolter@gmail.com.
 
 ---
 
