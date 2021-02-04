@@ -38,14 +38,14 @@ def color_point(x, y, z, scale, alpha=0.1):
     """Create a color value for a simplex point.
 
     This function is lifted from the examples from the python-ternary GitHub page.
-    
+
     Args:
         x (float): x value
         y (float): y value
         z (float): z value
         scale (float): Scale parameter for ternary plot.
         alpha (float, optional): Alpha level of returned color. Defaults to 0.1.
-    
+
     Returns:
         tuple: rgba tuple
     """
@@ -62,10 +62,10 @@ def color_point(x, y, z, scale, alpha=0.1):
 def generate_heatmap_data(scale=5):
     """Generates a heatmap data dictionary for ternary plots.
     This function is lifted from the examples on the python-ternary GitHub page.
-    
+
     Args:
         scale (int, optional): Scale parameter for ternary plots. Defaults to 5.
-    
+
     Returns:
         dict: Heatmap data
     """
@@ -79,13 +79,13 @@ def generate_heatmap_data(scale=5):
 
 def ternaryTCD(choiceshares, scale=10, group_mean=True, ax=None):
     """Make a ternary plot of choiceshares for target, competitor and decoy options.
-    
+
     Args:
         choiceshares (pandas.DataFrame): DataFrame containing participant-wise choiceshares for target, competitor and decoy.
         scale (int, optional): Scale parameter for ternary plots. Defaults to 10.
         group_mean (bool, optional): Toggle plotting the group mean. Defaults to True.
         ax (matplotlib.axis, optional): Axis to plot on. Defaults to None.
-    
+
     Returns:
         matplotlib.axis: Axis with ternary plot.
     """
