@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs confirmatory statistical analyses of the gaze data
     1. One-sample (paired) BEST of Dwell(Target) - Dwell(Competitor) vs. 0, for attraction and compromise trials.
     2. Bayesian correlation between RST and Payne Index, for attraction and compromise trials
@@ -21,9 +21,7 @@ from analysis import best, bayescorr
 logger = logging.getLogger("pymc3")
 logger.setLevel(logging.ERROR)
 
-
 warnings.simplefilter(action="ignore", category=FutureWarning)
-
 
 # Set seed
 SEED = 22
@@ -48,7 +46,7 @@ pi = pd.read_csv(join(RESULTS_DIR, "2-gaze", "payne-index_across-targets.csv"))
 # 1. Run One-sample (paired) BEST of Dwell to Target - Dwell to Competitor
 # ------------------------------------------------------------------------
 
-print("Running Paired Sample BESTs: Dwell to Target vs Dwell to Competitor")
+print("Running Paired Sample BESTs: Relative dwell to Target vs Relative dwell to Competitor")
 for effect in ["attraction", "compromise"]:
     print("\t" + effect.capitalize() + " trials")
     diffTC = (
@@ -92,7 +90,10 @@ for effect in ["attraction", "compromise"]:
         figsize=(10, 2.5),
     )
     plt.savefig(
-        join(OUTPUT_DIR, f"dwell_target_vs_competitor_{effect}_BEST_posterior.png",),
+        join(
+            OUTPUT_DIR,
+            f"dwell_target_vs_competitor_{effect}_BEST_posterior.png",
+        ),
         dpi=100,
     )
 
