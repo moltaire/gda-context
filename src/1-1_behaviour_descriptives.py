@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script generates descriptives of behavioural data
     1. Compute subject-wise choice shares for ABC, TCD, split by target alternative
     2. Compute subject-wise choice shares for ABC, TCD, across target alternatives
@@ -70,7 +70,9 @@ cs_tcd.columns.name = None
 
 ## Combine and save dataframes
 cs = cs_abc.merge(right=cs_tcd, on=["subject", "effect", "target_alternative"])
-cs.to_csv(join(OUTPUT_DIR, "choiceshares_by-target.csv"), index=False)
+output_file = join(OUTPUT_DIR, "choiceshares_by-target.csv")
+cs.to_csv(output_file, index=False)
+print(f"Created dataframe of choice shares by target alternative at '{output_file}'.")
 
 ## Create summary
 cs_summary = (
@@ -78,8 +80,9 @@ cs_summary = (
         ["A", "B", "C", "target", "competitor", "decoy", "rst"]
     ].agg(["mean", "std", "min", "max"])
 ).T
-cs_summary.to_csv(join(OUTPUT_DIR, "choiceshares_by-target_summary.csv"))
-
+output_file = join(OUTPUT_DIR, "choiceshares_by-target_summary.csv")
+cs_summary.to_csv(output_file)
+print(f"Created summary of choice shares by target alternative at '{output_file}'.")
 
 # 2. Compute subject-wise choice shares for ABC, TCD, across target alternatives
 # ------------------------------------------------------------------------------
@@ -111,7 +114,11 @@ cs_tcd.columns.name = None
 
 ## Combine and save dataframes
 cs_across = cs_abc.merge(right=cs_tcd, on=["subject", "effect"])
-cs_across.to_csv(join(OUTPUT_DIR, "choiceshares_across-targets.csv"), index=False)
+output_file = join(OUTPUT_DIR, "choiceshares_across-targets.csv")
+cs_across.to_csv(output_file, index=False)
+print(
+    f"Created dataframe of choice shares across target alternatives at '{output_file}'."
+)
 
 ## Create summary
 cs_across_summary = (
@@ -119,7 +126,11 @@ cs_across_summary = (
         ["A", "B", "C", "target", "competitor", "decoy", "rst"]
     ].agg(["mean", "std", "min", "max"])
 ).T
-cs_across_summary.to_csv(join(OUTPUT_DIR, "choiceshares_across-targets_summary.csv"))
+output_file = join(OUTPUT_DIR, "choiceshares_across-targets_summary.csv")
+cs_across_summary.to_csv(output_file)
+print(
+    f"Created summary of choice shares across target alternatives at '{output_file}'."
+)
 
 # 3. Count and print number of participants with RST above 0.5
 # ------------------------------------------------------------
