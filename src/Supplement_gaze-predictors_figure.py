@@ -1,3 +1,18 @@
+#!/usr/bin/python
+"""
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
+    Plot time-binned gaze data by different predictors
+    (which are used in the gaze-regression analysis).
+    This script creates plots for different dependent gaze-variables:
+        1) Dwell time
+        2) Probability of fixation
+        3) Fixation count
+
+    This script requires the Supplement_run-dwell-regression.py script to have run (with --timebinned argument) and saved preprocessed gaze data to '../results/S_supplemental-gaze-analyses/dwell-regression_timebinned/data/aois_timebinned.csv'
+
+Author: Felix Molter, felixmolter@gmail.com
+"""
 from os.path import join
 
 import matplotlib
@@ -261,4 +276,3 @@ if __name__ == "__main__":
             join(OUTPUT_DIR, f"S_gaze-data_timebinned_{dependent}.pdf"),
             bbox_inches="tight",
         )
-

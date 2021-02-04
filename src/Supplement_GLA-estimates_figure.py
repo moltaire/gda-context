@@ -1,7 +1,10 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
-    Summarise GLA estimates and make pairwise scatterplots
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
+    Make pairwise scatterplots of GLA estimates.
+
+felixmolter@gmail.com
 """
 
 from os.path import join

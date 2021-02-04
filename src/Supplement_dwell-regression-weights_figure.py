@@ -1,7 +1,10 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
-    Plot weights from dwell-regression
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
+    Plot weights from dwell-regression.
+
+felixmolter@gmail.com
 """
 
 from os.path import join

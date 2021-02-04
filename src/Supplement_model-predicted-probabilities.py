@@ -1,3 +1,11 @@
+#!/usr/bin/python
+"""
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
+    Plot model-predicted choice probabilities for Target, Competitor, Decoy and empirically chosen alternatives.
+
+felixmolter@gmail.com
+"""
 from os.path import join
 
 import matplotlib
@@ -5,9 +13,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from plotting.plot_utils import cm2inch, set_mpl_defaults
-from plotting.plot_share import violin
 from analysis.utilities import makeDirIfNeeded
+from plotting.plot_share import violin
+from plotting.plot_utils import cm2inch, set_mpl_defaults
 
 matplotlib = set_mpl_defaults(matplotlib)
 
