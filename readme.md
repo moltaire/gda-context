@@ -5,7 +5,7 @@ This repository contains all raw data, preprocessing, analysis and visualization
 - tbd
 
 All analyses<sup>[*](#bms)</sup> are written in Python.
-Dependencies and package versions used are listed in the `environment.yml` file, which you can use to reproduce the computing environment (e.g., using the Anaconda Python distribution).
+Dependencies and package versions used are listed in the `environment.yml` file, which you can use to reproduce the computing environment (e.g., using the Anaconda Python distribution). The main dependencies of this project are the standard Python data stack (numpy, pandas, scipy), PyMC3, Theano, bambi and pyyaml for statistical analyses, matplotlib, seaborn and python-ternary for visualization.
 
 All Python analyses can be run in sequence by calling the `run_all_analyses.sh` script. This script calls the individual analysis scripts in the `src` folder.
 
