@@ -9,7 +9,7 @@ ntune: 500
 overwrite: false
 results_dir: ../results/
 seed: 1
-time: 30/11/2020 20:09:00
+time: 04/02/2021 19:13:39
 timebinned: false
 verbose: 2
 withoutchoice: false
