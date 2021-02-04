@@ -289,7 +289,7 @@ def runRegression():
             trace = model.backend.trace
             summary_df = summary(results, hdi_prob=0.95, var_names=predictors)
             for predictor in predictors:
-                summary_df.loc[predictor + "[0]", "P>0"] = np.mean(
+                summary_df.loc[predictor, "P>0"] = np.mean(
                     trace.get_values(predictor) > 0
                 )
 
