@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs analysis on the results from the switchboard analysis, performed in `4-1_switchboard_fitting`.
 
     1) Read and process switchboard estimate data
@@ -86,7 +86,6 @@ print("Non-converged runs are primarily using distance-dependent inhibition:")
 print(sb_estimates_noduplicates.groupby(["inhibition"])["non-converged"].sum())
 
 
-
 # %% 2) Compute mean BICs for each model over participants
 # --------------------------------------------------------
 variants_mean_bic = sb_estimates.groupby("model")["bic"].mean().reset_index()
@@ -131,7 +130,9 @@ variants_mean_bic["inhibition"] = pd.Categorical(
     ordered=True,
 ).rename_categories(["None", "Constant", "Distance", "Gaze"])
 variants_mean_bic.rename({"bic": "BIC"}, axis=1, inplace=True)
-variants_mean_bic.to_csv(join(OUTPUT_DIR, "variants_mean_bic.csv"))
+output_file = join(OUTPUT_DIR, "variants_mean_bic.csv")
+variants_mean_bic.round(4).to_csv(output_file)
+print(f"\tCreated output file at: '{output_file}'.")
 
 # mark duplicate models with comparative accumulation
 # because they are mathematically equivalent to independent accumulation models
@@ -165,10 +166,13 @@ top10_variants_pooled_bic = (
     .head(10)
     .drop("model", axis=1)
     .reset_index(drop=True)
+    .round(2)
 )
 print("Top 10 variants (based on mean BIC across participants)")
 print(top10_variants_pooled_bic)
-top10_variants_pooled_bic.to_csv(join(OUTPUT_DIR, "top10_variants_pooled_bic.csv"))
+output_file = join(OUTPUT_DIR, "top10_variants_pooled_bic.csv")
+top10_variants_pooled_bic.to_csv(output_file)
+print(f"\tCreated output file at: '{output_file}'.")
 
 # Single best variant:
 top1_variant_pooled_estimate_summary = variants_mean_bic_noduplicates.sort_values(
@@ -176,15 +180,19 @@ top1_variant_pooled_estimate_summary = variants_mean_bic_noduplicates.sort_value
 )["model"].values[0]
 
 # %% 4) Summarise winning model parameters
-print("Best variant (average across participants) parameter estimates:")
-top1_variant_pooled_estimate_summary = sb_estimates.loc[
-    sb_estimates["model"] == top1_variant_pooled_estimate_summary,
-    ["alpha", "beta", "lam", "theta"],
-].describe()
-print(top1_variant_pooled_estimate_summary)
-top1_variant_pooled_estimate_summary.to_csv(
-    join(OUTPUT_DIR, "top1_variant_pooled_estimate-summary.csv")
+print("\nBest variant (average across participants) parameter estimates:")
+top1_variant_pooled_estimate_summary = (
+    sb_estimates.loc[
+        sb_estimates["model"] == top1_variant_pooled_estimate_summary,
+        ["alpha", "beta", "lam", "theta"],
+    ]
+    .describe()
+    .round(2)
 )
+print(top1_variant_pooled_estimate_summary)
+output_file = join(OUTPUT_DIR, "top1_variant_pooled_estimate-summary.csv")
+top1_variant_pooled_estimate_summary.to_csv(output_file)
+print(f"\tCreated output file at: '{output_file}'.")
 
 
 # %% 5) Compute Switch-levels Mean BIC
@@ -206,9 +214,11 @@ for switch in switches.keys():
     df["switch"] = switch
     switch_levels_bic.append(df.reset_index())
 
-switch_levels_bic = pd.concat(switch_levels_bic)[
-    ["switch", "level", "mean", "sem"]
-].reset_index(drop=True)
+switch_levels_bic = (
+    pd.concat(switch_levels_bic)[["switch", "level", "mean", "sem"]]
+    .reset_index(drop=True)
+    .round(2)
+)
 level_labels = {
     "comparison": {
         "absolute": "Independent",
@@ -230,7 +240,10 @@ level_labels = {
 switch_levels_bic["label"] = switch_levels_bic.apply(
     lambda x: level_labels[x["switch"]][x["level"]], axis=1
 )
-switch_levels_bic.to_csv(join(OUTPUT_DIR, "switch-levels_bic.csv"))
+output_file = join(OUTPUT_DIR, "switch-levels_bic.csv")
+switch_levels_bic.to_csv(output_file)
+print(switch_levels_bic)
+print(f"\tOutput file created at '{output_file}'.")
 
 
 # %% 6) Count individual best fitting model variants
@@ -249,9 +262,9 @@ ind_best_variants = sb_estimates_noduplicates.loc[
         "inhibition",
     ]
 ]
-ind_best_variants.drop("model", axis=1).to_csv(
-    join(OUTPUT_DIR, "individual_best-variants_bic.csv")
-)
+output_file = join(OUTPUT_DIR, "individual_best-variants_bic.csv")
+ind_best_variants.drop("model", axis=1).to_csv(output_file)
+print(f"\tOutput file created at '{output_file}'.")
 
 
 top10_variants_individual_counts = (
@@ -283,10 +296,10 @@ top10_variants_individual_counts["inhibition"] = (
 top10_variants_individual_counts = top10_variants_individual_counts.drop(
     "model", axis=1
 )
-top10_variants_individual_counts.to_csv(
-    join(OUTPUT_DIR, "top10_variants_individual-counts.csv")
-)
+output_file = join(OUTPUT_DIR, "top10_variants_individual-counts.csv")
+top10_variants_individual_counts.to_csv(output_file)
 print(top10_variants_individual_counts)
+print(f"\tOutput file created at '{output_file}'.")
 
 # %% 7) Count individually best fitting switches
 best_switches_individual_counts = []
@@ -305,6 +318,6 @@ best_switches_individual_counts["label"] = best_switches_individual_counts.apply
     lambda x: level_labels[x["switch"]][x["level"]], axis=1
 )
 print(best_switches_individual_counts)
-best_switches_individual_counts.to_csv(
-    join(RESULTS_DIR, "switch-levels_individual-counts.csv")
-)
+output_file = join(RESULTS_DIR, "switch-levels_individual-counts.csv")
+best_switches_individual_counts.to_csv(output_file)
+print(f"\tOutput file created at '{output_file}'.")
