@@ -48,6 +48,11 @@ estimates = (
     .reset_index(drop=True)
 )
 
+gla_estimates = estimates.loc[
+    estimates["model"] == "glickman1layer",
+    ["subject", "bic", "nll", "alpha", "beta", "gamma", "lam", "theta"],
+].reset_index(drop=True)
+
 
 def pairPlot(df, kind="lm", bins=None, limits=None, labels=None, titles=None):
     """
