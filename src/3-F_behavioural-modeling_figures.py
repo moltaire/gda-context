@@ -1,12 +1,12 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script makes figures of the behavioural-modeling analyses.
     1) Composite figure of
         a) BIC violin plot
         b) Barplot of individually best fitting model counts
-        c, d) Observed vs. predicted RST for the winning model
-        e-f) gaze-advantage choice probability plots for all models
+        c-h) gaze-advantage choice probability plots for all models
+        i, j) Observed vs. predicted RST for the winning model (attraction and compromise)
     2) Supplementary Figure of RST vs relative model fit (GLA vs MDFT)
 """
 
@@ -41,7 +41,7 @@ RESULTS_DIR = join("..", "results")
 OUTPUT_DIR = join("..", "figures")
 
 # Random seed
-SEED = 3
+SEED = 32
 np.random.seed(SEED)
 
 # Colours to use
