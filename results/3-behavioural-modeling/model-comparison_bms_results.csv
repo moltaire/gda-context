@@ -1,0 +1,6 @@
+model,alpha,exp_r,xp,pxp
+eu,1,0.02,0,0
+gaze_baseline_dyn,1.94,0.04,0,0
+gaze_baseline_stat,1,0.02,0,0
+glickman1layer,37.06,0.82,1,1
+mdft,4,0.09,0,0
