@@ -1,5 +1,7 @@
 #!usr/bin/python
 """
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
 This script performs multiple tests of the hypothesis that subjects with
 strong attraction effects followed a simple choice rule based on the dominance
 relationship between target and decoy.
@@ -40,15 +42,16 @@ makeDirIfNeeded(OUTPUT_DIR)
 SEED = 1
 sample_kwargs = {"cores": 1, "random_seed": SEED, "progressbar": False}
 
-
-# 0. Load trial, choiceshare and fixation data
+# %% 0. Load trial, choiceshare and fixation data
+# -----------------------------------------------
 trials = pd.read_csv(join(RESULTS_DIR, "0-clean_data", "trials.csv"), index_col=0)
 
 cs = pd.read_csv(join(RESULTS_DIR, "1-behaviour", "choiceshares_across-targets.csv"))
 
 fixations = pd.read_csv(join(RESULTS_DIR, "0-clean_data", "fixations.csv"), index_col=0)
 
-# Test 1: High AE associated with low RT in attraction trials?
+# %% Test 1: High AE associated with low RT in attraction trials?
+# ---------------------------------------------------------------
 print("Test 1: Correlation between Attraction RST and Attraction RT")
 
 # calculate mean RT in attraction trials
@@ -78,7 +81,8 @@ print(
     f"  mean r = {summary_df.loc['r', 'mean']} [{summary_df.loc['r', 'hdi_2.5%']}, {summary_df.loc['r', 'hdi_97.5%']}]"
 )
 
-# Test 2: High AE associated Fixation count in attraction trials?
+# %% Test 2: High AE associated Fixation count in attraction trials?
+# ------------------------------------------------------------------
 print(
     "Test 2: Correlation between Attraction RST and fixation count in attraction trials"
 )
@@ -116,7 +120,8 @@ print(
     f"  mean r = {summary_df.loc['r', 'mean']} [{summary_df.loc['r', 'hdi_2.5%']}, {summary_df.loc['r', 'hdi_97.5%']}]"
 )
 
-# Test 3: High AE associated with fixation count after dominance known?
+# %% Test 3: High AE associated with fixation count after dominance known?
+# ------------------------------------------------------------------------
 print(
     "Test 3: Correlation between Attraction RST and fixation count in attraction trials after dominance known (all AOIs / any AOI of target and decoy seen once)"
 )
@@ -216,12 +221,13 @@ for i, (measure, label) in enumerate(
         f"  mean r = {summary_df.loc['r', 'mean']} [{summary_df.loc['r', 'hdi_2.5%']}, {summary_df.loc['r', 'hdi_97.5%']}]"
     )
 
-# Test 4: Faster RTs for target vs non-target choices in attraction trials
+# %% Test 4: Faster RTs for target vs non-target choices in attraction trials
+# ---------------------------------------------------------------------------
 print(
     "Test 4: Shorter RTs for target vs non-target choices in attraction trials (BEST analysis)"
 )
 
-# Make a DataFrame witih subject mean RTs of attraction trials with target and other choices
+# Make a DataFrame with subject mean RTs of attraction trials with target and other choices
 trials["target_chosen"] = trials["choice_tcd"] == "target"
 df = (
     trials.loc[trials["effect"] == "attraction"]
@@ -267,4 +273,3 @@ print(
     f"  mean difference = {summary_df.loc['difference', 'mean']} [{summary_df.loc['difference', 'hdi_2.5%']}, {summary_df.loc['difference', 'hdi_97.5%']}]\n"
     + f"  mean d = {summary_df.loc['d', 'mean']} [{summary_df.loc['d', 'hdi_2.5%']}, {summary_df.loc['d', 'hdi_97.5%']}]\n"
 )
-
