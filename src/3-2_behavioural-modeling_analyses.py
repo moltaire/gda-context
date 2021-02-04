@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """
 Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
 This script performs model comparison of previously fitted models
     1. Compute mean ± s.d. BICs per model
     2. Count individually best fitting models
