@@ -43,6 +43,7 @@ echo "###########################"
 echo
 
 echo "\t/!\ Note, that model estimation estimation can take a long, long time. In particular, the switchboard analysis contains estimation of 192 model variants per participant. It took multiple weeks to finish on a machine with 24 cores. By default, model estimation results are *not* overwritten, but existing results are loaded. If you want to re-run the model-fitting, please delete existing results in '../results/3-behavioural_modeling/[estimates, predictions]' and '../results/4-switchboard/[estimates, predictions]'."
+echo "Note that you can set the number of CPU cores (threads) to use the `ncores` command line argument."
 echo
 echo "Running model estimation..."
 python 3-1_behavioural-modeling_fitting.py --label de1 --optmethod differential_evolution --nruns 1 --ncores 24 --seed 1 --verbose 2
