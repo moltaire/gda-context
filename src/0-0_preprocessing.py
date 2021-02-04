@@ -55,7 +55,7 @@ def preprocessData():
     VERBOSE = args.verbose
     RAWDATA_DIR = args.data_dir
     RESULTS_DIR = args.results_dir
-    OUTPUT_DIR = join(OUTPUT_DIR, "0-clean_data")
+    OUTPUT_DIR = join(RESULTS_DIR, "0-clean_data")
     CALIBRATION_DIR = join(RAWDATA_DIR, "eyetracking_calibration")
     BEHAVIOURAL_DIR = join(RAWDATA_DIR, "behaviour")
     EYETRACKING_DIR = join(RAWDATA_DIR, "eyetracking")
