@@ -47,23 +47,12 @@ estimates = (
     .drop("Unnamed: 0", axis=1)
     .reset_index(drop=True)
 )
-gla_estimates = estimates.loc[
-    estimates["model"] == "glickman1layer",
-    ["subject", "bic", "nll", "alpha", "beta", "gamma", "lam", "theta"],
-].reset_index(drop=True)
-
-gla_estimates_summary = (
-    gla_estimates[["alpha", "beta", "gamma", "lam", "theta"]].describe().round(2).T
-)
-gla_estimates_summary.to_csv(
-    join(RESULTS_DIR, "3-behavioural-modeling", "gla_estimates_summary.csv")
-)
 
 
 def pairPlot(df, kind="lm", bins=None, limits=None, labels=None, titles=None):
     """
     Plot associations between all pairs of variables in df.
-    
+
     kind : str
         'lm': Calculates linear models per pair
         'scatter': Only scatter
@@ -73,7 +62,7 @@ def pairPlot(df, kind="lm", bins=None, limits=None, labels=None, titles=None):
         Dictionary of variable x- and y-labels
     titles : dict
         Dictionary of variable column titles
-    
+
     Returns:
         fig, axs
     """
@@ -152,7 +141,7 @@ fig, axs = pairPlot(
     bins=10,
     limits=limits,
     labels=labels,
-    titles=titles
+    titles=titles,
 )
 
 fig.tight_layout(h_pad=0.1, w_pad=0.1)

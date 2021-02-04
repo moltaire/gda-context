@@ -42,6 +42,19 @@ estimates = pd.read_csv(
     join(RESULTS_DIR, "3-behavioural-modeling", "estimates", "estimates_de1.csv")
 )
 
+# %% -1. Summarize GLA estimates
+# ------------------------------
+gla_estimates = estimates.loc[
+    estimates["model"] == "glickman1layer",
+    ["subject", "bic", "nll", "alpha", "beta", "gamma", "lam", "theta"],
+].reset_index(drop=True)
+
+gla_estimates_summary = (
+    gla_estimates[["alpha", "beta", "gamma", "lam", "theta"]].describe().round(2).T
+)
+output_file = join(OUTPUT_DIR, "gla_estimates_summary.csv")
+gla_estimates_summary.to_csv(output_file)
+print(f"Saved summary of GLA estimates to '{output_file}'.")
 
 # %% 0. Save BIC dataframe for BMS
 # --------------------------------
