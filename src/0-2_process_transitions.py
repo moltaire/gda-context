@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script processes the eyetracking data to create a dataframe containing transitions between AOIs
     1. Create transition dataframe
     2. Save dataframe (transitions)

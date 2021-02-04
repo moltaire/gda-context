@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs preprocessing of behavioural and gaze data
     1. Exclude subjects
         a) marked to exclude (Experiment crash or no understanding of task)

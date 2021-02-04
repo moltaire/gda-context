@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script performs further preprocessing of dwell and fixation data
     1. Compute trial-wise relative dwells and merge them into trial dataframe
     2. Save combined dataframe (trials_with-dwells)

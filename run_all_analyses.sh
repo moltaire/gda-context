@@ -1,7 +1,7 @@
 #!usr/bin/bash
 echo 
 echo "Performing all analyses for project"
-echo "'Gaze-dependent accumulation as a model of context-dependent risky choice'"
+echo "'Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour'"
 echo "Contact: felixmolter@gmail.com"
 echo 
 
