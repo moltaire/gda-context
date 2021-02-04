@@ -150,4 +150,4 @@ fig, axs = pairPlot(
 )
 
 fig.tight_layout(h_pad=0.1, w_pad=0.1)
-plt.savefig(join(OUTPUT_DIR, "S_gla-estimates.pdf"), bbox_inches="tight")
+plt.savefig(join(OUTPUT_DIR, "S_GLA-estimates.pdf"), bbox_inches="tight")
