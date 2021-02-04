@@ -1,12 +1,14 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
 This script runs a regression analysis of AOI dwell times on stimulus characteristics (including the required preprocessing steps)
 Author: Felix Molter, felixmolter@gmail.com
 """
-
 import argparse
+import logging
 import os
+import warnings
 from datetime import datetime
 from os.path import join
 
@@ -18,6 +20,11 @@ from arviz import plot_trace, summary
 from bambi import Model
 
 from analysis.utilities import makeDirIfNeeded
+
+warnings.filterwarnings("ignore")
+
+logger = logging.getLogger("pymc3")
+logger.setLevel(logging.ERROR)
 
 
 def runRegression():
@@ -254,7 +261,9 @@ def runRegression():
     for effect in ["attraction", "compromise"]:
         data_subset = data.loc[data["effect"] == effect].copy()
         ESTIMATES_FILE = join(
-            OUTPUT_DIR, "estimates", f"dwell-regression{LABEL}_{effect}.csv",
+            OUTPUT_DIR,
+            "estimates",
+            f"dwell-regression{LABEL}_{effect}.csv",
         )
 
         if os.path.exists(ESTIMATES_FILE) and (not OVERWRITE):
@@ -269,9 +278,9 @@ def runRegression():
 
             results = model.fit(
                 formula,
-                random=random_terms,
+                group_specific=random_terms,
                 family="gaussian",
-                samples=N_SAMPLES,
+                draws=N_SAMPLES,
                 tune=N_TUNE,
                 chains=N_CHAINS,
                 cores=N_CORES,
@@ -286,7 +295,9 @@ def runRegression():
 
             summary_df.to_csv(
                 os.path.join(
-                    OUTPUT_DIR, "estimates", f"dwell-regression{LABEL}_{effect}.csv",
+                    OUTPUT_DIR,
+                    "estimates",
+                    f"dwell-regression{LABEL}_{effect}.csv",
                 )
             )
 
