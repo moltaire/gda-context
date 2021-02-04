@@ -1,6 +1,7 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
 This script makes figure illustrating performance of the hybrid model identified in the switchboard analysis
     1) Figure 5
         a, b) Histogram of individual RST values, for participants better described by GLA or the hybrid, separate for attraction and compromise trials
@@ -10,6 +11,8 @@ This script makes figure illustrating performance of the hybrid model identified
         Supgroups: Hybrid vs. GLA predicted associations of dwell time advantage and choice probability, separately for participants with strong (RST > 0.7) attraction effect and the rest.
 """
 
+import logging
+import warnings
 from os.path import join
 from string import ascii_lowercase
 
@@ -20,6 +23,11 @@ import pandas as pd
 
 from plotting.plot_share import plot_dwell_adv, plot_observed_predicted_rst
 from plotting.plot_utils import cm2inch, set_mpl_defaults
+
+warnings.filterwarnings("ignore")
+
+logger = logging.getLogger("pymc3")
+logger.setLevel(logging.ERROR)
 
 # %% Preparations
 matplotlib = set_mpl_defaults(matplotlib)
