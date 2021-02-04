@@ -1,5 +1,7 @@
 #!usr/bin/python
 """
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
+
 This script...
 
 1. Summarises transition and search direction data
@@ -54,14 +56,19 @@ transitions = transitions.merge(
 transitions_subject = (
     transitions.loc[transitions["effect"].isin(["attraction", "compromise"])]
     .groupby(["subject", "effect"])[
-        ["n_horizontal", "n_vertical", "n_diagonal", "payne_index",]
+        [
+            "n_horizontal",
+            "n_vertical",
+            "n_diagonal",
+            "payne_index",
+        ]
     ]
     .mean()
     .reset_index()
 )
-transitions_subject.to_csv(
-    join(OUTPUT_DIR, "transitions_subject-summary.csv"), index=False
-)
+output_file = join(OUTPUT_DIR, "transitions_subject-summary.csv")
+transitions_subject.round(4).to_csv(output_file, index=False)
+print(f"\tOutput file created at '{output_file}'.")
 
 
 # Compute summary statistics
@@ -72,7 +79,9 @@ transitions_summary = (
     .agg(["mean", "std"])
     .round(2)
 )
-transitions_summary.to_csv(join(OUTPUT_DIR, "transitions_summary.csv"))
+output_file = join(OUTPUT_DIR, "transitions_summary.csv")
+transitions_summary.round(4).to_csv(output_file)
+print(f"\tOutput file created at '{output_file}'.")
 
 
 # 2. Perform statistical tests on the difference of measures between attraction and compromise trials
@@ -96,9 +105,11 @@ for measure in ["n_horizontal", "n_vertical", "n_diagonal", "payne_index"]:
 
     # Save summary
     summary_df = summary(trace, hdi_prob=0.95)
-    summary_df.to_csv(
-        join(OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_summary.csv")
+    output_file = join(
+        OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_summary.csv"
     )
+    summary_df.round(4).to_csv(output_file)
+    print(f"\tOutput file created at '{output_file}'.")
 
     # Save traceplot
     plot_trace(trace)
