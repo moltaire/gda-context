@@ -46,6 +46,7 @@ cs_abc = (
     )
     .fillna(0)
     .reset_index()
+    .round(4)
 )
 cs_abc.columns.name = None
 
@@ -71,7 +72,7 @@ cs_tcd.columns.name = None
 ## Combine and save dataframes
 cs = cs_abc.merge(right=cs_tcd, on=["subject", "effect", "target_alternative"])
 output_file = join(OUTPUT_DIR, "choiceshares_by-target.csv")
-cs.to_csv(output_file, index=False)
+cs.round(4).to_csv(output_file, index=False)
 print(f"Created dataframe of choice shares by target alternative at '{output_file}'.")
 
 ## Create summary
@@ -81,7 +82,7 @@ cs_summary = (
     ].agg(["mean", "std", "min", "max"])
 ).T
 output_file = join(OUTPUT_DIR, "choiceshares_by-target_summary.csv")
-cs_summary.to_csv(output_file)
+cs_summary.round(4).to_csv(output_file)
 print(f"Created summary of choice shares by target alternative at '{output_file}'.")
 
 # 2. Compute subject-wise choice shares for ABC, TCD, across target alternatives
@@ -115,7 +116,7 @@ cs_tcd.columns.name = None
 ## Combine and save dataframes
 cs_across = cs_abc.merge(right=cs_tcd, on=["subject", "effect"])
 output_file = join(OUTPUT_DIR, "choiceshares_across-targets.csv")
-cs_across.to_csv(output_file, index=False)
+cs_across.round(4).to_csv(output_file, index=False)
 print(
     f"Created dataframe of choice shares across target alternatives at '{output_file}'."
 )
@@ -127,7 +128,7 @@ cs_across_summary = (
     ].agg(["mean", "std", "min", "max"])
 ).T
 output_file = join(OUTPUT_DIR, "choiceshares_across-targets_summary.csv")
-cs_across_summary.to_csv(output_file)
+cs_across_summary.round(4).to_csv(output_file)
 print(
     f"Created summary of choice shares across target alternatives at '{output_file}'."
 )
@@ -136,11 +137,11 @@ print(
 # ------------------------------------------------------------
 
 cs_across["rst_above_0.5"] = cs_across["rst"] > 0.5
-print("RST > 0.5")
+print("Counting number of participants with RST > 0.5 for each effect:")
 print(cs_across.groupby("effect")["rst_above_0.5"].value_counts())
 
 # 4. Count and print number of strong (RST > 0.7) ADE responders
 # --------------------------------------------------------------
 
-print("Strong (RST > 0.7) ADE responders:")
+print("Counting strong (RST > 0.7) ADE responders:")
 print((cs_across.loc[cs_across["effect"] == "attraction", "rst"] > 0.7).sum())
