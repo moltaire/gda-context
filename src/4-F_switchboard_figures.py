@@ -1,12 +1,13 @@
 #!/usr/bin/python
 """
-Gaze-dependent accumulation in context-dependent risky choice
+Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour
 This script makes figures for the switchboard analysis.
-    1) Heatmap of all variants' BIC values
-    2) Barplot of switch-level mean BICs
-    3) Barplot of switch-level individual best-fitting counts
-    4) Context-effect predictions of the two models that described most participants best
+    1) Heatmap of all variants' BIC values (Fig 4c)
+    2) Barplot of switch-level mean BICs (Fig 4b)
+    3) Barplot of switch-level individual best-fitting counts (Supplementary Figure)
 """
+import logging
+import warnings
 from os.path import join
 
 import matplotlib
@@ -17,12 +18,17 @@ import pymc3 as pm
 from matplotlib.colors import TwoSlopeNorm
 from matplotlib.patches import Rectangle
 
-from analysis.bayescorr import runBayesCorr
-from plotting.plot_share import factorial_heatmap, lm
+from plotting.plot_share import factorial_heatmap
 from plotting.plot_utils import break_after_nth_tick, cm2inch, set_mpl_defaults
 
 matplotlib = set_mpl_defaults(matplotlib)
 matplotlib.rcParams["font.size"] = 6
+
+warnings.filterwarnings("ignore")
+
+logger = logging.getLogger("pymc3")
+logger.setLevel(logging.ERROR)
+
 
 RESULTS_DIR = join("..", "results")
 OUTPUT_DIR = join("..", "figures")
@@ -255,7 +261,7 @@ matplotlib.rcParams.update(
 # Load the data
 best_switches_individual_counts = pd.read_csv(
     join(RESULTS_DIR, "4-switchboard", "switch-levels_individual-counts.csv"),
-    index_col=0
+    index_col=0,
 )
 
 fig, axs = plt.subplots(
@@ -283,7 +289,9 @@ for i, (switch, color) in enumerate(
     ax = axs.ravel()[i]
     ax.set_title(switch_labels[switch], fontsize=6, y=0.95)
 
-    counts = best_switches_individual_counts.loc[best_switches_individual_counts["switch"] == switch, "count"].values
+    counts = best_switches_individual_counts.loc[
+        best_switches_individual_counts["switch"] == switch, "count"
+    ].values
     sort = np.argsort(counts)
     ylabels = best_switches_individual_counts.loc[
         best_switches_individual_counts["switch"] == switch, "label"
@@ -309,162 +317,3 @@ plt.savefig(
     dpi=300,
     bbox_inches="tight",
 )
-
-
-# %% 4) Context-effect predictions of the two models that described most participants best
-
-model1 = "sb_int-multiplicative_comp-absolute_gbatt-false_gbalt-true_lk-free_inh-none"
-model2 = "sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent"
-model_labels = {model1: "GLA~variant", model2: "Hybrid~variant"}
-
-# Observed RST
-rst_obs = pd.read_csv(
-    join(RESULTS_DIR, "1-behaviour", "choiceshares_across-targets.csv")
-)
-
-# Load SB model predictions
-sb_predictions = pd.read_csv(
-    join(RESULTS_DIR, "4-switchboard", "predictions", "sb_predictions_de1.csv")
-)
-
-# Individual best fitting models
-best_variants_individual = pd.read_csv(
-    join(RESULTS_DIR, "4-switchboard", "individual_best-variants_bic.csv")
-)
-
-# Code predicted choice as target, competitor or decoy
-sb_predictions["pred_choice_abc"] = np.array(["A", "B", "C"])[
-    sb_predictions["predicted_choice"]
-]
-sb_predictions["pred_choice_tcd"] = np.where(
-    sb_predictions["pred_choice_abc"] == "C",
-    "decoy",
-    np.where(
-        sb_predictions["pred_choice_abc"] == sb_predictions["target"],
-        "target",
-        "competitor",
-    ),
-)
-sb_predictions.loc[pd.isnull(sb_predictions["target"]), "pred_choice_tcd"] = np.nan
-
-# Compute predicted RST for the two variants
-pred_rst = {}
-for model in [model1, model2]:
-    m_pred = sb_predictions.loc[sb_predictions["model"] == model].copy()
-
-    # compute predicted RSTs
-    m_pred_rst = (
-        m_pred.loc[(m_pred["effect"].isin(["attraction", "compromise"]))]
-        .groupby(["effect", "subject", "model"])["pred_choice_tcd"]
-        .value_counts()
-        .rename("count")
-        .reset_index()
-        .pivot_table(
-            index=["effect", "subject"], columns="pred_choice_tcd", values="count"
-        )
-        .reset_index()
-        .fillna(0)
-    )
-    m_pred_rst["rst"] = m_pred_rst["target"] / (
-        m_pred_rst["target"] + m_pred_rst["competitor"]
-    )
-    m_pred_rst = m_pred_rst.merge(
-        best_variants_individual[
-            [
-                "subject",
-                "comparison",
-                "integration",
-                "gb_att",
-                "gb_alt",
-                "leak",
-                "inhibition",
-            ]
-        ],
-        on="subject",
-    )
-    pred_rst[model] = m_pred_rst
-
-# Merge dataframes
-df = (
-    rst_obs.rename({"rst": "rst_obs"}, axis=1)
-    .merge(
-        pred_rst[model1][["subject", "effect", "rst"]].rename(
-            {"rst": "rst_pred_m1"}, axis=1
-        ),
-        on=["subject", "effect"],
-    )
-    .merge(
-        pred_rst[model2][["subject", "effect", "rst"]].rename(
-            {"rst": "rst_pred_m2"}, axis=1
-        ),
-        on=["subject", "effect"],
-    )
-)
-
-# Make the figure
-fig, axs = plt.subplots(2, 2, dpi=300, figsize=cm2inch(10, 9.5))
-
-i = 0
-for model, color in zip(["m1", "m2"], ["slategray", "darksalmon"]):
-    for effect in ["attraction", "compromise"]:
-
-        x = df.loc[df["effect"] == effect, "rst_obs"]
-        y = df.loc[df["effect"] == effect, f"rst_pred_{model}"]
-
-        # Linear Model
-        ax, trace, summary = lm(
-            x=x,
-            y=y,
-            ax=axs.ravel()[i],
-            scatter_color=color,
-            line_color="lightgray",
-            xrange=[0, 1],
-            sample_kwargs=sample_kwargs,
-        )
-
-        # Correlation
-        corrTrace = runBayesCorr(y1=x.values, y2=y.values, sample_kwargs=sample_kwargs)
-        corrSummary = pm.summary(corrTrace, hdi_prob=0.95)
-
-        ax.set_xlim(0, 1)
-        ax.set_ylim(0, 1)
-        ax.plot([0, 1], [0, 1], lw=0.5, color="gray", zorder=-1)
-        ax.set_xlabel("observed RST")
-        ax.set_ylabel("predicted RST")
-
-        stat_str = (
-            f"r = {corrSummary.loc['r', 'mean']:.2f} [{corrSummary.loc['r', 'hdi_2.5%']:.2f}, {corrSummary.loc['r', 'hdi_97.5%']:.2f}]"
-            + "\n"
-            + f"Intercept = {summary.loc['Intercept', 'mean']:.2f} [{summary.loc['Intercept', 'hdi_2.5%']:.2f}, {summary.loc['Intercept', 'hdi_97.5%']:.2f}]"
-            + "\n"
-            + f"Slope = {summary.loc['x', 'mean']:.2f} [{summary.loc['x', 'hdi_2.5%']:.2f}, {summary.loc['x', 'hdi_97.5%']:.2f}]"
-        )
-        ax.annotate(
-            stat_str, [1, 0.05], ha="right", va="bottom", fontsize=4, ma="right"
-        )
-
-        i += 1
-
-axs[0, 0].set_title("Attraction", fontsize=7)
-axs[0, 1].set_title("Compromise", fontsize=7)
-axs[0, 0].set_ylabel(r"$\bf{" + model_labels[model1] + "}$" + "\n\npredicted RST")
-axs[1, 0].set_ylabel(r"$\bf{" + model_labels[model2] + "}$" + "\n\npredicted RST")
-
-fig.tight_layout(h_pad=4, w_pad=4)
-
-# Label the axes
-for ax, label in zip(axs.ravel(), list("abcd")):
-
-    # Left-align axes
-    ax.set_anchor("W")
-
-    # Place axis labels in figure space, so that they are aligned
-    # https://stackoverflow.com/a/52309638
-    X = ax.get_position().x0
-    Y = ax.get_position().y1
-    fig.text(X - 0.1, Y, label, size=10, weight="bold")
-
-plt.savefig(
-    join(OUTPUT_DIR, "5-best-2-model-variants_rst-predictions.pdf"), dpi=300,
-)
-
