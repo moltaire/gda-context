@@ -65,9 +65,9 @@ for e, effect in enumerate(["attraction", "compromise"]):
         )
 
         if analysis == "fulltrial":
-            vars = [f"{predictor}[0]" for predictor in predictors]
+            vars = [f"{predictor}" for predictor in predictors]
         elif analysis == "timebinned":
-            vars = [f"{predictor}:time_bin[0]" for predictor in predictors]
+            vars = [f"{predictor}:time_bin" for predictor in predictors]
 
         means = df.loc[vars, "mean"].values
         hdi_lower = df.loc[vars, "hdi_2.5%"].values
