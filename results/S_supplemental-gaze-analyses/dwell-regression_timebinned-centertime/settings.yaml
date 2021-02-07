@@ -1,0 +1,15 @@
+center_time: true
+data_dir: ../results/0-clean_data
+label: timebinned-centertime
+mixed: true
+nchains: 4
+ncores: 4
+nsamples: 2000
+ntune: 500
+overwrite: false
+results_dir: ../results/
+seed: 2
+time: 06/02/2021 00:47:58
+timebinned: true
+verbose: 2
+withoutchoice: false
