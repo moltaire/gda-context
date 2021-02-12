@@ -37,6 +37,7 @@
     labelsep=period,
     justification=justified,
     singlelinecheck=false}
+\captionsetup[table]{position=bottom}   %% or below
 
 % Reference management
 \usepackage[style=nature,doi=false,url=false,eprint=false]{biblatex}
@@ -104,8 +105,8 @@ Here, we test to what extent gaze-dependent accumulation can explain risky choic
 \centering
 \includegraphics[scale=1]{../figures/1-task_stimuli.pdf}
 \caption{\textbf{Choice task and attribute space of stimuli.} \textbf{(a)} Choice task. Trials started with a central fixation cross for 1.5 s. Next, three gambles were presented. Participants made a choice by button press, without time limit. Eye movements were recorded during the choice phase. Finally, brief feedback on the choice (but not on the gamble outcome) was displayed. \textbf{(b)} Attribute space. Each gamble is described by two attributes: Probability $p$ and outcome $m$. The core options $A$ and $B$ were presented in every trial, along with one of four decoy alternatives: Compromise decoys ($C_A$ or $C_B$) and asymmetrically dominated decoys ($D_A$ or $D_B$) are expected to elicit compromise and attraction effects, respectively. Dashed lines indicate possible stimulus placements. \textbf{(c)} Exact positions for $C_B$, $A$ and $C_A$ were calibrated for pairwise indifference in separate binary choice estimation blocks for each individual. Differences in outcome between neighbouring alternatives was not less than 2 EUR. Dominated decoys $D_A$ and $D_B$ were always 2\% and 1 EUR worse than $A$ and $B$ respectively.}
-\hspace{0.5cm}
 \label{fig:task}
+\hspace{0.5cm}
 \end{SCfigure}
 
 In our experiment, 40 participants made repeated decisions between three all-or-nothing gambles, each described by a probability $p$ to win an outcome $m$ and nothing otherwise (Fig. \ref{fig:task}a). We recorded participants' eye movements during the task with an eye tracker (see \nameref{sec:methods} for details). Participants were instructed that after completing the task, their chosen gamble from one randomly determined trial would be played out for an additional bonus payment. In contrast to hypothetical choices between consumer goods described on attribute dimensions like quality and price, risky gamble stimuli offer a high amount of control over their attributes and a straightforward way to incentivise choices. The gamble stimuli were designed to elicit attraction and compromise effects and were individually tailored to account for each participant's risk preferences (Fig. \ref{fig:task}b). Participants performed three pairs of indifference-estimation and experimental blocks, for a total of 225 experimental trials (see \nameref{sec:methods} for additional details on the experimental procedure and gamble stimuli). In indifference-estimation blocks, participants made repeated choices between pairs of gambles with different probabilities (Fig. \ref{fig:task}c). Gamble outcomes $m$ were adjusted according to participants' choices so that four approximately equally preferred gambles $C_B$, $B$, $A$, and $C_A$ were constructed with winning probabilities $p$ = 55\%, 65\%, 75\%, and 85\%. Additionally, two asymmetrically dominated decoys $D_A$ and $D_B$ were defined to be 2\% and 1 EUR worse than gambles $A$ and $B$, respectively. Following this indifference estimation, participants performed an experimental block of 75 ternary choice trials, 32 of which were compromise trials balanced with respect to the target option (i.e., 16 choice sets \{$A$, $B$, $C_A$\}, 16 choice sets \{$A$, $B$, $C_B$\}), 32 attraction trials (16 choice sets \{$A$, $B$ ,$D_A$\}, 16 choice sets \{$A$, $B$, $D_B$\}) and 11 distractor trials showing randomly created options with expected value of 10 EUR and low (5–33\%), medium (34–64\%) and high (65–95\%) probability $p$. Uniform noise was added to all outcomes $m$ ($\pm$0 EUR, +1 EUR) and probabilities $p$ (–3\%, $\pm$0\%, +3\%) in each trial. Asymmetrically dominated decoys $D_A$ and $D_B$ received the same noise as the target option to preserve the dominance relation.
@@ -175,11 +176,11 @@ To better understand participants' eye movements over the course of the trial, w
 Given that participants’ choices and eye movements exhibited modulation by the context of available options, we next tested whether their behaviour could be described using a gaze-dependent accumulation model, and how such a model performs in comparison to extant theories of multi-alternative multi-attribute choice. To this end, we adapted a recently developed, gaze-dependent leaky accumulator model of two-alternative risky choice \autocite{glickman2019FormationPreferenceRisky} to the three-alternative scenario. We refer to this model as the Gaze-dependent Leaky Accumulator (GLA). It assumes that subjective utilities for each alternative $i$ are constructed as in Cumulative Prospect Theory \autocite{tversky1992AdvancesProspectTheory} by first applying a probability weighting function, that transforms objective probabilities $p$ into subjective decision weights. Outcomes $m$ are transformed into utilities using a power function. Next, this model assumes that for each alternative $i$ subjective utilities $x_i^{GLA}$ are accumulated with leakage over the time course of each trial and that utilities are discounted while they are not fixated. At each fixation $n$, accumulators evolve according to
 
 \begin{equation}
-    \label{eq:gla:accumulator}
-    X_i^{GLA}(n) = \begin{cases}
-             (1 - \lambda) \cdot X_i^{GLA}(n - 1) + 1 \cdot x_i^{GLA} &\text{if $i$ fixated}\\
-             (1 - \lambda) \cdot X_i^{GLA}(n - 1) + \theta \cdot x_i^{GLA} &\text{otherwise}
-             \end{cases}
+  X_i^{GLA}(n) = \begin{cases}
+    (1 - \lambda) \cdot X_i^{GLA}(n - 1) + 1 \cdot x_i^{GLA} &\text{if $i$ fixated}\\
+    (1 - \lambda) \cdot X_i^{GLA}(n - 1) + \theta \cdot x_i^{GLA} &\text{otherwise}
+  \end{cases}
+  \label{eq:gla:accumulator}
 \end{equation}
 
 where all $X_i(0)=0$. Similar to the aDDM, the $\theta$ parameter ($0 \le \theta \le 1$) controls discounting of unattended alternative utilities. The $\lambda$ parameter ($0 \le \lambda \le 1$) controls the strength of the accumulation leak. We computed choice probabilities from this model by applying the soft-max choice rule (Eq. (\ref{eq:softmax})) over the final accumulator values $X_i^{GLA}$.
@@ -350,15 +351,15 @@ The random choice model predicts equal choice probabilities $p=\frac{1}{3}$ for 
 Expected Utility Theory (EU) \autocite{vonneumann1947TheoryGamesEconomic} assumes that choice behaviour can be described as maximization of expected subjective utility. We computed subjective utilities of option outcomes $m_i$ using a power function with one free parameter $\alpha$:
 
 \begin{equation}
-    \label{eq:utility}
-    U(m_i) = m_i^\alpha
+  U(m_i) = m_i^\alpha
+  \label{eq:utility}
 \end{equation}
 
 Predicted choice probabilities were computed using a soft-max choice rule \autocite{sutton2018ReinforcementLearningIntroduction} over expected utilities $x_i^{EU} = p_i \cdot U(m_i)$:
 
 \begin{equation}
-    \label{eq:softmax}
-    p(x_i) = \frac{e^{\beta x_i}}{\sum_{j \in J}{e^{\beta x_j}}}
+  p(x_i) = \frac{e^{\beta x_i}}{\sum_{j \in J}{e^{\beta x_j}}}
+  \label{eq:softmax}
 \end{equation}
 
 Here, $J$ is the set of all available alternatives. The inverse temperature parameter $\beta$ controls the degree of randomness in the choice (choices become more deterministic with larger $\beta$).
@@ -368,22 +369,22 @@ Here, $J$ is the set of all available alternatives. The inverse temperature para
 Multialternative Decision Field Theory (MDFT) \autocite{roe2001MultialternativeDecisionField} is a dynamic connectionist model for multi-attribute, multi-alternative choice. MDFT can predict similarity, attraction and compromise effects. The core principle of MDFT is the calculation of valences $V(t)$ at each point in time $t$. Valences are determined as
 
 \begin{equation}
-    \label{eq:mdft:v}
-    V(t) = C M W(t) + \varepsilon(t)
+  V(t) = C M W(t) + \varepsilon(t)
+  \label{eq:mdft:v}
 \end{equation}
 
 where $M$ is a matrix containing all alternatives' attributes. $W(t)$ is a stochastic vector indicating the momentary weight distribution between attributes, according to a weight parameter $w$. $C$ is a contrast matrix, designed to perform attribute-wise contrasts between one option and the mean of other options' attributes. Finally, $\varepsilon(t)$ is a stochastic normally distributed noise component. Preferences $P(t)$ are generated integrating all valences $V(t)$ up to time $t$:
 
 \begin{equation}
-    \label{eq:mdft:p}
-    P(t) = SP(t - 1) + V(t)
+  P(t) = SP(t - 1) + V(t)
+  \label{eq:mdft:p}
 \end{equation}
 
 Critically, $S$ is a square feedback matrix, thought to reflect the neurobiological mechanism of lateral inhibition between alternatives. The diagonal elements of $S$ determine how much the current preference state is influenced by the previous one, controlled by the decay parameter $\varphi_2$. Off-diagonal elements represent the feedback connections between alternatives. MDFT assumes that the connection strength between two alternatives depends on their perceived distance $D$ in attribute space, scaled by sensitivity parameter $\varphi_1$. Taken together, the feedback matrix $S$ is given by
 
 \begin{equation}
-    \label{eq:mdft:s}
-    S = I - \varphi_2 \exp{(-\varphi_1 D^2)}.
+  S = I - \varphi_2 \exp{(-\varphi_1 D^2)}.
+  \label{eq:mdft:s}
 \end{equation}
 
 Here, $I$ is the identity matrix. $D$ is a matrix containing pairwise distances between alternatives. We used the distance function formalized in \citeauthor{hotaling2010TheoreticalDevelopmentsDecision} \autocite{hotaling2010TheoreticalDevelopmentsDecision}, where the distance between two alternatives is expressed in dominance- and indifference-directions and additionally scaled in dominance direction with an overweighting parameter $w_d$. The preference vector $P(t)$ is asymptotically normally distributed with mean $\xi$ and covariance matrix $\Omega$ \autocite{busemeyer2002SurveyDecisionField}, from which choice probabilities are derived as in the general Thurstone model \autocite{bockenholt1992MultivariateModelsPreference}.
@@ -427,8 +428,8 @@ Gaze-biased leaky accumulator model (GLA). Finally, following a recent study on 
 Here, the subjective utility for each alternative is computed by first applying a probability weighting function \autocite{tversky1992AdvancesProspectTheory}, that transforms objective probabilities into subjective decision weights:
 
 \begin{equation}
-    \label{eq:pweighting}
-    w(p) = \frac{p^\gamma}{(p^\gamma + (1 - p)^\gamma)^{\frac{1}{\gamma}}}
+  w(p) = \frac{p^\gamma}{(p^\gamma + (1 - p)^\gamma)^{\frac{1}{\gamma}}}
+  \label{eq:pweighting}
 \end{equation}
 
 where $\gamma~(0.28 \le \gamma \le 1)$ is a free parameter controlling the shape of the weighting function. If $\gamma = 1$, the subjective weights equal the objective probabilities \autocite{cavagnaro2013DiscriminatingProbabilityWeighting}. Outcome utilities are assumed to obtained from a power function as in the EU model (Eq. (\ref{eq:utility})). Subjective expected utilities are then given by $x_i^{GLA} = w(p_i) \cdot U(m_i)$.
@@ -455,8 +456,8 @@ All models' parameters were estimated by minimizing the negative summed log-like
 Individually best-fitting models were identified based on the Bayesian Information Criterion (BIC) \autocite{schwarz1978EstimatingDimensionModel}, computed for each model $m$ as
 
 \begin{equation}
-    \label{eq:bic}
-    BIC_m = -2 \ln{(\hat{L})} + \ln{(n_{trials})} k_m
+  BIC_m = -2 \ln{(\hat{L})} + \ln{(n_{trials})} k_m
+  \label{eq:bic}
 \end{equation}
 
 where $k_m$ is the number of free parameters of model $m$ and $\ln{\hat{L}}$ is the summed log-likelihood of observed choices under model $m$.
