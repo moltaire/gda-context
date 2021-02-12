@@ -1,10 +1,7 @@
 \documentclass[11pt, a4paper]{article}
 
 \usepackage{geometry}
-\geometry{
-    textwidth=18cm, textheight=23.4cm,marginratio={1:1,5:7}      % actual formatting
-    % left=1cm, right=5cm, vmargin={2.5cm,3cm}, marginparwidth=5cm   % todo-note friendly formatting (https://tex.stackexchange.com/a/156328)
-}
+\geometry{textwidth=18cm, textheight=23.4cm,marginratio={1:1,5:7}}
 
 % Load packages
 \usepackage{booktabs}  % Nicer tables
@@ -87,7 +84,7 @@ Imagine you inherited money from a distant relative and you need to decide how t
 
 This association between gaze and choice has been formalized in gaze-dependent evidence accumulation models \autocite{cavanagh2014EyeTrackingPupillometry,glickman2019FormationPreferenceRisky,gluth2018ValuebasedAttentionalCapture,krajbich2010VisualFixationsComputation,krajbich2011MultialternativeDriftdiffusionModel,molter2019GLAMboxPythonToolbox,thomas2019GazeBiasDifferences,tavares2017AttentionalDriftDiffusion}. The attentional Drift Diffusion Model (aDDM) \autocite{krajbich2010VisualFixationsComputation}, Gaze-weighted Linear Accumulator Model \autocite{molter2019GLAMboxPythonToolbox,thomas2019GazeBiasDifferences}, and others that apply explicitly to risky choice \autocite{glickman2019FormationPreferenceRisky} assume that decision makers accumulate evidence in favour of each alternative until evidence for one alternative reaches a threshold and a decision is made. Crucially, accumulation rates are assumed to depend on gaze allocation, so that evidence for an alternative is discounted while it is not fixated. Prior work has tested these assumptions in simple decisions under risk, involving two risky gambles with two equally probable outcomes \autocite{smith2018AttentionChoiceDomains} or two risky gambles described by outcome and probability \autocite{glickman2019FormationPreferenceRisky}. Like the example of choosing an investment plan, however, many real-life decisions are more complex than simple binary choice. For example, investment decisions can involve more than two alternatives that vary on multiple attributes (such as expected return, associated risk, and fees), including both sets of options with similarly low expected returns (e.g., government bonds, fixed deposits) and sets of other riskier options promising larger gains at higher risk (e.g., stocks or derivatives).
 
-Crucially, choices in these multi-alternative, multi-attribute settings pose a challenge to many traditional models of risky choice, including Expected Utility Theory (EU \autocite{vonneumann1947TheoryGamesEconomic}) and Prospect Theory \autocite{kahneman1979ProspectTheoryAnalysis,tversky1992AdvancesProspectTheory}, which obey basic axioms of rational choice like independence of irrelevant alternatives (IIA \autocite{luce1959IndividualChoiceBehavior}). Briefly, IIA asserts that the preference between two alternatives should not depend on other alternatives. At least three context effects – the attraction \autocite{huber1982AddingAsymmetricallyDominated}, compromise \autocite{simonson1989ChoiceBasedReasons}, and similarity \autocite{tversky1972EliminationAspectsTheory} effects – show that IIA is frequently violated: The attraction effect describes an increase in preference for an alternative following the addition of a similar, but slightly inferior alternative. The compromise effect describes an increase in preference for an alternative after a third alternative was added that makes it appear as intermediate. The similarity effect predicts that adding a third option that is similar to one of the original options, and equally appealing, will increase relative preference for the other, dissimilar alternative. While these effects are predominantly investigated using consumer goods, some studies also found them to affect choices between risky gambles \autocite{huber1982AddingAsymmetricallyDominated,mohr2017AttractionEffectRisky,soltani2012RangeNormalizationModelContextDependent,tversky1972EliminationAspectsTheory,wedell1991DistinguishingModelsContextually}.
+Crucially, choices in these multi-alternative, multi-attribute settings pose a challenge to many traditional models of risky choice, including Expected Utility Theory (EU) \autocite{vonneumann1947TheoryGamesEconomic} and Prospect Theory \autocite{kahneman1979ProspectTheoryAnalysis,tversky1992AdvancesProspectTheory}, which obey basic axioms of rational choice like independence of irrelevant alternatives (IIA) \autocite{luce1959IndividualChoiceBehavior}. Briefly, IIA asserts that the preference between two alternatives should not depend on other alternatives. At least three context effects – the attraction \autocite{huber1982AddingAsymmetricallyDominated}, compromise \autocite{simonson1989ChoiceBasedReasons}, and similarity \autocite{tversky1972EliminationAspectsTheory} effects – show that IIA is frequently violated: The attraction effect describes an increase in preference for an alternative following the addition of a similar, but slightly inferior alternative. The compromise effect describes an increase in preference for an alternative after a third alternative was added that makes it appear as intermediate. The similarity effect predicts that adding a third option that is similar to one of the original options, and equally appealing, will increase relative preference for the other, dissimilar alternative. While these effects are predominantly investigated using consumer goods, some studies also found them to affect choices between risky gambles \autocite{huber1982AddingAsymmetricallyDominated,mohr2017AttractionEffectRisky,soltani2012RangeNormalizationModelContextDependent,tversky1972EliminationAspectsTheory,wedell1991DistinguishingModelsContextually}.
 
 Generally, models that assume that each alternative can independently be assigned a single scale value denoting its utility (fixed utility or simple scalability models\autocite{rieskamp2006ExtendingBoundsRationality}) cannot account for the observed violations. In contrast, models that can predict the effects often assume that preferences are constructed by means of comparisons between alternatives on different attribute dimensions \autocite{roe2001MultialternativeDecisionField,trueblood2014MultiattributeLinearBallistic,tversky1972EliminationAspectsTheory,usher2004LossAversionInhibition,tversky1993ContextDependentPreferences}, and employ additional psychological or neurobiologically-inspired mechanisms, such as loss-aversion or inhibition between alternatives.
 
@@ -350,7 +347,7 @@ The random choice model predicts equal choice probabilities $p=\frac{1}{3}$ for 
 
 \subsubsection*{Expected Utility}
 
-Expected Utility Theory (EU \autocite{vonneumann1947TheoryGamesEconomic}) assumes that choice behaviour can be described as maximization of expected subjective utility. We computed subjective utilities of option outcomes $m_i$ using a power function with one free parameter $\alpha$:
+Expected Utility Theory (EU) \autocite{vonneumann1947TheoryGamesEconomic} assumes that choice behaviour can be described as maximization of expected subjective utility. We computed subjective utilities of option outcomes $m_i$ using a power function with one free parameter $\alpha$:
 
 \begin{equation}
     \label{eq:utility}
@@ -368,7 +365,7 @@ Here, $J$ is the set of all available alternatives. The inverse temperature para
 
 \subsubsection*{Multialternative Decision Field Theory}
 
-Multialternative Decision Field Theory (MDFT\autocite{roe2001MultialternativeDecisionField}) is a dynamic connectionist model for multi-attribute, multi-alternative choice. MDFT can predict similarity, attraction and compromise effects. The core principle of MDFT is the calculation of valences $V(t)$ at each point in time $t$. Valences are determined as
+Multialternative Decision Field Theory (MDFT) \autocite{roe2001MultialternativeDecisionField} is a dynamic connectionist model for multi-attribute, multi-alternative choice. MDFT can predict similarity, attraction and compromise effects. The core principle of MDFT is the calculation of valences $V(t)$ at each point in time $t$. Valences are determined as
 
 \begin{equation}
     \label{eq:mdft:v}
@@ -455,7 +452,7 @@ All models' parameters were estimated by minimizing the negative summed log-like
 
 \subsubsection*{Model comparison}
 
-Individually best-fitting models were identified based on the Bayesian Information Criterion (BIC \autocite{schwarz1978EstimatingDimensionModel}), computed for each model $m$ as
+Individually best-fitting models were identified based on the Bayesian Information Criterion (BIC) \autocite{schwarz1978EstimatingDimensionModel}, computed for each model $m$ as
 
 \begin{equation}
     \label{eq:bic}
@@ -531,7 +528,7 @@ Exhaustive combination of all switch levels yields 192 model variants. The effec
 The optimization algorithm failed to find a solution better than a random model for 108 of 6400 (1.69\%) of estimation runs. Since all model variants used the soft-max choice rule (Eq. (\ref{eq:softmax})) and therefore could predict random choices by setting the inverse temperature parameter $\beta$ to 0, this indicates non-convergence of the optimization algorithm. All but one non-converged estimation run used distance-dependent inhibition. We set the maximum-likelihood estimates of the failed runs to that of the nested random model for all analyses.
 
 \subsection*{Statistical modelling}
-We used Bayesian estimation (BEST \autocite{kruschke2013BayesianEstimationSupersedes,kruschke2014DoingBayesianData}) of differences, effect size $d$ and associated 95\% highest posterior density intervals (HDI$_{95}$) for all reported pairwise comparisons. Reported correlation coefficients and associated HDI$_{95}$ result from Bayesian correlation analyses \autocite{lee2013BayesianCognitiveModeling}. Regression estimates and HDI$_{95}$ result from Bayesian regression analyses implemented in PyMC3 \autocite{salvatier2016ProbabilisticProgrammingPython}.
+We used Bayesian estimation (BEST) \autocite{kruschke2013BayesianEstimationSupersedes,kruschke2014DoingBayesianData} of differences, effect size $d$ and associated 95\% highest posterior density intervals (HDI$_{95}$) for all reported pairwise comparisons. Reported correlation coefficients and associated HDI$_{95}$ result from Bayesian correlation analyses \autocite{lee2013BayesianCognitiveModeling}. Regression estimates and HDI$_{95}$ result from Bayesian regression analyses implemented in PyMC3 \autocite{salvatier2016ProbabilisticProgrammingPython}.
 
 \subsection*{Software}
 The task was programmed in MATLAB (The Mathworks Inc., USA) using the PsychToolBox \autocite{brainard1997psychophysics}. Data processing and analyses were done in Python with numpy \autocite{harris2020array}, scipy \autocite{jones2001SciPyOpenSource} and pandas \autocite{mckinney2012PythonDataAnalysis} libraries. Bayesian analyses were implemented in PyMC3 \autocite{salvatier2016ProbabilisticProgrammingPython}, mixed models used bambi \autocite{yarkoni2016BambiSimpleInterface}. Exceedance probabilities were computed in MATLAB using SPM12 \autocite{penny2011statistical}. Fig.s were created using matplotlib \autocite{hunter2007Matplotlib2DGraphics}, seaborn \autocite{waskom2020seaborn} and python-ternary \autocite{pythonternary}.
@@ -560,6 +557,10 @@ The authors declare no competing interests.
 \label{sec:supplement}
 
 \begin{refsection}  % Separate reference list for Supplement
+
+% Reset page counter and add "S"
+\setcounter{page}{1}
+\renewcommand{\thepage}{S\arabic{page}}
 
 % Reset figure and table counters, change figure and table names
 % \renewcommand{\thefigure}{S\arabic{figure}}  % -> Fig. S1
@@ -762,5 +763,6 @@ Taken together, we did not find any evidence based on process data to support th
 \printbibliography[title=Supplementary Information References]
 
 \end{refsection} % (separate reference list for Supplement)
+\renewcommand{\thepage}{S\arabic{page}}
 
 \end{document}

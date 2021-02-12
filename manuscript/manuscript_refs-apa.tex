@@ -1,10 +1,7 @@
 \documentclass[11pt, a4paper]{article}
 
 \usepackage{geometry}
-\geometry{
-    textwidth=18cm, textheight=23.4cm,marginratio={1:1,5:7}      % actual formatting
-    % left=1cm, right=5cm, vmargin={2.5cm,3cm}, marginparwidth=5cm   % todo-note friendly formatting (https://tex.stackexchange.com/a/156328)
-}
+\geometry{textwidth=18cm, textheight=23.4cm,marginratio={1:1,5:7}}
 
 % Load packages
 \usepackage{booktabs}  % Nicer tables
@@ -559,6 +556,10 @@ The authors declare no competing interests.
 
 \begin{refsection}  % Separate reference list for Supplement
 
+  % Reset page counter and add "S"
+\setcounter{page}{1}
+\renewcommand{\thepage}{S\arabic{page}}
+
 % Reset figure and table counters, change figure and table names
 % \renewcommand{\thefigure}{S\arabic{figure}}  % -> Fig. S1
 \renewcommand{\figurename}{Supplementary Fig.} % -> Supplementary Fig. 1
@@ -756,5 +757,6 @@ Taken together, we did not find any evidence based on process data to support th
 \printbibliography[title=Supplementary Information References]
 
 \end{refsection} % (separate reference list for Supplement)
+\renewcommand{\thepage}{S\arabic{page}}
 
 \end{document}
