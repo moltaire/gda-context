@@ -2,7 +2,7 @@
 
 This repository contains all raw data, preprocessing, analysis and visualization code used in the paper:
 
-- tbd
+- Molter, F., Thomas, A., Huettel, S. A., Heekeren, H., & Mohr, P. N. C. (2021). Gaze-dependent evidence accumulation predicts multi-alternative risky choice behaviour. Retrieved from [psyarxiv.com/x6nbf](https://psyarxiv.com/x6nbf)
 
 All analyses<sup>[*](#bms)</sup> are written in Python.
 Dependencies and package versions used are listed in the `environment.yml` file, which you can use to reproduce the computing environment (e.g., using the [Anaconda Python distribution](https://www.anaconda.com/products/individual), see instructions [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file)). The main dependencies of this project are the standard Python data stack (numpy, pandas, scipy), PyMC3, Theano, bambi and pyyaml for statistical analyses, matplotlib, seaborn and python-ternary for visualization.
