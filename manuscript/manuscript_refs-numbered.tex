@@ -669,32 +669,32 @@ $\theta$  & 0.69 & 0.18 & 0.13 & 0.63 & 0.72 & 0.83 & 0.95  \\ \bottomrule
   \multicolumn{1}{c}{\cellcolor[HTML]{DAE8FC}\textbf{Gaze-dependent levels}} &
   \textbf{N} \\ \midrule
 \textbf{Attribute integration} &
-  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}$\times$ \textbf{Multiplicative}\\ Outcomes and probabilities\\ combine multiplicatively\\ into expected utilities.\\ \autocite{tversky1992AdvancesProspectTheory,glickman2019FormationPreferenceRisky}\end{tabular}} &
-  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}+ \textbf{Weighted additive}\\ Outcomes and probabilities\\ are normalized, weighted\\ and added.\\ \autocite{rouault2019PrefrontalMechanismsCombining}\end{tabular}} &
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}$\times$ \textbf{Multiplicative}\\ Outcomes and probabilities\\ combine multiplicatively\\ into expected utilities \autocite{tversky1992AdvancesProspectTheory,glickman2019FormationPreferenceRisky}.\end{tabular}} &
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}+ \textbf{Weighted additive}\\ Outcomes and probabilities\\ are normalized, weighted\\ and added \autocite{rouault2019PrefrontalMechanismsCombining}.\end{tabular}} &
   \textit{n.a.} &
   2 \\ \midrule
 \textbf{Comparison} &
-  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Independent}\\ Accumulation of absolute\\ item values per alternative.\\ \autocite{glickman2019FormationPreferenceRisky,bhatia2013AssociationsAccumulationPreference}\end{tabular}} &
-  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Comparative}\\ Accumulation of relative\\ values per alternative.\\ \autocite{roe2001MultialternativeDecisionField}\end{tabular}} &
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Independent}\\ Accumulation of absolute\\ item values per alternative \autocite{glickman2019FormationPreferenceRisky,bhatia2013AssociationsAccumulationPreference}.\end{tabular}} &
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Comparative}\\ Accumulation of relative\\ values per alternative \autocite{roe2001MultialternativeDecisionField}.\end{tabular}} &
   \textit{n.a.} &
   2 \\ \midrule
 \textbf{Alternative-wise gaze-discount} &
   \multicolumn{6}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{False}\\ Fixated and non-fixated alternatives processed equally.\end{tabular}} &
-  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{True}\\ Non-fixated alternatives' values are\\ discounted by a parameter $\theta$.\\ \autocite{krajbich2010VisualFixationsComputation}\end{tabular} &
+  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{True}\\ Non-fixated alternatives' values are\\ discounted by a parameter $\theta$ \autocite{krajbich2010VisualFixationsComputation}.\end{tabular} &
   2 \\ \midrule
 \textbf{Attribute-wise gaze-discount} &
   \multicolumn{6}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{False}\\ Fixated and non-fixated attributes are processed equally.\end{tabular}} &
-  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{True}\\ Attributes on the non-fixated dimension\\ are discounted by a parameter $\eta$.\\ \autocite{krajbich2012AttentionalDriftdiffusionModel,fisher2017AttentionalDriftDiffusion}\end{tabular} &
+  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{True}\\ Attributes on the non-fixated dimension\\ are discounted by a parameter $\eta$ \autocite{krajbich2012AttentionalDriftdiffusionModel,fisher2017AttentionalDriftDiffusion}.\end{tabular} &
   2 \\ \midrule
 \textbf{Accumulation leak} &
   \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{None}\\ Perfect integration over fixations.\end{tabular}} &
-  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Constant}\\ With each fixation, accumulators leak\\ information proportional to their current value,\\ controlled by parameter $\lambda$.\\ \autocite{roe2001MultialternativeDecisionField,usher2001TimeCoursePerceptual}\end{tabular}} &
-  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{Gaze-dependent}\\ With each fixation, accumulators of\\ non-fixated alternatives leak information,\\ as in Constant leak.\\ \autocite{ashby2016FindingRightFit}\end{tabular} &
+  \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Constant}\\ With each fixation, accumulators leak\\ information proportional to their current value,\\ controlled by parameter $\lambda$ \autocite{roe2001MultialternativeDecisionField,usher2001TimeCoursePerceptual}.\end{tabular}} &
+  \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{Gaze-dependent}\\ With each fixation, accumulators of\\ non-fixated alternatives leak information,\\ as in Constant leak \autocite{ashby2016FindingRightFit}.\end{tabular} &
   3 \\ \midrule
 \textbf{Accumulator inhibition} &
   \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{None}\\ No inhibition between accumulators.\end{tabular}} &
-  \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Constant}\\ Accumulators inhibit each other\\ proportional to their current value,\\ controlled by parameter $\Phi$.\\ \autocite{usher2004LossAversionInhibition}\end{tabular}} &
-  \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Distance-dependent}\\ Inhibition between accumulators\\ depends on pairwise distance\\ between alternatives in attribute\\ space. Parameters $w_d$ and $\Phi$.\\ \autocite{roe2001MultialternativeDecisionField}\end{tabular}} &
+  \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Constant}\\ Accumulators inhibit each other\\ proportional to their current value,\\ controlled by parameter $\Phi$ \autocite{usher2004LossAversionInhibition}.\end{tabular}} &
+  \multicolumn{2}{l}{\begin{tabular}[c]{@{}l@{}}\textbf{Distance-dependent}\\ Inhibition between accumulators\\ depends on pairwise distance\\ between alternatives in attribute\\ space. Parameters $w_d$ and $\Phi$ \autocite{roe2001MultialternativeDecisionField}.\end{tabular}} &
   \cellcolor[HTML]{DAE8FC}\begin{tabular}[c]{@{}l@{}}\textbf{Gaze-dependent}\\ With each fixation, accumulators of\\ non-fixated alternatives are inhibited, \\ proportional to the currently fixated\\ accumulator's value.\\ Controlled by parameter $\Phi$.\end{tabular} &
   4 \\ \midrule
 \textbf{Total variants} &
