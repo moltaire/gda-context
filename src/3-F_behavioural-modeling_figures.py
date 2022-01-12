@@ -58,13 +58,14 @@ palette = [
 
 # Model labels to use in the figures
 models = np.array(
-    ["glickman1layer", "mdft", "eu", "gaze-baseline-stat", "gaze-baseline-dyn"]
+    ["glickman1layer", "mdft", "eu", "pt", "gaze-baseline-stat", "gaze-baseline-dyn"]
 )
 
 model_labels = {
     "glickman1layer": "GLA",
     "mdft": "MDFT",
     "eu": "EU",
+    "pt": "PT",
     "gaze-baseline-stat": "GB$_{stat}$",
     "gaze-baseline-dyn": "GB$_{dyn}$",
 }

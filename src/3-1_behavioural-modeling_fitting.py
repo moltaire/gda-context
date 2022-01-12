@@ -87,6 +87,7 @@ def modelFitting():
     # Define models to be fit
     models = [
         bm.models.ExpectedUtility,
+        bm.models.ProspectTheory,
         bm.mdft.MDFT,
         bm.models.GazeBaselineStat,
         bm.models.GazeBaselineDyn,

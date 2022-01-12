@@ -6,25 +6,20 @@ from .utils import choose, softmax
 
 class ChoiceModel(object):
     """Base class for probabilistic choice models
-    
+
     Contains methods shared across models to
         1) simulate choices (`simulate_choices`)
         2) compute negative log-likelihood (`compute_nll`)
         3) perform parameter estimation (`fit`)
     """
 
-    def __init__(self):
-        super(ChoiceModel, self).__init__()
-
     def simulate_choices(self, parameters):
-        """For given parameters, predict choice probabilities and generate choices from them.
-        """
+        """For given parameters, predict choice probabilities and generate choices from them."""
         choices = choose(self.predict_choiceprobs(parameters))
         return choices
 
     def compute_nll(self, parameters, verbose=False, nonzeroconst=1e-6):
-        """Compute negative log-likelihood of the data, given parameters.
-        """
+        """Compute negative log-likelihood of the data, given parameters."""
         choiceprobs = self.predict_choiceprobs(parameters)
         chosenprobs = choiceprobs[
             np.arange(choiceprobs.shape[0]).astype(int), self.choices.astype(int)
@@ -109,7 +104,7 @@ class ChoiceModel(object):
 
 class ExpectedUtility(ChoiceModel):
     """Expected Utility model
-    
+
     Attributes:
         choices (np.ndarray): Array of choices of type int
         label (str, optional): Model label
@@ -149,7 +144,7 @@ class ExpectedUtility(ChoiceModel):
 class ProspectTheory(ChoiceModel):
     """Prospect Theory model.
     Assumes that objective probabilities are transformed into decision weights (using weighting function with parameter $\gamma$), and outcome utilities are computed with a power-function with parameter $\alpha$. Choice probabilities are derived from subjective expected utilities via a softmax function with inverse temperature parameter $\beta$.
-    
+
     Attributes:
         choices (np.ndarray): Array of choices of type int
         label (str, optional): Model label
@@ -217,7 +212,7 @@ class GazeBaselineStat(ChoiceModel):
 
 class GazeBaselineDyn(ChoiceModel):
     """Second baseline model that only uses gaze data,
-    but also uses the sequence and duration of fixations 
+    but also uses the sequence and duration of fixations
     and a leak parameter
 
     Parameters
@@ -349,11 +344,11 @@ class Glickman1Layer(ChoiceModel):
 
 class Glickman2Layer(ChoiceModel):
     """Three alternative adaption from 2-layer model from Glickman et al., 2019
-    Also assumes that over fixations, subjective utilities (see PT) are accumulated. However, in contrast to the 1-layer model, here, the subjective stimulus attributes (decision weights and subjective utilities) also accumulate across fixations. The gaze-bias acts on the input to these lower-level accumulators (decision weights and subjective utilities), which are then combined *after the gaze bias was applied* in the next level. 
+    Also assumes that over fixations, subjective utilities (see PT) are accumulated. However, in contrast to the 1-layer model, here, the subjective stimulus attributes (decision weights and subjective utilities) also accumulate across fixations. The gaze-bias acts on the input to these lower-level accumulators (decision weights and subjective utilities), which are then combined *after the gaze bias was applied* in the next level.
     Accumulators on both levels are subject to leak.
 
     For a reference, see Glickman et al., 2019 (Fig. 6A)
-    
+
     Parameters
     ----------
     alpha (alpha > 0)
