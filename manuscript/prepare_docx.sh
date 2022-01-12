@@ -15,7 +15,7 @@ sed -i '' 's|\hspace{0.5cm}||g' tmp_manuscript_refs-numbered_no-sc.tex
 echo "\tDegree symbol..."
 sed -i '' 's|\$\\degree\$|°|g' tmp_manuscript_refs-numbered_no-sc.tex
 
-# Replace \degree
+# Replace emergency stretch
 echo "\tEmergency stretch"
 sed -i '' 's|\\emergencystretch=1em \% prevent overfull \\hbox for 1.5pt||g' tmp_manuscript_refs-numbered_no-sc.tex
 
