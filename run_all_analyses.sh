@@ -89,8 +89,7 @@ echo "Running analyses testing simple choice rule"
 python Supplement_choicerule-analysis.py
 
 echo "Running model fitting for parameter- and model-recovery analyses"
-python S_recoveries.py --label de1 --optmethod differential_evolution --nruns 1 --ncores 7 --seed 1 --verbose 2
-
+python Supplement_recoveries.py --label de1 --optmethod differential_evolution --nruns 1 --ncores 24 --seed 1 --verbose 2
 
 echo "Supplemental figures..."
 python Supplement_gaze-predictors_figure.py

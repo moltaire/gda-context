@@ -7,7 +7,7 @@ Author: Felix Molter, felixmolter@gmail.com
 
 import argparse
 from functools import partial
-from os import makedirs
+from os import makedirs, listdir
 from os.path import exists, join
 
 import numpy as np
@@ -21,12 +21,6 @@ def modelFitting():
     parser.add_argument(
         "--verbose", default=0, type=int, help="Set verbosity (0, 1, >1)."
     )
-    # parser.add_argument(
-    #     "--data-dir",
-    #     type=str,
-    #     default="../results/0-clean_data",
-    #     help="Relative path to preprocessed data directory.",
-    # )
     parser.add_argument(
         "--results-dir",
         type=str,
@@ -57,12 +51,6 @@ def modelFitting():
     parser.add_argument(
         "--nruns", type=int, default=10, help="Number of optimization runs per model."
     )
-    # parser.add_argument(
-    #     "--nsims",
-    #     type=int,
-    #     default=1,
-    #     help="Number of simulation repetitions per trial.",
-    # )
     parser.add_argument("--seed", type=int, default=2019, help="Random number seed.")
 
     args = parser.parse_args()
@@ -90,10 +78,105 @@ def modelFitting():
         bm.models.Glickman1Layer,
     ]
 
-    # Load trial data
-    trials = pd.read_csv(
-        join("..", "results", "S_recoveries", "trials_synth.csv"), index_col=0
+    # Create synthetic DataFrame
+    # For each real participant, we create data from $n$ synthetic agents, where $n$ is the number of models included.
+    # Each synthetic data set has the same size as that of a real participant (i.e., 225 trials).
+
+    ## Read a data set as a dummy
+    dummy_data = pd.read_csv(
+        join(
+            RESULTS_DIR,
+            "3-behavioural-modeling",
+            "predictions",
+            "eu",
+            "predictions_eu_0_de1.csv",
+        )
     )
+
+    # Build a dataframe with synthetic data from model predictions
+    # This dataframe will be len(models) times as large as the original dataframe,
+    # because for each real participant, len(models) new participants are generated
+    trials = []
+
+    for model in models:
+
+        model_instance = model(data=dummy_data)
+        model_label = model_instance.label.lower()
+
+        files = [
+            file
+            for file in listdir(
+                join(
+                    "..", "results", "3-behavioural-modeling", "estimates", model_label
+                )
+            )
+            if file.endswith(".csv")
+        ]
+
+        for file in files:
+
+            _, _, subject, label = file.split("_")
+            label = label.split(".")[0]
+            new_subject = "-".join([subject, model_label])
+
+            # Read model-predictions and select only the first simulation (`rep == 0`)
+            pred_s = pd.read_csv(
+                join(
+                    "..",
+                    "results",
+                    "3-behavioural-modeling",
+                    "predictions",
+                    model_label,
+                    f"predictions_{model_label}_{subject}_{label}.csv",
+                ),
+            )
+            pred_s = pred_s.loc[pred_s["rep"] == 0]
+            if len(pred_s) == 0:
+                raise ValueError(f"Missing predictions for subject {new_subject}!")
+            pred_s["subject"] = new_subject
+
+            # Read estimates (= generating parameters)
+            est_s = pd.read_csv(
+                join(
+                    "..",
+                    "results",
+                    "3-behavioural-modeling",
+                    "estimates",
+                    model_label,
+                    f"estimates_{model_label}_{subject}_{label}.csv",
+                ),
+                index_col=0,
+            )
+            for parameter in model_instance.parameter_names:
+                pred_s[parameter + "_gen"] = est_s[parameter].values[0]
+
+            ## Add estimates to prediction DataFrame
+            # Add to synthetic DataFrame
+            trials.append(pred_s)
+
+    trials = (
+        pd.concat(trials)
+        .reset_index(drop=True)
+        .drop(
+            [
+                "key",
+                "choice",
+                "choice_tcd",
+                "rt",
+                "model",
+                "rep",
+                "pos_A",
+                "pos_B",
+                "pos_C",
+                "pA_top",
+                "pB_top",
+                "pC_top",
+            ],
+            axis=1,
+        )
+        .rename({"predicted_choice": "choice"}, axis=1)
+    )
+    trials.to_csv(join(OUTPUT_DIR, "trials_synth.csv"))
 
     # Fix eye tracking columns which have arrays in them
     trials["fixated_alternatives"] = trials["fixated_alternatives"].apply(
@@ -119,15 +202,17 @@ def modelFitting():
         for model in models:
             if VERBOSE > 0:
                 _ = model(data=data)
-                print(
-                    "{}: Parameter estimation and choice prediction...".format(_.label)
-                )
+                print("{}: Parameter estimation...".format(_.label))
                 del _
             for subject in subjects:
                 # Subset subject data
                 subject_data = data[data["subject"] == subject].copy()
                 # Initialize model instance
                 subject_model = model(data=subject_data)
+                subject_model.parameters_gen = {
+                    parameter: subject_data[parameter + "_gen"].values[0]
+                    for parameter in subject_model.parameter_names
+                }
                 if not isinstance(subject, int):
                     subject_model.subject = int(subject.split("-")[0])
                 else:
@@ -166,7 +251,7 @@ def modelFitting():
         ):
             if VERBOSE > 0:
                 print("Subject {} ({}/{})".format(subject, s + 1, n_subjects))
-            (estimates, predictions) = fit((subject, subject_model))
+            estimates = fit((subject, subject_model))
             all_estimates.append(estimates)
 
     # Collect and save results
@@ -233,6 +318,7 @@ def fit_subject_model(
         )
         for parameter, estimate in zip(subject_model.parameter_names, estimates):
             estimates_df[parameter] = estimate
+            estimates_df[parameter + "_gen"] = subject_model.parameters_gen[parameter]
         estimates_df.to_csv(estimates_output_path, index=False)
 
     return estimates_df
