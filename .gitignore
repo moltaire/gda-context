@@ -4,6 +4,9 @@ __pycache__/
 .vscode/
 *.py[cod]
 
+# Ignore private folder
+private
+
 # Ignore large concatenated dataframes
 results/3-behavioural-modeling/estimates/estimates_de1.csv
 results/3-behavioural-modeling/predictions/predictions_de1.csv
