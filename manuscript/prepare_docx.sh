@@ -20,7 +20,7 @@ echo "\tEmergency stretch"
 sed -i '' 's|\\emergencystretch=1em \% prevent overfull \\hbox for 1.5pt||g' tmp_manuscript_refs-numbered_no-sc.tex
 
 # Convert with pandoc
-pandoc tmp_manuscript_refs-numbered_no-sc.tex -f latex -t docx -o manuscript_refs-numbered.docx --reference-doc resources/apa6_man.docx --csl=resources/nature.csl --metadata=notes-after-punctuation:false --metadata=link-citations:true --filter pandoc-crossref --citeproc 
+pandoc tmp_manuscript_refs-numbered_no-sc.tex -f latex -t docx -o docx/manuscript_refs-numbered.docx --reference-doc resources/apa6_man.docx --csl=resources/nature.csl --metadata=notes-after-punctuation:false --metadata=link-citations:true --filter pandoc-crossref --citeproc 
 
 # Remove files
 rm tmp_manuscript_refs-numbered_no-sc*
