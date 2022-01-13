@@ -1,0 +1,2 @@
+subject,nll,bic,model,alpha,alpha_gen,gamma,gamma_gen,beta,beta_gen,lam,lam_gen,theta,theta_gen
+14-gaze-baseline-dyn,164.7675125547329,356.61552712048785,glickman1layer,0.07073419484229442,,0.2,,14.452458927456547,1.2371747197000509,0.2684132303850228,0.2815793788663611,0.0,
