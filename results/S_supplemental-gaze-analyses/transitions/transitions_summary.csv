@@ -1,5 +1,5 @@
-,n_horizontal,n_horizontal,n_vertical,n_vertical,n_diagonal,n_diagonal,payne_index,payne_index
-,mean,std,mean,std,mean,std,mean,std
-effect,,,,,,,,
-attraction,7.28,2.36,7.17,3.06,2.88,1.18,0.1,0.16
-compromise,7.29,2.63,7.55,3.11,2.72,1.31,0.14,0.18
+,n_horizontal,n_horizontal,n_vertical,n_vertical,n_diagonal,n_diagonal,payne_index,payne_index,n_target_competitor,n_target_competitor,n_target_decoy,n_target_decoy,n_competitor_decoy,n_competitor_decoy
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+effect,,,,,,,,,,,,,,
+attraction,7.28,2.36,7.17,3.06,2.88,1.18,0.1,0.16,3.68,1.52,3.76,1.24,2.73,0.74
+compromise,7.29,2.63,7.55,3.11,2.72,1.31,0.14,0.18,3.88,1.51,3.41,1.38,2.72,0.98
