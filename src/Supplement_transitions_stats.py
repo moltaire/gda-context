@@ -61,6 +61,9 @@ transitions_subject = (
             "n_vertical",
             "n_diagonal",
             "payne_index",
+            "n_target_competitor",
+            "n_target_decoy",
+            "n_competitor_decoy",
         ]
     ]
     .mean()
@@ -84,19 +87,66 @@ transitions_summary.round(4).to_csv(output_file)
 print(f"\tOutput file created at '{output_file}'.")
 
 
-# 2. Perform statistical tests on the difference of measures between attraction and compromise trials
-print(
-    "Running 1-Sample BEST comparisons between transition measures in attraction and compromise trials..."
-)
-for measure in ["n_horizontal", "n_vertical", "n_diagonal", "payne_index"]:
+# # 2. Perform statistical tests on the difference of measures between attraction and compromise trials
+# print(
+#     "Running 1-Sample BEST comparisons between transition measures in attraction and compromise trials..."
+# )
+# for measure in ["n_horizontal", "n_vertical", "n_diagonal", "payne_index"]:
 
-    # Format data and compute paired difference between attraction and compromise trials
-    df = transitions_subject.pivot(index="subject", columns="effect", values=measure)
-    df["difference"] = df["attraction"] - df["compromise"]
+#     # Format data and compute paired difference between attraction and compromise trials
+#     df = transitions_subject.pivot(index="subject", columns="effect", values=measure)
+#     df["difference"] = df["attraction"] - df["compromise"]
+
+#     # Run paired BEST
+#     trace = runBEST1G(
+#         y=df["difference"],
+#         mu=0,
+#         sigma_low=0.01,
+#         sigma_high=100,
+#         sample_kwargs=sample_kwargs,
+#     )
+
+#     # Save summary
+#     summary_df = summary(trace, hdi_prob=0.95)
+#     output_file = join(
+#         OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_summary.csv"
+#     )
+#     summary_df.round(4).to_csv(output_file)
+#     print(f"\tOutput file created at '{output_file}'.")
+
+#     # Save traceplot
+#     plot_trace(trace)
+#     plt.savefig(
+#         join(OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_traceplot.png"),
+#         dpi=50,
+#     )
+#     plt.close()
+
+#     # Print statistics
+#     print(
+#         f"\n{measure}:\n"
+#         + f"  Attraction: {transitions_summary.loc['attraction', measure]['mean']:.2f} ± "
+#         + f"{transitions_summary.loc['attraction', measure]['std']:.2f}\n"
+#         + f"  Compromise: {transitions_summary.loc['compromise', measure]['mean']:.2f} ± "
+#         + f"{transitions_summary.loc['compromise', measure]['std']:.2f}\n"
+#         + f"  mean difference = {summary_df.loc['mean', 'mean']} [{summary_df.loc['mean', 'hdi_2.5%']}, {summary_df.loc['mean', 'hdi_97.5%']}]\n"
+#         + f"  d = {summary_df.loc['d', 'mean']} [{summary_df.loc['d', 'hdi_2.5%']}, {summary_df.loc['d', 'hdi_97.5%']}]\n"
+#     )
+
+
+# 3. Perform statistical tests on the difference of target-decoy and competitor-decoy transitions, separately for attraction and compromise trials
+print(
+    "Running 1-Sample BEST comparisons between target-decoy transition counts competitor-decoy transition counts, separately for attraction and compromise trials..."
+)
+for effect in ["attraction", "compromise"]:
+    print("\t" + effect.capitalize() + " trials")
+
+    tr_e = transitions_subject.loc[transitions_subject["effect"] == effect]
+    difference = tr_e["n_target_decoy"] - tr_e["n_competitor_decoy"]
 
     # Run paired BEST
     trace = runBEST1G(
-        y=df["difference"],
+        y=difference,
         mu=0,
         sigma_low=0.01,
         sigma_high=100,
@@ -106,26 +156,32 @@ for measure in ["n_horizontal", "n_vertical", "n_diagonal", "payne_index"]:
     # Save summary
     summary_df = summary(trace, hdi_prob=0.95)
     output_file = join(
-        OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_summary.csv"
+        OUTPUT_DIR, f"transitions_tcd_{effect}_td-vs-cd_BEST_summary.csv"
     )
+
+    for var in ["mean", "difference", "d"]:
+        summary_df.loc[var, "p>0"] = np.mean(trace.get_values(var) > 0)
+
+    print(
+        f"\tmean difference = {summary_df.loc['difference', 'mean']} [{summary_df.loc['difference', 'hdi_97.5%']}, {summary_df.loc['difference', 'hdi_2.5%']}]"
+    )
+    print(
+        f"\td = {summary_df.loc['d', 'mean']} [{summary_df.loc['d', 'hdi_2.5%']}, {summary_df.loc['d', 'hdi_97.5%']}]"
+    )
+
+    print(
+        "\t{}% of posterior mass above 0.".format(
+            100 * np.mean(trace.get_values("d") > 0)
+        )
+    )
+
     summary_df.round(4).to_csv(output_file)
     print(f"\tOutput file created at '{output_file}'.")
 
     # Save traceplot
     plot_trace(trace)
     plt.savefig(
-        join(OUTPUT_DIR, f"transitions_{measure}_attr-vs-comp_BEST_traceplot.png"),
+        join(OUTPUT_DIR, f"transitions_tcd_{effect}_td-vs-cd_BEST_traceplot.png"),
         dpi=50,
     )
     plt.close()
-
-    # Print statistics
-    print(
-        f"\n{measure}:\n"
-        + f"  Attraction: {transitions_summary.loc['attraction', measure]['mean']:.2f} ± "
-        + f"{transitions_summary.loc['attraction', measure]['std']:.2f}\n"
-        + f"  Compromise: {transitions_summary.loc['compromise', measure]['mean']:.2f} ± "
-        + f"{transitions_summary.loc['compromise', measure]['std']:.2f}\n"
-        + f"  mean difference = {summary_df.loc['mean', 'mean']} [{summary_df.loc['mean', 'hdi_2.5%']}, {summary_df.loc['mean', 'hdi_97.5%']}]\n"
-        + f"  d = {summary_df.loc['d', 'mean']} [{summary_df.loc['d', 'hdi_2.5%']}, {summary_df.loc['d', 'hdi_97.5%']}]\n"
-    )

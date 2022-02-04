@@ -122,10 +122,59 @@ trans_direction = (
 )
 trans_direction.columns.name = None
 
+# Direction: Target-Competitor_decoy
+# Add target, effect columns to dwell dataframe
+dwells = dwells.merge(
+    trials[["subject", "trial", "effect", "target"]], on=["subject", "trial"]
+)
+dwells["alternative_tcd"] = np.where(
+    dwells["alternative"] == "C",
+    "decoy",
+    np.where(dwells["alternative"] == dwells["target"], "target", "competitor"),
+)
+
+dwells["prev_alt_tcd"] = dwells.groupby(["subject", "trial"])["alternative_tcd"].shift(
+    1, fill_value=np.nan
+)
+
+dwells["trans_tcd_directed"] = (
+    dwells["prev_alt_tcd"].str[0] + "-" + dwells["alternative_tcd"].str[0]
+)
+
+dwells["trans_tcd"] = np.where(
+    pd.isnull(dwells["trans_tcd_directed"]),
+    np.nan,
+    np.where(
+        dwells["trans_tcd_directed"].isin(["t-c", "c-t"]),
+        "t-c",
+        np.where(
+            dwells["trans_tcd_directed"].isin(["t-d", "d-t"]),
+            "t-d",
+            np.where(
+                dwells["trans_tcd_directed"].isin(["c-d", "d-c"]),
+                "c-d",
+                "within-alternative",
+            ),
+        ),
+    ),
+)
+
+trans_tcd = (
+    dwells.groupby(["subject", "trial"])["trans_tcd"]
+    .value_counts(dropna=True)
+    .rename("count")
+    .reset_index()
+    .pivot_table(values="count", columns="trans_tcd", index=["subject", "trial"])
+    .reset_index()
+    .drop("nan", axis=1)
+    .fillna(0)
+)
+
 # Combine everything
 transitions = (
     trans_withinbetween.merge(trans_distance, on=["subject", "trial"])
     .merge(trans_direction, on=["subject", "trial"])
+    .merge(trans_tcd)
     .rename(
         {
             "between-alt-diff": "n_between-alt-diff",
@@ -137,6 +186,9 @@ transitions = (
             "diagonal": "n_diagonal",
             "horizontal": "n_horizontal",
             "vertical": "n_vertical",
+            "t-c": "n_target_competitor",
+            "t-d": "n_target_decoy",
+            "c-d": "n_competitor_decoy",
         },
         axis=1,
     )
