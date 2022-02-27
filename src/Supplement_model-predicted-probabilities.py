@@ -88,6 +88,8 @@ def plot_predicted_choiceprobs(predictions, models, model_labels, axs=None):
     )
     df["log_pcp_chosen"] = np.log(df["pcp_chosen"])
 
+    print(100 * df.groupby('model')['pcp_chosen'].mean().round(4))
+
     # Compute model predicted choice probabilities for target, competitor, decoy and chosen alternative
     pcps = (
         df.loc[df["effect"].isin(["attraction", "compromise"])]
@@ -162,12 +164,14 @@ if __name__ == "__main__":
         "gaze-baseline-dyn",
         "gaze-baseline-stat",
         "eu",
+        "pt",
         "sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent",
     ]
     model_labels = {
         "glickman1layer": "GLA",
         "mdft": "MDFT",
         "eu": "EU",
+        "pt": "PT",
         "gaze-baseline-stat": "GB" + r"$_{stat}$",
         "gaze-baseline-dyn": "GB" + r"$_{dyn}$",
         "sb_int-multiplicative_comp-vsmean_gbatt-false_gbalt-true_lk-free_inh-distance-dependent": "Hybrid",
@@ -195,8 +199,8 @@ if __name__ == "__main__":
     for ax, label in zip(axs.ravel(), list("abcdefghijklmnopqrst")):
 
         # set a different x position for the first plots in each row, because they have y-ticklabels
-        if label in ["a", "g"]:
-            xshift = -0.6
+        if label in ["a", "h"]:
+            xshift = -0.8
         else:
             xshift = -0.15
         ax.text(

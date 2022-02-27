@@ -17,6 +17,7 @@ import numpy as np
 import pandas as pd
 import pymc3 as pm
 from bambi import Model
+import arviz as az
 
 from analysis import best
 
@@ -26,8 +27,10 @@ warnings.simplefilter(action="ignore", category=FutureWarning)
 SEED = 91
 np.random.seed(SEED)
 
+OUTPUT_DIR = join("..", "results", "S_indifference-estimation")
+
 # Load behavioural data
-trials = pd.read_csv(join("..", "results", "clean_data", "trials.csv"), index_col=0)
+trials = pd.read_csv(join("..", "results", "0-clean_data", "trials.csv"), index_col=0)
 
 subjects = trials["subject"].unique()
 
@@ -50,10 +53,10 @@ estimation_results = pd.concat(estimation_results)
 estimation_results = estimation_results.rename({"subject_id": "subject"}, axis=1)
 
 estimation_results.to_csv(
-    join("..", "results", "clean_data", "indifference_estimation.csv"), index=False
+    join("..", "results", "0-clean_data", "indifference_estimation.csv"), index=False
 )
 print(
-    "Wrote indifference estimation results to '../results/clean_data/indifference_estimation.csv'."
+    "Wrote indifference estimation results to '../results/0-clean_data/indifference_estimation.csv'."
 )
 
 # calculate individual increases / decreases of estimates per block, always relative to the previous one
@@ -72,7 +75,7 @@ deltas = pd.concat(deltas).reset_index(drop=True)
 # calculate mean change in estimation per subject
 mean_deltas = deltas.groupby("subject")[["dCB", "dB", "dA", "dCA"]].mean()
 mean_deltas.describe().to_csv(
-    join("..", "results", "behaviour", "s-1_indifference-estimation_deltas_summary.csv")
+    join(OUTPUT_DIR, "s-1_indifference-estimation_deltas_summary.csv")
 )
 
 # 1. Test, whether increases or decreases across blocks for a given option significantly differed from 0 across the group
@@ -88,13 +91,15 @@ print(
 for alt in ["dCB", "dA", "dCA"]:
     print("\tOption:", alt[1:])
     trace = best.runBEST1G(
-        y=mean_deltas[alt].values, mu=0, sigma_low=0.0001, sigma_high=100, seed=SEED
+        y=mean_deltas[alt].values,
+        mu=0,
+        sigma_low=0.0001,
+        sigma_high=100,
+        sample_kwargs=dict(random_seed=SEED, cores=1),
     )
     pm.summary(trace).to_csv(
         join(
-            "..",
-            "results",
-            "behaviour",
+            OUTPUT_DIR,
             "s-1_indifference-estimation_BEST1G_delta-{alt}-v-0_posterior.csv".format(
                 alt=alt
             ),
@@ -105,9 +110,7 @@ for alt in ["dCB", "dA", "dCA"]:
     )
     plt.savefig(
         join(
-            "..",
-            "results",
-            "behaviour",
+            OUTPUT_DIR,
             "s-1_indifference-estimation_BEST1G_delta-{alt}-v-0_posterior.png".format(
                 alt=alt
             ),
@@ -128,13 +131,17 @@ for alt in ["CB", "A", "CA"]:
     print("Option:", alt)
     model = Model(estimation_results)
     formula = alt + "m ~ 0 + block"
-    results = model.fit(formula, random=["1|subject", "block|subject"])
+    results = model.fit(
+        formula,
+        random=["1|subject", "block|subject"],
+        cores=1,
+        chains=2,
+        random_seed=SEED,
+    )
 
-    results.summary().to_csv(
+    az.summary(results, hdi_prob=0.95).to_csv(
         join(
-            "..",
-            "results",
-            "behaviour",
+            OUTPUT_DIR,
             "s-1_indifference-estimation_bayesReg_m-block_{alt}_summary.csv".format(
                 alt=alt
             ),

@@ -342,6 +342,154 @@ class Glickman1Layer(ChoiceModel):
         return choiceprobs
 
 
+class Glickman1LayerDuration(ChoiceModel):
+    """Three alternative adaptation from the winning model from Glickman et al., 2019
+    Assumes that in each fixation, gaze-biased subjective utilities (see PT) are accumulated and all accumulators (irrespective of fixation) are subject to leak over individual fixations.
+
+    Parameters
+    ----------
+    alpha (alpha > 0)
+        Utility function parameter
+    gamma (0.28 < gamma < 1)
+        Probability weighting parameter
+    beta (beta > 0)
+        Inverse temperature parameter
+    lambda (0 < lambda < 1)
+        Leak parameter (0 = perfect memory, 1 = full leak)
+    theta (0 < theta < 1)
+        Gaze bias parameter
+    """
+
+    def __init__(
+        self,
+        data,
+        probability_cols=["pA", "pB", "pC"],
+        outcome_cols=["mA", "mB", "mC"],
+        label="glickman1layerduration",
+        parameter_names=["alpha", "gamma", "beta", "lam", "theta"],
+        parameter_bounds=[(0, 5), (0.28, 1), (0, 5), (0, 1), (0, 1)],
+    ):
+        super(Glickman1LayerDuration, self).__init__()
+        self.data = data
+        self.probability_cols = probability_cols
+        self.probabilities = data[probability_cols].values
+        self.outcomes = data[outcome_cols].values
+        self.choices = data["choice"].values
+        self.fixated_alternatives = data["fixated_alternatives"].values  # 0 = p, 1 = m
+        self.fixated_attributes = data["fixated_attributes"].values
+        self.fixation_durations = data["fixation_durations"].values
+        self.label = label
+        self.parameter_names = parameter_names
+        self.parameter_bounds = parameter_bounds
+        self.n_parameters = len(parameter_names)
+        self.n_trials = len(data)
+        self.n_items = len(probability_cols)
+
+    def predict_choiceprobs(self, parameters):
+
+        alpha, gamma, beta, lam, theta = parameters
+        p = self.probabilities
+        w = p ** gamma / ((p ** gamma + (1 - p) ** gamma) ** (1 / gamma))
+        SU = w * self.outcomes ** alpha
+        Y = np.zeros((self.n_trials, self.n_items))
+
+        for trial in range(self.n_trials):
+
+            # If fixation data present
+            if isinstance(self.fixation_durations[trial], np.ndarray):
+                for dur, alt, att in zip(
+                    self.fixation_durations[trial],
+                    self.fixated_alternatives[trial],
+                    self.fixated_attributes[trial],
+                ):
+                    
+                    # Option wise gaze discount
+                    theta_vector = np.ones(self.n_items) * theta
+                    theta_vector[alt] = 1.0
+
+                    # Transform duration from second to integer of 10-ms steps
+                    dur = int(np.round(dur * 1000 / 100))
+
+                    for t in range(dur):
+                        Y[trial, :] = (1 - lam) * Y[trial, :] + theta_vector * SU[trial, :]
+
+        choiceprobs = softmax(beta * Y)
+        return choiceprobs
+
+class Glickman1LayerNoLeak(ChoiceModel):
+    """Three alternative adaptation from the winning model from Glickman et al., 2019
+    Assumes that in each fixation, gaze-biased subjective utilities (see PT) are accumulated
+
+    This variant has no leak!
+
+    Parameters
+    ----------
+    alpha (alpha > 0)
+        Utility function parameter
+    gamma (0.28 < gamma < 1)
+        Probability weighting parameter
+    beta (beta > 0)
+        Inverse temperature parameter
+    theta (0 < theta < 1)
+        Gaze bias parameter
+    """
+
+    def __init__(
+        self,
+        data,
+        probability_cols=["pA", "pB", "pC"],
+        outcome_cols=["mA", "mB", "mC"],
+        label="glickman1layernoleak",
+        parameter_names=["alpha", "gamma", "beta", "theta"],
+        parameter_bounds=[(0, 5), (0.28, 1), (0, 50), (0, 1)],
+    ):
+        super(Glickman1LayerNoLeak, self).__init__()
+        self.data = data
+        self.probability_cols = probability_cols
+        self.probabilities = data[probability_cols].values
+        self.outcomes = data[outcome_cols].values
+        self.choices = data["choice"].values
+        self.fixated_alternatives = data["fixated_alternatives"].values  # 0 = p, 1 = m
+        self.fixated_attributes = data["fixated_attributes"].values
+        self.fixation_durations = data["fixation_durations"].values
+        self.label = label
+        self.parameter_names = parameter_names
+        self.parameter_bounds = parameter_bounds
+        self.n_parameters = len(parameter_names)
+        self.n_trials = len(data)
+        self.n_items = len(probability_cols)
+
+    def predict_choiceprobs(self, parameters):
+
+        alpha, gamma, beta, theta = parameters
+        p = self.probabilities
+        w = p ** gamma / ((p ** gamma + (1 - p) ** gamma) ** (1 / gamma))
+        SU = w * self.outcomes ** alpha
+        Y = np.zeros((self.n_trials, self.n_items))
+
+        for trial in range(self.n_trials):
+
+            # If fixation data present
+            if isinstance(self.fixation_durations[trial], np.ndarray):
+                for dur, alt, att in zip(
+                    self.fixation_durations[trial],
+                    self.fixated_alternatives[trial],
+                    self.fixated_attributes[trial],
+                ):
+
+                    # Option wise gaze discount
+                    theta_vector = np.ones(self.n_items) * theta
+                    theta_vector[alt] = 1.0
+
+                    Y[trial, :] = Y[trial, :] + theta_vector * SU[trial, :]
+
+        choiceprobs = softmax(beta * Y)
+        return choiceprobs
+
+
+
+
+
 class Glickman2Layer(ChoiceModel):
     """Three alternative adaption from 2-layer model from Glickman et al., 2019
     Also assumes that over fixations, subjective utilities (see PT) are accumulated. However, in contrast to the 1-layer model, here, the subjective stimulus attributes (decision weights and subjective utilities) also accumulate across fixations. The gaze-bias acts on the input to these lower-level accumulators (decision weights and subjective utilities), which are then combined *after the gaze bias was applied* in the next level.
