@@ -87,10 +87,13 @@ def modelFitting():
     # Define models to be fit
     models = [
         bm.models.ExpectedUtility,
+        bm.models.ProspectTheory,
         bm.mdft.MDFT,
         bm.models.GazeBaselineStat,
         bm.models.GazeBaselineDyn,
         bm.models.Glickman1Layer,
+        bm.models.Glickman1LayerDuration,
+        bm.models.Glickman1LayerNoLeak
     ]
 
     # Load trial data

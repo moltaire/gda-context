@@ -43,6 +43,19 @@ estimates = pd.read_csv(
     join(RESULTS_DIR, "3-behavioural-modeling", "estimates", "estimates_de1.csv")
 )
 
+models = [
+    "glickman1layer",
+    "mdft",
+    "pt",
+    # "eu",
+    "gaze-baseline-stat",
+    "gaze-baseline-dyn",
+    # "glickman1layernoleak",
+    # "glickman1layerduration"
+]
+
+estimates = estimates.loc[estimates["model"].isin(models)]
+
 # %% -1. Summarize GLA estimates
 # ------------------------------
 gla_estimates = estimates.loc[

@@ -149,11 +149,25 @@ for x, y in list(zip(xcoords, ycoords)):
         [y - 0.5, x - 0.5],
         width=1,
         height=1,
-        linewidth=1,
+        linewidth=1.5,
         edgecolor="white",
         facecolor="none",
     )
     ax.add_patch(rect)
+
+# Mark hybrid model
+x = 5
+y = 14
+rect = Rectangle(
+    [y - 0.5, x - 0.5],
+    width=1,
+    height=1,
+    linewidth=1,
+    ls=(0, (1.5, 1)),
+    edgecolor="white",
+    facecolor="none",
+)
+ax.add_patch(rect)
 
 fig.tight_layout()
 

@@ -58,13 +58,21 @@ palette = [
 
 # Model labels to use in the figures
 models = np.array(
-    ["glickman1layer", "mdft", "eu", "gaze-baseline-stat", "gaze-baseline-dyn"]
+    [
+        "glickman1layer",
+        "mdft",
+        # "eu",
+        "pt",
+        "gaze-baseline-stat",
+        "gaze-baseline-dyn",
+    ]
 )
 
 model_labels = {
     "glickman1layer": "GLA",
     "mdft": "MDFT",
-    "eu": "EU",
+    # "eu": "EU",
+    "pt": "PT",
     "gaze-baseline-stat": "GB$_{stat}$",
     "gaze-baseline-dyn": "GB$_{dyn}$",
 }
@@ -140,7 +148,8 @@ def plot_bic_violins(estimates, models, model_labels, ax=None):
         ax = plt.gca()
     # Determine the model order, so that the best model is first and so on
     model_order = (
-        estimates.groupby("model")["bic"]
+        estimates.loc[estimates["model"].isin(models)]
+        .groupby("model")["bic"]
         .mean()
         .reset_index()
         .sort_values("bic")["model"]
@@ -148,9 +157,9 @@ def plot_bic_violins(estimates, models, model_labels, ax=None):
     )
 
     # pivot: each line should be a subject, each column contains BIC of a single model
-    bics_wide = estimates.pivot(values="bic", columns="model", index="subject")[
-        [model for model in model_order if model in models]
-    ]
+    bics_wide = estimates.loc[estimates["model"].isin(models)].pivot(
+        values="bic", columns="model", index="subject"
+    )[[model for model in model_order if model in models]]
     bics_wide.columns.name = None
 
     # Make the figure

@@ -6,25 +6,20 @@ from .utils import choose, softmax
 
 class ChoiceModel(object):
     """Base class for probabilistic choice models
-    
+
     Contains methods shared across models to
         1) simulate choices (`simulate_choices`)
         2) compute negative log-likelihood (`compute_nll`)
         3) perform parameter estimation (`fit`)
     """
 
-    def __init__(self):
-        super(ChoiceModel, self).__init__()
-
     def simulate_choices(self, parameters):
-        """For given parameters, predict choice probabilities and generate choices from them.
-        """
+        """For given parameters, predict choice probabilities and generate choices from them."""
         choices = choose(self.predict_choiceprobs(parameters))
         return choices
 
     def compute_nll(self, parameters, verbose=False, nonzeroconst=1e-6):
-        """Compute negative log-likelihood of the data, given parameters.
-        """
+        """Compute negative log-likelihood of the data, given parameters."""
         choiceprobs = self.predict_choiceprobs(parameters)
         chosenprobs = choiceprobs[
             np.arange(choiceprobs.shape[0]).astype(int), self.choices.astype(int)
@@ -109,7 +104,7 @@ class ChoiceModel(object):
 
 class ExpectedUtility(ChoiceModel):
     """Expected Utility model
-    
+
     Attributes:
         choices (np.ndarray): Array of choices of type int
         label (str, optional): Model label
@@ -149,7 +144,7 @@ class ExpectedUtility(ChoiceModel):
 class ProspectTheory(ChoiceModel):
     """Prospect Theory model.
     Assumes that objective probabilities are transformed into decision weights (using weighting function with parameter $\gamma$), and outcome utilities are computed with a power-function with parameter $\alpha$. Choice probabilities are derived from subjective expected utilities via a softmax function with inverse temperature parameter $\beta$.
-    
+
     Attributes:
         choices (np.ndarray): Array of choices of type int
         label (str, optional): Model label
@@ -217,7 +212,7 @@ class GazeBaselineStat(ChoiceModel):
 
 class GazeBaselineDyn(ChoiceModel):
     """Second baseline model that only uses gaze data,
-    but also uses the sequence and duration of fixations 
+    but also uses the sequence and duration of fixations
     and a leak parameter
 
     Parameters
@@ -347,13 +342,161 @@ class Glickman1Layer(ChoiceModel):
         return choiceprobs
 
 
+class Glickman1LayerDuration(ChoiceModel):
+    """Three alternative adaptation from the winning model from Glickman et al., 2019
+    Assumes that in each fixation, gaze-biased subjective utilities (see PT) are accumulated and all accumulators (irrespective of fixation) are subject to leak over individual fixations.
+
+    Parameters
+    ----------
+    alpha (alpha > 0)
+        Utility function parameter
+    gamma (0.28 < gamma < 1)
+        Probability weighting parameter
+    beta (beta > 0)
+        Inverse temperature parameter
+    lambda (0 < lambda < 1)
+        Leak parameter (0 = perfect memory, 1 = full leak)
+    theta (0 < theta < 1)
+        Gaze bias parameter
+    """
+
+    def __init__(
+        self,
+        data,
+        probability_cols=["pA", "pB", "pC"],
+        outcome_cols=["mA", "mB", "mC"],
+        label="glickman1layerduration",
+        parameter_names=["alpha", "gamma", "beta", "lam", "theta"],
+        parameter_bounds=[(0, 5), (0.28, 1), (0, 5), (0, 1), (0, 1)],
+    ):
+        super(Glickman1LayerDuration, self).__init__()
+        self.data = data
+        self.probability_cols = probability_cols
+        self.probabilities = data[probability_cols].values
+        self.outcomes = data[outcome_cols].values
+        self.choices = data["choice"].values
+        self.fixated_alternatives = data["fixated_alternatives"].values  # 0 = p, 1 = m
+        self.fixated_attributes = data["fixated_attributes"].values
+        self.fixation_durations = data["fixation_durations"].values
+        self.label = label
+        self.parameter_names = parameter_names
+        self.parameter_bounds = parameter_bounds
+        self.n_parameters = len(parameter_names)
+        self.n_trials = len(data)
+        self.n_items = len(probability_cols)
+
+    def predict_choiceprobs(self, parameters):
+
+        alpha, gamma, beta, lam, theta = parameters
+        p = self.probabilities
+        w = p ** gamma / ((p ** gamma + (1 - p) ** gamma) ** (1 / gamma))
+        SU = w * self.outcomes ** alpha
+        Y = np.zeros((self.n_trials, self.n_items))
+
+        for trial in range(self.n_trials):
+
+            # If fixation data present
+            if isinstance(self.fixation_durations[trial], np.ndarray):
+                for dur, alt, att in zip(
+                    self.fixation_durations[trial],
+                    self.fixated_alternatives[trial],
+                    self.fixated_attributes[trial],
+                ):
+                    
+                    # Option wise gaze discount
+                    theta_vector = np.ones(self.n_items) * theta
+                    theta_vector[alt] = 1.0
+
+                    # Transform duration from second to integer of 10-ms steps
+                    dur = int(np.round(dur * 1000 / 100))
+
+                    for t in range(dur):
+                        Y[trial, :] = (1 - lam) * Y[trial, :] + theta_vector * SU[trial, :]
+
+        choiceprobs = softmax(beta * Y)
+        return choiceprobs
+
+class Glickman1LayerNoLeak(ChoiceModel):
+    """Three alternative adaptation from the winning model from Glickman et al., 2019
+    Assumes that in each fixation, gaze-biased subjective utilities (see PT) are accumulated
+
+    This variant has no leak!
+
+    Parameters
+    ----------
+    alpha (alpha > 0)
+        Utility function parameter
+    gamma (0.28 < gamma < 1)
+        Probability weighting parameter
+    beta (beta > 0)
+        Inverse temperature parameter
+    theta (0 < theta < 1)
+        Gaze bias parameter
+    """
+
+    def __init__(
+        self,
+        data,
+        probability_cols=["pA", "pB", "pC"],
+        outcome_cols=["mA", "mB", "mC"],
+        label="glickman1layernoleak",
+        parameter_names=["alpha", "gamma", "beta", "theta"],
+        parameter_bounds=[(0, 5), (0.28, 1), (0, 50), (0, 1)],
+    ):
+        super(Glickman1LayerNoLeak, self).__init__()
+        self.data = data
+        self.probability_cols = probability_cols
+        self.probabilities = data[probability_cols].values
+        self.outcomes = data[outcome_cols].values
+        self.choices = data["choice"].values
+        self.fixated_alternatives = data["fixated_alternatives"].values  # 0 = p, 1 = m
+        self.fixated_attributes = data["fixated_attributes"].values
+        self.fixation_durations = data["fixation_durations"].values
+        self.label = label
+        self.parameter_names = parameter_names
+        self.parameter_bounds = parameter_bounds
+        self.n_parameters = len(parameter_names)
+        self.n_trials = len(data)
+        self.n_items = len(probability_cols)
+
+    def predict_choiceprobs(self, parameters):
+
+        alpha, gamma, beta, theta = parameters
+        p = self.probabilities
+        w = p ** gamma / ((p ** gamma + (1 - p) ** gamma) ** (1 / gamma))
+        SU = w * self.outcomes ** alpha
+        Y = np.zeros((self.n_trials, self.n_items))
+
+        for trial in range(self.n_trials):
+
+            # If fixation data present
+            if isinstance(self.fixation_durations[trial], np.ndarray):
+                for dur, alt, att in zip(
+                    self.fixation_durations[trial],
+                    self.fixated_alternatives[trial],
+                    self.fixated_attributes[trial],
+                ):
+
+                    # Option wise gaze discount
+                    theta_vector = np.ones(self.n_items) * theta
+                    theta_vector[alt] = 1.0
+
+                    Y[trial, :] = Y[trial, :] + theta_vector * SU[trial, :]
+
+        choiceprobs = softmax(beta * Y)
+        return choiceprobs
+
+
+
+
+
 class Glickman2Layer(ChoiceModel):
     """Three alternative adaption from 2-layer model from Glickman et al., 2019
-    Also assumes that over fixations, subjective utilities (see PT) are accumulated. However, in contrast to the 1-layer model, here, the subjective stimulus attributes (decision weights and subjective utilities) also accumulate across fixations. The gaze-bias acts on the input to these lower-level accumulators (decision weights and subjective utilities), which are then combined *after the gaze bias was applied* in the next level. 
+    Also assumes that over fixations, subjective utilities (see PT) are accumulated. However, in contrast to the 1-layer model, here, the subjective stimulus attributes (decision weights and subjective utilities) also accumulate across fixations. The gaze-bias acts on the input to these lower-level accumulators (decision weights and subjective utilities), which are then combined *after the gaze bias was applied* in the next level.
     Accumulators on both levels are subject to leak.
 
     For a reference, see Glickman et al., 2019 (Fig. 6A)
-    
+
     Parameters
     ----------
     alpha (alpha > 0)
